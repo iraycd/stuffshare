@@ -1,0 +1,13 @@
+{
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "args": ["run", "debug"],
+    "showOutput": "always",
+    "tasks": [
+        { 
+            "taskName": "runwebpack",
+            "suppressTaskName": true
+        }
+    ]
+}

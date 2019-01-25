@@ -1,0 +1,774 @@
+{
+    "LABEL": {
+        "CODE_CODE_LABEL": {
+            "code": "CODE_CODE_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Kod",
+                "us": "Code"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_TYPE_LABEL": {
+            "code": "CODE_TYPE_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Typ kodu",
+                "us": "Code type"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_FORM_HEADER": {
+            "code": "CODE_FORM_HEADER",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Edycja słownika",
+                "us": "Dictionary edit"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_STATUS_LABEL": {
+            "code": "CODE_STATUS_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Status",
+                "us": "Status"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_PL_LABEL": {
+            "code": "CODE_PL_LABEL ",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Polski",
+                "us": "Polish"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_US_LABEL": {
+            "code": "CODE_US_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Angielski",
+                "us": "English"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LANG_POLISH_LABEL": {
+            "code": "LANG_POLISH_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Polski",
+                "us": "Polish"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LANG_ENGLISH_LABEL": {
+            "code": "LANG_ENGLISH_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Angielski",
+                "us": "English"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "ADMIN_LINK_LABEL": {
+            "code": "ADMIN_LINK_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Panel admina",
+                "us": "Admin"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "DICTIONARY_LINK_LABEL": {
+            "code": "DICTIONARY_LINK_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Edycja Słownika",
+                "us": "Dictionary list"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_FILTER_LABEL": {
+            "code": "CODE_FILTER_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Filtruj słownik",
+                "us": "Filter"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LANG_HOME_LINK_LABEL": {
+            "code": "LANG_HOME_LINK_LABEL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Strona główna",
+                "us": "Home"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LANG_RUSSIA_LABEL": {
+            "code": "LANG_RUSSIA_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Rosyjski",
+                "us": "Russian"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_USER_NAME_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_USER_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_PASSWORD_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_PASSWORD_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Hasło",
+                "us": "Password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_EMAIL_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_EMAIL_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PASSWORD_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PASSWORD_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Hasło",
+                "us": "Password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PASSWORD_REPEAT_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PASSWORD_REPEAT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Powtórz hasło",
+                "us": "Repeat password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_NAME_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Imie",
+                "us": "Name"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_SURNAME_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_SURNAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwisko",
+                "us": "Surname"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PHONE_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PHONE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Telefon",
+                "us": "Phone"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_BIRTHDATE_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_BIRTHDATE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Data urodzin",
+                "us": "Birthdate"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD_USER_NAME_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "FORGOT_PASSWORD_USER_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_FORM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_FORM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Logowanie",
+                "us": "Login"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_FORM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_FORM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zakładanie konta",
+                "us": "Create account"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD_FORM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "FORGOT_PASSWORD_FORM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Przypomnienie hasła",
+                "us": "Forgot password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_SUBMIT_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_SUBMIT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Załóż konto",
+                "us": "Create account"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_SUBMIT_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_SUBMIT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zaloguj",
+                "us": "Login"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD_SUBMIT_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "FORGOT_PASSWORD_SUBMIT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Potwierdź",
+                "us": "Submit"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        }
+    },
+    "PLACEHOLDER": {
+        "CODE_CODE_PLACEHOLDER": {
+            "code": "CODE_CODE_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "np. ( CODE_CODE_PLACEHOLDER )",
+                "us": "e.g ( CODE_CODE_PLACEHOLDER )"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_PL_PLACEHOLDER": {
+            "code": "CODE_PL_PLACEHOLDER",
+            "status": "100",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Tłumaczenie polskie",
+                "us": "Polish translation"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_US_PLACEHOLDER": {
+            "code": "CODE_US_PLACEHOLDER",
+            "status": "100",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Tłumaczenie angielskie",
+                "us": "English translation"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "CODE_STATUS_PLACEHOLDER": {
+            "code": "CODE_STATUS_PLACEHOLDER",
+            "status": "100",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Wartość musi być w przedziale( 100 - 999 )",
+                "us": "Value must be between ( 100 - 999 )"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD_USER_NAME_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "FORGOT_PASSWORD_USER_NAME_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_USER_NAME_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_USER_NAME_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "LOGIN_PASSWORD_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_PASSWORD_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Hasło",
+                "us": "Password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_EMAIL_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_EMAIL_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PASSWORD_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PASSWORD_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Hasło",
+                "us": "Password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PASSWORD_REPEAT_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PASSWORD_REPEAT_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Powtórz hasło",
+                "us": "Repeat password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_NAME_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_NAME_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Imię",
+                "us": "Name"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_SURNAME_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_SURNAME_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Nazwisko",
+                "us": "Surname"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_PHONE_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_PHONE_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Telefon",
+                "us": "Phone"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "REGISTER_BIRTHDATE_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "REGISTER_BIRTHDATE_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "yyyy-mm-dd",
+                "us": "yyyy-mm-dd"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        }
+    },
+    "VALIDATION": {
+        "isNumber": {
+            "code": "isNumber",
+            "status": "100",
+            "type": "VALIDATION",
+            "message": {
+                "pl": "Wartość musi być liczbą",
+                "us": "Value must be a number"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "notEmpty": {
+            "code": "notEmpty",
+            "status": "100",
+            "type": "VALIDATION",
+            "message": {
+                "pl": "Pole nie może być puste",
+                "us": "This field cannot be empty"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FILE_IS_TOO_BIG": {
+            "code": "FILE_IS_TOO_BIG",
+            "status": "100",
+            "type": "VALIDATION",
+            "message": {
+                "pl": "Przeslany plik jest za duzy (Organieczeni do 2MB)",
+                "us": "Uploaded file is too big (2MB limitation)"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "TOO_MANY_USER_IMAGES": {
+            "code": "TOO_MANY_USER_IMAGES",
+            "status": "100",
+            "type": "VALIDATION",
+            "message": {
+                "pl": "Za dużo przesłanych zdjęć profilowych (Max. 5)",
+                "us": "Too many user profile images (Max. 5)"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "UNRECOGNIZE_FILE_TYPE": {
+            "code": "UNRECOGNIZE_FILE_TYPE",
+            "status": "100",
+            "type": "VALIDATION",
+            "message": {
+                "pl": "Niedozwolony format pliku (Oczekiwane JPG,PNG).",
+                "us": "Unrecognize file type (expected JPG,PNG)."
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "EMAIL_EXIST_IN_DB": {
+            "code": "EMAIL_EXIST_IN_DB",
+            "status": "400",
+            "type": "ERROR",
+            "message": {
+                "pl": "Użytkownik {0} jest juz zarejestrowany w systemie",
+                "us": "User {0} has been already registerd"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        }
+    },
+    "EMAIL": {
+        "AUTHORIZATION_TITLE": {
+            "code": "AUTHORIZATION_TITLE",
+            "status": "200",
+            "type": "EMAIL",
+            "message": {
+                "pl": "[StuffShare] Potwierdź email",
+                "us": "[StuffShare] Email authorization"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "NEW_USER_TITLE": {
+            "code": "NEW_USER_TITLE",
+            "status": "200",
+            "type": "EMAIL",
+            "message": {
+                "pl": "[StuffShare] Cześć {0}",
+                "us": "[StuffShare] Hi {0}"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD": {
+            "code": "FORGOT_PASSWORD",
+            "status": "200",
+            "type": "EMAIL",
+            "message": {
+                "pl": "[StuffShare] Wygenerowano nowe hasło",
+                "us": "[StuffShare] New password received"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "FORGOT_PASSWORD_FIRST_MAIL": {
+            "code": "FORGOT_PASSWORD_FIRST_MAIL",
+            "status": "200",
+            "type": "EMAIL",
+            "message": {
+                "pl": "[StuffShare] Rozpoczęcie procesu generowania hasła",
+                "us": "[StuffShare] Start process to generate new password"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        }
+    },
+    "INFO": {},
+    "ERROR_GLOBAL": {},
+    "ERROR": {
+        "1": {
+            "code": "1",
+            "status": "200",
+            "type": "ERROR",
+            "message": {
+                "pl": "1",
+                "us": "1"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "EMAIL_EXCEPTION": {
+            "code": "EMAIL_EXCEPTION",
+            "status": "500",
+            "type": "ERROR",
+            "message": {
+                "pl": "Email nie został wysłany popranwie",
+                "us": "Exception in mail sending"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "VALIDATION_INVALID_ERROR": {
+            "code": "VALIDATION_INVALID_ERROR",
+            "status": "400",
+            "type": "ERROR",
+            "message": {
+                "pl": "Niepoprawnie wypełnione dane",
+                "us": "Invalid data"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "PRIVILEGES_INVALID_ERROR": {
+            "code": "PRIVILEGES_INVALID_ERROR",
+            "status": "400",
+            "type": "ERROR",
+            "message": {
+                "pl": "Nie masz uprawnień do wykonania tej akcji.",
+                "us": "You don't have permission to run this action."
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "EMAIL_NOT_EXIST": {
+            "code": "EMAIL_NOT_EXIST",
+            "status": "400",
+            "type": "ERROR",
+            "message": {
+                "pl": "Podany email lub hasło są niepoprawne.",
+                "us": "Email or password is incorrect"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "AUTHORIZATION_ERROR": {
+            "code": "AUTHORIZATION_ERROR",
+            "status": "401",
+            "type": "ERROR",
+            "message": {
+                "pl": "Musisz być zalogowany, żeby wykonać tę akcję.",
+                "us": "You are not log in."
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        }
+    }
+}

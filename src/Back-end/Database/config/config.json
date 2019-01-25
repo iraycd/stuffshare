@@ -1,0 +1,45 @@
+{
+  "development": {
+   
+    "username": "stuffshare",
+    "password": "stuffshare",
+    "dialect": "mssql",
+    "database": "stuffShareDB",
+    "host":"127.0.0.1",
+    "dialectOptions": {
+      "connectionString": "Server=127.0.0.1\\SQLEXPRESS;Database=stuffShareDB;Trusted_Connection=yes;"
+    },
+    "define": {
+   
+      "underscored": true
+    }
+
+
+  },
+  "test": {
+    "username": "stuffshare",
+    "password": "stuffshare",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "connectionString": "Server=localhost\\SQLEXPRESS;Database=stuffShareDB;Trusted_Connection=yes;"
+    },
+    "define": {
+   
+      "underscored": true
+    }
+
+  },
+  "production": {
+    "host": "SQL6003.site4now.net",
+    "username": "DB_A43E8B_stuffshare_admin",
+    "password": "stuffShare123",
+    "database": "DB_A43E8B_stuffshare",
+    "dialect": "mssql",
+  
+    "define": {
+   
+      "underscored": true
+    }
+  }
+}
+

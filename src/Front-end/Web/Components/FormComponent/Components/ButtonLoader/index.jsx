@@ -1,0 +1,40 @@
+import React from 'react';
+
+import { Button } from 'reactstrap';
+
+
+
+export default class ButtonLoader extends React.Component {
+
+    constructor() {
+        super();
+
+    }
+
+    render() {
+
+        let loader;
+        let isDisable=false;
+        if (this.props.isLoading == true) {
+            loader = <span>{' '}<i class="fa fa-spinner fa-spin" /></span>
+            isDisable=true;
+        }
+        let result = (
+
+            <Button onClick={this.props.onClick} size={this.props.size} disabled={isDisable} className={this.props.className}>{this.props.value} {loader}</Button>
+
+        );
+        return result;
+    }
+
+
+}
+
+ButtonLoader.propTypes = {
+
+    value: React.PropTypes.string,
+    className: React.PropTypes.string,
+    onClick: React.PropTypes.func,
+    size: React.PropTypes.string,
+    isLoading: React.PropTypes.bool,
+}
