@@ -3,8 +3,8 @@
 */
 
 import React from 'react';
-import Header from './Layout/header/index.jsx';
-import Footer from './Layout/footer/index.jsx';
+import Header from './Layout/Header/index.jsx';
+import Footer from './Layout/Footer/index.jsx';
 import Home from './Layout/Home/index.jsx';
 import Dictionary from './Dictionary/index.jsx';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
