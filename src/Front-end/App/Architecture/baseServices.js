@@ -5,7 +5,7 @@ import { LOADER_ACTIONS } from './../Reducers/Loader/actions.js';
 
 import { NOTIFICATIONS_ACTIONS } from './../Reducers/Notifications/actions.js';
 import { Enums } from './../../../Shared/index.js';
-
+import WEB_CONFIG from '../../config.js';
 
 class BaseService {
 
@@ -21,7 +21,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING" });
             return axios({
                 method: 'get',
-                url: 'http://localhost:1337/query?action=' + JSON.stringify({ "action": action, "model": model })
+                url: WEB_CONFIG.API_URL[process.env.NODE_ENV]+'/query?action=' + JSON.stringify({ "action": action, "model": model })
             })
                 .then(response => {
 
@@ -53,7 +53,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING" });
             return axios({
                 method: 'POST',
-                url: 'http://localhost:1337/command',
+                url: WEB_CONFIG.API_URL[process.env.NODE_ENV]+'/command',
                 data: { "action": action, "model": model }
             })
                 .then(response => {

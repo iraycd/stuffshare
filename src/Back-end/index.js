@@ -23,7 +23,12 @@ const router = new KoaRouter();
 
 app.use(serve(__dirname + '/web'));
 app.use(cors());
-
+app.use(cors({
+  origin: function (ctx) {
+    return '*';
+  },
+  allowMethods: ['GET', 'POST', 'DELETE'],
+}));
 
 // This installs a scoped container into our
 // context - we will use this to register our current user!
