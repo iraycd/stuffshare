@@ -8,12 +8,11 @@
   },
   "scripts": {
     "start": "babel-node --presets es2017,stage-2 ./src/Back-end/index.js ",
-    "start_dupa": "webpack --config webpack_web.config.js && babel-node --presets es2017,stage-2 ./src/Back-end/index.js ",
     "debug": "babel ./src/Back-end -d .compiled/Back-end --source-maps & babel ./src/Shared -d .compiled/Shared --source-maps",
     "test": "\".\\node_modules\\.bin\\_mocha.cmd\" ./test --compilers js:babel-core/register   --recursive  --watch --harmony-async-await",
     "eslint": "eslint ./src ",
     "server": "babel ./src/Back-end -d .compiled/Back-end --source-maps --copy-files & babel ./src/Shared -d .compiled/Shared --source-maps --copy-files & \".\\node_modules\\.bin\\nodemon.cmd\"  --harmony   --exec babel-node --presets es2017,stage-2 ./src/Back-end/index.js ",
-    "web": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js  --host 0.0.0.0 --port 8080 --progress --color --config webpack_web.config.js",
+    "web": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js  --host 0.0.0.0 --disable-host-check --port 8080 --progress --color --config webpack_web.config.js",
     "web-build": "\".\\node_modules\\.bin\\webpack\" --config webpack_web.config.js",
     "server-prod-build": "\".\\node_modules\\.bin\\webpack\" --config webpack_serv.config.js --progress",
     "server-prod-start": "npm run server-prod-build && node --harmony-async-await ./dist/server/app.js"
