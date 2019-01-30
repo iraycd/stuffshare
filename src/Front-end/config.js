@@ -1,6 +1,6 @@
 let WEB_CONFIG = {
     API_URL: {
-        production: "http://api.stuffshare.online",
+        production: "https://stuffshare-web.herokuapp.com",
         dev: "http://localhost:1337"
     }
 }

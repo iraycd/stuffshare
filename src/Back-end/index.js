@@ -21,12 +21,8 @@ let koaBody = koaBodyImport();
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(serve(__dirname + '/web'));
-//app.use(cors());
-app.use(cors({
-  origin: 'http://localhost:8080',
-  allowMethods: ['GET', 'POST', 'DELETE'],
-}));
+app.use(cors());
+
 
 // This installs a scoped container into our
 // context - we will use this to register our current user!
