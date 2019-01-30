@@ -22,7 +22,7 @@ const app = new Koa();
 const router = new KoaRouter();
 
 app.use(serve(__dirname + '/web'));
-app.use(cors());
+//app.use(cors());
 app.use(cors({
   origin: function (ctx) {
     return '*';
