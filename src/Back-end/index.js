@@ -21,7 +21,7 @@ let koaBody = koaBodyImport();
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(cors() );
+app.use(cors());
 
 
 // This installs a scoped container into our
