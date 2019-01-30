@@ -24,9 +24,7 @@ const router = new KoaRouter();
 app.use(serve(__dirname + '/web'));
 //app.use(cors());
 app.use(cors({
-  origin: function (ctx) {
-    return 'http://localhost:8080';
-  },
+  origin: 'http://localhost:8080',
   allowMethods: ['GET', 'POST', 'DELETE'],
 }));
 
