@@ -73,7 +73,7 @@ class Login extends React.Component {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
         this.refreshValidation();
-        if (this.props.user.login.auth) {
+        if (this.props.user.login.auth.token) {
             localStorage.token = this.props.user.login.auth.token;
             localStorage.refresh_token = this.props.user.login.auth.refresh_token;
         }
@@ -112,7 +112,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         loginInternal: (dto) => {
-            dispatch(new BaseService().commandThunt(QueryList.User.LOG_IN_INTERNAL, dto));
+            dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto,null,Enums.LOADER.SET_CONTAINER_ACTION));
         }
 
     }

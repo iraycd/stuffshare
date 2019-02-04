@@ -9,7 +9,7 @@ import WEB_CONFIG from '../../config.js';
 
 class BaseService {
 
-    queryThunt(action, model = {}, loader = null) {
+    queryThunt(action, model = {}, token = null, loader = null) {
 
         return (dispatch) => {
             switch (loader) {
@@ -21,7 +21,8 @@ class BaseService {
             dispatch({ type: action + "_LOADING" });
             return axios({
                 method: 'get',
-                url: WEB_CONFIG.API_URL[process.env.NODE_ENV]+'/query?action=' + JSON.stringify({ "action": action, "model": model })
+                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": model }),
+                headers: { "Authorization": `Bearer ${token}` }
             })
                 .then(response => {
 
@@ -32,6 +33,8 @@ class BaseService {
                     BaseService.prototype.errorHandling(error, dispatch, action, model);
                 }).then(function () {
 
+                    dispatch({ type: action + "_FINALLY" });
+
                     switch (loader) {
                         case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.FINISH_INITIAL_ACTION, actionName: action });
                         case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.FINISH_BODY_ACTION, actionName: action });
@@ -41,7 +44,7 @@ class BaseService {
                 });
         }
     }
-    commandThunt(action, model = {}, loader = null) {
+    commandThunt(action, model = {}, token = null, loader = null) {
 
         return (dispatch) => {
             switch (loader) {
@@ -53,8 +56,10 @@ class BaseService {
             dispatch({ type: action + "_LOADING" });
             return axios({
                 method: 'POST',
-                url: WEB_CONFIG.API_URL[process.env.NODE_ENV]+'/command',
-                data: { "action": action, "model": model }
+                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',
+                data: { "action": action, "model": model },
+                headers: { autorizacion: `Bearer ${token}` }
+
             })
                 .then(response => {
                     dispatch({
@@ -86,7 +91,7 @@ class BaseService {
 
                 const exception = error.response.data.error;
                 dispatch({ type: NOTIFICATIONS_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: exception });
-            }else if(error.response.data.error.type.indexOf('ERROR') == 0){
+            } else if (error.response.data.error.type.indexOf('ERROR') == 0) {
                 console.log(error.response.data.error)
                 dispatch({ type: action + "_ERROR", exception: error.response.data.error });
             }

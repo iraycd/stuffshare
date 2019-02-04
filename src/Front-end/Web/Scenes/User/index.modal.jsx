@@ -55,7 +55,7 @@ class UserModal extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
-        if (this.props.user.login.auth) {
+        if (this.props.user.login.auth.token) {
             localStorage.token = this.props.user.login.auth.token;
             localStorage.refresh_token = this.props.user.login.auth.refresh_token;
         }

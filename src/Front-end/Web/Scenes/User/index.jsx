@@ -27,6 +27,7 @@ class UserHeader extends React.Component {
     }
 
     init() {
+        this.getUserInfo()
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         this.language = '';
         this.open = false;
@@ -41,7 +42,15 @@ class UserHeader extends React.Component {
         localStorage.setItem('lang', event.target.getAttribute('data-tag'));
         this.props.setLanguage(event.target.getAttribute('data-tag'));
 
+
+
         //window.location.reload();
+    }
+
+    getUserInfo() {
+        if (this.props.user.user_info.id == undefined && localStorage.token) {
+            this.props.getUserInfo()
+        }
     }
 
     openModalHandler(event) {
@@ -53,7 +62,12 @@ class UserHeader extends React.Component {
 
     render() {
         this.init();
-
+        let userInfo = <div></div>;
+        if (this.props.user.user_info.id>0) {
+            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.user.user_info.name} ${this.props.user.user_info.surname}`}</a></li>
+        } else {
+            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">Login</a></li>
+        }
 
         return (
             <Col xs="auto" >
@@ -74,11 +88,10 @@ class UserHeader extends React.Component {
                             </ul>
                         </li>
 
-                     
-                    
-                        <li className="list-inline-item g-mx-4">|   {this.props.user.isLogged==true?
-                      <div>dupa dupa dupd</div>:'' }</li>
-                        <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">Login</a></li>
+
+
+                        <li className="list-inline-item g-mx-4">|</li>
+                        {userInfo}
                     </ul>
                     <UserModal></UserModal>
 
@@ -103,6 +116,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        getUserInfo: () => {
+            dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token));
+
+        },
         setLanguage: (lang) => {
             dispatch({
                 type: LANGUAGE_ACTIONS.SET_LANGUAGE,

@@ -12,7 +12,7 @@ let emptyState = {
     user_info: {
 
     },
-    isLogged:false,
+    isLogged: false,
     login: {
         isLoading: false,
         auth: {},
@@ -60,15 +60,16 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             return result;
         } case USER_ACTIONS.CLOSE_MODAL: {
 
-            const result = Object.assign({}, emptyState);
+            const result = Object.assign({}, state);
+            result.login = Object.assign({}, emptyState.login);
             result.modal.open = false;
-
             return result;
         }
         case USER_ACTIONS.USER_INFO_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
             result.user_info = action.data;
+            result.isLogged = true;
             return result;
         }
         default:
