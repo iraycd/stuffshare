@@ -31,7 +31,7 @@ class UserHeader extends React.Component {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         this.language = '';
         this.open = false;
-        if(this.props.user.isLogged){
+        if(this.props.user.isLogged && this.props.lang != this.props.user.user_info.language){
             localStorage.setItem('lang', this.props.user.user_info.language);
             this.props.setLanguage(this.props.user.user_info.language);
         }
