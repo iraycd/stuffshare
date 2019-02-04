@@ -28,7 +28,6 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
                 result.login.auth = Object.assign({}, action.data);
                 result.login.auth.uid = '';
                 result.login.exception = undefined;
-                result.isLogged = true;
                 console.log(result);
                 return result;
             }
@@ -42,11 +41,12 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             {
                 const result = Object.assign({}, state);
                 result.login.isLoading = false;
+                result.modal.open=false;
                 return result;
             }
         case USER_ACTIONS.LOG_IN_INTERNAL_FETCH.ERROR:
             {
-                console.log(action);
+                
                 const result = Object.assign({}, state);
                 result.login.exception = Object.assign({}, action.exception);
                 result.login.isLoading = false;
@@ -70,6 +70,14 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             const result = Object.assign({}, state);
             result.user_info = action.data;
             result.isLogged = true;
+            return result;
+        }
+        case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
+
+            const result = Object.assign({}, state);
+            console.log(action.data)
+         //   result.user_info = action.data;
+          //  result.isLogged = true;
             return result;
         }
         default:

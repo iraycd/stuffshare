@@ -38,10 +38,7 @@ const init = () => {
     store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {},localStorage.token, Enums.LOADER.INITIAL));
 
     if( localStorage.token){
-        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token, Enums.LOADER.INITIAL));
-
-      //  store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {},localStorage.token, Enums.LOADER.INITIAL));
- 
+        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token, Enums.LOADER.INITIAL));  
     }
 }
 

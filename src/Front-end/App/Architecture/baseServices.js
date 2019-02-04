@@ -58,7 +58,7 @@ class BaseService {
                 method: 'POST',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',
                 data: { "action": action, "model": model },
-                headers: { autorizacion: `Bearer ${token}` }
+                headers: { "Authorization": `Bearer ${token}` }
 
             })
                 .then(response => {
