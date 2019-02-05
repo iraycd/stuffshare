@@ -75,7 +75,8 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
         case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
-            console.log(action.data)
+   
+            result.user_info.language=action.dto.language;
          //   result.user_info = action.data;
           //  result.isLogged = true;
             return result;

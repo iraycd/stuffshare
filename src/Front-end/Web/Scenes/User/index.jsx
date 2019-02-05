@@ -25,16 +25,19 @@ class UserHeader extends React.Component {
         this.open = false;
 
     }
+    componentDidUpdate(prevProps) {
+        if (this.props.user.isLogged && this.props.lang != this.props.user.user_info.language) {
+            localStorage.setItem('lang', this.props.user.user_info.language);
+            this.props.setLanguage(this.props.user.user_info.language);
+        }
 
+    }
     init() {
         this.getUserInfo()
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         this.language = '';
         this.open = false;
-        if(this.props.user.isLogged && this.props.lang != this.props.user.user_info.language){
-            localStorage.setItem('lang', this.props.user.user_info.language);
-            this.props.setLanguage(this.props.user.user_info.language);
-        }
+
         switch (this.props.lang) {
             case 'us': this.language = this.tran.translate('LANG_ENGLISH_LABEL'); break;
             case 'pl': this.language = this.tran.translate('LANG_POLISH_LABEL'); break;
@@ -43,20 +46,19 @@ class UserHeader extends React.Component {
         }
     }
     setLanguageHandler(event) {
-        if(this.props.user.isLogged)
-        {
+        if (this.props.user.isLogged) {
             this.props.setUserLanguage(event.target.getAttribute('data-tag'));
+        } else {
+            localStorage.setItem('lang', event.target.getAttribute('data-tag'));
+            this.props.setLanguage(event.target.getAttribute('data-tag'));
         }
-        localStorage.setItem('lang', event.target.getAttribute('data-tag'));
-        this.props.setLanguage(event.target.getAttribute('data-tag'));
-
         //window.location.reload();
     }
 
     getUserInfo() {
         if (this.props.user.user_info.id == undefined && localStorage.token) {
             this.props.getUserInfo();
-           
+
         }
     }
 
@@ -69,9 +71,9 @@ class UserHeader extends React.Component {
 
     render() {
         this.init();
-       
+
         let userInfo = <div></div>;
-        if (this.props.user.user_info.id>0) {
+        if (this.props.user.user_info.id > 0) {
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.user.user_info.name} ${this.props.user.user_info.surname}`}</a></li>
         } else {
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">Login</a></li>
@@ -125,11 +127,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         setUserLanguage: (language) => {
-            dispatch(new BaseService().commandThunt(CommandList.User.SET_LANGUAGE,{language:language},localStorage.token));
+            dispatch(new BaseService().commandThunt(CommandList.User.SET_LANGUAGE, { language: language }, localStorage.token));
 
         },
         getUserInfo: () => {
-            dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token));
+            dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
 
         },
         setLanguage: (lang) => {
