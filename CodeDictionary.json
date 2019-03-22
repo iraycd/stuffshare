@@ -1,5 +1,71 @@
 {
     "LABEL": {
+        
+        "LABEL_LINK_LOGIN_LINK":
+        {
+            "code": "LABEL_LINK_LOGIN_LINK",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Login",
+                "us": "Login"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "USER_PROFILE_MODAL_NAME_SURNAME":
+        {
+            "code": "USER_PROFILE_MODAL_NAME_SURNAME",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Imię i nazwisko",
+                "us": "Name and surname"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "USER_PROFILE_MODAL_EMAIL":
+        {
+            "code": "USER_PROFILE_MODAL_EMAIL",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Email",
+                "us": "Email"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "USER_PROFILE_MODAL_HEADER":
+        {
+            "code": "USER_PROFILE_MODAL_HEADER",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Panel użytkownika",
+                "us": "User panel"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
+        "USER_PROFILE_MODAL_PHONE":
+        {
+            "code": "USER_PROFILE_MODAL_PHONE",
+            "status": "100",
+            "type": "LABEL",
+            "message": {
+                "pl": "Telefon",
+                "us": "Phone"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
+        },
         "CODE_CODE_LABEL": {
             "code": "CODE_CODE_LABEL",
             "status": "100",

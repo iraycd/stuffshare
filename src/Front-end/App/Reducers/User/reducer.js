@@ -13,6 +13,8 @@ let emptyState = {
 
     },
     isLogged: false,
+    getRefreshToken: false,
+    genRefreshToken: false,
     login: {
         isLoading: false,
         auth: {},
@@ -26,9 +28,11 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
 
                 const result = Object.assign({}, state);
                 result.login.auth = Object.assign({}, action.data);
-                result.login.auth.uid = '';
                 result.login.exception = undefined;
-                console.log(result);
+                if (!result.login.auth.refresh_token) {
+                    result.genRefreshToken = true;
+                }
+                result.modal.open = false;
                 return result;
             }
         case USER_ACTIONS.LOG_IN_INTERNAL_FETCH.LOADING:
@@ -41,12 +45,12 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             {
                 const result = Object.assign({}, state);
                 result.login.isLoading = false;
-                result.modal.open=false;
+               
                 return result;
             }
         case USER_ACTIONS.LOG_IN_INTERNAL_FETCH.ERROR:
             {
-                
+
                 const result = Object.assign({}, state);
                 result.login.exception = Object.assign({}, action.exception);
                 result.login.isLoading = false;
@@ -75,12 +79,20 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
         case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
-   
-            result.user_info.language=action.dto.language;
-         //   result.user_info = action.data;
-          //  result.isLogged = true;
+
+            result.user_info.language = action.dto.language;
+            //   result.user_info = action.data;
+            //  result.isLogged = true;
             return result;
         }
+        case USER_ACTIONS.GEN_REFRESH_TOKEN_FETCH.SUCCESS: {
+
+            const result = Object.assign({}, state);
+            result.genRefreshToken = false;
+            result.getRefreshToken = true;
+            return result;
+        }
+
         default:
             {
                 return state;

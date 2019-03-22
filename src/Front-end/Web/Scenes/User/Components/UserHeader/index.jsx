@@ -13,6 +13,7 @@ import QueryList from '../../../../Shared/QueryList.js';
 import { USER_ACTIONS } from '../../../App/Reducers/User/actions.js';
 import UserModal from './index.modal.jsx'
 import { LANGUAGE_ACTIONS } from '../../../App/Reducers/Language/actions.js';
+import UserProfileModal from './user_profile.modal.jsx'
 
 
 
@@ -68,16 +69,22 @@ class UserHeader extends React.Component {
         this.props.openUserModal(true, 'LOGIN');
 
     }
-
+   
     render() {
         this.init();
 
         let userInfo = <div></div>;
+        let modal = <div></div>;
+
         if (this.props.user.user_info.id > 0) {
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.user.user_info.name} ${this.props.user.user_info.surname}`}</a></li>
+            modal = <UserProfileModal></UserProfileModal>;
         } else {
-            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">Login</a></li>
+            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{this.tran.translate('LABEL_LINK_LOGIN_LINK')}</a></li>
+            modal = <UserModal></UserModal>
+
         }
+
 
         return (
             <Col xs="auto" >
@@ -103,8 +110,8 @@ class UserHeader extends React.Component {
                         <li className="list-inline-item g-mx-4">|</li>
                         {userInfo}
                     </ul>
-                    <UserModal></UserModal>
 
+                    {modal}
                 </Col>
 
             </Col>

@@ -64,7 +64,7 @@ class Login extends React.Component {
             this.state.language
             this.props.loginInternal(this.state);
 
-            
+
         }
     }
 
@@ -76,6 +76,9 @@ class Login extends React.Component {
         if (this.props.user.login.auth.token) {
             localStorage.token = this.props.user.login.auth.token;
             localStorage.refresh_token = this.props.user.login.auth.refresh_token;
+            if (this.props.user.genRefreshToken==false) {
+                this.props.genRefresh(this.props.user.login.auth.uid);
+            }
         }
 
         return (
@@ -90,7 +93,7 @@ class Login extends React.Component {
                 <TextBox type="password" placeholder={phTrans.translate('LOGIN_PASSWORD_PLACEHOLDER')} isRequired={true} label={tran.translate('LOGIN_PASSWORD_LABEL')} value={this.state.password} onChange={this.passwordHandler.bind(this)} field="password" validation={this.state.validation} />
 
                 <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('LOGIN_SUBMIT_LABEL')} isLoading={this.props.user.login.isLoading} />
-          
+
             </Form>
 
         );
@@ -112,7 +115,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         loginInternal: (dto) => {
-            dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto,null,Enums.LOADER.SET_CONTAINER_ACTION));
+            dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto, null, Enums.LOADER.SET_CONTAINER_ACTION));
+        },
+        genRefresh: (userId) => {
+            console.log(userId);
+            dispatch(new BaseService().commandThunt(CommandList.User.GEN_REFRESH_TOKEN, { uid: userId }));
         }
 
     }

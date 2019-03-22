@@ -20,7 +20,9 @@
   },
   "author": "Michal M <michal.mach@epam.com>",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "recursive-readdir": "^2.2.2"
+  },
   "babel": {
     "presets": [
       "es2015",
@@ -68,6 +70,8 @@
     "express-history-api-fallback": "^2.2.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "find": "^0.3.0",
+    "fs": "0.0.1-security",
     "fs-extra": "^7.0.0",
     "graphql": "^0.10.4",
     "html-webpack-plugin": "^2.29.0",
