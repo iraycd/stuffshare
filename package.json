@@ -21,6 +21,7 @@
   "author": "Michal M <michal.mach@epam.com>",
   "license": "ISC",
   "devDependencies": {
+    "pre-build-webpack": "^0.1.0",
     "recursive-readdir": "^2.2.2"
   },
   "babel": {

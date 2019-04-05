@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux';
 
-import { DictionaryReducer, LanguageReducer, LoaderReducer ,UserReducer} from './../App/index.js';
+import { DictionaryReducer, LoaderReducer ,UserReducer} from './../App/index.js';
 
 import NotificationReducer from '../App/Reducers/Notifications/reducer.js';
+import * as Reducers from './reducers.scenes.js' ;
 
-NotificationReducer
-console.log(UserReducer);
+console.log(Reducers.default)
 const combainReducer = combineReducers({
+    ...Reducers.default,
     DictionaryReducer,
-    LanguageReducer, 
+   // LanguageReducer, 
     LoaderReducer,
     NotificationReducer,
     UserReducer

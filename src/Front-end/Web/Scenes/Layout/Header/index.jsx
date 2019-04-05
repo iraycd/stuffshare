@@ -8,8 +8,7 @@ import { connect } from 'react-redux';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Row, Container, Col } from 'reactstrap';
 
 import { Translator } from './../../../../../Shared/index.js';
-import UserModal from './../../User/index.modal.jsx';
-import UserHeader from './../../User/index.jsx';
+import UserHeader from '../../User/Components/UserHeader/index.jsx';
 
 import './../../../assets/js/helpers/hs.hamburgers.js';
 import './../../../assets/js/components/hs.header.js';

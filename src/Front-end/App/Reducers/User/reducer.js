@@ -23,7 +23,7 @@ let emptyState = {
 }
 export default function UserReducer(state = Object.assign({}, emptyState), action) {
     switch (action.type) {
-        case USER_ACTIONS.LOG_IN_INTERNAL_FETCH.SUCCESS:
+      /*  case USER_ACTIONS.LOG_IN_INTERNAL_FETCH.SUCCESS:
             {
 
                 const result = Object.assign({}, state);
@@ -55,8 +55,8 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
                 result.login.exception = Object.assign({}, action.exception);
                 result.login.isLoading = false;
                 return result;
-            }
-        case USER_ACTIONS.OPEN_WINDOW: {
+            }*/
+       /* case USER_ACTIONS.OPEN_WINDOW: {
 
             const result = Object.assign({}, state);
             result.modal.open = action.dto.open;
@@ -68,14 +68,8 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             result.login = Object.assign({}, emptyState.login);
             result.modal.open = false;
             return result;
-        }
-        case USER_ACTIONS.USER_INFO_FETCH.SUCCESS: {
-
-            const result = Object.assign({}, state);
-            result.user_info = action.data;
-            result.isLogged = true;
-            return result;
-        }
+        }*/
+      
         case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
@@ -84,14 +78,14 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             //   result.user_info = action.data;
             //  result.isLogged = true;
             return result;
-        }
+        }/*
         case USER_ACTIONS.GEN_REFRESH_TOKEN_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
             result.genRefreshToken = false;
             result.getRefreshToken = true;
             return result;
-        }
+        }*/
 
         default:
             {

@@ -16,22 +16,20 @@ import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
 import Register from '../../Scenes/Register/index.jsx';
 import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
 import { CSSTransitionGroup } from 'react-transition-group';
+import logo from './../../../../assets/img/logo/logo-2.png';
+import SIGN_IN_MODAL_ACTIONS from './actions.js';
 
-import logo from './../../assets/img/logo/logo-2.png';
 
-class UserModal extends React.Component {
+
+class SignInModal extends React.Component {
 
     constructor() {
         super();
-        this.state = new UserLoginInternalDTO();
-        this.state.validation = [];
-        this.open = false;
+
 
     }
 
-    onOpenModal() {
-        this.setState({ open: true });
-    };
+   
 
     onCloseModal() {
         this.props.closeWindow();
@@ -55,25 +53,22 @@ class UserModal extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
-        if (this.props.user.login.auth.token) {
-            localStorage.token = this.props.user.login.auth.token;
-            localStorage.refresh_token = this.props.user.login.auth.refresh_token;
-        }
-
+       // if (this.props.user.login.auth.token) {
+        //    localStorage.token = this.props.user.login.auth.token;
+         //   localStorage.refresh_token = this.props.user.login.auth.refresh_token;
+        //}
+        //console.log(this.props);
         let modalBody = <div></div>;
-        if (this.props.user.modal.action == 'LOGIN') {
+        if (this.props.siginInModal.action == 'LOGIN') {
             modalBody =<Login></Login>
-        } else if (this.props.user.modal.action == 'CREATE_ACCOUNT') {
+        } else if (this.props.siginInModal.action == 'CREATE_ACCOUNT') {
             modalBody =<Register></Register>
         }
-        else if (this.props.user.modal.action == 'FORGOT_PASSWORD') {
+        else if (this.props.siginInModal.action == 'FORGOT_PASSWORD') {
             modalBody =<ForgotPassword></ForgotPassword>
-            
-
         }
 
         let body =
-            <div><Modal open={this.props.user.modal.open} onClose={this.onCloseModal.bind(this)} center closeIconSize={15} >
                 <Container className="g-pa-15">
                     <Row>
                         <Col xs="8">
@@ -81,17 +76,13 @@ class UserModal extends React.Component {
                         </Col>
                         <Col xs="4" >
                             <img src={logo} className={"g-mb-10 g-pa-20 img-logo-width"} />
-
-
-                            <ButtonLoader onClick={this.onLoginBtn.bind(this)} size={"sm"} className={"btn rounded-0 btn-block " + (this.props.user.modal.action == 'LOGIN' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_SIGN_IN_BTN_LABEL')} />
-                            <ButtonLoader onClick={this.onCreateAccountBtn.bind(this)} size={"sm"} className={"btn rounded-0  btn-block " + (this.props.user.modal.action == 'CREATE_ACCOUNT' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_CREATEA_ACCOUNT_BTN_LABEL')} />
-                            <ButtonLoader onClick={this.onForgotPaswordBtn.bind(this)} size={"sm"} className={"btn rounded-0 btn-block " + (this.props.user.modal.action == 'FORGOT_PASSWORD' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_FORGOT_PASSWOD_BTN_LABEL')} />
+                            <ButtonLoader onClick={this.onLoginBtn.bind(this)} size={"sm"} className={"btn rounded-0 btn-block " + (this.props.siginInModal.action == 'LOGIN' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_SIGN_IN_BTN_LABEL')} />
+                            <ButtonLoader onClick={this.onCreateAccountBtn.bind(this)} size={"sm"} className={"btn rounded-0  btn-block " + (this.props.siginInModal.action == 'CREATE_ACCOUNT' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_CREATEA_ACCOUNT_BTN_LABEL')} />
+                            <ButtonLoader onClick={this.onForgotPaswordBtn.bind(this)} size={"sm"} className={"btn rounded-0 btn-block " + (this.props.siginInModal.action == 'FORGOT_PASSWORD' ? 'u-btn-primary' : '')} value={tran.translate('LOGIN_FORGOT_PASSWOD_BTN_LABEL')} />
 
                         </Col>
                     </Row>
                 </Container>
-            </Modal>
-            </div>;
         return (
 
             body
@@ -107,19 +98,18 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer
-
+        user: state.UserReducer,
+        modal:state.ModalComponentReducer,
+        siginInModal:state.SignInModalReducer
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loginInternal: (dto) => {
-            dispatch(new BaseService().commandThunt(QueryList.User.LOG_IN_INTERNAL, dto));
-        },
+        
         changeAction: (open, action) => {
             dispatch({
-                type: USER_ACTIONS.OPEN_WINDOW,
+                type: SIGN_IN_MODAL_ACTIONS.OPEN_MODAL,
                 dto: {
                     open: open,
                     action: action
@@ -128,7 +118,7 @@ const mapDispatchToProps = (dispatch) => {
         },
         closeWindow: () => {
             dispatch({
-                type: USER_ACTIONS.CLOSE_MODAL,
+                type: SIGN_IN_MODAL_ACTIONS.CLOSE_WINDOW,
                 dto: {
                     open: false,
                 }
@@ -141,4 +131,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(UserModal);
+)(SignInModal);

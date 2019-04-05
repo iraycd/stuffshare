@@ -22,6 +22,7 @@ import { BaseService, LANGUAGE_ACTIONS } from './../App/index.js';
 import { QueryList, Enums } from './../../Shared/index.js';
 
 import logo from './assets/img/logo/logo-1.png';
+import AUTH_ACTIONS from './Reducers/Auth/action.js';
 let store = configureStore({});
 //INIT
 let loader = 0;
@@ -38,7 +39,16 @@ const init = () => {
     store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {},localStorage.token, Enums.LOADER.INITIAL));
 
     if( localStorage.token){
-        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token, Enums.LOADER.INITIAL));  
+        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token, Enums.LOADER.INITIAL)).then(succ=>{
+           
+            store.dispatch({
+                type: AUTH_ACTIONS.IS_AUTH,
+                dto: {
+                    refresh_token: localStorage.refresh_token,
+                    token: localStorage.token
+                }
+            });
+        })
     }
 }
 

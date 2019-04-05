@@ -1,4 +1,3 @@
-import ActionsGen from "../../actions";
 
 /*
  * action types

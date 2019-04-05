@@ -14,7 +14,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import logo from './../../../../assets/img/logo/logo-2.png';
 import CommandList from '../../../../../../Shared/CommandList.js';
 
-class UserProfileInfoModal extends React.Component {
+class UserProfileInfo extends React.Component {
 
     constructor() {
         super();
@@ -83,21 +83,21 @@ class UserProfileInfoModal extends React.Component {
                                 <Col xs="4" >
                                     <Label>{tran.translate('USER_PROFILE_MODAL_NAME_SURNAME')}</Label>
                                 </Col>
-                                <Col xs="8"><Label>{this.props.user.user_info.name} {this.props.user.user_info.surname}</Label>
+                                <Col xs="8"><Label>{this.props.auth.user.name} {this.props.auth.user.surname}</Label>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col xs="4" >
                                     <Label>{tran.translate('USER_PROFILE_MODAL_EMAIL')}</Label>
                                 </Col>
-                                <Col xs="8"><Label>{this.props.user.user_info.email} </Label>
+                                <Col xs="8"><Label>{this.props.auth.user.email} </Label>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col xs="4" >
                                     <Label>{tran.translate('USER_PROFILE_MODAL_PHONE')}</Label>
                                 </Col>
-                                <Col xs="8"><Label>{this.props.user.user_info.phone} </Label>
+                                <Col xs="8"><Label>{this.props.auth.user.phone} </Label>
                                 </Col>
                             </Row>
                         </Col>
@@ -120,7 +120,8 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer
+        user: state.UserReducer,
+        auth:state.AuthReducer
 
     };
 }
@@ -143,4 +144,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(UserProfileInfoModal);
+)(UserProfileInfo);

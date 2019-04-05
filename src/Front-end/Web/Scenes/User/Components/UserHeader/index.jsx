@@ -5,15 +5,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from './../../../../Shared/index.js';
-import { BaseService } from './../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../Components/index.js';
-import UserLoginInternalDTO from '../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../Shared/QueryList.js';
-import { USER_ACTIONS } from '../../../App/Reducers/User/actions.js';
-import UserModal from './index.modal.jsx'
-import { LANGUAGE_ACTIONS } from '../../../App/Reducers/Language/actions.js';
-import UserProfileModal from './user_profile.modal.jsx'
+import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
+import { BaseService } from '../../../../../App/index.js';
+import { TextBox, DropDownList, ButtonLoader } from '../../../../Components/index.js';
+import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
+import UserProfileModal from '../UserProfileModal/index.jsx'
+import QueryList from '../../../../../../Shared/QueryList.js';
+import ModalComponent from '../../../../Components/ModalComponent/index.jsx';
+import SignInModal from '../SignInModal/index.jsx';
+import { USER_HEADER_ACTIONS } from './actions.js';
 
 
 
@@ -26,15 +26,14 @@ class UserHeader extends React.Component {
         this.open = false;
 
     }
-    componentDidUpdate(prevProps) {
-        if (this.props.user.isLogged && this.props.lang != this.props.user.user_info.language) {
-            localStorage.setItem('lang', this.props.user.user_info.language);
-            this.props.setLanguage(this.props.user.user_info.language);
+   /* componentDidUpdate(prevProps) {
+        if (this.props.auth.is_logged && this.props.lang != this.props.auth.user.language) {
+            localStorage.setItem('lang', this.props.auth.user.language);
+            this.props.setLanguage(this.props.auth.user.language);
         }
 
-    }
+    }*/
     init() {
-        this.getUserInfo()
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         this.language = '';
         this.open = false;
@@ -47,7 +46,8 @@ class UserHeader extends React.Component {
         }
     }
     setLanguageHandler(event) {
-        if (this.props.user.isLogged) {
+        if (this.props.auth.is_logged) {
+            localStorage.setItem('lang', event.target.getAttribute('data-tag'));
             this.props.setUserLanguage(event.target.getAttribute('data-tag'));
         } else {
             localStorage.setItem('lang', event.target.getAttribute('data-tag'));
@@ -56,12 +56,6 @@ class UserHeader extends React.Component {
         //window.location.reload();
     }
 
-    getUserInfo() {
-        if (this.props.user.user_info.id == undefined && localStorage.token) {
-            this.props.getUserInfo();
-
-        }
-    }
 
     openModalHandler(event) {
 
@@ -69,20 +63,19 @@ class UserHeader extends React.Component {
         this.props.openUserModal(true, 'LOGIN');
 
     }
-   
+
     render() {
         this.init();
 
         let userInfo = <div></div>;
         let modal = <div></div>;
 
-        if (this.props.user.user_info.id > 0) {
-            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.user.user_info.name} ${this.props.user.user_info.surname}`}</a></li>
+        if (this.props.auth.is_logged == true) {
+            userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.auth.user.name} ${this.props.auth.user.surname}`}</a></li>
             modal = <UserProfileModal></UserProfileModal>;
         } else {
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{this.tran.translate('LABEL_LINK_LOGIN_LINK')}</a></li>
-            modal = <UserModal></UserModal>
-
+            modal = <SignInModal></SignInModal>
         }
 
 
@@ -111,7 +104,7 @@ class UserHeader extends React.Component {
                         {userInfo}
                     </ul>
 
-                    {modal}
+                    <ModalComponent modalType={modal}></ModalComponent>
                 </Col>
 
             </Col>
@@ -126,7 +119,7 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer
+        auth: state.AuthReducer,
 
     };
 }
@@ -134,22 +127,26 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         setUserLanguage: (language) => {
-            dispatch(new BaseService().commandThunt(CommandList.User.SET_LANGUAGE, { language: language }, localStorage.token));
+            dispatch(new BaseService().commandThunt(CommandList.User.SET_LANGUAGE, { language: language }, localStorage.token)).then(succ => {
+                dispatch({
+                    type: USER_HEADER_ACTIONS.SET_LANGUAGE,
+                    lang: language
+                });
+            }
+
+            );
 
         },
-        getUserInfo: () => {
-            dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
 
-        },
         setLanguage: (lang) => {
             dispatch({
-                type: LANGUAGE_ACTIONS.SET_LANGUAGE,
+                type: USER_HEADER_ACTIONS.SET_LANGUAGE,
                 lang: lang
             });
         },
         openUserModal: (open, action) => {
             dispatch({
-                type: USER_ACTIONS.OPEN_WINDOW,
+                type: USER_HEADER_ACTIONS.OPEN_MODAL,
                 dto: {
                     open: open,
                     action: action

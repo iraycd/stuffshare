@@ -11,4 +11,4 @@ const ActionsGen = (action) => {
         FINALLY: action + "_" + Enums.ACTIONS.FINALLY
     };
 }
-module.exports = { ActionsGen };
+export default  ActionsGen ;

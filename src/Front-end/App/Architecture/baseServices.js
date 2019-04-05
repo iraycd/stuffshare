@@ -27,12 +27,14 @@ class BaseService {
                 .then(response => {
 
                     dispatch({ type: action + "_SUCCESS", data: response.data, dto: model });
+                    return Promise.resolve(response);
 
                 })
                 .catch(function (error) {
                     BaseService.prototype.errorHandling(error, dispatch, action, model);
-                }).then(function () {
-
+                    return Promise.resolve(error);
+                }).then(function (res) {
+                    console.log(res);
                     dispatch({ type: action + "_FINALLY" });
 
                     switch (loader) {
@@ -41,7 +43,15 @@ class BaseService {
                         case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.FINISH_CONTAINER_ACTION, actionName: action });
                         default: ;
                     }
+                    if (res.status == 200) {
+                        return Promise.resolve(res);
+                    }else{
+                        return Promise.reject(res);
+
+                    }
                 });
+
+
         }
     }
     commandThunt(action, model = {}, token = null, loader = null) {
@@ -67,11 +77,15 @@ class BaseService {
                         data: response.data,
                         dto: model
                     });
+                    return Promise.resolve(response);
+
                 })
                 .catch(function (error) {
                     BaseService.prototype.errorHandling(error, dispatch, action, model);
+                    return Promise.reject(error);
 
-                }).then(function () {
+
+                }).then(function (res) {
                     dispatch({ type: action + "_FINALLY" });
 
                     switch (loader) {
@@ -79,6 +93,12 @@ class BaseService {
                         case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.FINISH_BODY_ACTION, actionName: action });
                         case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.FINISH_CONTAINER_ACTION, actionName: action });
                         default: ;
+                    }
+                    if (res.status == 200) {
+                        return Promise.resolve(res);
+                    }else{
+                        return Promise.reject(res);
+
                     }
                 });
         }

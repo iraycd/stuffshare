@@ -1,6 +1,6 @@
 import { CommandList, QueryList, Enums } from './../../../../Shared/index.js';
 
-import {ActionsGen} from './../../actions.js' ;
+import ActionsGen from '../../actions.js';
 
 /*
  * action types

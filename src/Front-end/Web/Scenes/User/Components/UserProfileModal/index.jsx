@@ -5,20 +5,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, TabPane, TabContent, Nav, NavItem, NavLink } from 'reactstrap';
-import { Enums, CommandList, Translator } from './../../../../Shared/index.js';
-import { BaseService } from './../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../Components/index.js';
-import UserLoginInternalDTO from '../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../Shared/QueryList.js';
+import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+//import { TextBox, DropDownList, ButtonLoader } from './../../Components/index.js';
+import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
 import Modal from 'react-responsive-modal'
-import Login from './Scenes/Login/index.jsx';
-import ForgotPassword from './Scenes/ForgotPassword/index.jsx';
-import Register from './Scenes/Register/index.jsx';
-import { USER_ACTIONS } from '../../../App/Reducers/User/actions.js';
-import { CSSTransitionGroup } from 'react-transition-group';
+import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
+import Register from '../../Scenes/Register/index.jsx';
+import Login from '../../Scenes/Login/index.jsx';
 
-import logo from './../../assets/img/logo/logo-2.png';
-import UserProfileInfoModal from './Scenes/UserProfileInfoModal/index.jsx';
+
+import { CSSTransitionGroup } from 'react-transition-group';
+import logo from './../../../../assets/img/logo/logo-2.png';
+import UserProfileInfo from '../../Scenes/UserProfileInfo/index.jsx'
+import QueryList from '../../../../../../Shared/QueryList.js';
+import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
+
 
 
 class UserProfileModal extends React.Component {
@@ -62,7 +64,7 @@ class UserProfileModal extends React.Component {
 
 
         let body =
-            <div><Modal open={this.props.user.modal.open} onClose={this.onCloseModal.bind(this)} center closeIconSize={15} >
+            <div>
                 <Nav tabs>
                     <NavItem>
                         <NavLink className="active"
@@ -95,10 +97,9 @@ class UserProfileModal extends React.Component {
                 </Nav>
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
-                        <UserProfileInfoModal></UserProfileInfoModal>
+                        <UserProfileInfo></UserProfileInfo>
                     </TabPane>
                 </TabContent>
-            </Modal>
             </div >;
         return (
 
@@ -127,7 +128,7 @@ const mapDispatchToProps = (dispatch) => {
         },
         changeAction: (open, action) => {
             dispatch({
-                type: USER_ACTIONS.OPEN_WINDOW,
+                type: USER_ACTIONS.OPEN_MODAL,
                 dto: {
                     open: open,
                     action: action

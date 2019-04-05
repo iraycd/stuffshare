@@ -1,6 +1,6 @@
 import { CommandList, QueryList, Enums } from './../../../../Shared/index.js';
+import ActionsGen from '../../actions.js';
 
-import {ActionsGen} from './../../actions.js' ;
 
 
 
@@ -18,6 +18,6 @@ export const USER_ACTIONS = {
     FORGOT_PASSWORD_FETCH :ActionsGen(CommandList.User.FORGOT_PASSWORD),
     SET_LANGUAGE_FETCH :ActionsGen(CommandList.User.SET_LANGUAGE)   , 
     SET_COORDIATES_FETCH :ActionsGen(CommandList.User.SET_COORDIATES),
-    OPEN_WINDOW: 'OPEN_WINDOW',
-    CLOSE_MODAL:'CLOSE_MODAL'
+   // OPEN_WINDOW: 'OPEN_WINDOW',
+    //CLOSE_MODAL:'CLOSE_MODAL'
 }
