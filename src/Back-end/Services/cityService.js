@@ -34,18 +34,19 @@ export default class CityService extends BaseService {
   /**
    *
    *
-   * @param   {{ country: CityDTO}}
-   * @returns
+   * @param   {{ city: CityDTO}}
+   * @returns {{Promise<CityDTO[]>}}
    * @memberof CityService
    */
-  async getCountryByName({country}) {
+  async getCities({city}) {
 
     console.log('KUPAAAA');
     console.log(this.unitOfWorkDI);
 
-    let countryList = await this.unitOfWorkDI.countryRepository.getCountryByName({
-      name_fs: country.name
+    let cityList = await this.unitOfWorkDI.cityRepository.getCities({
+      name_fs: city.name,
+      region_id:city.region_id
     });
-    return countryList;
+    return cityList;
   }
 }

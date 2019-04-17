@@ -54,6 +54,8 @@ import CityRepository from "./Repository/cityRepository.js";
 import CityService from "./Services/cityService.js";
 import RegionService from "./Services/regionService.js";
 import RegionRepository from "./Repository/regionRepository.js";
+import GetCitiesQuery from "./Query/City/getCitiesQuery.js";
+import GetRegionsQuery from "./Query/Region/getRegionsQuery.js";
 
 
 /**
@@ -147,6 +149,12 @@ exporter[QueryList.Item.SEARCH_ITEM] = asClass(SearchItemQuery);
 ///////////////////COUNTRY////////////////////////////////
 
 exporter[QueryList.Country.GET_COUNTRY] = asClass(GetCountriesQuery);
+
+exporter[QueryList.City.GET_CITY] = asClass(GetCitiesQuery);
+
+
+exporter[QueryList.Region.GET_REGION] = asClass(GetRegionsQuery);
+
 
 
 

@@ -34,17 +34,18 @@ export default class RegionService extends BaseService {
   /**
    *
    *
-   * @param   {{ country: RegionDTO}}
+   * @param   {{ region: RegionDTO}}
    * @returns
    * @memberof RegionService
    */
-  async getCountryByName({region}) {
+  async getRegions({region}) {
 
     console.log('KUPAAAA');
     console.log(this.unitOfWorkDI);
 
-    let countryList = await this.unitOfWorkDI.countryRepository.getCountryByName({
-      name_fs: country.name
+    let countryList = await this.unitOfWorkDI.regionRepository.getRegions({
+      name_fs: region.name,
+      country_id:region.country_id
     });
     return countryList;
   }

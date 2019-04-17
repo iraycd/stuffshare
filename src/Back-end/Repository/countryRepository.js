@@ -26,7 +26,7 @@ export default class CountryRepository extends BaseRepository {
    *
    *
    * @param {*} { user_id,country_id, transaction }
-    * @return {Promise<CountryDTO>}
+    * @return {Promise<CountryDTO[]>}
     *  @memberof UserRepository
    */
   getCountryByName({ name_fs,  transaction }) {

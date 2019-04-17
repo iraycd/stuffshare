@@ -26,10 +26,10 @@ export default class CityRepository extends BaseRepository {
    *
    *
    * @param {*} { user_id,country_id, transaction }
-    * @return {Promise<CityDTO>}
-    *  @memberof UserRepository
+    * @return {Promise<CityDTO[]>}
+    *  @memberof CityRepository
    */
-  getCityByName({ name_fs,region_id,  transaction }) {
+  getCities({ name_fs,region_id,  transaction }) {
 
     let freetext = PrepareSearch.simplePrepare(name_fs)
     console.log(freetext);

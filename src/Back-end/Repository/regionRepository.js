@@ -26,29 +26,31 @@ export default class RegionRepository extends BaseRepository {
    *
    *
    * @param {*} { user_id,country_id, transaction }
-    * @return {Promise<RegionDTO>}
+    * @return {Promise<RegionDTO[]>}
     *  @memberof RegionRepository
    */
-  getCountryByName({ name_fs,country_id,  transaction }) {
+  getRegions({ name_fs, country_id, transaction }) {
 
     let freetext = PrepareSearch.simplePrepare(name_fs)
     console.log(freetext);
+    freetext = freetext != undefined ? freetext : '""';
     let withQuery = [];
-    withQuery.push(`countries_prep as
-                        (SELECT Countries.* ,
+    withQuery.push(`regions_prep as
+                        (SELECT Regions.* ,
                         0 aS RANK
-                        FROM Countries
+                        FROM Regions
+                        WHERE country_id = ISNULL(:country_id,country_id)
                         )`);
 
-   
-      withQuery.push(
-        `search_fts as (
+
+    withQuery.push(
+      `search_fts as (
             SELECT t.* FROM (SELECT 
               [KEY],
               ([RANK])*100/(1+CAST( SUM([RANK]) OVER( PARTITION BY 1) AS FLOAT)) AS [RANK],
 			  COUNT(*) OVER() as counter
               FROM 
-              CONTAINSTABLE (Countries,  
+              CONTAINSTABLE (Regions,  
                 name_clob,
                 :freetext,
                 LANGUAGE '${this.context.language == 'pl' ? 'polish' : 'english'}'
@@ -62,19 +64,20 @@ export default class RegionRepository extends BaseRepository {
           )
         `
 
-      )
-    
+    )
+
     let query = `WITH 
                   ${withQuery.join(',')}
-                  SELECT c.id,c.name,c.longitude,c.latitude FROM countries_prep c
-                  JOIN  search_fts fs ON c.id= fs.[KEY]
-                  ORDER BY fs.RANK DESC ,name`;
+                  SELECT c.id,c.name,c.longitude,c.latitude FROM regions_prep c
+                  ${freetext.length !="" ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,name' : 'ORDER BY name'}`
+
+    console.log(query);
     return this.sequelizeDI.sequelize.query(
       query
       ,
       {
         replacements: {
-          freetext:freetext
+          freetext: freetext
         },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT

@@ -24,6 +24,12 @@ let QueryList = {
     },
     Country:{
         GET_COUNTRY:"getCountriesQuery"
+    },
+    City:{
+        GET_CITY:'getCitiesQuery'
+    },
+    Region:{
+        GET_REGION:'getRegionsQuery'
     }
 }
 

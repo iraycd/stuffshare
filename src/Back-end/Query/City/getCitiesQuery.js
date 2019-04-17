@@ -22,6 +22,6 @@ export default class GetCitiesQuery extends BaseQuery {
 
     async action() {
         console.log(this.countryServiceDI)
-        return await this.cityServiceDI.setContext(this.context).getCityByName({country:this.model});
+        return await this.cityServiceDI.setContext(this.context).getCities({city:this.model});
     }
 };
