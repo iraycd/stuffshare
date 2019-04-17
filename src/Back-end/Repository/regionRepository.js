@@ -1,6 +1,6 @@
 import BaseRepository from "../Architecture/baseRepository.js";
 import SequelizeDB from "../Database/models/index.js";
-import CountryDTO from "../../Shared/DTO/Country/CountryDTO.js";
+import RegionDTO from "../../Shared/DTO/Region/RegionDTO.js";
 import PrepareSearch from "../Architecture/prepareSearch.js";
 
 
@@ -26,10 +26,10 @@ export default class RegionRepository extends BaseRepository {
    *
    *
    * @param {*} { user_id,country_id, transaction }
-    * @return {Promise<CountryDTO>}
+    * @return {Promise<RegionDTO>}
     *  @memberof RegionRepository
    */
-  getCountryByName({ name_fs,  transaction }) {
+  getCountryByName({ name_fs,country_id,  transaction }) {
 
     let freetext = PrepareSearch.simplePrepare(name_fs)
     console.log(freetext);

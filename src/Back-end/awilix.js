@@ -50,6 +50,11 @@ import GetUserInfoQuery from "./Query/User/getUserInfoQuery.js";
 import CountryRepository from "./Repository/countryRepository.js";
 import CountryService from "./Services/countryService.js";
 import GetCountriesQuery from "./Query/Country/getCountriesQuery.js";
+import CityRepository from "./Repository/cityRepository.js";
+import CityService from "./Services/cityService.js";
+import RegionService from "./Services/regionService.js";
+import RegionRepository from "./Repository/regionRepository.js";
+
 
 /**
  * 
@@ -72,8 +77,11 @@ let exporter = {
   unitOfWorkDI: asClass(UnitOfWork, { lifetime: awilix.Lifetime.SCOPED }),
   countryRepositoryDI: asClass(CountryRepository),
   countryServiceDI: asClass(CountryService),
+  cityRepositoryDI: asClass(CityRepository),
+  cityServiceDI: asClass(CityService),
+  regionRepositoryDI: asClass(RegionRepository),
+  regionServiceDI: asClass(RegionService),
 
-  
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(
@@ -138,7 +146,7 @@ exporter[QueryList.Item.SEARCH_ITEM] = asClass(SearchItemQuery);
 
 ///////////////////COUNTRY////////////////////////////////
 
-exporter[QueryList.Country.GET_COUNTRY]= asClass(GetCountriesQuery);
+exporter[QueryList.Country.GET_COUNTRY] = asClass(GetCountriesQuery);
 
 
 

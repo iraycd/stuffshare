@@ -8,7 +8,7 @@ export default class GetCountriesQuery extends BaseQuery {
 
     /**
   * Creates an instance of GetDictionariesQuery.
-  * @param  {{ logFileInfrastructureDI:LogFileInfrastructure, countryServiceI:CountryService }}
+  * @param  {{ logFileInfrastructureDI:LogFileInfrastructure, countryServiceDI:CountryService }}
   * @memberof GetCountriesQuery
   */
     constructor({ logFileInfrastructureDI, countryServiceDI }) {
