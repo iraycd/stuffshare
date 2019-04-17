@@ -26,7 +26,7 @@ export default class UserRegisterInternalDTO extends BaseDTO {
         const validator = new Validator();
         validator(state.name).display("name").required().isString().notEmpty();
 
-        validator(state.surname).display("surname").required().isString().notEmpty();
+        //validator(state.surname).display("surname").required().isString().notEmpty();
 
         validator(state.email).display("email").required();
         return validator.run();

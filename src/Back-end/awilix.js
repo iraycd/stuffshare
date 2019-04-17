@@ -47,6 +47,9 @@ import SetAsVerifiedCommand from "./Commands/Category/setAsVerifiedCommand.js";
 import TextRepository from './Repository/textRepository.js'
 import SearchItemQuery from "./Query/Item/searchItemQuery.js";
 import GetUserInfoQuery from "./Query/User/getUserInfoQuery.js";
+import CountryRepository from "./Repository/countryRepository.js";
+import CountryService from "./Services/countryService.js";
+import GetCountriesQuery from "./Query/Country/getCountriesQuery.js";
 
 /**
  * 
@@ -67,6 +70,10 @@ let exporter = {
   textRepositoryDI: asClass(TextRepository),
   itemServiceDI: asClass(ItemService),
   unitOfWorkDI: asClass(UnitOfWork, { lifetime: awilix.Lifetime.SCOPED }),
+  countryRepositoryDI: asClass(CountryRepository),
+  countryServiceDI: asClass(CountryService),
+
+  
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(
@@ -129,7 +136,17 @@ exporter[QueryList.Item.SEARCH_ITEM] = asClass(SearchItemQuery);
 
 
 
+///////////////////COUNTRY////////////////////////////////
 
+exporter[QueryList.Country.GET_COUNTRY]= asClass(GetCountriesQuery);
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////
 ContainerAwlix.register(exporter);
 let container = ContainerAwlix;
 export default container;

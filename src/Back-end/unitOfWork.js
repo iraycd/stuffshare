@@ -9,6 +9,7 @@ import BlobMapperRepository from "./Repository/blobMapperRepository.js";
 import ItemCategoryRepository from "./Repository/itemCategoryRepository.js";
 import ItemRepository from "./Repository/itemRepository.js";
 import TextRepository from "./Repository/textRepository.js";
+import CountryRepository from "./Repository/countryRepository.js";
 
 
 /**
@@ -21,11 +22,11 @@ export default class UnitOfWork extends BaseUnitOfWork {
 
     /**
      * Creates an instance of UnitOfWork.
-     * @param  { { categoryRepositoryDI:CategoryRepository, userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository}} 
+     * @param  { { categoryRepositoryDI:CategoryRepository, userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository}} 
      * @memberof UnitOfWork
      */
     // @ts-ignore
-    constructor({ categoryRepositoryDI, userRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI ,blobMapperRepositoryDI,itemCategoryRepositoryDI,itemRepositoryDI,textRepositoryDI}) {
+    constructor({ categoryRepositoryDI, userRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI ,blobMapperRepositoryDI,itemCategoryRepositoryDI,itemRepositoryDI,textRepositoryDI,countryRepositoryDI}) {
         super()
 
         this.transaction = null;
@@ -37,7 +38,8 @@ export default class UnitOfWork extends BaseUnitOfWork {
             blobRepositoryDI,
             blobMapperRepositoryDI,
             itemCategoryRepositoryDI,
-            itemRepositoryDI
+            itemRepositoryDI,
+            countryRepositoryDI
         }
     };
 
@@ -103,6 +105,15 @@ export default class UnitOfWork extends BaseUnitOfWork {
     }
 
 
+    /**
+     * 
+     * @return {CountryRepository}
+     * @readonly
+     * @memberof UnitOfWork
+     */
+    get countryRepository() {
+        return this.repositories.countryRepositoryDI;
+    }
     /**
      *  
      * @return {ItemCategoryRepository}

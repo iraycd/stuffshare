@@ -1,0 +1,1 @@
+{"error":{"status":"400","message":{"pl":"Niepoprawnie wypełnione dane","us":"Invalid data"},"code":"VALIDATION_INVALID_ERROR","type":"ERROR","validations":[{"failed":"notEmpty","path":["name"],"value":""}],"field":"","validation":[],"toRefresh":true},"level":"error","message":"","timestamp":"2019-04-12T00:18:52.863Z"}

@@ -14,6 +14,10 @@ import BlobMapper from "./blobMapper.js";
 import Item from "./item.js";
 import ItemCategory from "./itemcategory.js";
 import V_User from "./v_user.js";
+import Country from "./country.js";
+import City from "./city.js";
+import Region from "./region.js";
+
 
 var env = process.env.NODE_ENV || "development";
 var config = configJSON[env];
@@ -54,6 +58,10 @@ let models = {
   ItemCategory: ItemCategory.init(sequelize, Sequelize),
   Blob: Blob.init(sequelize, Sequelize),
   V_User: V_User.init(sequelize, Sequelize),
+  Country: Country.init(sequelize, Sequelize),
+  Region: Region.init(sequelize, Sequelize),
+  Citry: City.init(sequelize, Sequelize)
+
   
 };
 

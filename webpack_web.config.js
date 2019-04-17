@@ -68,6 +68,7 @@ const config = [{
     },
     node: { fs: 'empty' },
     resolve: {
+    
         extensions: ['.js', '.jsx', '.css', '.sass', '.scss', '.png', '.jpg', '.gif', '.cur', '.woff', '.eot', '.ttf', '.svg', '.dtd', '.woff2'],
     },
     plugins: [HtmlWebpackPluginConfig,

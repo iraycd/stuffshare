@@ -5,11 +5,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from './../../../../../../Shared/index.js';
+import { Enums, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
 import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
 import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
+import CommandList from '../../../../../../Shared/CommandList';
 
 class ForgotPassword extends React.Component {
 
@@ -21,7 +21,7 @@ class ForgotPassword extends React.Component {
     refreshValidation() {
         if (this.state.toRefresh) {
             setTimeout(() => {
-                //          this.validation();
+                      this.validation();
             });
         }
     }
@@ -62,7 +62,7 @@ class ForgotPassword extends React.Component {
         //   if (this.validation().length == 0) {
         // this.props.code=this.state;
 
-        this.props.addDictionary(this.state);
+        this.props.forgotPassowrd(this.state);
 
         //   }
     }
@@ -102,10 +102,13 @@ const mapStateToProps = (state) => {
     };
 }
 
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        loginInternal: (dto) => {
-            dispatch(new BaseService().commandThunt(QueryList.User.LOG_IN_INTERNAL, dto));
+        forgotPassowrd: (dto) => {
+            dispatch(new BaseService().commandThunt(CommandList.User.FORGOT_PASSWORD_CHECK, dto)).then(succ=>{
+                
+            })
         }
 
     }

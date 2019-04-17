@@ -26,17 +26,17 @@ class ModalComponent extends React.Component {
     onCloseModal() {
         this.props.closeWindow();
     };
-  
+
     init() {
         this.open = false;
     }
 
     render() {
-        
+
 
         let body =
-            <div><Modal open={this.props.modal.open} onClose={this.onCloseModal.bind(this)} center closeIconSize={15}>
-              {this.props.modalType}
+            <div><Modal open={this.props.modal.open} onClose={this.onCloseModal.bind(this)} center closeIconSize={15} classNames={{ modal: this.props.classWidth }}>
+                {this.props.modalType}
             </Modal>
             </div>;
         return (
@@ -52,15 +52,15 @@ const mapStateToProps = (state) => {
     //console.log(state);
 
     return {
-      
-        modal:state.ModalComponentReducer
+
+        modal: state.ModalComponentReducer
 
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+
         changeAction: (open, action) => {
             dispatch({
                 type: MODAL_ACTIONS.OPEN_MODAL,

@@ -11,6 +11,10 @@ class BaseService {
 
     queryThunt(action, model = {}, token = null, loader = null) {
 
+
+        let body = Object.assign({},model);
+        body.validation=undefined
+
         return (dispatch) => {
             switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
@@ -21,7 +25,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING" });
             return axios({
                 method: 'get',
-                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": model }),
+                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": body }),
                 headers: { "Authorization": `Bearer ${token}` }
             })
                 .then(response => {
@@ -56,6 +60,8 @@ class BaseService {
     }
     commandThunt(action, model = {}, token = null, loader = null) {
 
+        let body = Object.assign({},model);
+        body.validation=undefined
         return (dispatch) => {
             switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
@@ -67,7 +73,7 @@ class BaseService {
             return axios({
                 method: 'POST',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',
-                data: { "action": action, "model": model },
+                data: { "action": action, "model": body },
                 headers: { "Authorization": `Bearer ${token}` }
 
             })

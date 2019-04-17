@@ -1,6 +1,57 @@
 @charset "UTF-8";
+#createUserMap{
+    width:100%;
+    height:100%;
+    border:1px solid rgba(0, 0, 0, 0.15)
+
+
+}
+.size-100{
+    width:100%;
+    height:100%;
+}
+.size-map-100{
+    width:100%;
+    height:100%;
+    border:1px solid rgba(0, 0, 0, 0.15)
+}
 .modal-wd-90p{
     max-width:90% !important;
+}
+.modal-wd-50p{
+    max-width:50% !important;
+}
+.modal-wd-60p{
+    max-width:60% !important;
+}
+.DayPickerInput{
+    width:100%;
+}
+.DayPickerInput>input{
+    border-color:#ccc;
+    color:#444;
+    width:100%;
+    display:block;
+    padding:.5rem .75rem;
+    font-size:1rem;
+    line-height:  1.25em;
+    transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    border-radius:0 !important;
+    background-clip:padding-box;
+    border:1px solid rgba(0, 0, 0, 0.15)
+}
+
+.DayPickerInput>input::placeholder {
+    color: g-color-white;
+    opacity: .85;
+}
+.DayPickerInput>input:focus , 
+.DayPickerInput>input:active,
+.DayPickerInput>input::selection
+    {
+    border-color: #fe6466;
+    outline: 0px;
+
 }
 
 .img-logo-width{

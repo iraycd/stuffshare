@@ -21,8 +21,10 @@ let QueryList = {
     Item: {
         GET_ITEM: "getItemQuery",
         SEARCH_ITEM: "searchItemQuery"
+    },
+    Country:{
+        GET_COUNTRY:"getCountriesQuery"
     }
-
 }
 
 export default QueryList;

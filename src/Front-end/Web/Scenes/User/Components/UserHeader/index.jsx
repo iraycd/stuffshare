@@ -69,11 +69,14 @@ class UserHeader extends React.Component {
 
         let userInfo = <div></div>;
         let modal = <div></div>;
-
+let width="";
         if (this.props.auth.is_logged == true) {
+            width="modal-wd-60p";
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{`${this.props.auth.user.name} ${this.props.auth.user.surname}`}</a></li>
             modal = <UserProfileModal></UserProfileModal>;
         } else {
+            width="modal-wd-50p";
+
             userInfo = <li className="list-inline-item g-mx-4"><a onClick={this.openModalHandler.bind(this)} className="g-color-white g-color-primary--hover g-text-underline--none--hover" href="#">{this.tran.translate('LABEL_LINK_LOGIN_LINK')}</a></li>
             modal = <SignInModal></SignInModal>
         }
@@ -104,7 +107,7 @@ class UserHeader extends React.Component {
                         {userInfo}
                     </ul>
 
-                    <ModalComponent modalType={modal}></ModalComponent>
+                    <ModalComponent modalType={modal} classWidth={width}></ModalComponent>
                 </Col>
 
             </Col>
