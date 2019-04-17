@@ -25,14 +25,13 @@ export default class RegionRepository extends BaseRepository {
   /**
    *
    *
-   * @param {*} { user_id,country_id, transaction }
+   * @param {*} { name_fs,country_id, transaction }
     * @return {Promise<RegionDTO[]>}
     *  @memberof RegionRepository
    */
   getRegions({ name_fs, country_id, transaction }) {
 
     let freetext = PrepareSearch.simplePrepare(name_fs)
-    console.log(freetext);
     freetext = freetext != undefined ? freetext : '""';
     let withQuery = [];
     withQuery.push(`regions_prep as
@@ -69,15 +68,15 @@ export default class RegionRepository extends BaseRepository {
     let query = `WITH 
                   ${withQuery.join(',')}
                   SELECT c.id,c.name,c.longitude,c.latitude FROM regions_prep c
-                  ${freetext.length !="" ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,name' : 'ORDER BY name'}`
+                  ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,name' : 'ORDER BY name'}`
 
-    console.log(query);
     return this.sequelizeDI.sequelize.query(
       query
       ,
       {
         replacements: {
-          freetext: freetext
+          freetext: freetext,
+          country_id:country_id
         },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
