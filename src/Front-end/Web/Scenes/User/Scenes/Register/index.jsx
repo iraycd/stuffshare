@@ -17,7 +17,7 @@ import { geolocated } from 'react-geolocated';
 import uuidv4 from "uuid/v4";
 //import MapMarkerPopup from '../../../../Components/MapComponent/MapMarkerPopup/index.js';
 import L from 'leaflet';
-import  { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css'; // sass
 
@@ -38,8 +38,7 @@ class Register extends React.Component {
         this.state = new UserRegisterInternalDTO();
         this.step = 1;
         this.state.validation = [];
-        this.longitude = 0;
-        this.latitude = 0;
+        this.state.setLonLat = false;
 
     }
 
@@ -175,9 +174,7 @@ class Register extends React.Component {
         console.log(this.latitude);
         console.log(this.props.coords)
         if (this.props.coords && this.longitude == 0 && this.latitude == 0) {
-            console.log('kupa2')
 
-            console.log(this.props)
             this.setState({
                 longitude: props.coords.longitude,
                 latitude: props.coords.latitude
@@ -204,6 +201,15 @@ class Register extends React.Component {
         this.refresh_token = '';
         this.language=''
     */
+    addMarker(event) {
+
+        console.log(event.latlng);
+        this.setState({
+            longitude: event.latlng.lng,
+            latitude: event.latlng.lat,
+            setLonLat: true
+        })
+    }
 
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -215,7 +221,7 @@ class Register extends React.Component {
 
         if (this.step == 1) {
             const position = [51.505, -0.09]
-     
+
 
 
 
@@ -224,29 +230,30 @@ class Register extends React.Component {
                 ? <Row className="size-100">
                     <span>latitude {this.props.coords.latitude}</span>
                     <span>longitude{this.props.coords.longitude}</span>
-                
-                    <Map className="size-map-100" center={[this.props.coords.latitude,this.props.coords.longitude]} zoom={16}>
+
+                    <Map className="size-map-100" center={[this.props.coords.latitude, this.props.coords.longitude]} zoom={16} onClick={this.addMarker.bind(this)}
+                    >
                         <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
-<MarkerClusterGroup>
-                        <Marker position={[this.props.coords.latitude,this.props.coords.longitude]}>
-                            <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br/> Easily customizable.</Row>
-</Popup>
-                        </Marker>
-                        <Marker position={[this.props.coords.latitude+1,this.props.coords.longitude+1]}>
-                            <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br/> Easily customizable.</Row>
-</Popup>
-                        </Marker>
-                        <Marker position={[this.props.coords.latitude,this.props.coords.longitude+2]}>
-                            <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br/> Easily customizable.</Row>
-</Popup>
-                        </Marker>
+                        <MarkerClusterGroup>
+                            <Marker position={this.state.setLonLat == 1 ? [this.state.latitude, this.state.longitude] : [this.props.coords.latitude, this.props.coords.longitude]}>
+                                <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br /> Easily customizable.</Row>
+                                </Popup>
+                            </Marker>
+                            <Marker position={[this.props.coords.latitude + 1, this.props.coords.longitude + 1]}>
+                                <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br /> Easily customizable.</Row>
+                                </Popup>
+                            </Marker>
+                            <Marker position={[this.props.coords.latitude, this.props.coords.longitude + 2]}>
+                                <Popup><Row>A pretty CSS3 popup. {this.props.coords.latitude} <br /> Easily customizable.</Row>
+                                </Popup>
+                            </Marker>
                         </MarkerClusterGroup>
                     </Map>
                 </Row >
                 : <div>Getting the location data&hellip; </div>;
-         
+
 
 
         } else {
