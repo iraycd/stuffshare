@@ -82,7 +82,7 @@ const config = [{
         }),
         new WebpackPreBuildPlugin(function (stats) {
             console.log('Reducer build');
-            let dirname = __dirname + '\\src\\Front-end\\Web'
+            let dirname = __dirname + '/src/Front-end/Web'
             let files = find.fileSync('reducer.js', dirname);
             let result = files.map(item => {
                 let result = item.replace(dirname, '.').replace(/\\/g, '/');
