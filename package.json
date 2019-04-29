@@ -20,10 +20,7 @@
   },
   "author": "Michal M <michal.mach@epam.com>",
   "license": "ISC",
-  "devDependencies": {
-    "pre-build-webpack": "^0.1.0",
-    "recursive-readdir": "^2.2.2"
-  },
+ 
   "babel": {
     "presets": [
       "es2015",
@@ -32,6 +29,8 @@
     ]
   },
   "dependencies": {
+    "pre-build-webpack": "^0.1.0",
+    "recursive-readdir": "^2.2.2",
     "awilix": "^2.12.0",
     "awilix-koa": "^0.1.1",
     "axios": "^0.16.2",
