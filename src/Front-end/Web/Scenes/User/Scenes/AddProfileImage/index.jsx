@@ -35,9 +35,7 @@ class AddProfileImage extends React.Component {
     componentDidMount() {
         this.props.getUserImages(
             { user_id: this.props.auth.user.id }
-        ).then(succ => {
-            this.props.openLightbox(succ.data[0], succ.data)
-        })
+        );
     }
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -116,7 +114,27 @@ class AddProfileImage extends React.Component {
         })
 
     }
+    clickImageHandler(event) {
 
+        this.props.addProfile.images.forEach(item => {
+            if (item.id == event.currentTarget.getAttribute('data-tag')) {
+
+                this.props.openLightbox(item, this.props.addProfile.images)
+                this.props.getFullsizeImage([{ uid: item.blob_item.uid }])
+             /*   this.props.getFullsizeImage([{ uid: item.blob_item.uid }]).then(succ=>{
+                    console.log(succ);
+                    item.blob_item=succ.data[0];
+                    this.props.openLightbox(item, this.props.addProfile.images)
+
+
+                })
+
+                */
+
+            }
+        })
+
+    }
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
@@ -145,12 +163,12 @@ class AddProfileImage extends React.Component {
                             {item.status == 1 && item.id != profId ? <a href="#" class="g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('SET_AS_PROFILE_IMAGE')}
                             </a> : <span></span>}
 
-                            <a href="#" class={(item.status == 0 ? "u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" : "") + " js-fancybox d-block u-block-hover u-block-hover--scale-down"} href="smooth-parallax-scroll/index.html" >
+                            <span data-tag={item.id} onClick={this.clickImageHandler.bind(this)} class={(item.status == 0 ? "u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" : "") + " js-fancybox d-block u-block-hover u-block-hover--scale-down"} href="smooth-parallax-scroll/index.html" >
                                 <Img src={img.toString()} className={"img-fluid u-block-hover__main u-block-hover__img"} />
                                 {item.status == 0 ? <span class="u-bg-overlay__inner g-color-white g-pos-abs g-left-20 g-bottom-20">
                                     {tran.translate('IMAGE_NOT_VERIFIED')}
                                 </span> : <span></span>}
-                            </a>
+                            </span>
                         </div>
 
                     </div>
@@ -236,6 +254,10 @@ const mapDispatchToProps = (dispatch) => {
         },
         uploadImage: (dto) => {
             return dispatch(new BaseService().commandThunt(CommandList.Blob.UPLOAD_IMAGE, dto, null))
+
+        },
+        getFullsizeImage: (dto) => {
+            return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_BLOBS_BY_GUIDS, dto, null))
 
         },
         openLightbox: (activeImage, images) => {

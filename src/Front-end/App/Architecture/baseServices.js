@@ -12,8 +12,15 @@ class BaseService {
     queryThunt(action, model = {}, token = null, loader = null) {
 
 
-        let body = Object.assign({}, model);
-        body.validation = undefined;
+        let body = null
+        if (!Array.isArray(model)) {
+            body = Object.assign({}, model)
+            body.validation = undefined;
+
+        } else {
+            body = model;
+        }
+
         let context = {
             token: localStorage.getItem('token'),
             lang: localStorage.getItem('lang')
@@ -26,7 +33,7 @@ class BaseService {
                 case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.SET_CONTAINER_ACTION, actionName: action });
                 default: ;
             }
-            dispatch({ type: action + "_LOADING",dto: model  });
+            dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'get',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": body }),
@@ -64,8 +71,14 @@ class BaseService {
     }
     commandThunt(action, model = {}, token = null, loader = null) {
 
-        let body = Object.assign({}, model);
-        body.validation = undefined
+        let body = null
+        if (!Array.isArray(model)) {
+            body = Object.assign({}, model)
+            body.validation = undefined;
+
+        } else {
+            body = model;
+        }
         return (dispatch) => {
             switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
@@ -78,7 +91,7 @@ class BaseService {
                 lang: localStorage.getItem('lang')
             }
             console.log(context)
-            dispatch({ type: action + "_LOADING",dto: model  });
+            dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'POST',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',

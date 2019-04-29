@@ -29,7 +29,9 @@ import ChangePassword from '../../Scenes/ChangePassword/index.jsx';
 import Img from 'react-image'
 import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
 import AddProfileImage from '../../Scenes/AddProfileImage/index.jsx';
-import ImageLightbox from  './../../../../Components/ImageLightbox/index.jsx'
+import ImageLightbox from './../../../../Components/ImageLightbox/index.jsx'
+import USER_ACCOUNTS_ACTION from './actions.js';
+
 
 class UserAccount extends React.Component {
 
@@ -47,6 +49,11 @@ class UserAccount extends React.Component {
 
 
     }
+    openImage(event) {
+
+        this.props.openLightbox(this.props.auth.user.blob_profile, [this.props.auth.user.blob_profile])
+        this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
+    }
 
     render() {
         this.init();
@@ -58,8 +65,11 @@ class UserAccount extends React.Component {
 
 
         let img = noprofilepic;
+        let uid = 0;
         if (this.props.auth.user.blob_profile != null) {
             img = `data:${this.props.auth.user.blob_profile.blob_thumbmail.type};base64,${this.props.auth.user.blob_profile.blob_thumbmail.blob}`
+            uid = this.props.auth.user.blob_profile.blob_item.uid
+
         }
 
         let body =
@@ -69,11 +79,13 @@ class UserAccount extends React.Component {
                     <Col xs="3" >
                         <div class=" g-mb-50 g-mb-0--lg">
                             <div class="u-block-hover g-pos-rel">
-                                <figure>
-                                    <Img src={img.toString()} className="img-fluid w-100 u-block-hover__main--zoom-v1 g-cursor-pointer" alt="Image Description" />
+                                <figure >
+                                    
+                                    <Img data-tag={uid} src={img.toString()}  className="img-fluid w-100 u-block-hover__main--zoom-v1 g-cursor-pointer" alt="Image Description" />
+                                
                                 </figure>
 
-                                <figcaption class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
+                                <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
                                     <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
 
                                     </div>
@@ -164,7 +176,20 @@ const mapDispatchToProps = (dispatch) => {
     return {
 
 
+        getFullsizeImage: (dto) => {
+            return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_BLOBS_BY_GUIDS, dto, null))
 
+        },
+        openLightbox: (activeImage, images) => {
+            return dispatch({
+                type: USER_ACCOUNTS_ACTION.OPEN_LIGHTBOX,
+                dto: {
+                    images: images,
+                    activeImage: activeImage
+                }
+            })
+
+        }
 
 
     }

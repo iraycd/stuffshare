@@ -9,7 +9,7 @@ module.exports = {
       ).then(succ => {
         return queryInterface.sequelize.query(`ALTER TABLE [dbo].[Users]  WITH CHECK ADD  CONSTRAINT [FK_user_blob_id] FOREIGN KEY([blob_id])
         REFERENCES [dbo].[Blobs] ([id])
-        ON DELETE SET NULL`)
+        `)
       }
       )
   },

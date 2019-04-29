@@ -9,7 +9,8 @@ import Modal from 'react-responsive-modal'
 import { CSSTransitionGroup } from 'react-transition-group';
 import LIGHTBOX_ACTIONS from './actions.js';
 import Img from 'react-image'
-
+import QueryList from '../../../../Shared/QueryList.js';
+import { BaseService } from './../../../App/index'
 
 
 class ImageLightbox extends React.Component {
@@ -17,9 +18,13 @@ class ImageLightbox extends React.Component {
     constructor() {
         super();
         this.open = false;
+        this.isLoading = false;
 
     }
 
+    thumbmailClickHandler(event) {
+        this.props.getImage([{ uid: event.currentTarget.getAttribute('data-tag') }])
+    }
     onOpenModal() {
         this.setState({ open: true });
     };
@@ -40,36 +45,66 @@ class ImageLightbox extends React.Component {
         if (this.props.lightbox.open == false) {
             return <span></span>
         }
+        let img = this.props.lightbox.activeImage ?
+            `data:${this.props.lightbox.activeImage.blob_item.type};base64,${this.props.lightbox.activeImage.blob_item.blob}` :
+            ''
+        let imgReact = img != null ? <img style={{ maxWidth: '1100px', maxHeight: '900px' }} src={img} /> : <span></span>
+
+        let lightboxBody = (<Col onClick={this.closeLightboxHandler.bind(this)} style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignSelf: 'center',
+            alignContent: 'center',
+            display: 'flex'
+
+
+        }} xs="12">
+            {img != null ? <img style={{ maxWidth: '1100px', maxHeight: '900px' }} src={img} /> : <span></span>}</Col>)
+
+        if (this.props.lightbox.imageList.length > 1) {
+            lightboxBody =
+                <Row className="ligbboxBody">
+                    <Col onClick={this.closeLightboxHandler.bind(this)} style={{
+                        flex: 1,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignSelf: 'center',
+                        alignContent: 'center',
+                        display: 'flex'
+
+
+                    }} xs="10">
+                        {imgReact}
+                    </Col>
+                    <Col xs="2" className="lighboxRight g-pa-10">
+                        <Row>
+                            {this.props.lightbox.imageList.map(item => {
+                                let actualId = this.props.lightbox.activeImage ? this.props.lightbox.activeImage.id : 0;
+                                return <div key={item.blob_thumbmail.uid} class="col-md-6  g-ma-0 g-pa-0 g-pl-10 ">
+                                    <div class="g-brd-around g-brd-gray-light-v4--hover">
+                                        <span data-tag={item.blob_item.uid} className={"js-fancybox d-block u-block-hover u-block-hover--scale-down "} href="#" onClick={this.thumbmailClickHandler.bind(this)} data-fancybox="lightbox-gallery--17" data-src="../../assets/img-temp/400x270/img1.jpg" data-animate-in="bounceInDown" data-animate-out="bounceOutDown" data-speed="1000" data-overlay-blur-bg="true" data-caption="Lightbox Gallery">
+                                            <Img src={`data:${item.blob_thumbmail.type};base64,${item.blob_thumbmail.blob}`} className={"img-fluid  u-block-hover__img " + (actualId == item.id ? "" : "u-block-hover__main--grayscale")} />
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                            })}
+                        </Row>
+                    </Col>
+                </Row>
+
+        }
         let body =
             (
                 <div>
                     <div className="lightboxContainer" onClick={this.closeLightboxHandler.bind(this)}></div>
                     <Container className="ligbboxBody" >
-                        <Col onClick={this.closeLightboxHandler.bind(this)} style={{
-                            flex: 1,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            alignSelf: 'center',
-                            alignContent: 'center',
-                            display: 'flex'
+
+                        {lightboxBody}
 
 
-                        }} xs="9"><img style={{ maxWidth: '800px', maxHeight: '900px' }} src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/55869522_2193080720760912_3627980156494151680_n.jpg?_nc_cat=109&_nc_ht=scontent-waw1-1.xx&oh=be74901ac75dd3ae9a32435b540d26ac&oe=5D30EE4D" /></Col>
-                        <Col xs="2" className="lighboxRight g-pa-10">
-                            <Row>
-                                {this.props.lightbox.imageList.map(item => {
-                                    return <div class="col-md-6  g-ma-0 g-pa-0 ">
-                                        <div class="g-brd-around g-brd-gray-light-v4--hover">
-                                            <a class="js-fancybox d-block u-block-hover u-block-hover--scale-down" href="javascript:;" data-fancybox="lightbox-gallery--17" data-src="../../assets/img-temp/400x270/img1.jpg" data-animate-in="bounceInDown" data-animate-out="bounceOutDown" data-speed="1000" data-overlay-blur-bg="true" data-caption="Lightbox Gallery">
-                                                <Img src={`data:${item.blob_thumbmail.type};base64,${item.blob_thumbmail.blob}`} class="img-fluid u-block-hover__main--grayscale u-block-hover__img" />
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                })}
-                            </Row>
-                        </Col>
                     </Container>
                 </div>
             )
@@ -87,6 +122,7 @@ const mapStateToProps = (state) => {
 
     return {
 
+
         lightbox: state.ImageLightboxReducer
 
     };
@@ -95,15 +131,19 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
 
-     /*   openLightbox: (open, action) => {
-            dispatch({
-                type: LIGHTBOX_ACTIONS.OPEN_MODAL,
-                dto: {
-                    open: open,
-                    action: action
-                }
-            });
-        },*/
+        /*   openLightbox: (open, action) => {
+               dispatch({
+                   type: LIGHTBOX_ACTIONS.OPEN_MODAL,
+                   dto: {
+                       open: open,
+                       action: action
+                   }
+               });
+           },*/
+        getImage: (dto) => {
+            return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_BLOBS_BY_GUIDS, dto, null))
+
+        },
         closeLightbox: () => {
             dispatch({
                 type: LIGHTBOX_ACTIONS.CLOSE_LIGHTBOX,
