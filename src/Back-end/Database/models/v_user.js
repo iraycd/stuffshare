@@ -47,12 +47,17 @@ export default class V_User extends Model {
         longitude: DataTypes.FLOAT,
         latitude: DataTypes.FLOAT,
         relogin_require: DataTypes.BOOLEAN,
-        language: DataTypes.STRING
+        language: DataTypes.STRING,
+        blob_id:DataTypes.INTEGER
+
       },
       { sequelize }
     );
   }
   static associate(models) {
+   // V_User.hasOne(models.Blob, { as: "blob_profile", targetKey: 'blob_id', foreignKey: "id" });
+    V_User.belongsTo(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
+
     // Users.hasMany(models.UserAuth)
   }
 }

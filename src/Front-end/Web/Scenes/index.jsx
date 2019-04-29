@@ -12,6 +12,11 @@ import logo from './../assets/img/logo/logo-2.png';
 import { connect } from 'react-redux';
 import { CSSTransitionGroup } from 'react-transition-group';
 import Notification from './Layout/Notifications/index.jsx';
+import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.jsx';
+import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
+import UserAccount from './User/Components/UserAccount/index.jsx';
+import ImageLightbox from '../Components/ImageLightbox/index.jsx';
+
 class App extends React.Component {
 
   constructor() {
@@ -19,23 +24,28 @@ class App extends React.Component {
 
   }
   render() {
-    let body = null;
-    let loader = null;
+    let body = <div></div>;
+    let loader = <div></div>;
     if (this.props.loader.INITIAL_PROGRESS < 100) {
       loader = (<div id="loading-wrapper">
         <img src={logo} class="position-absolute" />
         <div id="loading-text">LOADING <br />{this.props.loader.INITIAL_PROGRESS + "%"}</div>
-        <div id="loading-content"></div>
+        <div id="loading-content" className="loading-content"></div>
       </div>);
     } else {
 
       body = (<div>
         <Notification />
+                    <ImageLightbox/>
+
         <Header />
 
         <Switch>
           <Route exact path={"/"} component={Home} />
           <Route path={"/dictionary"} component={Dictionary} />
+          <Route path={"/forgot_password/:uid"} component={ForgotPasswordRedirect} />
+          <Route path={"/authorize/:uid"} component={AuthorizeUser} />
+          <Route path={"/userAccount"} component={UserAccount} />
         </Switch>
         <Footer />
       </div>);

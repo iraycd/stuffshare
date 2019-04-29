@@ -9,6 +9,7 @@ import MailSender from "../../Architecture/mailSender.js";
 import CodeDictionary from "../../Architecture/Dictionary/codeDictionary.js";
 import UserLoginInternalDTO from "../../../Shared/DTO/User/UserLoginInternalDTO.js";
 import DbTransactionInfrastucture from "../../Architecture/Infrastructure/dbTransactionInfrastucture.js";
+import { URL } from "url";
 
 /**
  *
@@ -53,7 +54,7 @@ export default class SendMailForgotPasswordCommand extends BaseCommand {
         body: {
           email: this.model.email,
           uid: result.uid,
-          href: CONFIG.FRONT_END_URL,
+          href: (new URL(this.referer)).origin,//this.referer,//CONFIG.FRONT_END_URL,
           name: result.name
         }
       };

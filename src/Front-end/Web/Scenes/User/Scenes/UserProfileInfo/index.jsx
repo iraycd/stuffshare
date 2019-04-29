@@ -104,7 +104,6 @@ class UserProfileInfo extends React.Component {
                     </Row>
                 </Form>
             </Container>
-
         return (
 
             body

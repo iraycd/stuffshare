@@ -21,7 +21,8 @@ export default class DayPickerInputComponent extends FormComponent {
             <FormGroup color={formValidation.isDanger} className={formValidation.classError}>
                 <Label for={this.state.guid} class="col-3 ">{this.state.label}</Label>
                 <Col >
-                    <DayPickerInput  value={this.props.value} id={this.state.guid} onDayChange={this.props.onChange} placeholder={this.props.placeholder} />
+                    <DayPickerInput
+                    value={this.props.value} id={this.state.guid} onDayChange={this.props.onChange} placeholder={this.props.placeholder} />
                     {formValidation.FormValidation}
                 </Col>
             </FormGroup>

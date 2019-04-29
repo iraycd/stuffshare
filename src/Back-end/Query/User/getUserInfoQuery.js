@@ -4,29 +4,45 @@ import UserLoginInternalDTO from './../../../Shared/DTO/User/UserLoginInternalDT
 import LogFileInfrastructure from '../../Architecture/Infrastructure/logFileInfrastructure.js';
 import ServerException from '../../Architecture/Exceptions/serverException.js';
 import UserService from '../../Services/userService.js';
+import BlobService from '../../Services/blobService.js';
+import BlobBase64DTO from '../../../Shared/DTO/Blob/BlobBase64DTO.js';
 
 
 export default class GetUserInfoQuery extends BaseQuery {
     /**
      * Creates an instance of GetDictionariesQuery.
-     * @param  {{ logFileInfrastructureDI:LogFileInfrastructure,  dictionaryDI,userServiceDI:UserService }}
+     * @param  {{ logFileInfrastructureDI:LogFileInfrastructure,  dictionaryDI,userServiceDI:UserService,blobServiceDI: BlobService}}
      * @memberof GetUserInfoQuery
      */
-    constructor({ logFileInfrastructureDI, userServiceDI, authInfrastructureDI }) {
+    constructor({ logFileInfrastructureDI, userServiceDI, authInfrastructureDI, blobServiceDI }) {
         super({ logFileInfrastructureDI, authInfrastructureDI });
 
         this.userServiceDI = userServiceDI;
+        this.blobServiceDI = blobServiceDI
     };
     init(dto) {
         this.model = Object.assign(new UserDTO(), dto);;
     }
 
     async action() {
-        
-        let user_Id = this.model.id>0?this.model.id: this.context.user.id;
-        return await this.userServiceDI.setContext(this.context).getUserInfo({ user_id: user_Id });
 
-        
+        let user_Id = this.model.id > 0 ? this.model.id : this.context.user.id;
+        let result = await this.userServiceDI.setContext(this.context).getUserInfo({ user_id: user_Id });
+        if (result.blob_profile != null) {
+            let blobsResulst = await this.blobServiceDI.getBlobsBase64ByGuids({
+                uids: [result.blob_profile.blob_thumbmail.uid
+                ]
+            });
+
+            let blobBase64 = blobsResulst.filter(element => {
+                return result.blob_profile.blob_thumbmail.uid == element.uid
+            })[0]
+            result.blob_profile.blob_thumbmail = Object.assign(new BlobBase64DTO(), blobBase64);
+
+        }
+        return result;
+
+
 
     }
 };

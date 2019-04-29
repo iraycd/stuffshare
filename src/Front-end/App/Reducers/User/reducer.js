@@ -70,7 +70,7 @@ export default function UserReducer(state = Object.assign({}, emptyState), actio
             return result;
         }*/
       
-        case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
+       /* case USER_ACTIONS.SET_LANGUAGE_FETCH.SUCCESS: {
 
             const result = Object.assign({}, state);
 

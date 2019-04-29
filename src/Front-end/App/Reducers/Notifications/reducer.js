@@ -10,7 +10,7 @@ export default function NotificationReducer(state = [], action) {
             {
                 const result = [...state];
                 let notif = action.notification;
-                notif.guid = global.guid();
+                notif.guid ='jadhksadj'// global.guid();
                 
                 result.push(notif);
                 return result;

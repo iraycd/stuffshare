@@ -37,7 +37,7 @@ export default class CityRepository extends BaseRepository {
     withQuery.push(`cities_prep as
                         (SELECT Cities.* ,
                         0 aS RANK
-                        FROM Regions
+                        FROM Cities
                         WHERE region_id = ISNULL(NULLIF(:region_id,''),region_id)
                         )`);
 

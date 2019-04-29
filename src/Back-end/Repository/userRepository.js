@@ -20,6 +20,7 @@ export default class UserRepository extends BaseRepository {
     super(sequelizeDI.Users);
     this.UserDB = sequelizeDI.Users;
     this.UserVDB = sequelizeDI.V_User
+    this.sequelizeDI = sequelizeDI;
   }
 
 /**
@@ -32,8 +33,28 @@ export default class UserRepository extends BaseRepository {
 getUserInfo({ user_id, transaction }) {
     return this.UserVDB.findOne({
       where: {
-        id: user_id
+        id: this.toStr(user_id)
       },
+      include: [
+        {
+          model: this.sequelizeDI.Blob,
+          as: "blob_profile",
+          required: false,
+          include: [
+            {
+              model: this.sequelizeDI.BlobMapper,
+              as: "blob_item",
+              required: true
+            },
+            {
+              model: this.sequelizeDI.BlobMapper,
+              as: "blob_thumbmail",
+              required: true
+            }
+          ],
+        },
+       
+      ],
       transaction: this.getTran({ transaction })
     })
   }

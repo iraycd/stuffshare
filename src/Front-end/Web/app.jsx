@@ -28,19 +28,9 @@ let store = configureStore({});
 let loader = 0;
 const init = () => {
 
-    const language = localStorage.getItem('lang');
-    if (language != null) {
-        store.dispatch({
-            type: LANGUAGE_ACTIONS.SET_LANGUAGE,
-            lang: language
-        });
-    }
+    if (localStorage.token) {
+        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
 
-    store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {},localStorage.token, Enums.LOADER.INITIAL));
-
-    if( localStorage.token){
-        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO,{},localStorage.token, Enums.LOADER.INITIAL)).then(succ=>{
-           
             store.dispatch({
                 type: AUTH_ACTIONS.IS_AUTH,
                 dto: {
@@ -50,6 +40,17 @@ const init = () => {
             });
         })
     }
+    const language = localStorage.getItem('lang');
+    if (language != null) {
+        store.dispatch({
+            type: LANGUAGE_ACTIONS.SET_LANGUAGE,
+            lang: language
+        });
+    }
+
+    store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {}, localStorage.token, Enums.LOADER.INITIAL));
+
+
 }
 
 init();

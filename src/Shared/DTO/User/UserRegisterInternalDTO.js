@@ -20,6 +20,7 @@ export default class UserRegisterInternalDTO extends BaseDTO {
         this.longitude='';
         this.latitude='';
         this.uuid='';
+        this.language='';
     };
     validation(state) {
         // @ts-ignore
@@ -28,7 +29,41 @@ export default class UserRegisterInternalDTO extends BaseDTO {
 
         //validator(state.surname).display("surname").required().isString().notEmpty();
 
-        validator(state.email).display("email").required();
+        validator(state.password)
+        .display("password")
+        .required()
+        .isString()
+        .notEmpty()
+        .isEqual(state.passwordRepeat);
+
+        validator(state.passwordRepeat)
+        .display("passwordRepeat")
+        .required()
+        .isString()
+        .notEmpty()
+        .isEqual(state.password);
+
+        validator(state.email)
+        .display("email")
+        .required()
+        .isString()
+        .isEmail()
+        .notEmpty();  
+
+        validator(state.phone)
+        .display("phone")
+        .required()
+        .isString()
+        .notEmpty(); 
+
+        console.log('dupaaaaa')
+         validator(state.birthDate?state.birthDate.toString():'')
+        .display("birthDate")
+        .required()
+        .isString()
+        .isDate()
+        .notEmpty()
+        
         return validator.run();
     };
 }

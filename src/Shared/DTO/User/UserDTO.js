@@ -25,7 +25,8 @@ export default class UserDTO extends BaseDTO {
     this.latitude = '';
     this.relogin_require = '';
     this.refresh_token = '';
-    this.language=''
+    this.language='',
+    this.blob_id='';
   };
   validation(state) {
     const validator = new Validator();

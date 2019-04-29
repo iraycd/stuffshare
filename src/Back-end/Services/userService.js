@@ -216,15 +216,15 @@ export default class UserService extends BaseService {
 
   //get_language
   //user edit
-/**
- *
- *
- * @param {*} {user_id}
- * @returns UserDTO
- * @memberof UserService
- */
-async getUserInfo({user_id}){
-    return await this.unitOfWorkDI.userRepository.getUserInfo({user_id});
+  /**
+   *
+   *
+   * @param {*} {user_id}
+   * @returns UserDTO
+   * @memberof UserService
+   */
+  async getUserInfo({ user_id }) {
+    return await this.toJsonParse(this.unitOfWorkDI.userRepository.getUserInfo({ user_id }));
   }
 
   async setCoordinates({ longitude, latitude }) {

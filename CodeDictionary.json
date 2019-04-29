@@ -1,8 +1,6 @@
 {
     "LABEL": {
-        
-        "LABEL_LINK_LOGIN_LINK":
-        {
+        "LABEL_LINK_LOGIN_LINK": {
             "code": "LABEL_LINK_LOGIN_LINK",
             "status": "100",
             "type": "LABEL",
@@ -14,8 +12,7 @@
             "validation": [],
             "toRefresh": true
         },
-        "USER_PROFILE_MODAL_NAME_SURNAME":
-        {
+        "USER_PROFILE_MODAL_NAME_SURNAME": {
             "code": "USER_PROFILE_MODAL_NAME_SURNAME",
             "status": "100",
             "type": "LABEL",
@@ -27,8 +24,7 @@
             "validation": [],
             "toRefresh": true
         },
-        "USER_PROFILE_MODAL_EMAIL":
-        {
+        "USER_PROFILE_MODAL_EMAIL": {
             "code": "USER_PROFILE_MODAL_EMAIL",
             "status": "100",
             "type": "LABEL",
@@ -40,8 +36,7 @@
             "validation": [],
             "toRefresh": true
         },
-        "USER_PROFILE_MODAL_HEADER":
-        {
+        "USER_PROFILE_MODAL_HEADER": {
             "code": "USER_PROFILE_MODAL_HEADER",
             "status": "100",
             "type": "LABEL",
@@ -53,8 +48,7 @@
             "validation": [],
             "toRefresh": true
         },
-        "USER_PROFILE_MODAL_PHONE":
-        {
+        "USER_PROFILE_MODAL_PHONE": {
             "code": "USER_PROFILE_MODAL_PHONE",
             "status": "100",
             "type": "LABEL",
@@ -445,6 +439,188 @@
             "field": "",
             "validation": [],
             "toRefresh": true
+        },
+        "EDIT_PROFILE_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "EDIT_PROFILE_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Mój profil",
+                "us": "My profile"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SET_COORDINATE_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "SET_COORDINATE_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw lokalizację",
+                "us": "Set localisation"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "REMOVE_ACCOUNT_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_ACCOUNT_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Usuń konto",
+                "us": "Remove account"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CHANGE_PASSWORD_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "CHANGE_PASSWORD_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zmień hasło",
+                "us": "Change password"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOG_OUT_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "LOG_OUT_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wyloguj się",
+                "us": "Log out"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "REFRESH_GEO_BUTTON_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REFRESH_GEO_BUTTON_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Odswież lokalizację",
+                "us": "Refresh localisation"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_COUNTRY_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_COUNTRY_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Kraj",
+                "us": "Country"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_REGION_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_REGION_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Województwo",
+                "us": "Region"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_CITY_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_CITY_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Miasto",
+                "us": "City"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ACCOUNT_LINK_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "ACCOUNT_LINK_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustawienia użytkownika",
+                "us": "User settings"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SET_COORDINATES_BUTTON_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "SET_COORDINATES_BUTTON_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zapisz",
+                "us": "Save"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_FORM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_FORM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw lokalizację",
+                "us": "Set localisation"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ADD_PROFILE_IMG_LINK": {
+            "id": 0,
+            "uid": "",
+            "code": "ADD_PROFILE_IMG_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw zdjęcie",
+                "us": "Set profile picture"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "USER_INFO_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "USER_INFO_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Profil użytkownika",
+                "us": "User profile"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -834,6 +1010,36 @@
             },
             "field": "",
             "validation": [],
+            "toRefresh": true
+        }
+    },
+    "SUCCESS_GLOBAL": {
+        "SET_LANG_REQUIRE_INFO": {
+            "id": 0,
+            "uid": "",
+            "code": "SET_LANG_REQUIRE_INFO",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Ustaw piniezke lub ustaw współrzędne miasta z którego pochodzisz",
+                "us": "Set  geoocordinates"
+            },
+            "field": "",
+            "toRefresh": true
+        }
+    },
+    "INFO_GLOBAL": {
+        "SET_LANG_REQUIRE_INFO": {
+            "id": 0,
+            "uid": "",
+            "code": "SET_LANG_REQUIRE_INFO",
+            "status": "200",
+            "type": "INFO_GLOBAL",
+            "message": {
+                "pl": "Ustaw spółrzędne Twojego położenia",
+                "us": "Set your coordinates"
+            },
+            "field": "",
             "toRefresh": true
         }
     }

@@ -10,7 +10,12 @@ export default class Home extends React.Component {
 
   constructor() {
     super();
+    console.log(this)
 
+  }
+  componentDidMount()
+  {
+  
   }
   render() {
     return (<CSSTransitionGroup transitionName="fade"

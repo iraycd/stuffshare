@@ -35,7 +35,7 @@
                               </p>
                               <p style="font-size:12px">Thank you for registration. I hope you will love this application :). This mail is for authenticate, if your email is truely. </p>
                               <p>To complete of registration please click on link below:</p>
-                              <center><strong><br/><a href="{$url}/{$uid}" style="font-size:16px; background-color:#9E0B0F;color:white;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;border-radius:2px;text-decoration: none;font-weight:100">
+                              <center><strong><br/><a href="{$url}/authorize/{$uid}" style="font-size:16px; background-color:#9E0B0F;color:white;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;border-radius:2px;text-decoration: none;font-weight:100">
                                  MAIL AUTHORIZATION
                               </a></strong></center>
                               <br />

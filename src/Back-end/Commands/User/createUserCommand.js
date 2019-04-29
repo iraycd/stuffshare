@@ -14,6 +14,7 @@ import CONFIG from "../../config.js";
 import CodeDictionary from "../../Architecture/Dictionary/codeDictionary.js";
 import EMAIL_TEMPLATE from "../../Static/MailsXSLT/index.js"
 import UserValidators from './../../Validators/userValidators.js';
+import { URL } from "url";
 
 /**
  *
@@ -63,9 +64,10 @@ export default class CreateUserCommand extends BaseCommand {
         name: result.name,
         email: result.email,
         uid: result.uid,
-        href: CONFIG.FRONT_END_URL
+        href: (new URL(this.referer)).origin//this.referer,//CONFIG.FRONT_END_URL,
       }
     };
+    console.log(this.referer);
     this.mailSenderDI.mailSend({
       xslt_file: EMAIL_TEMPLATE.authorization,
       model,

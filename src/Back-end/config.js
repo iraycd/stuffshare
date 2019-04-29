@@ -7,7 +7,7 @@ let CONFIG = {
   UPLOADED_TYPE:[
     "image/png","image/jpeg"
   ],
-  UPLOAD_PATH:"C:/Programowanie/Private/cqrs/upload",//"F:/Private/cqrs-node/upload",//
+  UPLOAD_PATH:"C:/Programowanie/Private/stuffshare/upload",//"F:/Private/cqrs-node/upload",//
   DATABASE: {
     development: {
    

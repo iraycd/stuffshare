@@ -18,6 +18,7 @@ import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
 import { CSSTransitionGroup } from 'react-transition-group';
 import logo from './../../../../assets/img/logo/logo-2.png';
 import SIGN_IN_MODAL_ACTIONS from './actions.js';
+import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
 
 
 

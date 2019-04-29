@@ -12,9 +12,13 @@ class BaseService {
     queryThunt(action, model = {}, token = null, loader = null) {
 
 
-        let body = Object.assign({},model);
-        body.validation=undefined
-
+        let body = Object.assign({}, model);
+        body.validation = undefined;
+        let context = {
+            token: localStorage.getItem('token'),
+            lang: localStorage.getItem('lang')
+        }
+        console.log(context)
         return (dispatch) => {
             switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
@@ -22,11 +26,11 @@ class BaseService {
                 case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.SET_CONTAINER_ACTION, actionName: action });
                 default: ;
             }
-            dispatch({ type: action + "_LOADING" });
+            dispatch({ type: action + "_LOADING",dto: model  });
             return axios({
                 method: 'get',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": body }),
-                headers: { "Authorization": `Bearer ${token}` }
+                headers: { "Authorization": `Bearer ${context.token}`, "Language": context.lang }
             })
                 .then(response => {
 
@@ -49,7 +53,7 @@ class BaseService {
                     }
                     if (res.status == 200) {
                         return Promise.resolve(res);
-                    }else{
+                    } else {
                         return Promise.reject(res);
 
                     }
@@ -60,8 +64,8 @@ class BaseService {
     }
     commandThunt(action, model = {}, token = null, loader = null) {
 
-        let body = Object.assign({},model);
-        body.validation=undefined
+        let body = Object.assign({}, model);
+        body.validation = undefined
         return (dispatch) => {
             switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
@@ -69,12 +73,17 @@ class BaseService {
                 case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.SET_CONTAINER_ACTION, actionName: action });
                 default: ;
             }
-            dispatch({ type: action + "_LOADING" });
+            let context = {
+                token: localStorage.getItem('token'),
+                lang: localStorage.getItem('lang')
+            }
+            console.log(context)
+            dispatch({ type: action + "_LOADING",dto: model  });
             return axios({
                 method: 'POST',
                 url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',
                 data: { "action": action, "model": body },
-                headers: { "Authorization": `Bearer ${token}` }
+                headers: { "Authorization": `Bearer ${context.token}`, "Language": context.lang }
 
             })
                 .then(response => {
@@ -102,7 +111,7 @@ class BaseService {
                     }
                     if (res.status == 200) {
                         return Promise.resolve(res);
-                    }else{
+                    } else {
                         return Promise.reject(res);
 
                     }

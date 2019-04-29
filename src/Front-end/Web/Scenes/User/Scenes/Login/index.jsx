@@ -64,7 +64,13 @@ class Login extends React.Component {
         if (this.validation().length == 0) {
             // this.props.code=this.state;
             this.state.language
-            this.props.loginInternal(this.state);
+            this.props.loginInternal(this.state).then((succ,err) => {
+
+                console.log(succ,err)
+                this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                    Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
+                )
+            });
 
 
         }
@@ -121,7 +127,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         loginInternal: (dto) => {
-            dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
+            return dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
                 localStorage.token = succ.data.token;
                 localStorage.refresh_token = succ.data.refresh_token ? succ.data.refresh_token : "";
                 if (!localStorage.refresh_token) {
@@ -149,7 +155,6 @@ const mapDispatchToProps = (dispatch) => {
                             })
                         })
 
-                    return;
 
                 } else {
 
@@ -172,11 +177,16 @@ const mapDispatchToProps = (dispatch) => {
                         })
                     });
                 }
-                
+                return Promise.resolve(succ)
+
             }).catch(err => {
-                console.log(err);
+                return Promise.reject(err);
             });
-        },
+        }
+        , setNotification: (type, message) => {
+            dispatch({ type: LOGIN_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
+
+        }
 
 
     }

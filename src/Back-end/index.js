@@ -58,6 +58,7 @@ const cqrsPreprocess = () => {
       let token = ctx.request.header.authorization;
       let lang = ctx.request.header.language;
       action.token = token;
+      action.referer = ctx.request.header.referer
       action.language = lang;
       action.context.language = lang;
       result = await action.run();

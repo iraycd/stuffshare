@@ -20,6 +20,7 @@ import logo from './../../../../assets/img/logo/logo-2.png';
 import UserProfileInfo from '../../Scenes/UserProfileInfo/index.jsx'
 import QueryList from '../../../../../../Shared/QueryList.js';
 import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
+import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
 
 
 
@@ -62,7 +63,9 @@ class UserProfileModal extends React.Component {
 
         let modalBody = <div></div>;
 
-
+        if (this.props.auth.user.longitude == 0 && this.props.auth.user.latitude == 0) {
+            return <SetLatlng></SetLatlng>
+        }
         let body =
             <div>
                 <Nav tabs>
@@ -116,7 +119,8 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer
+        user: state.UserReducer,
+        auth: state.AuthReducer
 
     };
 }

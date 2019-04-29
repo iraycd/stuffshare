@@ -104,13 +104,13 @@ module.exports = {
         SET s.region_id = rg.id
         FROM Cities s 
         JOIN Subregions c ON c.id = s.subregion_id
-        JOIN Regions rg ON rg.id = c.region_id
+        JOIN Regions rg ON rg.id = c.region_id;
 
         WITH result as (
           SELECT id,name,subregion_id, ROW_NUMBER() OVER(PARTITION BY name,subregion_id ORDER BY population DESC) as rn ,population FROM Cities)
           DELETE s FROM Cities s
           JOIN result ON result.id = s.id
-          WHERE rn >1 OR s.subregion_id IS NULL
+          WHERE rn >1 OR s.subregion_id IS NULL;
           
                 
         UPDATE Cities 

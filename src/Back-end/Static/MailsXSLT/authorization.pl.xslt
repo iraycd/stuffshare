@@ -35,7 +35,7 @@
                               </p>
                               <p style="font-size:12px">Dziękujemy za zalożenie konta. Ten mail jest mailem aktywacyjnym, sprawdzającym autentyczność podanego maila.</p>
                               <p>Aby dokończyć rejestracje użytkownika, musisz kliknąc link poniżej:</p>
-                               <center><strong><br/><a href="{$url}/{$uid}" style="font-size:16px; background-color:#9E0B0F;color:white;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;border-radius:2px;text-decoration: none;font-weight:100">
+                               <center><strong><br/><a href="{$url}/authorize/{$uid}" style="font-size:16px; background-color:#9E0B0F;color:white;padding-top:2px;padding-bottom:2px;padding-left:10px;padding-right:10px;border-radius:2px;text-decoration: none;font-weight:100">
                                  POTWIERDZENIE MAILA
                               </a></strong></center>
                               <br />

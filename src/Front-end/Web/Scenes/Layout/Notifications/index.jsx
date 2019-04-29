@@ -81,7 +81,7 @@ class Notification extends React.Component {
                                 </button>
 
                                 <strong><i class={icon}></i> {header}</strong><br /><br/>
-                                {" " + item.message[this.props.lang]}
+                                {" " + item.message}
 
                             </Alert>)
                         })}
