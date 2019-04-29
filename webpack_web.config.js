@@ -39,7 +39,7 @@ const config = [{
         //,'./public/city_guide.scss','./public/awesomplete.css'
     },
     output: {
-        path: __dirname + '/src/Back-end/web',
+        path: __dirname + '/.compiled/web',
         filename: '[name].bundle.js',
         publicPath: '/'
     },

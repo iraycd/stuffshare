@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "babel-node --presets es2017,stage-2 ./src/Back-end/index.js ",
-    "web_server": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js  --host 0.0.0.0 --disable-host-check --port 8080 --progress --color --config webpack_web_prod.config.js",
+    "web_server": "node node_modules/http-server/bin/http-server ./.compiled/web/ -a  --port 8080 ",
     "debug": "babel ./src/Back-end -d .compiled/Back-end --source-maps & babel ./src/Shared -d .compiled/Shared --source-maps",
     "test": "\".\\node_modules\\.bin\\_mocha.cmd\" ./test --compilers js:babel-core/register   --recursive  --watch --harmony-async-await",
     "eslint": "eslint ./src ",
@@ -20,7 +20,6 @@
   },
   "author": "Michal M <michal.mach@epam.com>",
   "license": "ISC",
- 
   "babel": {
     "presets": [
       "es2015",
@@ -29,8 +28,6 @@
     ]
   },
   "dependencies": {
-    "pre-build-webpack": "^0.1.0",
-    "recursive-readdir": "^2.2.2",
     "awilix": "^2.12.0",
     "awilix-koa": "^0.1.1",
     "axios": "^0.16.2",
@@ -76,6 +73,7 @@
     "geocoder": "^0.2.3",
     "graphql": "^0.10.4",
     "html-webpack-plugin": "^2.29.0",
+    "http-server": "^0.11.1",
     "image-webpack-loader": "^3.3.1",
     "install": "^0.10.1",
     "istanbul": "^0.4.5",
@@ -109,6 +107,7 @@
     "npm": "^5.2.0",
     "pg": "^6.4.1",
     "pg-hstore": "^2.3.2",
+    "pre-build-webpack": "^0.1.0",
     "prop-types": "^15.7.2",
     "react": "^15.6.2",
     "react-addons-css-transition-group": "^15.6.0",
@@ -127,6 +126,7 @@
     "react-router-dom": "^4.1.1",
     "react-spinners": "^0.5.4",
     "reactstrap": "^4.8.0",
+    "recursive-readdir": "^2.2.2",
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",

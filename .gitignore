@@ -4,7 +4,6 @@ dist/
 src/Back-end/logs/
 WB0412697/
 package-lock.json
-.compiled/
 Śpiewnik2018.pdf
 src/Back-end/Architecture/logs/*.log.*
 src/Back-end/Architecture/logs/error/*-error.log.2019-01-07
@@ -16,3 +15,5 @@ src/Back-end/Architecture/logs/error/filelog-error.log.2019-02-04
 src/Back-end/Architecture/logs/error/filelog-error.log.2019-02-08
 src/Back-end/Architecture/logs/error/filelog-error.log.2019-04-17
 src/Back-end/Architecture/logs/error/filelog-error.log.2019-04-18
+.compiled/Back-end/
+.compiled/Shared/
