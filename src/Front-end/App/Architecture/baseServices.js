@@ -36,7 +36,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'get',
-                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": body }),
+                url: WEB_CONFIG.API_URL[NODE_ENV] + '/query?action=' + JSON.stringify({ "action": action, "model": body }),
                 headers: { "Authorization": `Bearer ${context.token}`, "Language": context.lang }
             })
                 .then(response => {
@@ -94,7 +94,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'POST',
-                url: WEB_CONFIG.API_URL[process.env.NODE_ENV] + '/command',
+                url: WEB_CONFIG.API_URL[NODE_ENV] + '/command',
                 data: { "action": action, "model": body },
                 headers: { "Authorization": `Bearer ${context.token}`, "Language": context.lang }
 
