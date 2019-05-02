@@ -7,6 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 let find = require('find');
 let fs = require('fs');
 var WebpackPreBuildPlugin = require('pre-build-webpack');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = env => {
     return {
@@ -28,12 +29,12 @@ module.exports = env => {
             ]
             //,'./public/city_guide.scss','./public/awesomplete.css'
         },
-        "target": "web",
+        target: "web",
         devServer: {
             historyApiFallback: true,
         },
         optimization: {
-            minimizer: [new UglifyJsPlugin({
+            minimizer: [ new OptimizeCSSAssetsPlugin({}),new UglifyJsPlugin({
                 uglifyOptions: {
                     warnings: false,
                     parse: {},

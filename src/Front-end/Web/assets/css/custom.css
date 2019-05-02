@@ -248,7 +248,18 @@
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
-
+#loading-content-white {
+    border: 3px dashed transparent;
+    border-top-color: red;
+    border-bottom-color: white;
+    border-radius: 50%;
+    -webkit-animation: loader 2s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
+    animation: loader 2s linear infinite;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 @-webkit-keyframes loaders {
     0% {
         -webkit-transform: rotate(0deg);

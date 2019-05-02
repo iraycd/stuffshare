@@ -141,7 +141,7 @@ class AddProfileImage extends React.Component {
         let profId = this.props.auth.user.blob_profile ? this.props.auth.user.blob_profile.id : 0
 
         if (this.props.addProfile.getImagesIsLoading == true) {
-            return (<BodyLoader height="500px" size="70px" progress={50} />);
+            return (<BodyLoader zIndex={3} height="500px" size="100px" progress={50} />);
         }
 
 
