@@ -16,6 +16,9 @@ import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.j
 import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
 import UserAccount from './User/Components/UserAccount/index.jsx';
 import ImageLightbox from '../Components/ImageLightbox/index.jsx';
+import RouterAuth from '../Components/RouterAuth/index.jsx';
+import SignInModal from './User/Components/SignInModal/index.jsx';
+
 
 class App extends React.Component {
 
@@ -42,10 +45,13 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path={"/"} component={Home} />
-          <Route path={"/dictionary"} component={Dictionary} />
+          <RouterAuth path={"/dictionary"} component={Dictionary} />
           <Route path={"/forgot_password/:uid"} component={ForgotPasswordRedirect} />
           <Route path={"/authorize/:uid"} component={AuthorizeUser} />
-          <Route path={"/userAccount"} component={UserAccount} />
+          <RouterAuth path={"/userAccount"} component={UserAccount} />
+          <Route path={"/login/"} component={SignInModal} />
+
+          
         </Switch>
         <Footer />
       </div>);

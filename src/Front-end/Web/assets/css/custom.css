@@ -17,6 +17,13 @@
     text-align:left;
 
 }
+.navbar-hover>.active:hover{
+    background-color:#eee !important;
+}
+.navbar-hover>.active{
+    color:#fe6466 !important;
+    background-color:#fff !important;
+}
 .input-autocomplete{
     width:100%;
 }
@@ -35,7 +42,11 @@
     height:300px;
     border:1px solid rgba(0, 0, 0, 0.15)
 }
-
+.size-map-200px{
+    width:100%;
+    height:200px;
+    border:1px solid rgba(0, 0, 0, 0.15)
+}
 .body_loader
 {
     background-color:#eee;

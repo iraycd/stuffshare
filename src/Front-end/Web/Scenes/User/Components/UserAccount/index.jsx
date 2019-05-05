@@ -99,10 +99,10 @@ class UserAccount extends React.Component {
 
                             <div class="list-group list-group-border-0 g-mb-40">
 
-                                <NavLink exact strict to="/userAccount" class="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <NavLink exact strict to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
                                 </NavLink>
-                                <NavLink to="/userAccount/addProfileImage" class="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <NavLink to="/userAccount/addProfileImage" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span>  {this.tran.translate('ADD_PROFILE_IMG_LINK')}</span>
                                 </NavLink>
                                 <NavLink to={"/userAccount/setCoordinates"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">

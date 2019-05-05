@@ -27,12 +27,14 @@ L.Icon.Default.mergeOptions({
 });
 class UserInfo extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
         this.state.validation = [];
         this.open = false;
         this.state.activeTab = '1';
+        this.state.mapHeight=props.mapHeight>0?props.mapHeight:500
+
 
     }
 
@@ -56,7 +58,7 @@ class UserInfo extends React.Component {
 
         let body =
             <div className=" text-center">
-                <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+                <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-left">
                     <Col className="text-center mx-auto g-mb-10">
                         <h5 className="g-color-black mb-2">{tran.translate('USER_INFO_HEADER')}</h5>
                         <br />
@@ -86,7 +88,7 @@ class UserInfo extends React.Component {
                     </Row>
                     <br />
                     <Row>
-                        <Map className="size-map-500px" center={latlng} zoom={13}>
+                        <Map className={`size-map-${this.state.mapHeight}px`} center={latlng} zoom={13}>
 
 
                             <TileLayer

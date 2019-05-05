@@ -18,8 +18,10 @@ import './../../../assets/vendor/hs-megamenu/src/hs.megamenu.js';
 import './../../../assets/js/components/hs.popup.js';
 import './../../../assets/js/components/hs.dropdown.js';
 import logo from './../../../assets/img/logo/logo-1.png';
-import { LANGUAGE_ACTIONS,USER_ACTIONS } from './../../../../App/index.js';
+import { LANGUAGE_ACTIONS, USER_ACTIONS } from './../../../../App/index.js';
 import { Link } from 'react-router-dom';
+import LinkAuth from '../../../Components/LinkAuth/index.jsx';
+import WrapperAuth from '../../../Components/WrapperAuth/index.jsx';
 
 
 
@@ -76,7 +78,7 @@ class Header extends React.Component {
 
                 </ul>
               </Col>
-             <UserHeader></UserHeader>
+              <UserHeader></UserHeader>
             </Row>
           </Container>
         </div>
@@ -97,26 +99,28 @@ class Header extends React.Component {
                   </span>
                 </span>
               </button>
-              <a href="/" className="navbar-brand">
+              <Link to="/" className="navbar-brand">
                 <img src={logo} alt="Image Description" />
-              </a>
+              </Link>
               <div className="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
                 <ul className="navbar-nav text-uppercase g-font-weight-400 ml-auto">
                   <li className="nav-item g-mx-10--lg g-mx-15--xl">
                     <Link to="/" className=" g-color-primary--hover nav-link g-py-7 g-px-0 ">{this.tran.translate('LANG_HOME_LINK_LABEL')}</Link>
                   </li>
 
-                  <li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl  hs-event-prevented">
-                    <a id="nav-link--home" class="nav-link g-py-7 g-px-0 g-color-primary--hover  " href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--home">{this.tran.translate('ADMIN_LINK_LABEL')}</a>
+                  <WrapperAuth>
 
-                   
-                    <ul class=" u-shadow-v11 nav-link hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2  g-min-width-220 g-py-7 g-mt-9 g-mt-15--lg--scrolling animated display-none" id="nav-submenu--home" aria-labelledby="nav-link--home"  >
-                      <li class="dropdown-item "><Link to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</Link></li>
-                      <li class="dropdown-item "><Link to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</Link></li>
+                    <li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl  hs-event-prevented">
+                      <a id="nav-link--home" class="nav-link g-py-7 g-px-0 g-color-primary--hover  " href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--home">{this.tran.translate('ADMIN_LINK_LABEL')}</a>
 
-                    </ul>
+                      <ul class=" u-shadow-v11 nav-link hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2  g-min-width-220 g-py-7 g-mt-9 g-mt-15--lg--scrolling animated display-none" id="nav-submenu--home" aria-labelledby="nav-link--home"  >
+                        <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</LinkAuth></li>
 
-                  </li>
+                      </ul>
+                    </li>
+                  </WrapperAuth>
+
                   <li class="hs-has-mega-menu nav-item g-mx-10--lg g-mx-15--xl"
                     data-animation-in="fadeIn"
                     data-animation-out="fadeOut"
@@ -324,7 +328,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    
+
   }
 }
 

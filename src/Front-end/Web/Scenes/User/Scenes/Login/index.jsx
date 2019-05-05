@@ -66,7 +66,6 @@ class Login extends React.Component {
             this.state.language
             this.props.loginInternal(this.state).then((succ,err) => {
 
-                console.log(succ,err)
                 this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                     Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
                 )
