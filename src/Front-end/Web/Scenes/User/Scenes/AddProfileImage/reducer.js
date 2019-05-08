@@ -11,7 +11,19 @@ let emptyState = {
 export default function AddProfileImageReducer(state = Object.assign({}, emptyState), action) {
     switch (action.type) {
 
-        
+       case ADD_PROFILE_IMAGE_ACTIONS.GET_USER_IMAGES.LOADING: {
+
+            const result = Object.assign({}, state);
+            result.getImagesIsLoading = true
+            return result;
+        }
+        case ADD_PROFILE_IMAGE_ACTIONS.GET_USER_IMAGES.FINALLY: {
+
+            const result = Object.assign({}, state);
+            result.getImagesIsLoading = false
+            return result;
+        }
+       
 
         case ADD_PROFILE_IMAGE_ACTIONS.UPLOAD_IMAGE.FINALLY:
             {

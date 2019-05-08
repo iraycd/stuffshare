@@ -61,12 +61,12 @@ class UserAccount extends React.Component {
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
 
         if (this.props.loader.BODY_PROGRESS < 100) {
-            return (<BodyLoader height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+            return (<BodyLoader  zIndex={3}  height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
         }
         console.log(this.props.userAccount)
-        if (this.props.userAccount.getImagesIsLoading == true) {
-            return (<BodyLoader height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
-        }
+      //  if (this.props.userAccount.getImagesIsLoading == true) {
+      //      return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+      //  }
         
 
 
