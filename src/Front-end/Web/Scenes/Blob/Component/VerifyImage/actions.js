@@ -5,10 +5,12 @@ import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
 import LIGHTBOX_ACTIONS from "../../../../Components/ImageLightbox/actions";
 
 
-const USER_ACCOUNTS_ACTION = {
+const VERIFY_IMAGE_ACTION = {
     OPEN_LIGHTBOX:LIGHTBOX_ACTIONS.OPEN_LIGHTBOX,
-    GET_USER_IMAGES: ActionsGen(QueryList.Blob.GET_USER_IMAGES),
+    GET_UNVERIFIED: ActionsGen(QueryList.Blob.GET_UNVERIFIED),
     REMOVE_IMAGE: ActionsGen(CommandList.Blob.REMOVE_BLOB),
+    VERIFY_IMAGE : ActionsGen(CommandList.Blob.VERIFY_IMAGE)
+  
 }
 
-export default  USER_ACCOUNTS_ACTION
+export default  VERIFY_IMAGE_ACTION

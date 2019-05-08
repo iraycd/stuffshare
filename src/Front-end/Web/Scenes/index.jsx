@@ -18,6 +18,8 @@ import UserAccount from './User/Components/UserAccount/index.jsx';
 import ImageLightbox from '../Components/ImageLightbox/index.jsx';
 import RouterAuth from '../Components/RouterAuth/index.jsx';
 import SignInModal from './User/Components/SignInModal/index.jsx';
+import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
+
 
 
 class App extends React.Component {
@@ -39,7 +41,7 @@ class App extends React.Component {
 
       body = (<div>
         <Notification />
-                    <ImageLightbox/>
+        <ImageLightbox />
 
         <Header />
 
@@ -50,8 +52,8 @@ class App extends React.Component {
           <Route path={"/authorize/:uid"} component={AuthorizeUser} />
           <RouterAuth path={"/userAccount"} component={UserAccount} />
           <Route path={"/login/"} component={SignInModal} />
+          <RouterAuth path={"/verifyImage"} component={VerifyImage} />
 
-          
         </Switch>
         <Footer />
       </div>);

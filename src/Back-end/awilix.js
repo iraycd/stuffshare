@@ -56,6 +56,9 @@ import RegionService from "./Services/regionService.js";
 import RegionRepository from "./Repository/regionRepository.js";
 import GetCitiesQuery from "./Query/City/getCitiesQuery.js";
 import GetRegionsQuery from "./Query/Region/getRegionsQuery.js";
+import GetUnverifiedBlobsQuery from "./Query/Blob/getUnverifiedBlobsQuery.js";
+import VerifyImageCommand from "./Commands/Blob/verifyImageCommand.js";
+import SetProfileImageCommand from "./Commands/User/setProfileImageCommand.js";
 
 
 /**
@@ -107,7 +110,7 @@ exporter[CommandList.User.FORGOT_PASSWORD_CHECK] = asClass(
 );
 exporter[CommandList.User.SET_LANGUAGE] = asClass(SetLanguageCommand);
 exporter[CommandList.User.SET_COORDIATES] = asClass(SetCoordinatesCommand);
-
+exporter[CommandList.User.SET_PROFILE_IMAGE] = asClass(SetProfileImageCommand)
 
 
 exporter[QueryList.User.USER_INFO] = asClass(GetUserInfoQuery)
@@ -131,12 +134,13 @@ exporter[QueryList.Category.GET_CATEGORIES_HIERARCHY] = asClass(
 ///////////////////////////////BLOB//////////////////////////////
 exporter[CommandList.Blob.UPLOAD_IMAGE] = asClass(UploadImageCommand);
 exporter[CommandList.Blob.REMOVE_BLOB] = asClass(RemoveBlobCommand);
+exporter[CommandList.Blob.VERIFY_IMAGE] = asClass(VerifyImageCommand);
 
 exporter[QueryList.Blob.GET_BLOBS_BY_GUIDS] = asClass(
   GetBlobsBase64ByGuidsQuery
 );
 exporter[QueryList.Blob.GET_USER_IMAGES] = asClass(GetUserImagesQuery);
-
+exporter[QueryList.Blob.GET_UNVERIFIED] = asClass(GetUnverifiedBlobsQuery);
 ///////////////////////ITEM//////////////////////////////////////
 exporter[CommandList.Item.NEW_ITEM] = asClass(CreateItemCommand);
 exporter[CommandList.Item.EDIT_ITEM] = asClass(EditItemCommand)

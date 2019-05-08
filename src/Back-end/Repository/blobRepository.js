@@ -108,4 +108,43 @@ export default class BlobRepository extends BaseRepository {
       transaction: this.getTran({ transaction })
     })
   }
+
+  getUnverified({
+    pagination,
+    transaction
+  }) {
+    return this.entityDAO.findAll({
+      where: {
+        status: 0
+      },
+      limit: Number(pagination.size), offset: Number(pagination.page),
+      include: [
+        {
+          model: this.sequelizeDI.BlobMapper,
+          as: "blob_item",
+          required: true
+        },
+        {
+          model: this.sequelizeDI.BlobMapper,
+          as: "blob_thumbmail",
+          required: true
+        }
+      ],
+      transaction: this.getTran({ transaction })
+    })
+  }
+  
+  verifyImage({
+    blob, transaction
+  }) {
+    return this.entityDAO.update(
+      {
+        status: 1
+      },
+      {
+        where: { id: this.toStr(blob.id) },
+        transaction: this.getTran({ transaction })
+      }
+    );
+  }
 }

@@ -7,7 +7,7 @@ import uuidv4 from "uuid/v4";
 import Jimp from "jimp";
 import BlobDTO from "../../Shared/DTO/Blob/BlobDTO.js";
 
-let upload_path = process.env.UPLOAD_PATH||CONFIG.UPLOAD_PATH
+let upload_path = process.env.UPLOAD_PATH || CONFIG.UPLOAD_PATH
 let saveBlobToFile = async ({ blob }) => {
   let newUid = uuidv4();
 
@@ -84,7 +84,7 @@ export default class BlobService extends BaseService {
         path: `${upload_path}/${newBlob.uid}-min.png`,
         fileName: `${newBlob.uid}-min.png`
       });
-      
+
       return {
         blob_id: await blob_id,
         blob_min_id: await blob_min_id
@@ -98,7 +98,7 @@ export default class BlobService extends BaseService {
     }
   }
 
-  
+
   /**
    *save  file in database
    *
@@ -122,11 +122,11 @@ export default class BlobService extends BaseService {
    * @memberof BlobService
    */
   async uploadUserImage({ blob }) {
-    await this.uploadImageAndSave({blob,itemId:null})
-   
+    await this.uploadImageAndSave({ blob, itemId: null })
+
   }
 
-  async uploadImageAndSave({ blob ,itemId}) {
+  async uploadImageAndSave({ blob, itemId }) {
     let getUsersBlob = await this.getBlobs({
       userId: this.userId,
       itemId: itemId
@@ -144,7 +144,7 @@ export default class BlobService extends BaseService {
       blob_id: newImages.blob_id,
       blob_thumbmail_id: newImages.blob_min_id,
       user_id: this.userId,
-      item_id: itemId==null?undefined:itemId,
+      item_id: itemId == null ? undefined : itemId,
       order: getUsersBlob.length + 1,
       status: 0
     };
@@ -190,4 +190,19 @@ export default class BlobService extends BaseService {
       })
     );
   }
+
+  async getUnverified({ pagination }) {
+    return await this.toJsonParse(
+      this.unitOfWorkDI.blobRepository.getUnverified({
+        pagination
+      })
+    );
+  }
+  async verifyImage({ blob }) {
+    return await this.unitOfWorkDI.blobRepository.verifyImage({
+        blob
+      })
+
+  }
+
 }

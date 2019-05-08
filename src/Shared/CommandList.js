@@ -6,7 +6,7 @@ let CommandList = {
     },
     Category: {
         ADD_CATEGORY: "insertCategoryCommand",
-        SET_AS_VERIFIED:"setAsVerifiedCommand"
+        SET_AS_VERIFIED: "setAsVerifiedCommand"
     },
     User: {
         CREATE_USER: "createUserCommand",
@@ -17,17 +17,19 @@ let CommandList = {
         FORGOT_PASSWORD: "forgotPasswordCommand",
         REMOVE_USER: "removeUserCommand",
         FORGOT_PASSWORD_CHECK: "sendMailForgotPasswordCommand",
-        SET_LANGUAGE:"setLanguageCommand",
-        SET_COORDIATES:"setCoordinatesCommand"
+        SET_LANGUAGE: "setLanguageCommand",
+        SET_COORDIATES: "setCoordinatesCommand",
+        SET_PROFILE_IMAGE: "setProfileImageCommand"
 
     },
     Blob: {
         UPLOAD_IMAGE: "uploadImageCommand",
-        REMOVE_BLOB: "removeBlobCommand"
+        REMOVE_BLOB: "removeBlobCommand",
+        VERIFY_IMAGE: "verifyImageCommand"
     },
-    Item:{
-        NEW_ITEM:"createItemCommand",
-        EDIT_ITEM:"editItemCommand"
+    Item: {
+        NEW_ITEM: "createItemCommand",
+        EDIT_ITEM: "editItemCommand"
     }
 }
 export default CommandList;

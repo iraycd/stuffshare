@@ -82,7 +82,7 @@ class ImageLightbox extends React.Component {
                             }} xs="10">
                                 {imgReact}
                             </Col>
-                        ) : <BodyLoader  onClick={this.closeLightboxHandler.bind(this)} white="true"  height="100%" size="130px" />}
+                        ) :(<Col xs="10"><BodyLoader  onClick={this.closeLightboxHandler.bind(this)} white="true"  height="100%" size="130px" /></Col>)}
 
                     <Col xs="2" className="lighboxRight g-pa-10">
 

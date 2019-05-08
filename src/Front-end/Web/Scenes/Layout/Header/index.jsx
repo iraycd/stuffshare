@@ -116,6 +116,7 @@ class Header extends React.Component {
                       <ul class=" u-shadow-v11 nav-link hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2  g-min-width-220 g-py-7 g-mt-9 g-mt-15--lg--scrolling animated display-none" id="nav-submenu--home" aria-labelledby="nav-link--home"  >
                         <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</LinkAuth></li>
                         <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item "><LinkAuth to="/verifyImage" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('IMAGE_VERIFY_LINK_LABEL')}</LinkAuth></li>
 
                       </ul>
                     </li>

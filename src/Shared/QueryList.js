@@ -15,7 +15,8 @@ let QueryList = {
     },
     Blob: {
         GET_BLOBS_BY_GUIDS: "getBlobsBase64ByGuidsQuery",
-        GET_USER_IMAGES: "getUserImagesQuery"
+        GET_USER_IMAGES: "getUserImagesQuery",
+        GET_UNVERIFIED:"getUnverifiedBlobsQuery"
 
     },
     Item: {

@@ -232,4 +232,8 @@ export default class UserService extends BaseService {
     this.context.user.latitude = latitude;
     this.update({ model: this.context.user });
   }
+  async setProfileImage({ user }) {
+    this.context.user.blob_id = user.blob_id;
+    this.update({ model: this.context.user })
+  }
 }

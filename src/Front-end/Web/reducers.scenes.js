@@ -5,6 +5,7 @@ import ImageLightboxReducer from 'C:/Programowanie/Private/stuffshare/src/Front-
  import WrapperAuthReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Components/WrapperAuth/reducer.js';
  import AuthReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Reducers/Auth/reducer.js';
  import LanguageReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Reducers/Language/reducer.js';
+ import VerifyImageReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Blob/Component/VerifyImage/reducer.js';
  import SignInModalReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/SignInModal/reducer.js';
  import UserAccountReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/UserAccount/reducer.js';
  import UserHeaderReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/UserHeader/reducer.js';
@@ -19,4 +20,4 @@ import ImageLightboxReducer from 'C:/Programowanie/Private/stuffshare/src/Front-
  import SetLatlngReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/SetLatlng/reducer.js';
  import UserInfoReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/UserInfo/reducer.js';
  import UserProfileInfoReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/UserProfileInfo/reducer.js';
- export default {ImageLightboxReducer,LinkAuthReducer,ModalComponentReducer,RouterAuthReducer,WrapperAuthReducer,AuthReducer,LanguageReducer,SignInModalReducer,UserAccountReducer,UserHeaderReducer,UserProfileModalTabReducer,AddProfileImageReducer,ChangePasswordReducer,ForgotPasswordReducer,LoginReducer,LogOutReducer,RegisterReducer,RemoveUserReducer,SetLatlngReducer,UserInfoReducer,UserProfileInfoReducer}
+ export default {ImageLightboxReducer,LinkAuthReducer,ModalComponentReducer,RouterAuthReducer,WrapperAuthReducer,AuthReducer,LanguageReducer,VerifyImageReducer,SignInModalReducer,UserAccountReducer,UserHeaderReducer,UserProfileModalTabReducer,AddProfileImageReducer,ChangePasswordReducer,ForgotPasswordReducer,LoginReducer,LogOutReducer,RegisterReducer,RemoveUserReducer,SetLatlngReducer,UserInfoReducer,UserProfileInfoReducer}

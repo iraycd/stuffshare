@@ -40,9 +40,10 @@ class UserAccount extends React.Component {
 
     }
     componentDidMount() {
-
+        this.props.getUserImages(
+            { user_id: this.props.auth.user.id }
+        );
     }
-
 
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -51,7 +52,7 @@ class UserAccount extends React.Component {
     }
     openImage(event) {
 
-        this.props.openLightbox(this.props.auth.user.blob_profile, [this.props.auth.user.blob_profile])
+        this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userAccount.images)
         this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
     }
 
@@ -62,6 +63,11 @@ class UserAccount extends React.Component {
         if (this.props.loader.BODY_PROGRESS < 100) {
             return (<BodyLoader height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
         }
+        console.log(this.props.userAccount)
+        if (this.props.userAccount.getImagesIsLoading == true) {
+            return (<BodyLoader height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+        }
+        
 
 
         let img = noprofilepic;
@@ -189,7 +195,11 @@ const mapDispatchToProps = (dispatch) => {
                 }
             })
 
-        }
+        },
+        getUserImages: (dto) => {
+            return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_USER_IMAGES, dto, null))
+
+        },
 
 
     }

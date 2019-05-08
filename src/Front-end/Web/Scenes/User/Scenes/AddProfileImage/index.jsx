@@ -33,9 +33,7 @@ class AddProfileImage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getUserImages(
-            { user_id: this.props.auth.user.id }
-        );
+      
     }
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -46,6 +44,9 @@ class AddProfileImage extends React.Component {
 
     removeImage(event) {
         this.props.removeImage({ id: event.currentTarget.getAttribute('data-tag') })
+    }
+    setAsProfile(event) {
+        this.props.setAsProfile({ blob_id: event.currentTarget.getAttribute('data-tag') })
     }
     uploadClick(event) {
         this.refs.fileUploader.click();
@@ -116,25 +117,18 @@ class AddProfileImage extends React.Component {
     }
     clickImageHandler(event) {
 
-        this.props.addProfile.images.forEach(item => {
+        this.props.userAccount.images.forEach(item => {
             if (item.id == event.currentTarget.getAttribute('data-tag')) {
 
-                this.props.openLightbox(item, this.props.addProfile.images)
+                this.props.openLightbox(item, this.props.userAccount.images)
                 this.props.getFullsizeImage([{ uid: item.blob_item.uid }])
-             /*   this.props.getFullsizeImage([{ uid: item.blob_item.uid }]).then(succ=>{
-                    console.log(succ);
-                    item.blob_item=succ.data[0];
-                    this.props.openLightbox(item, this.props.addProfile.images)
-
-
-                })
-
-                */
+               
 
             }
         })
 
     }
+
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
@@ -145,7 +139,7 @@ class AddProfileImage extends React.Component {
         }
 
 
-        let imgList = this.props.addProfile.images.map((item, index) => {
+        let imgList = this.props.userAccount.images.map((item, index) => {
             let brdColor = "g-brd-gray-light-v4--hover";
             if (index == 0) {
                 brdColor = "g-brd-red-light-v4--hover"
@@ -160,8 +154,8 @@ class AddProfileImage extends React.Component {
                             <span data-tag={item.id} onClick={this.removeImage.bind(this)} class="g-z-index-3 u-icon-v3 u-icon-size--xs g-bg-white g-color-black g-rounded-50x g-cursor-pointer g-pos-abs g-top-10 g-right-10">
                                 <i class="fa fa-remove"></i>
                             </span>
-                            {item.status == 1 && item.id != profId ? <a href="#" class="g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('SET_AS_PROFILE_IMAGE')}
-                            </a> : <span></span>}
+                            {item.status == 1 && item.id != profId ? <span data-tag={item.id} onClick={this.setAsProfile.bind(this)} class="g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('SET_AS_PROFILE_IMAGE')}
+                            </span> : <span></span>}
 
                             <span data-tag={item.id} onClick={this.clickImageHandler.bind(this)} class={(item.status == 0 ? "u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" : "") + " js-fancybox d-block u-block-hover u-block-hover--scale-down"} href="smooth-parallax-scroll/index.html" >
                                 <Img src={img.toString()} className={"img-fluid u-block-hover__main u-block-hover__img"} />
@@ -237,7 +231,9 @@ const mapStateToProps = (state) => {
         lang: state.LanguageReducer,
         auth: state.AuthReducer,
         addProfile: state.AddProfileImageReducer,
-        loader: state.LoaderReducer
+        loader: state.LoaderReducer,
+        userAccount: state.UserAccountReducer,
+
 
     };
 }
@@ -267,6 +263,13 @@ const mapDispatchToProps = (dispatch) => {
                     images: images,
                     activeImage: activeImage
                 }
+            })
+
+        },
+        setAsProfile: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.User.SET_PROFILE_IMAGE, dto, null)).then(succ => {
+                return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
+
             })
 
         }
