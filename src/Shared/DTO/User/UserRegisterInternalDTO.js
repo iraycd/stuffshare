@@ -8,19 +8,21 @@ export default class UserRegisterInternalDTO extends BaseDTO {
         this.name = '';
         this.surname = '';
         this.email = '';
-        this.phone='';
-        this.birthDate='';
-        this.password='';
-        this.passwordRepeat=''
-        this.city='';
-        this.city_id='';
-        this.adress='';
-        this.country='';
-        this.country_id='';
-        this.longitude='';
-        this.latitude='';
-        this.uuid='';
-        this.language='';
+        this.phone = '';
+        this.birthDate = '';
+        this.password = '';
+        this.passwordRepeat = ''
+        this.city = '';
+        this.city_id = '';
+        this.adress = '';
+        this.country = '';
+        this.country_id = '';
+        this.longitude = '';
+        this.latitude = '';
+        this.uuid = '';
+        this.language = '';
+        this.blob_id = null
+
     };
     validation(state) {
         // @ts-ignore
@@ -30,40 +32,40 @@ export default class UserRegisterInternalDTO extends BaseDTO {
         //validator(state.surname).display("surname").required().isString().notEmpty();
 
         validator(state.password)
-        .display("password")
-        .required()
-        .isString()
-        .notEmpty()
-        .isEqual(state.passwordRepeat);
+            .display("password")
+            .required()
+            .isString()
+            .notEmpty()
+            .isEqual(state.passwordRepeat);
 
         validator(state.passwordRepeat)
-        .display("passwordRepeat")
-        .required()
-        .isString()
-        .notEmpty()
-        .isEqual(state.password);
+            .display("passwordRepeat")
+            .required()
+            .isString()
+            .notEmpty()
+            .isEqual(state.password);
 
         validator(state.email)
-        .display("email")
-        .required()
-        .isString()
-        .isEmail()
-        .notEmpty();  
+            .display("email")
+            .required()
+            .isString()
+            .isEmail()
+            .notEmpty();
 
         validator(state.phone)
-        .display("phone")
-        .required()
-        .isString()
-        .notEmpty(); 
+            .display("phone")
+            .required()
+            .isString()
+            .notEmpty();
 
         console.log('dupaaaaa')
-         validator(state.birthDate?state.birthDate.toString():'')
-        .display("birthDate")
-        .required()
-        .isString()
-        .isDate()
-        .notEmpty()
-        
+        validator(state.birthDate ? state.birthDate.toString() : '')
+            .display("birthDate")
+            .required()
+            .isString()
+            .isDate()
+            .notEmpty()
+
         return validator.run();
     };
 }

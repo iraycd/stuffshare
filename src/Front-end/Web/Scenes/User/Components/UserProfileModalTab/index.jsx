@@ -169,7 +169,6 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer,
         auth: state.AuthReducer,
         userProfileModalTab:state.UserProfileModalTabReducer
 

@@ -19,8 +19,8 @@ let CommandList = {
         FORGOT_PASSWORD_CHECK: "sendMailForgotPasswordCommand",
         SET_LANGUAGE: "setLanguageCommand",
         SET_COORDIATES: "setCoordinatesCommand",
-        SET_PROFILE_IMAGE: "setProfileImageCommand"
-
+        SET_PROFILE_IMAGE: "setProfileImageCommand",
+        CREATE_USER_EXTERNAL_PROV:"createUserByExternalCommand"
     },
     Blob: {
         UPLOAD_IMAGE: "uploadImageCommand",

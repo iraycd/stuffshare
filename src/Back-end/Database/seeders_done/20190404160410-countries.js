@@ -39,7 +39,9 @@ module.exports = {
             clear_name: lineobj[2],
             name_clob:lineobj[3],
             latitude: lineobj[4],
-            longitude: lineobj[5]
+            longitude: lineobj[5],
+            countryCode: lineobj[8]
+
           })
          
         }
@@ -62,6 +64,7 @@ module.exports = {
         name_clear:country.clear_name,
         latitude: country.latitude,
         longitude: country.longitude,
+        countryCode:country.countryCode,
         status:'V'
       }]);
     });

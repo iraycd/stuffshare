@@ -23,14 +23,14 @@ export default class UserRepository extends BaseRepository {
     this.sequelizeDI = sequelizeDI;
   }
 
-/**
- *
- *
- * @param {*} { user_id, transaction }
-  * @return {Promise<UserDTO>}
-  *  @memberof UserRepository
- */
-getUserInfo({ user_id, transaction }) {
+  /**
+   *
+   *
+   * @param {*} { user_id, transaction }
+    * @return {Promise<UserDTO>}
+    *  @memberof UserRepository
+   */
+  getUserInfo({ user_id, transaction }) {
     return this.UserVDB.findOne({
       where: {
         id: this.toStr(user_id)
@@ -53,7 +53,7 @@ getUserInfo({ user_id, transaction }) {
             }
           ],
         },
-       
+
       ],
       transaction: this.getTran({ transaction })
     })
@@ -70,7 +70,13 @@ getUserInfo({ user_id, transaction }) {
         email: this.toStr(email),
         is_authorized: true
 
-      },
+      }, include: [
+        {
+          model: this.sequelizeDI.UserAuths,
+          as: "user_auths",
+          required: false
+        }
+      ],
       transaction: this.getTran({ transaction })
     });
   }

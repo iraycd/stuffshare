@@ -12,6 +12,7 @@ import TextRepository from "./Repository/textRepository.js";
 import CountryRepository from "./Repository/countryRepository.js";
 import RegionRepository from "./Repository/regionRepository.js";
 import CityRepository from "./Repository/cityRepository.js";
+import UserAuthRepository from "./Repository/userAuthRepository.js";
 
 
 /**
@@ -24,11 +25,11 @@ export default class UnitOfWork extends BaseUnitOfWork {
 
     /**
      * Creates an instance of UnitOfWork.
-     * @param  { { categoryRepositoryDI:CategoryRepository, userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository,regionRepositoryDI:RegionRepository}} 
+     * @param  { { categoryRepositoryDI:CategoryRepository,userAuthRepositoryDI: UserAuthRepository,userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository,regionRepositoryDI:RegionRepository}} 
      * @memberof UnitOfWork
      */
     // @ts-ignore
-    constructor({ categoryRepositoryDI, userRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI ,blobMapperRepositoryDI,itemCategoryRepositoryDI,itemRepositoryDI,textRepositoryDI,countryRepositoryDI,cityRepositoryDI,regionRepositoryDI}) {
+    constructor({ categoryRepositoryDI, userRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI ,blobMapperRepositoryDI,itemCategoryRepositoryDI,itemRepositoryDI,textRepositoryDI,countryRepositoryDI,cityRepositoryDI,regionRepositoryDI,userAuthRepositoryDI}) {
         super()
 
         this.transaction = null;
@@ -43,7 +44,8 @@ export default class UnitOfWork extends BaseUnitOfWork {
             itemRepositoryDI,
             countryRepositoryDI,
             cityRepositoryDI,
-            regionRepositoryDI
+            regionRepositoryDI,
+            userAuthRepositoryDI
         }
     };
 
@@ -57,7 +59,17 @@ export default class UnitOfWork extends BaseUnitOfWork {
     get userRepository() {
         return this.repositories.userRepositoryDI;
     } 
-    
+
+        /**
+     * 
+     * @return {UserAuthRepository}
+     * @readonly
+     * @memberof UnitOfWork
+     */
+    get userAuthRepository() {
+        return this.repositories.userAuthRepositoryDI;
+    }
+
     /**
     * 
     * @return {BlobRepository}

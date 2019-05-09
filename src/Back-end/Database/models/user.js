@@ -56,14 +56,15 @@ export default class Users extends Model {
         relogin_require: DataTypes.BOOLEAN,
         refresh_token: DataTypes.UUID,
         language: DataTypes.STRING,
-        blob_id:DataTypes.INTEGER
+        blob_id: DataTypes.INTEGER
       },
       { sequelize }
     );
   }
   static associate(models) {
-   // Users.hasOne(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
-   Users.belongsTo(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
+    // Users.hasOne(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
+    Users.belongsTo(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
+    Users.hasMany(models.UserAuths, { as: "user_auths", targetKey: 'id', foreignKey: "user_id" });
 
     // Users.hasMany(models.UserAuth)
   }

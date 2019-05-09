@@ -33,7 +33,7 @@ class AddProfileImage extends React.Component {
     }
 
     componentDidMount() {
-      
+
     }
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -122,7 +122,7 @@ class AddProfileImage extends React.Component {
 
                 this.props.openLightbox(item, this.props.userAccount.images)
                 this.props.getFullsizeImage([{ uid: item.blob_item.uid }])
-               
+
 
             }
         })

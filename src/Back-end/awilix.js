@@ -59,6 +59,9 @@ import GetRegionsQuery from "./Query/Region/getRegionsQuery.js";
 import GetUnverifiedBlobsQuery from "./Query/Blob/getUnverifiedBlobsQuery.js";
 import VerifyImageCommand from "./Commands/Blob/verifyImageCommand.js";
 import SetProfileImageCommand from "./Commands/User/setProfileImageCommand.js";
+import CreateUserByExternalCommand from "./Commands/User/createUserByExternalCommand.js";
+import UserAuthRepository from "./Repository/userAuthRepository.js";
+import LogInByExternalQuery from "./Query/User/logInByExternalQuery.js";
 
 
 /**
@@ -86,7 +89,7 @@ let exporter = {
   cityServiceDI: asClass(CityService),
   regionRepositoryDI: asClass(RegionRepository),
   regionServiceDI: asClass(RegionService),
-
+  userAuthRepositoryDI:asClass(UserAuthRepository),
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(
@@ -111,6 +114,7 @@ exporter[CommandList.User.FORGOT_PASSWORD_CHECK] = asClass(
 exporter[CommandList.User.SET_LANGUAGE] = asClass(SetLanguageCommand);
 exporter[CommandList.User.SET_COORDIATES] = asClass(SetCoordinatesCommand);
 exporter[CommandList.User.SET_PROFILE_IMAGE] = asClass(SetProfileImageCommand)
+exporter[CommandList.User.CREATE_USER_EXTERNAL_PROV] = asClass(CreateUserByExternalCommand)
 
 
 exporter[QueryList.User.USER_INFO] = asClass(GetUserInfoQuery)
@@ -118,6 +122,7 @@ exporter[QueryList.User.LOG_IN_INTERNAL] = asClass(UserLogInInternalQuery);
 exporter[QueryList.User.LOG_IN_BY_REFRESH_TOKEN] = asClass(
   LogInByRefreshTokenQuery
 );
+exporter[QueryList.User.LOGIN_BY_EXTERNAL]=asClass(LogInByExternalQuery)
 exporter[QueryList.User.GET_REFRESH_TOKEN] = asClass(GetRefreshTokenQuery);
 
 ////////////////////////////////Category/////////////////////////////////////////

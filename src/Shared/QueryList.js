@@ -10,7 +10,8 @@ let QueryList = {
         LOG_IN_INTERNAL: "userLogInInternalQuery",
         LOG_IN_BY_REFRESH_TOKEN: "logInByRefreshTokenQuery",
         GET_REFRESH_TOKEN: "getRefreshTokenQuery",
-        USER_INFO: "getUserInfoQuery"
+        USER_INFO: "getUserInfoQuery",
+        LOGIN_BY_EXTERNAL:"logInByExternalQuery"
 
     },
     Blob: {

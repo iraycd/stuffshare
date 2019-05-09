@@ -17,6 +17,7 @@ import V_User from "./v_user.js";
 import Country from "./country.js";
 import City from "./city.js";
 import Region from "./region.js";
+import UserAuths from "./userauth.js";
 
 
 var env = process.env.NODE_ENV || "development";
@@ -60,7 +61,8 @@ let models = {
   V_User: V_User.init(sequelize, Sequelize),
   Country: Country.init(sequelize, Sequelize),
   Region: Region.init(sequelize, Sequelize),
-  Citry: City.init(sequelize, Sequelize)
+  City: City.init(sequelize, Sequelize),
+  UserAuths: UserAuths.init(sequelize,Sequelize)
 
   
 };

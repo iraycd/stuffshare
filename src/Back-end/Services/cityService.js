@@ -45,7 +45,7 @@ export default class CityService extends BaseService {
 
     let cityList = await this.unitOfWorkDI.cityRepository.getCities({
       name_fs: city.name,
-      region_id:city.region_id
+      country_id:city.country_id
     });
     return cityList;
   }

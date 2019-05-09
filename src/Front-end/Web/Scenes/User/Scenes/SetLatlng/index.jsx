@@ -117,10 +117,11 @@ class SetLatlng extends React.Component {
         if (name.length > 2) {
             this.timeout = setTimeout(() => {
                 console.log('request');
-                this.props.getRegions({ country_id: this.state.countryId, name: name });
+                this.props.getCities({ country_id: this.state.countryId, name: name });
             }, 500)
         }
     }
+    /*
     regionSelect(val) {
         this.props.latlng.regions.forEach(item => {
             console.log(val);
@@ -143,7 +144,7 @@ class SetLatlng extends React.Component {
         })
 
         //this.props.getCountries({name:event.target.value});
-    }
+    }*/
 
 
     cityHander(event) {
@@ -156,7 +157,7 @@ class SetLatlng extends React.Component {
         if (name.length > 2) {
             this.timeout = setTimeout(() => {
                 console.log('request');
-                this.props.getCities({ region_id: this.state.regionId, name: name });
+                this.props.getCities({ country_id: this.state.countryId, name: name });
             }, 500)
         }
     }
@@ -172,7 +173,7 @@ class SetLatlng extends React.Component {
                     setLonLat: true,
                     latitude: item.latitude,
                     longitude: item.longitude,
-                    zoom: 10
+                    zoom: 9
                 });
 
             }
@@ -199,7 +200,7 @@ class SetLatlng extends React.Component {
                     cityId: '',
                     zoom: 3
                 });
-                this.props.getRegions({ country_id: item.id, name: name });
+                // this.props.getCities({ country_id: item.id, name: name });
                 return
             }
         })
@@ -224,8 +225,7 @@ class SetLatlng extends React.Component {
     submitHandler(event) {
         this.props.setLatLng(this.state)
     }
-    refreshGeolocation(event)
-    {
+    refreshGeolocation(event) {
         this.setState({
             longitude: this.props.coords.longitude,
             latitude: this.props.coords.latitude
@@ -240,9 +240,9 @@ class SetLatlng extends React.Component {
         if (this.props.coords) {
             if (this.state.setLonLat == 1) {
                 latlng = [this.state.latitude, this.state.longitude];
-            } else if(this.state.latitude!=0 && this.state.longitude!=0) {
+            } else if (this.state.latitude != 0 && this.state.longitude != 0) {
                 latlng = [this.state.latitude, this.state.longitude];
-            }else{
+            } else {
                 latlng = [this.props.coords.latitude, this.props.coords.longitude];
             }
         } else if (this.state.latitude && this.state.longitude) {
@@ -301,7 +301,8 @@ class SetLatlng extends React.Component {
             getItemValue={(item) => item.label}
             items={this.props.latlng.cities.map(item => {
                 return {
-                    label: item.name
+                    label: item.name,
+                    population:item.population
                 }
             })}
             renderItem={(item, isHighlighted) =>
@@ -320,12 +321,18 @@ class SetLatlng extends React.Component {
                 maxHeight: '50%', // TODO: don't cheat, let it flow to the bottom
                 zIndex: '2000'
             }, this.props.menuStyle)}
+            sortItems={(objA, objB) => {
+                console.log(objA);
+                console.log(objB)
+                return objB.population >  objA.population ?1:-1
+            }}
             inputProps={{ className: ' form-control', style: { width: '100%' }, autoComplete: false, placeholder: phTrans.translate('SETLATLNG_CITY_PLACEHOLDER') }}
             wrapperStyle={{ width: '100%' }}
             value={this.state.cityValue}
             onChange={this.cityHander.bind(this)}
             onSelect={this.citySelect.bind(this)}
         />
+        /*
         let regionForm = <Autocomplete
             getItemValue={(item) => item.label}
             items={this.props.latlng.regions.map(item => {
@@ -355,7 +362,7 @@ class SetLatlng extends React.Component {
             onChange={this.regionHander.bind(this)}
             onSelect={this.regionSelect.bind(this)}
         />
-
+*/
         let body = <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 ">
             <Col className="text-center mx-auto g-mb-10">
                 <h5 className="g-color-black mb-2">{tran.translate('SETLATLNG_FORM_HEADER')}</h5>
@@ -372,17 +379,7 @@ class SetLatlng extends React.Component {
                     </Col>
                 </Row>
             </FormGroup>
-            <FormGroup >
-                <Row>
-                    <Col class="col-3">
 
-                        <Label for={this.state.guid} >{tran.translate('SETLATLNG_REGION_LABEL')}</Label>
-                    </Col>
-                    <Col class="col-6">
-                        {this.state.countryId > 0 ? regionForm : <span></span>}
-                    </Col>
-                </Row>
-            </FormGroup>
             <FormGroup >
                 <Row>
                     <Col class="col-3">
@@ -390,7 +387,7 @@ class SetLatlng extends React.Component {
                         <Label for={this.state.guid} >{tran.translate('SETLATLNG_CITY_LABEL')}</Label>
                     </Col>
                     <Col class="col-6">
-                        {this.state.regionId > 0 ? cityForm : <span></span>}
+                        {this.state.countryId > 0 ? cityForm : <span></span>}
                     </Col>
                 </Row>
             </FormGroup>
@@ -400,8 +397,8 @@ class SetLatlng extends React.Component {
                 </Row>
             </FormGroup>
             <br />
-            
-            {this.props.coords?<ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn g-mr-10 rounded-0"} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} />:<span></span>}
+
+            {this.props.coords ? <ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn g-mr-10 rounded-0"} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} /> : <span></span>}
 
             <ButtonLoader onClick={this.submitHandler.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('SET_COORDINATES_BUTTON_LABEL')} isLoading={this.props.latlng.isLoading} />
 

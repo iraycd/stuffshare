@@ -10,6 +10,7 @@ export default class CityDTO extends BaseDTO {
         this.name = '';
         this.status = '';
         this.region_id = '';
+        this.country_id = '';
         this.uid = '';
         this.name = '';
         this.name_clear = '';

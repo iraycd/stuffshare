@@ -20,7 +20,7 @@ module.exports = {
 
 
     let rl = readline.createInterface({
-      input: fs.createReadStream('C:/Users/michal_mach/Desktop/allCountries/allCountries.txt')
+      input: fs.createReadStream('C:/Programowanie/Private/cities1000.txt')
     });   // parseString(tmp, function (err, result) {
     // console.dir(result);
     //});
@@ -31,7 +31,7 @@ module.exports = {
         line_no++;
         let lineobj = line.split('	');
 
-        if (lineobj[7] == 'ADM3') {
+     //   if (lineobj[7] == 'ADM3') {
 
           cities.push({
             uid: lineobj[0],
@@ -40,13 +40,14 @@ module.exports = {
             name_clob: lineobj[3],
             latitude: lineobj[4],
             longitude: lineobj[5],
-            population: lineobj[14]
+            population: lineobj[14],
+            countryCode: lineobj[8]
 
 
           })
 
 
-        }
+       // }
 
       });
       rl.on('close', function (line) {
@@ -66,8 +67,8 @@ module.exports = {
         status: 'V',
         population: city.population,
         latitude: city.latitude,
-        longitude: city.longitude
-
+        longitude: city.longitude,
+        countryCode:city.countryCode
       }]);
     });
 

@@ -17,7 +17,7 @@ export default class CityRepository extends BaseRepository {
    * @memberof CityRepository
    */
   constructor({ sequelizeDI }) {
-    super(sequelizeDI.Country);
+    super(sequelizeDI.City);
     this.sequelizeDI = sequelizeDI;
   }
 
@@ -29,7 +29,7 @@ export default class CityRepository extends BaseRepository {
     * @return {Promise<CityDTO[]>}
     *  @memberof CityRepository
    */
-  getCities({ name_fs, region_id, transaction }) {
+  getCities({ name_fs, country_id, transaction }) {
 
     let freetext = PrepareSearch.simplePrepare(name_fs)
     freetext = freetext != undefined ? freetext : '""';
@@ -38,7 +38,7 @@ export default class CityRepository extends BaseRepository {
                         (SELECT Cities.* ,
                         0 aS RANK
                         FROM Cities
-                        WHERE region_id = ISNULL(NULLIF(:region_id,''),region_id)
+                        WHERE country_id = ISNULL(NULLIF(:country_id,''),country_id)
                         )`);
 
 
@@ -67,8 +67,8 @@ export default class CityRepository extends BaseRepository {
 
     let query = `WITH 
                   ${withQuery.join(',')}
-                  SELECT c.id,c.name,c.longitude,c.latitude FROM cities_prep c
-                  ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,name' : 'ORDER BY name'}`
+                  SELECT c.id,c.name,c.longitude,c.latitude,c.population FROM cities_prep c
+                  ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,population DESC' : 'ORDER BY population DESC'}`
 
     return this.sequelizeDI.sequelize.query(
       query
@@ -76,7 +76,7 @@ export default class CityRepository extends BaseRepository {
       {
         replacements: {
           freetext: freetext,
-          region_id:region_id
+          country_id:country_id
         },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT

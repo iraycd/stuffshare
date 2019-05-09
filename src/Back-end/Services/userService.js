@@ -81,6 +81,8 @@ export default class UserService extends BaseService {
 
     if (hash == user.passwordHash) {
       let refresh_token = uuidv4();
+      var expiresDate = new Date();
+      expiresDate.setDate(expiresDate.getDate() + 1);
 
       let cert = fs.readFileSync("./cert.key");
       return {
@@ -99,7 +101,9 @@ export default class UserService extends BaseService {
         name: user.name,
         surname: user.surname,
         email: user.email,
-        language: user.language
+        language: user.language,
+        expiresInd: expiresDate
+
         //,language:
       };
     }
@@ -144,6 +148,9 @@ export default class UserService extends BaseService {
     );
     if (user && user.relogin_require == false) {
       let cert = fs.readFileSync("./cert.key");
+      var expiresDate = new Date();
+      expiresDate.setDate(expiresDate.getDate() + 1);
+
       return {
         token: jwt.sign(
           {
@@ -160,7 +167,9 @@ export default class UserService extends BaseService {
         name: user.name,
         surname: user.surname,
         email: user.email,
-        language: user.language
+        language: user.language,
+        expiresInd: expiresDate
+
       };
     } else {
       throw new ServerException().throw({
@@ -230,10 +239,68 @@ export default class UserService extends BaseService {
   async setCoordinates({ longitude, latitude }) {
     this.context.user.longitude = longitude;
     this.context.user.latitude = latitude;
-    this.update({ model: this.context.user });
+    await this.update({ model: this.context.user });
   }
+
+
   async setProfileImage({ user }) {
     this.context.user.blob_id = user.blob_id;
-    this.update({ model: this.context.user })
+    await this.update({ model: this.context.user })
+  }
+
+  async addExternalCredentials({ cred }) {
+    if (cred.id > 0) {
+      await this.unitOfWorkDI.userAuthRepository.delete({ model: cred })
+    }
+    cred.id = undefined;
+    return await this.unitOfWorkDI.userAuthRepository.insert({ model: cred })
+  }
+
+  async loginByExternalUserId({ email, externalUserId, provider }) {
+    let result = await this.toJsonParse(this.checkMailInDb({ email: email }))
+    console.log(result);
+    let extCred = undefined;
+    if (result == null) {
+      throw new ServerException().throw({
+        code: "EMAIL_NOT_EXIST",
+        type: "ERROR"
+      });
+    }
+    if (result.user_auths.length > 0) {
+      extCred = await result.user_auths.find(item => {
+        return item.socialType == provider && item.socialUser_id == externalUserId;
+      })
+    }
+    if (extCred != undefined) {
+      let cert = fs.readFileSync("./cert.key");
+      var expiresDate = new Date();
+      expiresDate.setDate(expiresDate.getDate() + 1);
+      return {
+        token: jwt.sign(
+          {
+            uid: result.uid,
+            socialGuid: null,
+            socialType: null,
+            email: result.email
+          },
+          cert.toString("utf8"),
+          { expiresIn: CONFIG.SECURITY.TOKEN_EXPIRATION }
+        ),
+        refresh_token: result.refresh_token,
+        uid: result.uid,
+        name: result.name,
+        surname: result.surname,
+        email: result.email,
+        language: result.language,
+        expiresInd: expiresDate
+        //,language:
+      };
+    }
+
+    throw new ServerException().throw({
+      code: "EMAIL_NOT_EXIST",
+      type: "ERROR"
+    });
+
   }
 }

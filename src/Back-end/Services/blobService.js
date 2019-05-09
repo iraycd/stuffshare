@@ -122,7 +122,7 @@ export default class BlobService extends BaseService {
    * @memberof BlobService
    */
   async uploadUserImage({ blob }) {
-    await this.uploadImageAndSave({ blob, itemId: null })
+    return await this.uploadImageAndSave({ blob, itemId: null })
 
   }
 
@@ -148,7 +148,7 @@ export default class BlobService extends BaseService {
       order: getUsersBlob.length + 1,
       status: 0
     };
-    await this.unitOfWorkDI.blobRepository.insert({ model: result });
+    return await this.unitOfWorkDI.blobRepository.insert({ model: result });
   }
 
 

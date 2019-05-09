@@ -35,10 +35,7 @@ export default class SetProfileImageCommand extends BaseCommand {
     this.model = Object.assign(new UserDTO(), dto);
   }
 
-  get validation() {
-    return [];
-  }
-
+ 
   async action() {
     await this.userServiceDI.setContext(this.context).setProfileImage({user:this.model});
   }

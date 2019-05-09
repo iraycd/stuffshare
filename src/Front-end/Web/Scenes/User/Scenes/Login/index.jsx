@@ -14,7 +14,7 @@ import LOGIN_ACTIONS from './actions.js';
 //import FacebookLogin from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import GoogleLogin from 'react-google-login';
-
+import ExternalCredentialsDTO from '../../../../../../Shared/DTO/User/ExternalCredentialsDTO.js';
 
 class Login extends React.Component {
 
@@ -90,10 +90,24 @@ class Login extends React.Component {
     }*/
     responseFacebook(response) {
         console.log(response);
+        let externalDTO = new ExternalCredentialsDTO();
+        externalDTO.provider = 1;
+        externalDTO.token = response.accessToken;
+        externalDTO.userId = response.id;
+        this.props.loginByExternal(externalDTO);
     }
     responseGoogle(response) {
         console.log(response);
+        let externalDTO = new ExternalCredentialsDTO();
+        externalDTO.provider = 2;
+        externalDTO.token = response.accessToken;
+        externalDTO.userId = response.googleId;
+        this.props.loginByExternal(externalDTO);
     }
+    failureGoogle(response) {
+        console.log(response);
+    }
+
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
@@ -120,9 +134,9 @@ class Login extends React.Component {
                 <ul class="list-inline d-inline-block g-mb-30"><li class="list-inline-item g-mr-10">
                     <FacebookLogin
                         appId="1080275872150336"
-                        autoLoad={true}
+                        autoLoad={false}
                         fields="name,email,picture"
-                        scope="public_profile,user_friends"
+                        scope="public_profile,email,user_birthday,hometown,gender,user_friends"
                         callback={this.responseFacebook.bind(this)}
                         render={renderProps => (
                             <a className="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-facebook g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
@@ -137,10 +151,9 @@ class Login extends React.Component {
                                 <a className="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-google-plus g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
                                     onClick={renderProps.onClick}><i class="fa fa-google-plus"></i></a>
                             )}
-                            responseType='code'
                             accessType='offline'
                             onSuccess={this.responseGoogle.bind(this)}
-                            onFailure={this.responseGoogle.bind(this)}
+                            onFailure={this.failureGoogle.bind(this)}
                             cookiePolicy={'single_host_origin'}
                         />
                     </li>
@@ -166,59 +179,71 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+    let loginLogic = (succ) => {
+        localStorage.token = succ.data.token;
+        localStorage.refresh_token = succ.data.refresh_token ? succ.data.refresh_token : "";
+        if (!localStorage.refresh_token) {
+            dispatch(new BaseService().commandThunt(CommandList.User.GEN_REFRESH_TOKEN, { uid: succ.data.uid }, null, Enums.LOADER.SET_CONTAINER_ACTION))
+                .then(succ => {
+                    return dispatch(new BaseService().commandThunt(QueryList.User.GET_REFRESH_TOKEN, { uid: succ.data.uid }, localStorage.token, Enums.LOADER.SET_CONTAINER_ACTION));
+                }).then(succ => {
+                    localStorage.refresh_token = succ.data;
+                    return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
+                }).then(succ => {
+                    if (succ.data.language != localStorage.lang) {
+                        localStorage.lang = succ.data.language;
+                        dispatch({
+                            type: LOGIN_ACTIONS.SET_LANGUAGE,
+                            lang: localStorage.lang
+
+                        })
+                    }
+                    dispatch({
+                        type: LOGIN_ACTIONS.IS_AUTH,
+                        dto: {
+                            refresh_token: localStorage.refresh_token,
+                            token: localStorage.token
+                        }
+                    })
+                })
+
+
+        } else {
+
+            dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token)).then(succ => {
+                if (succ.data.language != localStorage.lang) {
+                    localStorage.lang = succ.data.language;
+                    dispatch({
+                        type: LOGIN_ACTIONS.SET_LANGUAGE,
+                        lang: localStorage.lang
+
+                    })
+                }
+
+                dispatch({
+                    type: LOGIN_ACTIONS.IS_AUTH,
+                    dto: {
+                        refresh_token: localStorage.refresh_token,
+                        token: localStorage.token
+                    }
+                })
+            });
+        }
+        return Promise.resolve(succ)
+    }
     return {
         loginInternal: (dto) => {
             return dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_INTERNAL, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
-                localStorage.token = succ.data.token;
-                localStorage.refresh_token = succ.data.refresh_token ? succ.data.refresh_token : "";
-                if (!localStorage.refresh_token) {
-                    dispatch(new BaseService().commandThunt(CommandList.User.GEN_REFRESH_TOKEN, { uid: succ.data.uid }, null, Enums.LOADER.SET_CONTAINER_ACTION))
-                        .then(succ => {
-                            return dispatch(new BaseService().commandThunt(QueryList.User.GET_REFRESH_TOKEN, { uid: succ.data.uid }, localStorage.token, Enums.LOADER.SET_CONTAINER_ACTION));
-                        }).then(succ => {
-                            localStorage.refresh_token = succ.data;
-                            return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
-                        }).then(succ => {
-                            if (succ.data.language != localStorage.lang) {
-                                localStorage.lang = succ.data.language;
-                                dispatch({
-                                    type: LOGIN_ACTIONS.SET_LANGUAGE,
-                                    lang: localStorage.lang
-
-                                })
-                            }
-                            dispatch({
-                                type: LOGIN_ACTIONS.IS_AUTH,
-                                dto: {
-                                    refresh_token: localStorage.refresh_token,
-                                    token: localStorage.token
-                                }
-                            })
-                        })
-
-
-                } else {
-
-                    dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token)).then(succ => {
-                        if (succ.data.language != localStorage.lang) {
-                            localStorage.lang = succ.data.language;
-                            dispatch({
-                                type: LOGIN_ACTIONS.SET_LANGUAGE,
-                                lang: localStorage.lang
-
-                            })
-                        }
-
-                        dispatch({
-                            type: LOGIN_ACTIONS.IS_AUTH,
-                            dto: {
-                                refresh_token: localStorage.refresh_token,
-                                token: localStorage.token
-                            }
-                        })
-                    });
-                }
-                return Promise.resolve(succ)
+                return loginLogic(succ);
+            }).catch(err => {
+                return Promise.reject(err);
+            });
+        },
+        loginByExternal: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.User.CREATE_USER_EXTERNAL_PROV, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
+                return dispatch(new BaseService().queryThunt(QueryList.User.LOGIN_BY_EXTERNAL, dto, null, Enums.LOADER.SET_CONTAINER_ACTION));
+            }).then(succ => {
+                return loginLogic(succ);
 
             }).catch(err => {
                 return Promise.reject(err);

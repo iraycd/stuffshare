@@ -31,6 +31,10 @@ export default class City extends Model {
           type: DataTypes.INTEGER,
           allowNull: false
         },
+        country_id: {
+          type: DataTypes.INTEGER,
+          allowNull: false
+        },
         uid: DataTypes.STRING(50),
 
         name_clob: DataTypes.TEXT,
