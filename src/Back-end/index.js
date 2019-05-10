@@ -8,6 +8,7 @@ import cors from "koa2-cors";
 import fs from 'fs';
 import path from 'path'
 import serve from 'koa-static';
+import CircularJSON from 'circular-json';
 //TO REMOVE IN FUTURE
 if (process.env.UPLOAD_PATH) {
   if (!fs.existsSync(process.env.UPLOAD_PATH)) {
@@ -62,10 +63,10 @@ const cqrsPreprocess = () => {
       action.language = lang;
       action.context.language = lang;
       result = await action.run();
-      ctx.body = result;
+      ctx.body = CircularJSON.stringify(result);;
       ctx.status = 200;
     } catch (exception) {
-      ctx.body = exception;
+      ctx.body = CircularJSON.stringify(exception);;
       ctx.status = 400; // Number(exception.Status);
     }
     return ctx;

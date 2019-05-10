@@ -1,4 +1,5 @@
 import ServerException from "./Exceptions/serverException";
+import { inspect } from 'util' // or directly
 
 "use strict";
 
@@ -33,7 +34,8 @@ export default class BaseInfrastracture {
             }
             await this.successLayer(result);
         } catch (err) {
-            //     console.log(err);
+            //     console.log(err);  
+
             await this.errorHandling(err, result);
             throw err;
         } finally {
