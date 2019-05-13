@@ -90,11 +90,11 @@ class UserProfileModal extends React.Component {
             return <SetLatlng></SetLatlng>
         }
 
-    let body =
+        let body =
             <div>
-                <Nav  className="text-center nav-justified u-nav-v3-2 g-mt-15">
+                <Nav className="text-center nav-justified u-nav-v3-2 g-mt-15">
                     <NavItem className="nav-3-2-default-hor-left-big-icons  g-cursor-pointer navbar-hover">
-                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show "+ (this.state.activeTab == 1 ? "active" : "")}
+                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show " + (this.state.activeTab == 1 ? "active" : "")}
                             onClick={() => { this.toggle('1'); }}
                         >
                             <i class="fa fa-user d-block g-font-size-25 u-tab-line-icon-pro"></i>
@@ -102,7 +102,7 @@ class UserProfileModal extends React.Component {
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-3-1-default-hor-left-big-icons  g-cursor-pointer navbar-hover">
-                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show "+ (this.state.activeTab == 2? "active" : "" )}
+                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show " + (this.state.activeTab == 2 ? "active" : "")}
 
                             onClick={() => { this.toggle('2'); }}
                         >
@@ -112,7 +112,7 @@ class UserProfileModal extends React.Component {
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-3-1-default-hor-left-big-icons  g-cursor-pointer  navbar-hover">
-                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show "+ (this.state.activeTab == 3 ? "active" : "")}
+                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show " + (this.state.activeTab == 3 ? "active" : "")}
                             onClick={() => { this.toggle('3'); }}
                         >
                             <i class="fa fa-envelope d-block g-font-size-25 u-tab-line-icon-pro"></i>
@@ -121,7 +121,7 @@ class UserProfileModal extends React.Component {
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-3-1-default-hor-left-big-icons g-cursor-pointer  navbar-hover">
-                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show "+(this.state.activeTab == 4 ? "active" : "")}
+                        <NavLink className={"btn btn-md btn-block rounded-0 u-btn-outline-lightgray show " + (this.state.activeTab == 4 ? "active" : "")}
                             onClick={() => { this.toggle('4'); }}
                         >
                             <i class="fa fa-users d-block g-font-size-25 u-tab-line-icon-pro"></i>
@@ -131,18 +131,18 @@ class UserProfileModal extends React.Component {
                     </NavItem>
                 </Nav>
                 <TabContent className="g-pa-0" activeTab={this.state.activeTab}>
-                    <TabPane className="g-pa-0" tabId="1">
+                    {this.state.activeTab == 1 ? <TabPane className="g-pa-0" tabId="1">
                         <UserProfileModalTab></UserProfileModalTab>
-                    </TabPane>
-                    <TabPane tabId="2">
+                    </TabPane> : undefined}
+                    {this.state.activeTab == 2 ? <TabPane tabId="2">
                         <UserProfileModalTab></UserProfileModalTab>
-                    </TabPane>
-                    <TabPane tabId="3">
+                    </TabPane> : undefined}
+                    {this.state.activeTab == 3 ? <TabPane tabId="3">
                         <UserProfileModalTab></UserProfileModalTab>
-                    </TabPane>
-                    <TabPane tabId="4">
+                    </TabPane> : undefined}
+                    {this.state.activeTab == 4 ? <TabPane tabId="4">
                         <UserProfileModalTab></UserProfileModalTab>
-                    </TabPane>
+                    </TabPane> : undefined}
                 </TabContent>
             </div >;
         /*

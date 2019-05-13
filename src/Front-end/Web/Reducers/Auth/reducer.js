@@ -52,6 +52,15 @@ export default function AuthReducer(state = Object.assign({}, emptyState), actio
                 result.user = null;
                 return result;
             }
+        case AUTH_ACTIONS.REMOVE_USER_FETCH.SUCCESS:
+            {
+                const result = Object.assign({}, state);
+                result.token = null;
+                result.token = null;
+                result.is_logged = false;
+                result.user = null;
+                return result;
+            }
         default:
             {
                 return state;

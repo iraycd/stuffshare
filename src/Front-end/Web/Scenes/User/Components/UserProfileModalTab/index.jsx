@@ -97,10 +97,11 @@ class UserProfileModalTab extends React.Component {
 
         let img = noprofilepic;
         let uid = 0;
+        let hasImg = false;
         if (this.props.auth.user.blob_profile != null) {
             img = `data:${this.props.auth.user.blob_profile.blob_thumbmail.type};base64,${this.props.auth.user.blob_profile.blob_thumbmail.blob}`
             uid = this.props.auth.user.blob_profile.blob_item.uid
-
+            hasImg = true;
         }
 
         let body =
@@ -114,13 +115,13 @@ class UserProfileModalTab extends React.Component {
                                     <Img data-tag={uid} src={img.toString()} className="img-fluid w-100 u-block-hover__main--zoom-v1 g-cursor-pointer" alt="Image Description" />
 
                                 </figure>
+                                {hasImg == true ?
+                                    <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
+                                        <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
 
-                                <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
-                                    <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
-
-                                    </div>
-                                </figcaption>
-
+                                        </div>
+                                    </figcaption>
+                                    : undefined}
                                 <span class="g-pos-abs g-bottom-0 g-right-0">
                                     <a class="hidden btn btn-sm u-btn-primary rounded-0" href="#">Użytkownik</a>
                                     <small class="d-block g-bg-black g-color-white g-pa-5">{this.props.auth.user.name}</small>
@@ -170,7 +171,7 @@ const mapStateToProps = (state) => {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
         auth: state.AuthReducer,
-        userProfileModalTab:state.UserProfileModalTabReducer
+        userProfileModalTab: state.UserProfileModalTabReducer
 
     };
 }

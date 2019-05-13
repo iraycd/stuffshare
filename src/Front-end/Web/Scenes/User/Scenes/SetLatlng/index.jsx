@@ -302,7 +302,8 @@ class SetLatlng extends React.Component {
             items={this.props.latlng.cities.map(item => {
                 return {
                     label: item.name,
-                    population:item.population
+                    population: item.population,
+                    rank: item.RANK
                 }
             })}
             renderItem={(item, isHighlighted) =>
@@ -324,7 +325,7 @@ class SetLatlng extends React.Component {
             sortItems={(objA, objB) => {
                 console.log(objA);
                 console.log(objB)
-                return objB.population >  objA.population ?1:-1
+                return Number(objB.population) > Number(objA.population)? 1 : -1
             }}
             inputProps={{ className: ' form-control', style: { width: '100%' }, autoComplete: false, placeholder: phTrans.translate('SETLATLNG_CITY_PLACEHOLDER') }}
             wrapperStyle={{ width: '100%' }}

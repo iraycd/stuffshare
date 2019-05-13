@@ -19,25 +19,33 @@ import configureStore from './store.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { BaseService, LANGUAGE_ACTIONS } from './../App/index.js';
-import { QueryList, Enums } from './../../Shared/index.js';
+import { Enums } from './../../Shared/index.js';
 
 import logo from './assets/img/logo/logo-1.png';
 import AUTH_ACTIONS from './Reducers/Auth/action.js';
+import QueryList from '../../Shared/QueryList.js';
+
 let store = configureStore({});
 //INIT
 let loader = 0;
 const init = () => {
 
+    if (!localStorage.lang) {
+        localStorage.lang = 'us';
+    }
     if (localStorage.token) {
-        store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
+        store.dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_BY_REFRESH_TOKEN, { refresh_token: localStorage.refresh_token }, {}, Enums.LOADER.INITIAL)).then(refSucc => {
+            console.log(refSucc);
+            store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
 
-            store.dispatch({
-                type: AUTH_ACTIONS.IS_AUTH,
-                dto: {
-                    refresh_token: localStorage.refresh_token,
-                    token: localStorage.token
-                }
-            });
+                store.dispatch({
+                    type: AUTH_ACTIONS.IS_AUTH,
+                    dto: {
+                        refresh_token: localStorage.refresh_token,
+                        token: localStorage.token
+                    }
+                });
+            })
         })
     }
     const language = localStorage.getItem('lang');
@@ -47,6 +55,10 @@ const init = () => {
             lang: language
         });
     }
+
+    setInterval(() => {
+        window.location.reload();
+    }, 7200000)
 
     store.dispatch(new BaseService().queryThunt(QueryList.Dictionary.GET_DICTIONARY, {}, localStorage.token, Enums.LOADER.INITIAL));
 

@@ -182,6 +182,7 @@ const mapDispatchToProps = (dispatch) => {
     let loginLogic = (succ) => {
         localStorage.token = succ.data.token;
         localStorage.refresh_token = succ.data.refresh_token ? succ.data.refresh_token : "";
+        localStorage.expiresIn = succ.data.expiresIn;
         if (!localStorage.refresh_token) {
             dispatch(new BaseService().commandThunt(CommandList.User.GEN_REFRESH_TOKEN, { uid: succ.data.uid }, null, Enums.LOADER.SET_CONTAINER_ACTION))
                 .then(succ => {

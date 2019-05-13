@@ -47,6 +47,31 @@ const prepare = (text, wildecard) => {
 }
 
 
+const prepareSmall = (text) => {
+    if (text.length < 2) {
+        return '';
+    }
+
+    let freetext = text.trim();
+    let cleaned = freetext.replace(/[^a-zA-Z0-9À-ž_-\s]/g, " ").split(' ').filter(item => { return item }).join(' ');
+    let size = cleaned.split(' ').length;
+
+    let form_whole = `FORMSOF(INFLECTIONAL,"${cleaned}") weight(0.3) `
+    let equal = `"${cleaned}" weight(1)`;
+    let withStar = `"${cleaned}*" weight(0.5)`;
+    let withWild = `"${cleaned.split(' ').map(item => {
+        return item + "*"
+    }).join(' ')}" weight(0.2)`
+    let query = [equal,
+        form_whole,
+        withStar,
+        withWild,
+    ].filter(item => {
+        return item;
+    }).join(',');
+    return `ISABOUT(${query})`;
+
+}
 const clean = (text) => {
     let freetext = text.trim();
     let cleaned = freetext.replace(/[^a-zA-Z0-9À-ž_-\s]/g, " ").split(' ').filter(item => { return item }).join(' ');
@@ -60,7 +85,8 @@ const simplePrepare = (text) => {
 const PrepareSearch = {
     prepare,
     clean,
-    simplePrepare
+    simplePrepare,
+    prepareSmall
 
 }
 

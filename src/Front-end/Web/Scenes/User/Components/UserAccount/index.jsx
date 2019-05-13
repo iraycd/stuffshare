@@ -61,21 +61,22 @@ class UserAccount extends React.Component {
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
 
         if (this.props.loader.BODY_PROGRESS < 100) {
-            return (<BodyLoader  zIndex={3}  height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+            return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
         }
         console.log(this.props.userAccount)
-      //  if (this.props.userAccount.getImagesIsLoading == true) {
-      //      return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
-      //  }
-        
+        //  if (this.props.userAccount.getImagesIsLoading == true) {
+        //      return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+        //  }
+
 
 
         let img = noprofilepic;
         let uid = 0;
+        let hasImg = false;
         if (this.props.auth.user.blob_profile != null) {
             img = `data:${this.props.auth.user.blob_profile.blob_thumbmail.type};base64,${this.props.auth.user.blob_profile.blob_thumbmail.blob}`
             uid = this.props.auth.user.blob_profile.blob_item.uid
-
+            hasImg = true;
         }
 
         let body =
@@ -86,16 +87,18 @@ class UserAccount extends React.Component {
                         <div class=" g-mb-50 g-mb-0--lg">
                             <div class="u-block-hover g-pos-rel">
                                 <figure >
-                                    
-                                    <Img data-tag={uid} src={img.toString()}  className="img-fluid w-100 u-block-hover__main--zoom-v1 g-cursor-pointer" alt="Image Description" />
-                                
+
+                                    <Img data-tag={uid} src={img.toString()} className="img-fluid w-100 u-block-hover__main--zoom-v1 g-cursor-pointer" alt="Image Description" />
+
                                 </figure>
 
-                                <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
-                                    <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
+                                {hasImg == true ?
+                                    <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-bg-white-opacity-0_5 g-pa-30">
+                                        <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
 
-                                    </div>
-                                </figcaption>
+                                        </div>
+                                    </figcaption>
+                                    : undefined}
 
                                 <span class="g-pos-abs g-bottom-0 g-right-0">
                                     <a class="hidden btn btn-sm u-btn-primary rounded-0" href="#">Użytkownik</a>
@@ -117,9 +120,7 @@ class UserAccount extends React.Component {
                                 <NavLink to={"/userAccount/removeAccount"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     {this.tran.translate('REMOVE_ACCOUNT_LINK')}
                                 </NavLink>
-                                <NavLink to={"/userAccount/connectSocial"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span>{this.tran.translate('CONNECT_SOCIAL_LINK')}</span>
-                                </NavLink>
+                                
                                 <NavLink to={"/userAccount/changePassword"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     <span>{this.tran.translate('CHANGE_PASSWORD_LINK')}</span>
                                 </NavLink>

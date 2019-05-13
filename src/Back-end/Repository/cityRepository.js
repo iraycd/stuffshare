@@ -31,7 +31,7 @@ export default class CityRepository extends BaseRepository {
    */
   getCities({ name_fs, country_id, transaction }) {
 
-    let freetext = PrepareSearch.simplePrepare(name_fs)
+    let freetext = PrepareSearch.prepareSmall(name_fs)
     freetext = freetext != undefined ? freetext : '""';
     let withQuery = [];
     withQuery.push(`cities_prep as
@@ -57,7 +57,7 @@ export default class CityRepository extends BaseRepository {
               )  		
 			) as t
               WHERE 
-			  RANK > 70/(case when counter = 0 then 1
+			  RANK > 40/(case when counter = 0 then 1
 			  else  counter end )
 					
           )
@@ -67,8 +67,8 @@ export default class CityRepository extends BaseRepository {
 
     let query = `WITH 
                   ${withQuery.join(',')}
-                  SELECT c.id,c.name,c.longitude,c.latitude,c.population FROM cities_prep c
-                  ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ORDER BY fs.RANK DESC ,population DESC' : 'ORDER BY population DESC'}`
+                  SELECT c.id,c.name,c.longitude,c.latitude,c.population, fs.RANK FROM cities_prep c
+                  ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ' : ''}`
 
     return this.sequelizeDI.sequelize.query(
       query

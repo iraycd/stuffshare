@@ -94,7 +94,7 @@ export default class UserRepository extends BaseRepository {
     );
   }
   getByRefreshToken({ refresh_token, transaction }) {
-    return this.UserVDB.findOne({
+    return this.entityDAO.findOne({
       where: {
         refresh_token: this.toStr(refresh_token),
         is_authorized: true
