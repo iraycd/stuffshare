@@ -102,7 +102,9 @@ export default class UserService extends BaseService {
         surname: user.surname,
         email: user.email,
         language: user.language,
-        expiresIn: expiresDate
+        expiresIn: expiresDate,
+        user:user
+
 
         //,language:
       };
@@ -168,7 +170,9 @@ export default class UserService extends BaseService {
         surname: user.surname,
         email: user.email,
         language: user.language,
-        expiresIn: expiresDate
+        expiresIn: expiresDate,
+        user:user
+
 
       };
     } else {
@@ -292,7 +296,8 @@ export default class UserService extends BaseService {
         surname: result.surname,
         email: result.email,
         language: result.language,
-        expiresIn: expiresDate
+        expiresIn: expiresDate,
+        user:result
         //,language:
       };
     }

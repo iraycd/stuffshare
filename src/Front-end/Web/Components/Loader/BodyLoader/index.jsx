@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './../../../assets/img/logo/logo-2.png';
 
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
 
@@ -14,7 +15,7 @@ class BodyLoader extends React.Component {
 
         // <div id="loading-text">LOADING <br />{this.props.progress + "%"}</div>
         return <Container onClick={this.props.onClick}
-            className="loader" style={{
+            className={"loader" + (this.props.className ? this.props.className : "")} style={{
                 height: this.props.height,
                 display: 'flex',
                 zIndex: (this.props.zIndex > 0 ? this.props.zIndex : 7001),
@@ -32,6 +33,7 @@ class BodyLoader extends React.Component {
                 height: this.props.height,
 
             }}>
+                {this.props.withImg?<img src={logo} class="position-absolute" />:<span></span>}
                 <div id={this.props.white == "true" ? "loading-content-white" : "loading-content"} style={{
                     display: 'block',
                     height: this.props.size, width: this.props.size

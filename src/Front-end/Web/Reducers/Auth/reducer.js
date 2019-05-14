@@ -31,6 +31,8 @@ export default function AuthReducer(state = Object.assign({}, emptyState), actio
                 const result = Object.assign({}, state);
                 result.token = action.dto.token;
                 result.refresh_token = action.dto.refresh_token;
+                console.log(action)
+                result.user = action.data.user;
                 result.is_logged = true;
 
                 return result;

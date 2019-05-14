@@ -19,6 +19,7 @@ import ImageLightbox from '../Components/ImageLightbox/index.jsx';
 import RouterAuth from '../Components/RouterAuth/index.jsx';
 import SignInModal from './User/Components/SignInModal/index.jsx';
 import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
+import BodyLoader from '../Components/Loader/BodyLoader/index.jsx';
 
 
 
@@ -32,11 +33,14 @@ class App extends React.Component {
     let body = <div></div>;
     let loader = <div></div>;
     if (this.props.loader.INITIAL_PROGRESS < 100) {
+      loader = (<BodyLoader   withImg={true}  zIndex={3} heightClass=" g-min-height-100vh" height="800px" size="130px" progress={50} />);
+
+      /*
       loader = (<div id="loading-wrapper">
         <img src={logo} class="position-absolute" />
-        <div id="loading-text">LOADING <br />{this.props.loader.INITIAL_PROGRESS + "%"}</div>
+        <div id="loading-text">LOADING...</div>
         <div id="loading-content" className="loading-content"></div>
-      </div>);
+      </div>);*/
     } else {
 
       body = (<div>

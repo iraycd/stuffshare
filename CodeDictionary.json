@@ -1338,6 +1338,32 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "LOGIN_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Jesteś zalogowany",
+                "us": "You're logged in"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        " CHANGE_PASSWORD_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": " CHANGE_PASSWORD_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Hasło zostało zmienione.",
+                "us": "Your password has been changed."
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "INFO_GLOBAL": {

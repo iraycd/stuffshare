@@ -50,6 +50,7 @@ const init = () => {
             localStorage.removeItem("token");
             localStorage.removeItem("refresh_token")
         })
+
     }
     const language = localStorage.getItem('lang');
     if (language != null) {

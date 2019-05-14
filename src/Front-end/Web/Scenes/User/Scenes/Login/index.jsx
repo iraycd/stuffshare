@@ -110,7 +110,9 @@ class Login extends React.Component {
         this.props.loginByExternal(externalDTO).then(succ => {
             const urlParams = new URLSearchParams(window.location.search);
             const redirectTo = urlParams.get('redirectTo');
-
+            this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
+            );
             if (redirectTo) {
                 this.props.history.push(redirectTo);
 
@@ -127,7 +129,9 @@ class Login extends React.Component {
         this.props.loginByExternal(externalDTO).then(succ => {
             const urlParams = new URLSearchParams(window.location.search);
             const redirectTo = urlParams.get('redirectTo');
-
+            this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
+            );
             if (redirectTo) {
                 this.props.history.push(redirectTo);
 
