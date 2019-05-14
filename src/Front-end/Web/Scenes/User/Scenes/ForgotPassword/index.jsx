@@ -78,16 +78,16 @@ class ForgotPassword extends React.Component {
 
         return (
 
-            <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+            <Form className="g-brd-around g-brd-gray-light-v3 g-min-height-200 g-pa-30 g-mb-10 text-center g-height-350">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                    <h5 className="g-color-black mb-3">{tran.translate('FORGOT_PASSWORD_FORM_HEADER')}</h5>
+                    <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('FORGOT_PASSWORD_FORM_HEADER')}</h5>
                     <p className="lead "></p>
                 </Col>
 
                 <TextBox placeholder={phTrans.translate('FORGOT_PASSWORD_USER_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('FORGOT_PASSWORD_USER_NAME_LABEL')} value={this.state.email} onChange={this.emailHandler.bind(this)} field="email" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('FORGOT_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.forgotPassword.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15"} value={tran.translate('FORGOT_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.forgotPassword.isLoading} />
             </Form>
 
         );

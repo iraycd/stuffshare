@@ -107,7 +107,7 @@ class UserProfileModalTab extends React.Component {
         let body =
             <Container className="g-pa-5">
                 <Row>
-                    <Col xs="4" className="g-pa-5">
+                    <Col xs="4" className="g-pr-0 g-py-5 g-pl-5">
                         <div class=" g-mb-50 g-mb-0--lg">
                             <div class="u-block-hover g-pos-rel ">
                                 <figure >
@@ -131,12 +131,12 @@ class UserProfileModalTab extends React.Component {
                             <div class="list-group list-group-border-0 g-mb-40">
 
                                 <Link onClick={this.onClickMyProfile.bind(this)} to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
-                                    <span> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
                                 </Link>
 
 
                                 <Link onClick={this.logOut.bind(this)} to={"/userAccount/logOut"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span>{this.tran.translate('LOG_OUT_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('LOG_OUT_LINK')}</span>
                                 </Link>
 
                             </div>

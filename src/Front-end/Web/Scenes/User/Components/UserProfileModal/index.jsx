@@ -98,7 +98,7 @@ class UserProfileModal extends React.Component {
                             onClick={() => { this.toggle('1'); }}
                         >
                             <i class="fa fa-user d-block g-font-size-25 u-tab-line-icon-pro"></i>
-                            {this.tran.translate('PROFILE_MODAL_TAB')}
+                            <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('PROFILE_MODAL_TAB')}</span>
                         </NavLink>
                     </NavItem>
                     <NavItem className="nav-3-1-default-hor-left-big-icons  g-cursor-pointer navbar-hover">
@@ -107,7 +107,7 @@ class UserProfileModal extends React.Component {
                             onClick={() => { this.toggle('2'); }}
                         >
                             <i class="fa fa-book d-block g-font-size-25 u-tab-line-icon-pro"></i>
-                            {this.tran.translate('SHARE_ITEMS_MODAL_TAB')}
+                           <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SHARE_ITEMS_MODAL_TAB')}</span>
 
                         </NavLink>
                     </NavItem>
@@ -116,7 +116,8 @@ class UserProfileModal extends React.Component {
                             onClick={() => { this.toggle('3'); }}
                         >
                             <i class="fa fa-envelope d-block g-font-size-25 u-tab-line-icon-pro"></i>
-                            {this.tran.translate('MESSAGES_MODAL_TAB')}
+                            <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('MESSAGES_MODAL_TAB')}</span>
+
 
                         </NavLink>
                     </NavItem>
@@ -125,7 +126,8 @@ class UserProfileModal extends React.Component {
                             onClick={() => { this.toggle('4'); }}
                         >
                             <i class="fa fa-users d-block g-font-size-25 u-tab-line-icon-pro"></i>
-                            {this.tran.translate('FRIENDS_MODAL_TAB')}
+                            <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('FRIENDS_MODAL_TAB')}</span>
+
 
                         </NavLink>
                     </NavItem>

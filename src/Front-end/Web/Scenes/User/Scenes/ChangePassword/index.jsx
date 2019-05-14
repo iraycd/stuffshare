@@ -85,16 +85,16 @@ class ChangePassword extends React.Component {
 
         return (
 
-            <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30  text-center">
+            <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30  text-center">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-10">
-                    <h5 className="g-color-black mb-2">{tran.translate('CHANGEPASSWORD_FORM_HEADER')}</h5>
+                    <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CHANGEPASSWORD_FORM_HEADER')}</h5>
                 </Col>
 
                 <TextBox type="password" placeholder={phTrans.translate('REGISTER_PASSWORD_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_PASSWORD_LABEL')} value={this.state.password} onChange={this.passwordHandler.bind(this)} field="password" validation={this.state.validation} />
                 <TextBox type="password" placeholder={phTrans.translate('REGISTER_PASSWORD_REPEAT_PLACEHOLDER')} isRequired={true} label={""} value={this.state.repeatPassword} onChange={this.passwordRepeatHandler.bind(this)} field="repeatPassword" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('LOGIN_SUBMIT_LABEL')} isLoading={this.props.changePassword.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('CHANGE_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.changePassword.isLoading} />
 
             </Form>
 

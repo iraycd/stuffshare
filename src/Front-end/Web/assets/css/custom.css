@@ -70,6 +70,10 @@
 .DayPickerInput{
     width:100%;
 }
+.DayPickerInput>input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:#aaa !important;
+    opacity: 1; /* Firefox */
+  }
 .alert-absolute
 {
     z-index:5000 !important;

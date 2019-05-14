@@ -36,13 +36,19 @@ class SignInModal extends React.Component {
     onCloseModal() {
         this.props.closeWindow();
     };
-    onForgotPaswordBtn() {
+    onForgotPaswordBtn(event) {
+        event.preventDefault();
+
         this.props.changeAction(true, 'FORGOT_PASSWORD');
     };
-    onCreateAccountBtn() {
+    onCreateAccountBtn(event) {
+        event.preventDefault();
+
         this.props.changeAction(true, 'CREATE_ACCOUNT');
     };
-    onLoginBtn() {
+    onLoginBtn(event) {
+        event.preventDefault();
+
         this.props.changeAction(true, 'LOGIN');
     };
     init() {
@@ -71,7 +77,7 @@ class SignInModal extends React.Component {
         }
 
         let body =
-            <Container className="g-pa-15">
+            <Container className="g-pl-0">
                 <Row>
                     <Col xs="8">
                         {modalBody}
@@ -80,16 +86,16 @@ class SignInModal extends React.Component {
                         <img src={logo} className={"g-mb-10 g-pa-20 img-logo-width"} />
                         <div class="list-group list-group-border-0">
 
-                            <Button onClick={this.onLoginBtn.bind(this)} to="/login" className={"list-group-item list-group-item-action justify-content-between u-link-v5  g-pl-7--hover " + (this.props.siginInModal.action == 'LOGIN' ? 'active' : '')}>
-                                <span> {tran.translate('LOGIN_SIGN_IN_BTN_LABEL')}</span>
-                            </Button>
-                            <Button onClick={this.onCreateAccountBtn.bind(this)} to="/createAccount" className={"list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover " + (this.props.siginInModal.action == 'CREATE_ACCOUNT' ? 'active' : '')}>
-                                <span> {tran.translate('LOGIN_CREATEA_ACCOUNT_BTN_LABEL')}</span>
-                            </Button>
-                            <Button onClick={this.onForgotPaswordBtn.bind(this)} to="/forgot_password" className={"list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover " + (this.props.siginInModal.action == 'FORGOT_PASSWORD' ? 'active' : '')}>
-                                <span> {tran.translate('LOGIN_FORGOT_PASSWOD_BTN_LABEL')}</span>
-                            </Button>
-                           </div>
+                            <Link onClick={this.onLoginBtn.bind(this)} to="/login" className={"list-group-item list-group-item-action justify-content-between u-link-v5  g-pl-7--hover " + (this.props.siginInModal.action == 'LOGIN' ? 'active' : '')}>
+                                <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {tran.translate('LOGIN_SIGN_IN_BTN_LABEL')}</span>
+                            </Link>
+                            <Link onClick={this.onCreateAccountBtn.bind(this)} to="/createAccount" className={"list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover " + (this.props.siginInModal.action == 'CREATE_ACCOUNT' ? 'active' : '')}>
+                                <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {tran.translate('LOGIN_CREATEA_ACCOUNT_BTN_LABEL')}</span>
+                            </Link>
+                            <Link onClick={this.onForgotPaswordBtn.bind(this)} to="/forgot_password" className={"list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover " + (this.props.siginInModal.action == 'FORGOT_PASSWORD' ? 'active' : '')}>
+                                <span className={"g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase "}> {tran.translate('LOGIN_FORGOT_PASSWOD_BTN_LABEL')}</span>
+                            </Link>
+                        </div>
                     </Col>
                 </Row>
             </Container>

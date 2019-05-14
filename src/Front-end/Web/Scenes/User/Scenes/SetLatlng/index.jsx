@@ -364,9 +364,9 @@ class SetLatlng extends React.Component {
             onSelect={this.regionSelect.bind(this)}
         />
 */
-        let body = <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 ">
+        let body = <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 ">
             <Col className="text-center mx-auto g-mb-10">
-                <h5 className="g-color-black mb-2">{tran.translate('SETLATLNG_FORM_HEADER')}</h5>
+                <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('SETLATLNG_FORM_HEADER')}</h5>
                 <br />
             </Col>
             <FormGroup >
@@ -399,9 +399,9 @@ class SetLatlng extends React.Component {
             </FormGroup>
             <br />
 
-            {this.props.coords ? <ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn g-mr-10 rounded-0"} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} /> : <span></span>}
+            {this.props.coords ? <ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase g-mr-10 "} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} /> : <span></span>}
 
-            <ButtonLoader onClick={this.submitHandler.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('SET_COORDINATES_BUTTON_LABEL')} isLoading={this.props.latlng.isLoading} />
+            <ButtonLoader onClick={this.submitHandler.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('SET_COORDINATES_BUTTON_LABEL')} isLoading={this.props.latlng.isLoading} />
 
         </Form>
 

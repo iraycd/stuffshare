@@ -621,6 +621,266 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "LOGIN_FORGOT_PASSWOD_BTN_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_FORGOT_PASSWOD_BTN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Przypomnij hasło",
+                "us": "Forgot password"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGIN_SOCIAL_LOGIN": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_SOCIAL_LOGIN",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Logowanie przez",
+                "us": "External account"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGIN_SIGN_IN_BTN_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_SIGN_IN_BTN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zaloguj",
+                "us": "Login"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGIN_CREATEA_ACCOUNT_BTN_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGIN_CREATEA_ACCOUNT_BTN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Rejestracja",
+                "us": "Register"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SEARCH_HOMEPAGE_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "SEARCH_HOMEPAGE_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Szukaj",
+                "us": "Search"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SEARCH_HOMEPAGE_TEXT": {
+            "id": 0,
+            "uid": "",
+            "code": "SEARCH_HOMEPAGE_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Szukaj ludzi z podobnymi zainteresowaniami.",
+                "us": "Find people with passions just like you"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SEARCH_BUTTON_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "SEARCH_BUTTON_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Szukaj",
+                "us": "Search"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "USER_IMAGE_PROFILE_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "USER_IMAGE_PROFILE_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Dodaj zdjęcie",
+                "us": "Add profile image"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGOUT_USER_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGOUT_USER_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wyloguj się",
+                "us": "Logout"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGOUT_USER_TEXT_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGOUT_USER_TEXT_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wylogowanie spowoduje wymuszenie ponownego zalogowania się na wszystkich urządzeniach",
+                "us": "Logout cause that you will need to login on all your devices"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGOUT_ACCOUNT_BUTTON_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGOUT_ACCOUNT_BUTTON_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wyloguj się",
+                "us": "Logout"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CHANGEPASSWORD_FORM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "CHANGEPASSWORD_FORM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw nowe hasło",
+                "us": "Set new password"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CHANGE_PASSWORD_SUBMIT_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "CHANGE_PASSWORD_SUBMIT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zapisz hasło",
+                "us": "Save password"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "REMOVE_USER_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_USER_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Usuń konto",
+                "us": "Remove account"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "REMOVE_USER_TEXT_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_USER_TEXT_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Usunięcie spowoduje niedwracalne straty. Czy jesteś pewny, że chcesz to zrobic?",
+                "us": "If you remove your account we will not be able to retrive data. Are you sure that you want to do it?"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "REMOVE_ACCOUNT_BUTTON_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_ACCOUNT_BUTTON_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Usuń konto",
+                "us": "Remove account"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "PROFILE_MODAL_TAB": {
+            "id": 0,
+            "uid": "",
+            "code": "PROFILE_MODAL_TAB",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Profil użytkownika",
+                "us": "User profile"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SHARE_ITEMS_MODAL_TAB": {
+            "id": 0,
+            "uid": "",
+            "code": "SHARE_ITEMS_MODAL_TAB",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Przedmioty",
+                "us": "Shared Items"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "MESSAGES_MODAL_TAB": {
+            "id": 0,
+            "uid": "",
+            "code": "MESSAGES_MODAL_TAB",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wiadomości",
+                "us": "Messages"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "FRIENDS_MODAL_TAB": {
+            "id": 0,
+            "uid": "",
+            "code": "FRIENDS_MODAL_TAB",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Znajomi",
+                "us": "Friends"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -810,6 +1070,45 @@
             },
             "field": "",
             "validation": [],
+            "toRefresh": true
+        },
+        "SEARCH_HOMEPAGE_INPUT_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "SEARCH_HOMEPAGE_INPUT_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "np. Płyty winylowe",
+                "us": "eg. Vinyl records"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_COUNTRY_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_COUNTRY_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "np. Polska",
+                "us": "eg. Poland"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_CITY_PLACEHOLDER": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_CITY_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "np. Kraków",
+                "us": "eg. Cracow"
+            },
+            "field": "",
             "toRefresh": true
         }
     },

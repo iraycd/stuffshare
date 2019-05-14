@@ -80,10 +80,10 @@ class UserAccount extends React.Component {
         }
 
         let body =
-            <Container className="g-pa-15">
+            <Container className="g-py-15">
 
                 <Row>
-                    <Col xs="3" >
+                    <Col xs="3" className="g-pr-5 g-pl-0" >
                         <div class=" g-mb-50 g-mb-0--lg">
                             <div class="u-block-hover g-pos-rel">
                                 <figure >
@@ -109,23 +109,23 @@ class UserAccount extends React.Component {
                             <div class="list-group list-group-border-0 g-mb-40">
 
                                 <NavLink exact strict to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
-                                    <span> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
                                 </NavLink>
                                 <NavLink to="/userAccount/addProfileImage" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
-                                    <span>  {this.tran.translate('ADD_PROFILE_IMG_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">  {this.tran.translate('ADD_PROFILE_IMG_LINK')}</span>
                                 </NavLink>
                                 <NavLink to={"/userAccount/setCoordinates"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
-                                    <span> {this.tran.translate('SET_COORDINATE_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SET_COORDINATE_LINK')}</span>
                                 </NavLink>
                                 <NavLink to={"/userAccount/removeAccount"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    {this.tran.translate('REMOVE_ACCOUNT_LINK')}
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('REMOVE_ACCOUNT_LINK')}</span>
                                 </NavLink>
                                 
                                 <NavLink to={"/userAccount/changePassword"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span>{this.tran.translate('CHANGE_PASSWORD_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('CHANGE_PASSWORD_LINK')}</span>
                                 </NavLink>
                                 <NavLink to={"/userAccount/logOut"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span>{this.tran.translate('LOG_OUT_LINK')}</span>
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('LOG_OUT_LINK')}</span>
                                 </NavLink>
 
                             </div>
@@ -135,7 +135,7 @@ class UserAccount extends React.Component {
 
 
                     </Col>
-                    <Col xs="9">
+                    <Col xs="9" className="g-px-5 g-pr-0">
 
                         <Switch>
 

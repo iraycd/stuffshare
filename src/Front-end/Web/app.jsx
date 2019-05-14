@@ -35,9 +35,8 @@ const init = () => {
     }
     if (localStorage.token) {
         store.dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_BY_REFRESH_TOKEN, { refresh_token: localStorage.refresh_token }, {}, Enums.LOADER.INITIAL)).then(refSucc => {
-            console.log(refSucc);
-            store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
 
+            store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
                 store.dispatch({
                     type: AUTH_ACTIONS.IS_AUTH,
                     dto: {
@@ -45,7 +44,11 @@ const init = () => {
                         token: localStorage.token
                     }
                 });
+
             })
+        }).catch(ex => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("refresh_token")
         })
     }
     const language = localStorage.getItem('lang');

@@ -47,7 +47,7 @@ class BaseService {
                 })
                 .catch(function (error) {
                     BaseService.prototype.errorHandling(error, dispatch, action, model);
-                    return Promise.resolve(error);
+                    return Promise.reject(error.response);
                 }).then(function (res) {
                     console.log(res);
                     dispatch({ type: action + "_FINALLY" });
@@ -110,7 +110,7 @@ class BaseService {
                 })
                 .catch(function (error) {
                     BaseService.prototype.errorHandling(error, dispatch, action, model);
-                    return Promise.reject(error);
+                    return Promise.reject(error.response);
 
 
                 }).then(function (res) {

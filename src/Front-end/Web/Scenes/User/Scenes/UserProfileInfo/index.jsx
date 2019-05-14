@@ -61,8 +61,8 @@ class UserProfileInfo extends React.Component {
 
 
         let body =
-            <Container className="g-pa-15 text-center">
-                <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+            <Container className="g-brd-gray-light-v3">
+                <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center">
 
                     <br />
                     <h5 className="g-color-black mb-2">{tran.translate('USER_PROFILE_MODAL_HEADER')}</h5>

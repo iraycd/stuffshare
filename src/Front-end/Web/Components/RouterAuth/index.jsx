@@ -24,14 +24,14 @@ class RouterAuth extends React.Component {
     render() {
 
         console.log(this.props)
-        if (this.props.auth.is_logged == true) {
+        if (this.props.auth.is_logged == true ) {
             return (
                 <Route path={this.props.path} component={this.props.component} />
 
 
             );
         } else {
-            return <Redirect to={'/login?redirectTo=' + encodeURIComponent(this.props.location.pathname)} />;
+            return <Redirect to={'/?redirectTo=' + encodeURIComponent(this.props.location.pathname)} />;
         }
 
     }

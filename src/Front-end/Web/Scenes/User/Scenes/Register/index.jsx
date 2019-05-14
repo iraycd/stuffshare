@@ -187,9 +187,9 @@ class Register extends React.Component {
 
         return (
 
-            <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+            <Form className={`g-brd-around g-brd-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3} g-pa-30 text-center`}>
                 <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                    <h5 className="g-color-black mb-2">{tran.translate('REGISTER_FORM_HEADER')}</h5>
+                    <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('REGISTER_FORM_HEADER')}</h5>
                     <p className="lead "></p>
                 </Col>
 
@@ -206,7 +206,7 @@ class Register extends React.Component {
                 <TextBox placeholder={phTrans.translate('REGISTER_PHONE_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_PHONE_LABEL')} value={this.state.phone} onChange={this.phoneHandler.bind(this)} field="phone" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('REGISTER_SUBMIT_LABEL')} isLoading={this.props.registerUser.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn  u-btn-primary g-brd-none rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase "} value={tran.translate('REGISTER_SUBMIT_LABEL')} isLoading={this.props.registerUser.isLoading} />
             </Form>
 
         );

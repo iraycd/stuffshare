@@ -1,0 +1,87 @@
+apiVersion: build.openshift.io/v1
+kind: Build
+metadata:
+  annotations:
+    openshift.io/build-config.name: stuffshare
+    openshift.io/build.number: '38'
+    openshift.io/build.pod-name: stuffshare-38-build
+  creationTimestamp: '2019-05-13T01:21:33Z'
+  labels:
+    app: stuffshare
+    buildconfig: stuffshare
+    openshift.io/build-config.name: stuffshare
+    openshift.io/build.start-policy: Serial
+  name: stuffshare-38
+  namespace: stuffshare
+  ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      controller: true
+      kind: BuildConfig
+      name: stuffshare
+      uid: 7e7b6d29-4bf9-11e9-a622-1250f17a13c8
+  resourceVersion: '4007478873'
+  selfLink: /apis/build.openshift.io/v1/namespaces/stuffshare/builds/stuffshare-38
+  uid: 71cb9742-751d-11e9-b419-122631632f42
+spec:
+  completionDeadlineSeconds: 1800
+  nodeSelector: null
+  output:
+    pushSecret:
+      name: builder-dockercfg-dbj4k
+    to:
+      kind: ImageStreamTag
+      name: 'stuffshare:latest'
+  postCommit: {}
+  resources:
+    limits:
+      memory: 1Gi
+  revision:
+    git:
+      author:
+        email: m.mach.90@gmail.com
+        name: mmach900
+      commit: aa72aa28d26863ca94994d1052a599158e45c70a
+      committer:
+        email: m.mach.90@gmail.com
+        name: mmach900
+      message: no message
+    type: Git
+  serviceAccount: builder
+  source:
+    git:
+      ref: deploy
+      uri: 'https://github.com/mmach/stuffshare'
+    type: Git
+  strategy:
+    sourceStrategy:
+      env:
+        - name: NPM_RUN
+          value: web_server
+        - name: NODE_ENV
+          value: production
+      from:
+        kind: DockerImage
+        name: >-
+          docker-registry.default.svc:5000/openshift/nodejs@sha256:1a42ca9592ea96f1d9b6042cab05191e68ba7759e98b25334bd6af04cd028b35
+      pullSecret:
+        name: builder-dockercfg-dbj4k
+    type: Source
+  triggeredBy:
+    - message: Manually triggered
+status:
+  config:
+    kind: BuildConfig
+    name: stuffshare
+    namespace: stuffshare
+  output: {}
+  outputDockerImageReference: 'docker-registry.default.svc:5000/stuffshare/stuffshare:latest'
+  phase: Running
+  stages:
+    - durationMilliseconds: 3377
+      name: FetchInputs
+      startTime: '2019-05-13T01:21:37Z'
+      steps:
+        - durationMilliseconds: 3377
+          name: FetchGitSource
+          startTime: '2019-05-13T01:21:37Z'
+  startTimestamp: '2019-05-13T01:21:33Z'

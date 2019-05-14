@@ -57,10 +57,9 @@ class UserInfo extends React.Component {
         let latlng = [this.props.auth.user.latitude, this.props.auth.user.longitude]
 
         let body =
-            <div className=" text-center">
-                <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-left">
+                <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-left">
                     <Col className="text-center mx-auto g-mb-10">
-                        <h5 className="g-color-black mb-2">{tran.translate('USER_INFO_HEADER')}</h5>
+                        <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('USER_INFO_HEADER')}</h5>
                         <br />
                     </Col>
 
@@ -104,7 +103,6 @@ class UserInfo extends React.Component {
                     </Row>
 
                 </Form>
-            </div>
         return (
 
             body

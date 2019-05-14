@@ -62,15 +62,15 @@ class RemoveUser extends React.Component {
 
         let body =
             <div className="text-center">
-                <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+                <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center">
                     <Col className="text-center mx-auto g-mb-10">
-                        <h5 className="g-color-black mb-2">{tran.translate('REMOVE_USER_HEADER')}</h5>
+                        <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('REMOVE_USER_HEADER')}</h5>
                         <br />
-                        <Label>{tran.translate('REMOVE_USER_TEXT_HEADER')}</Label>
+                        <Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{tran.translate('REMOVE_USER_TEXT_HEADER')}</Label>
 
                     </Col>
 
-                    <ButtonLoader onClick={this.removeAccounts.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('REMOVE_ACCOUNT_BUTTON_LABEL')} />
+                    <ButtonLoader onClick={this.removeAccounts.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('REMOVE_ACCOUNT_BUTTON_LABEL')} />
 
                 </Form>
             </div>

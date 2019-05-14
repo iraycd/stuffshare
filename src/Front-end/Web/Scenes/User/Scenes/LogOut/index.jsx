@@ -34,6 +34,9 @@ class LogOut extends React.Component {
             logOut: 1
         });
         this.props.logOut().then(succ => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("refresh_token")
+
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                 Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGGED_OUT_SUCCESS')
             )
@@ -59,15 +62,15 @@ class LogOut extends React.Component {
 
             let body =
                 <div className=" text-center">
-                    <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
+                    <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center">
                         <Col className="text-center mx-auto g-mb-10">
-                            <h5 className="g-color-black mb-2">{tran.translate('LOGOUT_USER_HEADER')}</h5>
+                            <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('LOGOUT_USER_HEADER')}</h5>
                             <br />
-                            <Label>{tran.translate('LOGOUT_USER_TEXT_HEADER')}</Label>
+                            <Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{tran.translate('LOGOUT_USER_TEXT_HEADER')}</Label>
 
                         </Col>
 
-                        <ButtonLoader onClick={this.logOUt.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
+                        <ButtonLoader onClick={this.logOUt.bind(this)} size={"md"} className={"g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
 
                     </Form>
                 </div>

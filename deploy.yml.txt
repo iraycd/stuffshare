@@ -1,0 +1,97 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: '2019-03-21T16:50:55Z'
+  generation: 32
+  labels:
+    app: stuffshare
+  name: stuffshare
+  namespace: stuffshare
+  resourceVersion: '4003346829'
+  selfLink: >-
+    /apis/apps.openshift.io/v1/namespaces/stuffshare/deploymentconfigs/stuffshare
+  uid: 7e8b8bc7-4bf9-11e9-87e7-12d641ec7610
+spec:
+  replicas: 1
+  selector:
+    deploymentconfig: stuffshare
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 1%
+      maxUnavailable: 1%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: stuffshare
+        deploymentconfig: stuffshare
+    spec:
+      containers:
+        - image: >-
+            docker-registry.default.svc:5000/stuffshare/stuffshare@sha256:d90bbab27d496fcfac4221f25b9a6078897214e88cc1cd8732f97f848a55688d
+          imagePullPolicy: Always
+          name: stuffshare
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            limits:
+              memory: 1Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - stuffshare
+        from:
+          kind: ImageStreamTag
+          name: 'stuffshare:latest'
+          namespace: stuffshare
+        lastTriggeredImage: >-
+          docker-registry.default.svc:5000/stuffshare/stuffshare@sha256:d90bbab27d496fcfac4221f25b9a6078897214e88cc1cd8732f97f848a55688d
+      type: ImageChange
+    - type: ConfigChange
+status:
+  availableReplicas: 1
+  conditions:
+    - lastTransitionTime: '2019-05-10T13:12:47Z'
+      lastUpdateTime: '2019-05-10T13:12:50Z'
+      message: replication controller "stuffshare-23" successfully rolled out
+      reason: NewReplicationControllerAvailable
+      status: 'True'
+      type: Progressing
+    - lastTransitionTime: '2019-05-10T18:00:32Z'
+      lastUpdateTime: '2019-05-10T18:00:32Z'
+      message: Deployment config has minimum availability.
+      status: 'True'
+      type: Available
+  details:
+    causes:
+      - imageTrigger:
+          from:
+            kind: DockerImage
+            name: >-
+              docker-registry.default.svc:5000/stuffshare/stuffshare@sha256:d90bbab27d496fcfac4221f25b9a6078897214e88cc1cd8732f97f848a55688d
+        type: ImageChange
+    message: image change
+  latestVersion: 23
+  observedGeneration: 32
+  readyReplicas: 1
+  replicas: 1
+  unavailableReplicas: 0
+  updatedReplicas: 1

@@ -1,0 +1,56 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: '2019-03-21T16:50:55Z'
+  labels:
+    app: stuffshare
+  name: stuffshare
+  namespace: stuffshare
+  resourceVersion: '4007478714'
+  selfLink: /apis/build.openshift.io/v1/namespaces/stuffshare/buildconfigs/stuffshare
+  uid: 7e7b6d29-4bf9-11e9-a622-1250f17a13c8
+spec:
+  completionDeadlineSeconds: 1800
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'stuffshare:latest'
+  postCommit: {}
+  resources:
+    limits:
+      memory: 1Gi
+  runPolicy: Serial
+  source:
+    git:
+      ref: deploy
+      uri: 'https://github.com/mmach/stuffshare'
+    type: Git
+  strategy:
+    sourceStrategy:
+      env:
+        - name: NPM_RUN
+          value: web_server
+        - name: NODE_ENV
+          value: production
+      from:
+        kind: ImageStreamTag
+        name: 'nodejs:8'
+        namespace: openshift
+    type: Source
+  triggers:
+    - imageChange:
+        lastTriggeredImageID: >-
+          docker-registry.default.svc:5000/openshift/nodejs@sha256:1a42ca9592ea96f1d9b6042cab05191e68ba7759e98b25334bd6af04cd028b35
+      type: ImageChange
+    - type: ConfigChange
+    - generic:
+        secret: 0af6017c65fe4812
+      type: Generic
+    - github:
+        secret: 96e628fc69ea1f9f
+      type: GitHub
+status:
+  lastVersion: 38
