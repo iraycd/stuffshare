@@ -26,7 +26,15 @@ export default function AuthReducer(state = Object.assign({}, emptyState), actio
                 }
                 return result;
             }
+        case AUTH_ACTIONS.LOGIN_BY_REFRESH_FETCH.SUCCESS:
+            {
+                const result = Object.assign({}, state);
+                result.token = action.dto.token;
+                result.refresh_token = action.dto.refresh_token;
+                result.is_logged = true;
 
+                return result;
+            }
         case AUTH_ACTIONS.GET_USER_INFO_FETCH.SUCCESS:
             {
                 const result = Object.assign({}, state);

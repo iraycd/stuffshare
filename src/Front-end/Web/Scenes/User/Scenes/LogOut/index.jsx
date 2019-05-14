@@ -62,7 +62,7 @@ class LogOut extends React.Component {
 
             let body =
                 <div className=" text-center">
-                    <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center">
+                    <Form className="g-min-height-600 g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center">
                         <Col className="text-center mx-auto g-mb-10">
                             <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('LOGOUT_USER_HEADER')}</h5>
                             <br />

@@ -207,7 +207,7 @@ class AddProfileImage extends React.Component {
 
         return (
 
-            <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center g-px-0">
+            <Form className="g-min-height-600 g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center g-px-0">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-50">
                     <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('USER_IMAGE_PROFILE_HEADER')}</h5>
                     <p className="lead "></p>

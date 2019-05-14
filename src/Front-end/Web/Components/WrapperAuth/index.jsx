@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, Fade } from 'reactstrap';
 import Modal from 'react-responsive-modal'
 import { CSSTransitionGroup } from 'react-transition-group';
 import MODAL_ACTIONS from './actions.js';
@@ -18,19 +18,21 @@ class WrapperAuth extends React.Component {
         this.state = {};
         this.state.isLogged = props.isLogged == false ? props.isLogged : true
         this.state.ref = props.ref;
+        this.state.fadeIn = true;
         console.log(props);
     }
+    componentDidMount() {
 
+    }
 
 
     render() {
 
         if (this.props.auth.is_logged == this.state.isLogged) {
-            return (
-                this.props.children
-            );
+            return this.props.children;
         } else {
-            return <span class="hidden"></span>
+            return   <span class="hidden"></span>
+
         }
 
     }

@@ -87,7 +87,7 @@ class ForgotPassword extends React.Component {
                 <TextBox placeholder={phTrans.translate('FORGOT_PASSWORD_USER_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('FORGOT_PASSWORD_USER_NAME_LABEL')} value={this.state.email} onChange={this.emailHandler.bind(this)} field="email" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15"} value={tran.translate('FORGOT_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.forgotPassword.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('FORGOT_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.forgotPassword.isLoading} />
             </Form>
 
         );
