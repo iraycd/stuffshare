@@ -30,13 +30,13 @@ class LogOut extends React.Component {
 
 
     logOUt() {
-        this.setState({
-            logOut: 1
-        });
+
         this.props.logOut().then(succ => {
             localStorage.removeItem("token");
             localStorage.removeItem("refresh_token")
-
+            this.setState({
+                logOut: 1
+            });
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                 Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGGED_OUT_SUCCESS')
             )
@@ -70,7 +70,7 @@ class LogOut extends React.Component {
 
                         </Col>
 
-                        <ButtonLoader onClick={this.logOUt.bind(this)} size={"md"} className={"g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
+                        <ButtonLoader onClick={this.logOUt.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
 
                     </Form>
                 </div>

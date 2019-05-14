@@ -1325,6 +1325,19 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "LOGGED_OUT_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGGED_OUT_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Nastąpiło wylogowanie.",
+                "us": "You've been logged out."
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "INFO_GLOBAL": {
@@ -1335,8 +1348,23 @@
             "status": "200",
             "type": "INFO_GLOBAL",
             "message": {
-                "pl": "Ustaw spółrzędne Twojego położenia",
+                "pl": "Ustaw współrzędne Twojego położenia",
                 "us": "Set your coordinates"
+            },
+            "field": "",
+            "toRefresh": true
+        }
+    },
+    "SUCCESS": {
+        "LOGGED_OUT_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGGED_OUT_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS",
+            "message": {
+                "pl": "Zostałeś wylogowany",
+                "us": "You've been logged out"
             },
             "field": "",
             "toRefresh": true

@@ -223,7 +223,13 @@ class SetLatlng extends React.Component {
         })
     }
     submitHandler(event) {
+        if (this.props.coords && this.state.longitude == 0 && this.state.latitude == 0) {
+            this.state.longitude = this.props.coords.longitude,
+                this.state.latitude = this.props.coords.latitude
+
+        }
         this.props.setLatLng(this.state)
+
     }
     refreshGeolocation(event) {
         this.setState({
@@ -325,7 +331,7 @@ class SetLatlng extends React.Component {
             sortItems={(objA, objB) => {
                 console.log(objA);
                 console.log(objB)
-                return Number(objB.population) > Number(objA.population)? 1 : -1
+                return Number(objB.population) > Number(objA.population) ? 1 : -1
             }}
             inputProps={{ className: ' form-control', style: { width: '100%' }, autoComplete: false, placeholder: phTrans.translate('SETLATLNG_CITY_PLACEHOLDER') }}
             wrapperStyle={{ width: '100%' }}

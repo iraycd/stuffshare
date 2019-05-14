@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import uuidv4 from 'uuid/v4';
 
 import {
     NOTIFICATIONS_ACTIONS
@@ -10,19 +11,23 @@ export default function NotificationReducer(state = [], action) {
             {
                 const result = [...state];
                 let notif = action.notification;
-                notif.guid ='jadhksadj'// global.guid();
-                
-                result.push(notif);
+                notif.guid = uuidv4();
+                const exist = result.filter(item => {
+                    return item.message == notif.message
+                })
+                if (exist.length == 0) {
+                    result.push(notif);
+                }
                 return result;
             }
         case NOTIFICATIONS_ACTIONS.REMOVE_NOTIFICATION_GLOBAL:
             {
                 const _result = [...state];
-                let i=0;
-                const result = _result.filter((item,index) => {
+                let i = 0;
+                const result = _result.filter((item, index) => {
                     console.log(i);
                     console.log(action.notification);
-                    return i++ != action.notification;
+                    return item.guid != action.notification;
 
                 });
                 return result;
