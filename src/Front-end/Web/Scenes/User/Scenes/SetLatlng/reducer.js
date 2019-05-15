@@ -77,15 +77,7 @@ export default function SetLatlngReducer(state = Object.assign({}, emptyState), 
                 result.cities=action.data
                 return result;
             }
-            case SET_LATLNG_ACTIONS.GET_REGIONS.SUCCESS:
-            {
-                const result = Object.assign({}, state);
-                result.isLoading = false;
-                result.cities=[];
-                result.regions=action.data;
-                console.log(action.data)
-                return result;
-            }
+          
             case SET_LATLNG_ACTIONS.GET_COUNTRIES.LOADING:
             {
                 const result = Object.assign({}, state);
