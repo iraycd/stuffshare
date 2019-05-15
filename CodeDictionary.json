@@ -881,6 +881,123 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "REMOVE_USER_TEXT": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_USER_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy jesteś pewny, że chcesz usunąć konto?",
+                "us": "Are you sure that you want to remove account?"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "YES_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "YES_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Tak",
+                "us": "Yes"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "NO_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "NO_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nie",
+                "us": "No"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LOGOUT_CONFIRM_HEADER": {
+            "id": 0,
+            "uid": "",
+            "code": "LOGOUT_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy na pewno chcesz się wylogować?",
+                "us": "Are you sure that you want to logout?"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CHANGEPASSWORD_FORM_TEXT": {
+            "id": 0,
+            "uid": "",
+            "code": "CHANGEPASSWORD_FORM_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustawione hasło będzie używane do przyszłych logowań",
+                "us": "With new password you will be able to login by email and password"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_FORM_TEXT": {
+            "id": 0,
+            "uid": "",
+            "code": "SETLATLNG_FORM_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw swoje położenie, żeby szybciej znaleźć nowe znajomości.",
+                "us": "Set you localisation to better find friends."
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "USER_IMAGE_PROFILE_TEXT": {
+            "id": 0,
+            "uid": "",
+            "code": "USER_IMAGE_PROFILE_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Dodaj swoje zdjęcia (maksymalnie 5 zdjęć).",
+                "us": "Add your pictures (max 5 photos)."
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "IMAGE_VERIFY_LINK_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "IMAGE_VERIFY_LINK_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Weryfikacja zdjęć",
+                "us": "Verify pictures"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_LINK_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "CATEGORY_LINK_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Panel kategorii",
+                "us": "Categorii panel"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {

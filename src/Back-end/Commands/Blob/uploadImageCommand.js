@@ -15,6 +15,7 @@ import DbTransactionInfrastucture from "../../Architecture/Infrastructure/dbTran
 import BlobValidators from "../../Validators/blobValidators.js";
 
 
+
 /**
  *
  *
@@ -25,7 +26,7 @@ import BlobValidators from "../../Validators/blobValidators.js";
 export default class UploadImageCommand extends BaseCommand {
   /**
    * Creates an instance of CreateUserCommand.
-   * @param  {{logFileInfrastructureDI:LogFileInfrastructure ,dbTransactionInfrastuctureDI:DbTransactionInfrastucture,authInfrastructureDI:AuthInfrastucture,blobServiceDI:BlobService,validationInfrastructureDI:ValidatonInfrastructure }}
+   * @param  {{logFileInfrastructureDI:LogFileInfrastructure ,dbTransactionInfrastuctureDI:DbTransactionInfrastucture,userServiceDI:UserService,authInfrastructureDI:AuthInfrastucture,blobServiceDI:BlobService,validationInfrastructureDI:ValidatonInfrastructure }}
    * @memberof CreateUserCommand
    */
   constructor({
@@ -33,7 +34,8 @@ export default class UploadImageCommand extends BaseCommand {
     authInfrastructureDI,
     blobServiceDI,
     dbTransactionInfrastuctureDI,
-    validationInfrastructureDI
+    validationInfrastructureDI,
+    userServiceDI
   }) {
     super({
       logFileInfrastructureDI,
@@ -42,6 +44,7 @@ export default class UploadImageCommand extends BaseCommand {
       validationInfrastructureDI
     });
     this.blobServiceDI = blobServiceDI;
+    this.userServiceDI = userServiceDI;
   }
   init(dto) {
     this.model = Object.assign(new BlobBase64DTO(), dto);
@@ -49,15 +52,23 @@ export default class UploadImageCommand extends BaseCommand {
 
   get validation() {
     return [
-      ()=>{return BlobValidators.checkUploadedFileType.bind(this)(this.model)},
-      ()=>{return BlobValidators.getSizeOfUplodedFile.bind(this)(this.model)},
-      ()=>{return BlobValidators.countOfUsersImages.bind(this)()}];
+      () => { return BlobValidators.checkUploadedFileType.bind(this)(this.model) },
+      () => { return BlobValidators.getSizeOfUplodedFile.bind(this)(this.model) },
+      () => { return BlobValidators.countOfUsersImages.bind(this)() }];
   }
 
 
   async action() {
+
     let result = await this.blobServiceDI.setContext(this.context).uploadUserImage({
       blob: this.model,
     });
+    console.log(result.dataValues.id);
+
+    if (this.context.user.blob_id == null) {
+      console.log(result.dataValues.id);
+      this.context.user.blob_id = result.dataValues.id;
+      await this.userServiceDI.setContext(this.context).setProfileImage({ user: this.context.user })
+    }
   }
 }

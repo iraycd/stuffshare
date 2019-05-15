@@ -15,6 +15,8 @@ import logo from './../../../../assets/img/logo/logo-2.png';
 import CommandList from '../../../../../../Shared/CommandList.js';
 import { Redirect } from 'react-router'
 import LOGOUT_ACTIONS from './actions.js';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 
 class LogOut extends React.Component {
@@ -30,17 +32,37 @@ class LogOut extends React.Component {
 
 
     logOUt() {
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity- g-px-50 text-center'>
+                        <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</h1>
+                        <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</p>
+                        <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
+                            onClick={() => {
+                                this.props.logOut().then(succ => {
+                                    localStorage.removeItem("token");
+                                    localStorage.removeItem("refresh_token")
+                                    this.setState({
+                                        logOut: 1
+                                    });
+                                    this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                                        Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGGED_OUT_SUCCESS')
+                                    )
+                                })
+                                onClose();
+                            }}
+                        >
+                            {Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('YES_LABEL')}
+                        </button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={onClose}>{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
 
-        this.props.logOut().then(succ => {
-            localStorage.removeItem("token");
-            localStorage.removeItem("refresh_token")
-            this.setState({
-                logOut: 1
-            });
-            this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
-                Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGGED_OUT_SUCCESS')
-            )
-        })
+                    </div>
+                );
+            }
+
+        });
+       
     };
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);

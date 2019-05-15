@@ -52,10 +52,7 @@ import CountryService from "./Services/countryService.js";
 import GetCountriesQuery from "./Query/Country/getCountriesQuery.js";
 import CityRepository from "./Repository/cityRepository.js";
 import CityService from "./Services/cityService.js";
-import RegionService from "./Services/regionService.js";
-import RegionRepository from "./Repository/regionRepository.js";
 import GetCitiesQuery from "./Query/City/getCitiesQuery.js";
-import GetRegionsQuery from "./Query/Region/getRegionsQuery.js";
 import GetUnverifiedBlobsQuery from "./Query/Blob/getUnverifiedBlobsQuery.js";
 import VerifyImageCommand from "./Commands/Blob/verifyImageCommand.js";
 import SetProfileImageCommand from "./Commands/User/setProfileImageCommand.js";
@@ -87,8 +84,7 @@ let exporter = {
   countryServiceDI: asClass(CountryService),
   cityRepositoryDI: asClass(CityRepository),
   cityServiceDI: asClass(CityService),
-  regionRepositoryDI: asClass(RegionRepository),
-  regionServiceDI: asClass(RegionService),
+
   userAuthRepositoryDI:asClass(UserAuthRepository),
   sequelizeDI: asValue(SequelizeDB)
 };
@@ -161,8 +157,6 @@ exporter[QueryList.Country.GET_COUNTRY] = asClass(GetCountriesQuery);
 
 exporter[QueryList.City.GET_CITY] = asClass(GetCitiesQuery);
 
-
-exporter[QueryList.Region.GET_REGION] = asClass(GetRegionsQuery);
 
 
 

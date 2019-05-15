@@ -30,9 +30,7 @@ let QueryList = {
     City:{
         GET_CITY:'getCitiesQuery'
     },
-    Region:{
-        GET_REGION:'getRegionsQuery'
-    }
+    
 }
 
 export default QueryList;

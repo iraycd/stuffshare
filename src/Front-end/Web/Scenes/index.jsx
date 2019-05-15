@@ -33,7 +33,7 @@ class App extends React.Component {
     let body = <div></div>;
     let loader = <div></div>;
     if (this.props.loader.INITIAL_PROGRESS < 100) {
-      loader = (<BodyLoader   withImg={true}  zIndex={3} heightClass=" g-min-height-100vh" height="800px" size="130px" progress={50} />);
+      loader = (<BodyLoader   withImg={true}  zIndex={3} heightClass=" g-min-height-100vh" height="100vh" size="130px" progress={50} />);
 
       /*
       loader = (<div id="loading-wrapper">

@@ -374,12 +374,14 @@ class SetLatlng extends React.Component {
             <Col className="text-center mx-auto g-mb-10">
                 <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('SETLATLNG_FORM_HEADER')}</h5>
                 <br />
+                <Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{tran.translate('SETLATLNG_FORM_TEXT')}</Label>
             </Col>
             <FormGroup >
                 <Row>
                     <Col class="col-3">
 
                         <Label for={this.state.guid} >{tran.translate('SETLATLNG_COUNTRY_LABEL')}</Label>
+
                     </Col>
                     <Col class="col-6">
                         {countryForm}
@@ -434,9 +436,7 @@ const mapDispatchToProps = (dispatch) => {
         getCountries: (dto) => {
             dispatch(new BaseService().queryThunt(QueryList.Country.GET_COUNTRY, dto, null, Enums.LOADER.SET_CONTAINER_ACTION))
         },
-        getRegions: (dto) => {
-            dispatch(new BaseService().queryThunt(QueryList.Region.GET_REGION, dto, null, Enums.LOADER.SET_CONTAINER_ACTION))
-        },
+       
         getCities: (dto) => {
             dispatch(new BaseService().queryThunt(QueryList.City.GET_CITY, dto, null, Enums.LOADER.SET_CONTAINER_ACTION))
         },

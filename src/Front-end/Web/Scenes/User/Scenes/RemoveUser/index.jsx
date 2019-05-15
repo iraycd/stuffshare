@@ -14,6 +14,13 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import logo from './../../../../assets/img/logo/logo-2.png';
 import CommandList from '../../../../../../Shared/CommandList.js';
 
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import REMOVE_USER_ACTIONS from './actions.js';
+
+
+
+
 class RemoveUser extends React.Component {
 
     constructor() {
@@ -47,9 +54,35 @@ class RemoveUser extends React.Component {
         }
     }
     removeAccounts() {
-        this.props.removeAccounts();
-        localStorage.removeItem("token");
-        localStorage.removeItem("refresh_token")
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity- g-px-50 text-center'>
+                        <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('REMOVE_USER_HEADER')}</h1>
+                        <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('REMOVE_USER_TEXT')}</p>
+                        <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
+                            onClick={() => {
+                                this.props.removeAccounts().then(succ => {
+                                    this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                                        Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('REMOVE_USER_SUCCESS')
+                                    );
+                                    localStorage.removeItem("token");
+                                    localStorage.removeItem("refresh_token");
+
+                                });
+                                onClose();
+                            }}
+                        >
+                            {Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('YES_LABEL')}
+                        </button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={onClose}>{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
+
+                    </div>
+                );
+            }
+
+        });
+
 
     }
     render() {
@@ -99,9 +132,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
 
         removeAccounts: () => {
-            dispatch(
+            return dispatch(
                 new BaseService().commandThunt(CommandList.User.REMOVE_USER, {}, localStorage.token)
             )
+        }, setNotification: (type, message) => {
+            dispatch({ type: REMOVE_USER_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
+
         }
 
     }

@@ -114,6 +114,7 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-autocomplete": "^1.7.1",
+    "react-confirm-alert": "^2.4.1",
     "react-day-picker": "^7.3.0",
     "react-dom": "^15.6.2",
     "react-facebook-login": "^4.1.1",

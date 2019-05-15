@@ -1,19 +1,18 @@
 import ActionsGen from "../../../../../App/actions";
 import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
-MODAL_ACTIONS
+import CommandList from "../../../../../../Shared/CommandList";
+import { NOTIFICATIONS_ACTIONS } from "../../../../../App/Reducers/Notifications/actions";
 
 
-const LOGIN_ACTIONS = {
-  
-    
-    LOG_IN_INTERNAL_FETCH :ActionsGen(QueryList.User.LOG_IN_INTERNAL),
-    GEN_REFRESH_TOKEN_FETCH :ActionsGen(CommandList.User.GEN_REFRESH_TOKEN),
-    GET_REFRESH_TOKEN_FETCH :ActionsGen(QueryList.User.GET_REFRESH_TOKEN),
-    CLOSE_WINDOW: MODAL_ACTIONS.CLOSE_MODAL,
-    IS_AUTH:AUTH_ACTIONS.IS_AUTH
+
+const REMOVE_USER_ACTIONS = {
+ 
+    REMOVE_USER_FETCH :ActionsGen(CommandList.User.REMOVE_USER),
+    SET_NOTIFICATION_GLOBAL:NOTIFICATIONS_ACTIONS.SET_NOTIFICATION_GLOBAL
+
 }
 
 
 
 
-export default  LOGIN_ACTIONS
+export default  REMOVE_USER_ACTIONS

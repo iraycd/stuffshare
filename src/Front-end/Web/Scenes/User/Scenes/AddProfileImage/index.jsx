@@ -43,7 +43,10 @@ class AddProfileImage extends React.Component {
     }
 
     removeImage(event) {
-        this.props.removeImage({ id: event.currentTarget.getAttribute('data-tag') })
+        this.props.removeImage({ id: event.currentTarget.getAttribute('data-tag') }).then(succ => {
+            this.props.geUserInfo()
+
+        })
     }
     setAsProfile(event) {
         this.props.setAsProfile({ blob_id: event.currentTarget.getAttribute('data-tag') })
@@ -112,6 +115,7 @@ class AddProfileImage extends React.Component {
             this.props.getUserImages(
                 { user_id: this.props.auth.user.id }
             )
+            this.props.geUserInfo()
         })
 
     }
@@ -210,7 +214,8 @@ class AddProfileImage extends React.Component {
             <Form className="g-min-height-600 g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-center g-px-0">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-50">
                     <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('USER_IMAGE_PROFILE_HEADER')}</h5>
-                    <p className="lead "></p>
+                    <br />
+                    <Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{tran.translate('USER_IMAGE_PROFILE_TEXT')}</Label>
                 </Col>
                 <Container>
                     <Row>
@@ -255,6 +260,9 @@ const mapDispatchToProps = (dispatch) => {
         getFullsizeImage: (dto) => {
             return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_BLOBS_BY_GUIDS, dto, null))
 
+        },
+        geUserInfo: () => {
+            return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, null));
         },
         openLightbox: (activeImage, images) => {
             return dispatch({
