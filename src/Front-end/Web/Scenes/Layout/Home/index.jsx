@@ -35,7 +35,7 @@ class Home extends React.Component {
             <div class=" w-100  g-flex-centered  g-z-index-1 g-py-40 ">
               <div class=" g-bg-white-opacity-0_9 g-flex-centered align-self-center g-mx-20">
                 <div class=" align-self-center g-pa-10 g-width-760">
-                <SetLatlng></SetLatlng> </div></div></div> : <SearchFreetext></SearchFreetext>
+                  <SetLatlng></SetLatlng> </div></div></div> : <SearchFreetext></SearchFreetext>
 
           }
         </WrapperAuth>

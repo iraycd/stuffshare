@@ -177,7 +177,7 @@ class Login extends React.Component {
                         scope="public_profile,email,user_birthday,hometown,gender,user_friends"
                         callback={this.responseFacebook.bind(this)}
                         render={renderProps => (
-                            <a className="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-facebook g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
+                            <a className="u-icon-v3 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-facebook g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
                                 onClick={renderProps.onClick}><i class="fa fa-facebook"></i></a>
                         )}
                     />
@@ -186,7 +186,7 @@ class Login extends React.Component {
                         <GoogleLogin
                             clientId="147564742271-2itiv8meefk578crmklrmba06tiseor4.apps.googleusercontent.com"
                             render={renderProps => (
-                                <a className="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-google-plus g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
+                                <a className="u-icon-v3 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-google-plus g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
                                     onClick={renderProps.onClick}><i class="fa fa-google-plus"></i></a>
                             )}
                             accessType='offline'

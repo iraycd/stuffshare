@@ -1481,6 +1481,32 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "REMOVE_USER_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "REMOVE_USER_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Twoje konto zostało usunięte.",
+                "us": "Your account has been removed."
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CHANGE_PASSWORD_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "CHANGE_PASSWORD_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Twoje hasło zostało zmienione.",
+                "us": "Your password has been changed."
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "INFO_GLOBAL": {
