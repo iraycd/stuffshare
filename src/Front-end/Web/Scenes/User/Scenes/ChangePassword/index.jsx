@@ -20,7 +20,7 @@ class ChangePassword extends React.Component {
     constructor(props) {
         super(props);
         this.state = new ChangePasswordDTO();
-      
+        this.state.loading = false
         this.state.validation = [];
     }
     refreshValidation() {
@@ -64,16 +64,33 @@ class ChangePassword extends React.Component {
 
     submitHanlder(event) {
         this.state.toRefresh = true;
+        this.setState(
+            {
+                loading: true
+            }
+        )
         event.preventDefault();
         if (this.validation().length == 0) {
             this.props.changePassword(this.state).then((succ, err) => {
-                console.log(succ, err)
+                console.log(succ, err);
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+
                 this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                     Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('CHANGE_PASSWORD_SUCCESS')
                 )
             });
 
 
+        } else {
+            this.setState(
+                {
+                    loading: false
+                }
+            )
         }
     }
 
@@ -84,7 +101,7 @@ class ChangePassword extends React.Component {
 
 
         return (
-         
+
             <Form className="g-min-height-600 g-brd-around g-brd-gray-light-v3 g-pa-30  text-center">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-10">
                     <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CHANGEPASSWORD_FORM_HEADER')}</h5>
@@ -97,7 +114,7 @@ class ChangePassword extends React.Component {
                 <TextBox type="password" placeholder={phTrans.translate('REGISTER_PASSWORD_REPEAT_PLACEHOLDER')} isRequired={true} label={""} value={this.state.repeatPassword} onChange={this.passwordRepeatHandler.bind(this)} field="repeatPassword" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('CHANGE_PASSWORD_SUBMIT_LABEL')} isLoading={this.props.changePassword.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('CHANGE_PASSWORD_SUBMIT_LABEL')} isLoading={this.state.loading} />
 
             </Form>
 
@@ -113,14 +130,14 @@ const mapStateToProps = (state) => {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
         auth: state.AuthReducer,
-        changePassword:state.ChangePasswordReducer
+        changePassword: state.ChangePasswordReducer
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         changePassword: (dto) => {
-            return dispatch(new BaseService().commandThunt(CommandList.User.CHANGE_PASSWORD, dto,))
+            return dispatch(new BaseService().commandThunt(CommandList.User.CHANGE_PASSWORD, dto))
 
         }
         , setNotification: (type, message) => {

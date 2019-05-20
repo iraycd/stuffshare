@@ -530,7 +530,10 @@ h6 {
 .u-arrow-custom-v1 .u-arrow-icon {
     display: block;
 }
-
+.react-confirm-alert-overlay
+{
+    z-index:1500 !important
+}
 .u-arrow-custom-v1 .u-arrow-text {
     position: absolute;
     top: 50%;

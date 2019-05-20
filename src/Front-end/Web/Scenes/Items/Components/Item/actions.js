@@ -3,15 +3,12 @@ import QueryList from "../../../../../../Shared/QueryList";
 import ActionsGen from "../../../../../App/actions";
 import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
 import LIGHTBOX_ACTIONS from "../../../../Components/ImageLightbox/actions";
-import { NOTIFICATIONS_ACTIONS } from "../../../../../App/Reducers/Notifications/actions";
 
 
-const USER_PROFILE_MODAL_ACTION = {
-    OPEN_LIGHTBOX: LIGHTBOX_ACTIONS.OPEN_LIGHTBOX,
-    CLOSE_MODAL: MODAL_ACTIONS.CLOSE_MODAL,
+const ITEM_ACTION = {
+    OPEN_LIGHTBOX:LIGHTBOX_ACTIONS.OPEN_LIGHTBOX,
     GET_USER_IMAGES: ActionsGen(QueryList.Blob.GET_USER_IMAGES),
-    SET_NOTIFICATION_GLOBAL: NOTIFICATIONS_ACTIONS.SET_NOTIFICATION_GLOBAL
-
+    REMOVE_IMAGE: ActionsGen(CommandList.Blob.REMOVE_BLOB),
 }
 
-export default USER_PROFILE_MODAL_ACTION
+export default  ITEM_ACTION

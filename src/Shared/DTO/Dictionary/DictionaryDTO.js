@@ -30,7 +30,8 @@ export default class DictionaryDTO extends BaseDTO {
             ConstValues.CODE.ERROR_GLOBAL,
             ConstValues.CODE.INFO_GLOBAL,
             ConstValues.CODE.SUCCESS_GLOBAL,
-            ConstValues.CODE.WARNING_GLOBAL]);
+            ConstValues.CODE.WARNING_GLOBAL,
+            ConstValues.CODE.EMAIL]);
         validator(state.code).display("code").required().isString().notEmpty();
         validator(state.message.pl).display("message.pl").required().isString().notEmpty();
         validator(state.message.us).display("message.us").required().isString().notEmpty();

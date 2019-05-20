@@ -7,23 +7,46 @@ import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
 import { DictionaryDTO, Enums, CommandList, QueryList, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList,ButtonLoader } from './../../../../Components/index.js';
+import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
+import { withRouter } from 'react-router-dom';
 
 class DictionaryEdit extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = new DictionaryDTO();
 
         this.state.validation = [];
 
 
+    }
+    componentWillReceiveProps(next) {
+        console.log(next);
+        const urlParams = new URLSearchParams(next.location.search);
+
+        const type = urlParams.get('type');
+        const code = urlParams.get('code');
+        console.log(this.props.codeDict.data);
+        let dictList = this.props.codeDict.data[type];
+        console.log(dictList);
+        if (dictList != undefined) {
+            console.log('kupa');
+            let codeItem=dictList[code];
+            this.setState({
+                message:codeItem.message,
+                code:codeItem.code,
+                status:codeItem.statu,
+                type:codeItem.type,
+                validation: []
+            })
+        }
+        console.log(code);
 
     }
     refreshValidation() {
         if (this.state.toRefresh) {
             setTimeout(() => {
-      //          this.validation();
+                //          this.validation();
             });
         }
     }
@@ -33,13 +56,14 @@ class DictionaryEdit extends React.Component {
             , { id: Enums.CODE.INFO, value: Enums.CODE.INFO }
             , { id: Enums.CODE.VALIDATION, value: Enums.CODE.VALIDATION }
             , { id: Enums.CODE.WARNING, value: Enums.CODE.WARNING }
-            , { id: Enums.CODE.SUCCESS, value: Enums.CODE.SUCCESS } 
+            , { id: Enums.CODE.SUCCESS, value: Enums.CODE.SUCCESS }
             , { id: Enums.CODE.ERROR_GLOBAL, value: Enums.CODE.ERROR_GLOBAL }
             , { id: Enums.CODE.INFO_GLOBAL, value: Enums.CODE.INFO_GLOBAL }
             , { id: Enums.CODE.SUCCESS_GLOBAL, value: Enums.CODE.SUCCESS_GLOBAL }
             , { id: Enums.CODE.WARNING_GLOBAL, value: Enums.CODE.WARNING_GLOBAL }
             , { id: Enums.CODE.LABEL, value: Enums.CODE.LABEL }
             , { id: Enums.CODE.PLACEHOLDER, value: Enums.CODE.PLACEHOLDER }
+            , { id: Enums.CODE.EMAIL, value: Enums.CODE.EMAIL }
 
 
         ]
@@ -103,19 +127,18 @@ class DictionaryEdit extends React.Component {
 
 
         event.preventDefault();
-     //   if (this.validation().length == 0) {
-            // this.props.code=this.state;
-            
-            this.props.addDictionary(this.state);
+        //   if (this.validation().length == 0) {
+        // this.props.code=this.state;
 
-     //   }
+        this.props.addDictionary(this.state);
+
+        //   }
     }
 
 
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
-        this.refreshValidation();
         return (
 
             <Form className="g-brd-around g-brd-gray-light-v4 g-pa-60 g-mb-30 text-center">
@@ -135,7 +158,7 @@ class DictionaryEdit extends React.Component {
 
                 <TextBox placeholder={phTrans.translate('CODE_US_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_US_LABEL')} value={this.state.message.us} onChange={this.usHandler.bind(this)} field="message.us" validation={this.state.validation} />
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"}  className={"btn u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading}/>
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
             </Form>
 
         );
@@ -148,7 +171,7 @@ const mapStateToProps = (state) => {
 
     return {
         codeDict: state.DictionaryReducer,
-        lang :state.LanguageReducer
+        lang: state.LanguageReducer
 
     };
 }
@@ -165,7 +188,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(DictionaryEdit);
+)(DictionaryEdit));

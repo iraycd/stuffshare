@@ -25,22 +25,46 @@ class LogOut extends React.Component {
         super();
         this.state = {};
 
-
+        this.state.loading = false;
         this.state.logOut = 0;
 
     }
 
 
     logOUt() {
+        this.setState(
+            {
+                loading: true
+            }
+        )
         confirmAlert({
+            onClickOutside: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
+            onKeypressEscape: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
             customUI: ({ onClose }) => {
                 return (
-                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity- g-px-50 text-center'>
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity-0_8 g-px-50 text-center'>
                         <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</h1>
                         <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</p>
                         <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
                             onClick={() => {
                                 this.props.logOut().then(succ => {
+                                    this.setState(
+                                        {
+                                            loading: false
+                                        }
+                                    )
                                     localStorage.removeItem("token");
                                     localStorage.removeItem("refresh_token")
                                     this.setState({
@@ -55,14 +79,21 @@ class LogOut extends React.Component {
                         >
                             {Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('YES_LABEL')}
                         </button>
-                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={onClose}>{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={() => {
+                            this.setState(
+                                {
+                                    loading: false
+                                }
+                            )
+                            onClose()
+                        }}>{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
 
                     </div>
                 );
             }
 
         });
-       
+
     };
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
@@ -92,7 +123,7 @@ class LogOut extends React.Component {
 
                         </Col>
 
-                        <ButtonLoader onClick={this.logOUt.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
+                        <ButtonLoader isLoading={this.state.loading} onClick={this.logOUt.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"} value={tran.translate('LOGOUT_ACCOUNT_BUTTON_LABEL')} />
 
                     </Form>
                 </div>

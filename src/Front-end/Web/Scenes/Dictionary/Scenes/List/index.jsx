@@ -64,13 +64,15 @@ class DictionaryList extends React.Component {
                                     <div class="u-accordion__body  ">
                                         <ListGroup>
                                             {
-                                                Object.values(this.props.codeList.data[Enums.CODE[key]]).map((item, indx) => {
-                                                    if (i < 15 && (String(item.code).startsWith(this.state.filter) || String(item.code).indexOf(this.state.filter) > 0)) {
+                                                Object.values(this.props.codeList.data[Enums.CODE[key]]).sort((a,b)=>{
+                                                    return String(a.code)>String(b.code)?1:-1
+                                                }).map((item, indx) => {
+                                                    if (  (String(item.code).startsWith(this.state.filter) || String(item.code).indexOf(this.state.filter) > 0)) {
                                                         i++;
                                                         return (
                                                             <ListGroupItem className="justify-content-between " className="" key={indx} title={JSON.stringify(item, null, 4)} >
 
-                                                                <Link to={"?code=" + item.code + "&type=" + Enums.CODE[key]} className="g-font-size-11 col-md-11 col-xs-11 g-color-primary--hover nav-link">{item.code}</Link>
+                                                                <Link to={"/dictionary?code=" + item.code + "&type=" + Enums.CODE[key]} className="g-font-size-11 col-md-11 col-xs-11 g-color-primary--hover nav-link">{item.code}</Link>
                                                                 <i data-tag={JSON.stringify(item)} className="remove-icon fa fa-times pointer" aria-hidden="true" onClick={this.removeDictionary.bind(this)}></i>
                                                             </ListGroupItem>);
                                                     }

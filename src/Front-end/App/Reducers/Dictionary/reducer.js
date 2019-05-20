@@ -17,6 +17,7 @@ export default function DictionaryReducer(state = {
         WARNING_GLOBAL: [],
         SUCCESS_GLOBAL: [],
         PLACEHOLDER: [],
+        EMAIL:[]
     },
     edit: { isLoading: false }
 }, action) {

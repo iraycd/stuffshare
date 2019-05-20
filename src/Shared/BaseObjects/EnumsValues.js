@@ -10,7 +10,9 @@ let Enums =  {
         WARNING_GLOBAL: "WARNING_GLOBAL",
         SUCCESS: "SUCCESS",
         LABEL: "LABEL",
-        PLACEHOLDER: "PLACEHOLDER"
+        PLACEHOLDER: "PLACEHOLDER",
+        EMAIL:"EMAIL"
+
     },
     ACTIONS: {
         SUCCESS: "SUCCESS",

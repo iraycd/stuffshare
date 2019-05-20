@@ -998,6 +998,45 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "UPLOAD_IMAGE_BTN": {
+            "id": 0,
+            "uid": "",
+            "code": "UPLOAD_IMAGE_BTN",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zapisz",
+                "us": "Save"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "UPLOAD_IMAGE_LABEL": {
+            "id": 0,
+            "uid": "",
+            "code": "UPLOAD_IMAGE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Dodaj zdjęcie",
+                "us": "Add picture"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "IMAGE_NOT_VERIFIED": {
+            "id": 0,
+            "uid": "",
+            "code": "IMAGE_NOT_VERIFIED",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Weryfikacja",
+                "us": "To verify"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -1351,23 +1390,23 @@
             "field": "",
             "validation": [],
             "toRefresh": true
+        },
+        "REMOVE_USER_TITLE": {
+            "code": "REMOVE_USER_TITLE",
+            "status": "200",
+            "type": "EMAIL",
+            "message": {
+                "pl": "[StuffShare] Konto zostało usunięte",
+                "us": "[StuffShare] Your account has been removed"
+            },
+            "field": "",
+            "validation": [],
+            "toRefresh": true
         }
     },
     "INFO": {},
     "ERROR_GLOBAL": {},
     "ERROR": {
-        "1": {
-            "code": "1",
-            "status": "200",
-            "type": "ERROR",
-            "message": {
-                "pl": "1",
-                "us": "1"
-            },
-            "field": "",
-            "validation": [],
-            "toRefresh": true
-        },
         "EMAIL_EXCEPTION": {
             "code": "EMAIL_EXCEPTION",
             "status": "500",
@@ -1469,19 +1508,6 @@
             "field": "",
             "toRefresh": true
         },
-        " CHANGE_PASSWORD_SUCCESS": {
-            "id": 0,
-            "uid": "",
-            "code": " CHANGE_PASSWORD_SUCCESS",
-            "status": "200",
-            "type": "SUCCESS_GLOBAL",
-            "message": {
-                "pl": "Hasło zostało zmienione.",
-                "us": "Your password has been changed."
-            },
-            "field": "",
-            "toRefresh": true
-        },
         "REMOVE_USER_SUCCESS": {
             "id": 0,
             "uid": "",
@@ -1504,6 +1530,19 @@
             "message": {
                 "pl": "Twoje hasło zostało zmienione.",
                 "us": "Your password has been changed."
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SET_LANG_SAVE_SUCCESS": {
+            "id": 0,
+            "uid": "",
+            "code": "SET_LANG_SAVE_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Twoja lokalizacja została uaktualniona.",
+                "us": "Your localisation has been saved."
             },
             "field": "",
             "toRefresh": true

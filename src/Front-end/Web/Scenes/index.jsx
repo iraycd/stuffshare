@@ -20,7 +20,8 @@ import RouterAuth from '../Components/RouterAuth/index.jsx';
 import SignInModal from './User/Components/SignInModal/index.jsx';
 import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
 import BodyLoader from '../Components/Loader/BodyLoader/index.jsx';
-
+import Item from './Items/Components/Item/index.jsx';
+import NewItem from './Items/Components/NewItem/index.jsx';
 
 
 class App extends React.Component {
@@ -57,6 +58,8 @@ class App extends React.Component {
           <RouterAuth path={"/userAccount"} component={UserAccount} />
           <Route path={"/login/"} component={SignInModal} />
           <RouterAuth path={"/verifyImage"} component={VerifyImage} />
+          <RouterAuth exact={true}  path={"/item/new"} component={NewItem} />
+          <Route path={"/item/:id"} component={Item} />
 
         </Switch>
         <Footer />

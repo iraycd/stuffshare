@@ -26,7 +26,9 @@ import Img from 'react-image'
 import UserInfo from '../../Scenes/UserInfo/index.jsx';
 import USER_PROFILE_MODAL_ACTION from './actions.js';
 import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 
 class UserProfileModalTab extends React.Component {
@@ -36,7 +38,6 @@ class UserProfileModalTab extends React.Component {
         this.state = new UserLoginInternalDTO();
         this.state.validation = [];
         this.open = false;
-        this.toggle = this.toggle.bind(this);
         this.state.activeTab = '1';
 
     }
@@ -69,16 +70,45 @@ class UserProfileModalTab extends React.Component {
         this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userProfileModalTab.images)
         this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
     }
+   
     logOut(event) {
         event.preventDefault();
-        this.props.logOut().then(succ => {
-            this.onCloseModal();
-            localStorage.removeItem("token");
-            localStorage.removeItem("refresh_token")
 
-        })
+        confirmAlert({
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity-0_8 g-px-50 text-center'>
+                        <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</h1>
+                        <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('LOGOUT_CONFIRM_HEADER')}</p>
+                        <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
+                            onClick={() => {
+                                this.props.logOut().then(succ => {
+                                    localStorage.removeItem("token");
+                                    localStorage.removeItem("refresh_token")
+                                    this.setState({
+                                        logOut: 1
+                                    });
+                                    this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                                        Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGGED_OUT_SUCCESS')
+                                    )
+                                    this.onCloseModal();
 
-    }
+                                })
+                                onClose();
+
+                            }}
+                        >
+                            {Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('YES_LABEL')}
+                        </button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={onClose}>{Translator(this.props.codeDict.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
+
+                    </div>
+                );
+            }
+
+        });
+       
+    };
     onClickMyProfile(event) {
 
         this.onCloseModal()
@@ -95,43 +125,15 @@ class UserProfileModalTab extends React.Component {
          }*/
 
 
-        let img = noprofilepic;
-        let uid = 0;
-        let hasImg = false;
-        let isVerified = 1;
-        if (this.props.auth.user.blob_profile != null) {
-            img = `data:${this.props.auth.user.blob_profile.blob_thumbmail.type};base64,${this.props.auth.user.blob_profile.blob_thumbmail.blob}`
-            uid = this.props.auth.user.blob_profile.blob_item.uid
-            hasImg = true;
-            isVerified = this.props.auth.user.blob_profile.status
-
-        }
+  
 
         let body =
             <Container className="g-pa-5">
                 <Row>
                     <Col xs="4" className="g-pr-0 g-py-5 g-pl-5">
                         <div class=" g-mb-50 g-mb-0--lg">
-                        <div class="u-block-hover g-pos-rel">
-                                <figure >
+                        <ImageProfile blob_profile={this.props.auth.user.blob_profile} default={noprofilepic} title={this.props.auth.user.name} openImage={this.openImage.bind(this)}/>
 
-                                    <Img data-tag={uid} src={img.toString()} className={"img-fluid w-100   " + (isVerified == 1 ? (hasImg == true ? "u-block-hover__main--zoom-v1" : "") : "g-blur-10")} alt="Image Description" />
-
-                                </figure>
-
-                                {hasImg == true && isVerified == 1 ?
-                                    <figcaption onClick={this.openImage.bind(this)} class="u-block-hover__additional--fade g-cursor-pointer g-bg-white-opacity-0_5 g-pa-30">
-                                        <div class="u-block-hover__additional--fade u-block-hover__additional--fade-up g-flex-middle">
-
-                                        </div>
-                                    </figcaption>
-                                    : undefined}
-                                {hasImg == true ? (
-                                    <span class="g-pos-abs g-bottom-0 g-right-0">
-                                        <a class="hidden btn btn-sm u-btn-primary rounded-0" href="#">Użytkownik</a>
-                                        <small class="d-block g-bg-black-opacity-0_5 g-color-white g-pa-5">{isVerified == 1 ? this.props.auth.user.name : this.tran.translate('IMAGE_NOT_VERIFIED')}</small>
-                                    </span>) : <span></span>}
-                            </div>
 
                             <div class="list-group list-group-border-0 g-mb-40">
 
@@ -215,6 +217,10 @@ const mapDispatchToProps = (dispatch) => {
             return dispatch(
                 new BaseService().commandThunt(CommandList.User.LOG_OUT, {}, localStorage.token)
             )
+        }
+        , setNotification: (type, message) => {
+            dispatch({ type: USER_PROFILE_MODAL_ACTION.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
+
         }
 
     }

@@ -228,7 +228,11 @@ class SetLatlng extends React.Component {
                 this.state.latitude = this.props.coords.latitude
 
         }
-        this.props.setLatLng(this.state)
+        this.props.setLatLng(this.state).then(succ=>{
+            this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('SET_LANG_SAVE_SUCCESS')
+            );
+        })
 
     }
     refreshGeolocation(event) {
@@ -441,7 +445,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(new BaseService().queryThunt(QueryList.City.GET_CITY, dto, null, Enums.LOADER.SET_CONTAINER_ACTION))
         },
         setLatLng: (dto) => {
-            dispatch(new BaseService().queryThunt(CommandList.User.SET_COORDIATES, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
+            return dispatch(new BaseService().queryThunt(CommandList.User.SET_COORDIATES, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
                 return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
 
             })

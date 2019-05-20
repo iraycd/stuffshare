@@ -8,34 +8,24 @@ import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } 
 import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
 import { BaseService } from '../../../../../App/index.js';
 import { TextBox, DropDownList, ButtonLoader } from '../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
 import QueryList from '../../../../../../Shared/QueryList.js';
 import Modal from 'react-responsive-modal'
-import Login from '../../Scenes/Login/index.jsx';
-import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
-import Register from '../../Scenes/Register/index.jsx';
+
 import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
 import { CSSTransitionGroup } from 'react-transition-group';
 import noprofilepic from './../../../../assets/img/noprofilepic.jpg'
-import SIGN_IN_MODAL_ACTIONS from './actions.js';
-import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
 
 import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
-import UserProfileInfo from '../../Scenes/UserProfileInfo/index.jsx';
-import RemoveUser from '../../Scenes/RemoveUser/index.jsx';
-import UserInfo from '../../Scenes/UserInfo/index.jsx';
-import LogOut from '../../Scenes/LogOut/index.jsx';
-import ChangePassword from '../../Scenes/ChangePassword/index.jsx';
+
 import Img from 'react-image'
 import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
-import AddProfileImage from '../../Scenes/AddProfileImage/index.jsx';
 import ImageLightbox from './../../../../Components/ImageLightbox/index.jsx'
-import USER_ACCOUNTS_ACTION from './actions.js';
+import ITEM_ACTION from './actions.js';
 import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
 
 
 
-class UserAccount extends React.Component {
+class Item extends React.Component {
 
     constructor() {
         super();
@@ -71,37 +61,31 @@ class UserAccount extends React.Component {
 
 
 
-       
+
         let body =
             <Container className="g-py-15">
 
                 <Row>
                     <Col xs="3" className="g-pr-5 g-pl-0" >
                         <div class=" g-mb-50 g-mb-0--lg">
-                        <ImageProfile blob_profile={this.props.auth.user.blob_profile} default={noprofilepic} title={this.props.auth.user.name} openImage={this.openImage.bind(this)}/>
+                            <ImageProfile blob_profile={this.props.auth.user.blob_profile} default={noprofilepic} title={this.props.auth.user.name} openImage={this.openImage.bind(this)} />
 
 
                             <div class="list-group list-group-border-0 g-mb-40">
 
-                                <NavLink exact strict to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <NavLink exact strict to="/item/1" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
                                 </NavLink>
-                                <NavLink to="/userAccount/addProfileImage" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <NavLink to="/item/edit/1" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">  {this.tran.translate('ADD_PROFILE_IMG_LINK')}</span>
                                 </NavLink>
-                                <NavLink to={"/userAccount/setCoordinates"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <NavLink to={"/item/delete/1"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SET_COORDINATE_LINK')}</span>
                                 </NavLink>
-                                <NavLink to={"/userAccount/removeAccount"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
+                                <NavLink to={"/itemList"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('REMOVE_ACCOUNT_LINK')}</span>
                                 </NavLink>
 
-                                <NavLink to={"/userAccount/changePassword"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('CHANGE_PASSWORD_LINK')}</span>
-                                </NavLink>
-                                <NavLink to={"/userAccount/logOut"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
-                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('LOG_OUT_LINK')}</span>
-                                </NavLink>
 
                             </div>
 
@@ -115,13 +99,7 @@ class UserAccount extends React.Component {
                         <Switch>
 
 
-                            <Route exact path={"/userAccount"} component={UserInfo} />
 
-                            <Route path={"/userAccount/setCoordinates"} component={SetLatlng} />
-                            <Route path={"/userAccount/removeAccount"} component={RemoveUser} />
-                            <Route path={"/userAccount/logOut"} component={LogOut} />
-                            <Route path={"/userAccount/changePassword"} component={ChangePassword} />
-                            <Route path={"/userAccount/addProfileImage"} component={AddProfileImage} />
 
 
 
@@ -184,4 +162,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(UserAccount);
+)(Item);

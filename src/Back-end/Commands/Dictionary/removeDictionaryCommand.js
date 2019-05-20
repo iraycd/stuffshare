@@ -8,13 +8,15 @@ import DictionaryDTO from "../../../Shared/DTO/Dictionary/DictionaryDTO.js";
 export default class RemoveDictionaryCommand extends BaseCommand {
   constructor({
     logFileInfrastructureDI,
-    validationInfrastructureDI,
-    authInfrastructureDI
+    //validationInfrastructureDI,
+    authInfrastructureDI,
+    dictionaryDI
   }) {
     super({
       logFileInfrastructureDI,
-      validationInfrastructureDI,
-      authInfrastructureDI
+    //  validationInfrastructureDI,
+      authInfrastructureDI,
+      dictionaryDI
     });
 
   }
@@ -22,7 +24,7 @@ export default class RemoveDictionaryCommand extends BaseCommand {
     this.model = Object.assign(new DictionaryDTO(), dto);
   }
   get validation() {
-    return [()=>{return checkDTO.bind(this)()}];
+  //  return [()=>{return this.checkDTO.bind(this)()}];
   }
 
 

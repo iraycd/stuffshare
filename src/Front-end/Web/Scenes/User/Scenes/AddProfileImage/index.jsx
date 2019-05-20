@@ -151,7 +151,7 @@ class AddProfileImage extends React.Component {
             let img = `data:${item.blob_thumbmail.type};base64,${item.blob_thumbmail.blob}`
             return (
                 <Col xs="4" >
-                    <div class={"g-brd-around g-brd-gray-light-v4  g-mb-25  " + brdColor}>
+                    <div class={"g-brd-around g-brd-gray-light-v4  g-cursor-pointer   g-mb-25  " + brdColor}>
 
 
                         <div class="js-fancybox d-block u-block-hover " target="_blank">
@@ -163,7 +163,7 @@ class AddProfileImage extends React.Component {
 
                             <span data-tag={item.id} onClick={this.clickImageHandler.bind(this)} class={(item.status == 0 ? "u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" : "") + " js-fancybox d-block u-block-hover u-block-hover--scale-down"} href="smooth-parallax-scroll/index.html" >
                                 <Img src={img.toString()} className={"img-fluid u-block-hover__main u-block-hover__img"} />
-                                {item.status == 0 ? <span class="u-bg-overlay__inner g-color-white g-pos-abs g-left-20 g-bottom-20">
+                                {item.status == 0 ? <span class="u-bg-overlay__inner g-color-white h6 text-uppercase g-letter-spacing-2 g-font-weight-600  text-center g-pos-abs g-left-20 g-bottom-20">
                                     {tran.translate('IMAGE_NOT_VERIFIED')}
                                 </span> : <span></span>}
                             </span>
@@ -178,17 +178,17 @@ class AddProfileImage extends React.Component {
         if (imgList.length < 5) {
             imgList.push(<Col xs="4">
 
-                <div class={"g-brd-around g-brd-gray-light-v4  g-mb-25"}>
+                <div class={"g-brd-around g-brd-gray-light-v4 g-cursor-pointer  g-mb-25"}>
 
 
                     <div class="js-fancybox d-block u-block-hover " >
 
-                        <span onClick={this.uploadClick.bind(this)} class="g-pa-10 js-fancybox d-block u-block-hover u-block-hover--scale-down"  >
+                        <span onClick={this.uploadClick.bind(this)} class="g-pa-5 js-fancybox d-block u-block-hover u-block-hover--scale-down text-center"  >
                             {this.state.file == null ?
                                 <Img src={noprofilepic} className={"img-fluid u-block-hover__main u-block-hover__img"} />
                                 : <Img src={this.state.file.base64} className={"img-fluid u-block-hover__main u-block-hover__img"} />
                             }
-                            {this.state.file == null ? <span class="g-color-black g-font-size-16 u-bg-overlay__inner g-pos-abs g-left-15 g-bottom-10">
+                            {this.state.file == null ? <span class="g-color-black g-font-size-16 u-bg-overlay__inner g-mb-15 h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center">
                                 {tran.translate('UPLOAD_IMAGE_LABEL')}
                             </span>
                                 : <span></span>}
@@ -196,7 +196,7 @@ class AddProfileImage extends React.Component {
                                 <i class="hs-icon hs-icon-plus g-absolute-centered g-font-size-25"></i>
                             </span> : <span></span>}
                         </span>
-                        {this.state.file != null ? <a href="#" onClick={this.uploadImage.bind(this)} class="g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('UPLOAD_IMAGE_BTN')}
+                        {this.state.file != null ? <a href="#" onClick={this.uploadImage.bind(this)} class="g-z-index-3 rounded-0 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('UPLOAD_IMAGE_BTN')}
                         </a>
                             : <span></span>}
 
