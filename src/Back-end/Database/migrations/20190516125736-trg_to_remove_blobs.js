@@ -13,13 +13,6 @@ module.exports = {
   
            DELETE b FROM Blobs  b 
          JOIN DELETED  d ON b.user_id = d.id;
-
-      
-   
-    
-
-
-
     `
 
     )

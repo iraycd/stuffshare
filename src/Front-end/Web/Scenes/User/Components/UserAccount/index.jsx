@@ -55,7 +55,7 @@ class UserAccount extends React.Component {
     openImage(event) {
 
         this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userAccount.images)
-        this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
+        this.props.getFullsizeImage([{ id: this.props.auth.user.blob_profile.blob_item.id }])
     }
 
     render() {

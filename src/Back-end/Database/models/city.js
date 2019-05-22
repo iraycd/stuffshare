@@ -19,6 +19,13 @@ export default class City extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
         name: {
           type: DataTypes.STRING,
           allowNull: true
@@ -27,12 +34,9 @@ export default class City extends Model {
           type: DataTypes.STRING(255),
           allowNull: true
         },
-        region_id: {
-          type: DataTypes.INTEGER,
-          allowNull: false
-        },
+        
         country_id: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.UUID,
           allowNull: false
         },
         uid: DataTypes.STRING(50),

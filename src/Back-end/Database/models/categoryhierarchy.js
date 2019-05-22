@@ -20,8 +20,15 @@ export default class CategoryHierarchy extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
-        category_child_id: DataTypes.INTEGER,
-        category_parent_id: DataTypes.INTEGER
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
+        category_child_id: DataTypes.UUID,
+        category_parent_id: DataTypes.UUID
       },
       { sequelize }
     );

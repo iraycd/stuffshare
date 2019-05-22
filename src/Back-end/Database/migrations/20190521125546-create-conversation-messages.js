@@ -1,18 +1,23 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('UserConversations', {
+    return queryInterface.createTable('ConversationMessages', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
+      },
+     
+      conversation_id: {
+        type: Sequelize.UUID,
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
-      conversation_id: {
-        type: Sequelize.INTEGER
+      message: {
+        type: Sequelize.STRING
       },
       created_at: {
         allowNull: false,
@@ -25,6 +30,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('UserConversations');
+    return queryInterface.dropTable('ConversationMessages');
   }
 };

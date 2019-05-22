@@ -4,12 +4,14 @@ module.exports = {
     return queryInterface.createTable('Conversations', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
+     
       ownerUser_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       title: {
         type: Sequelize.STRING

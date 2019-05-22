@@ -2,7 +2,7 @@
     "version": "0.1.0",
     "command": "npm",
     "isShellCommand": true,
-    "args": ["run", "debug"],
+    "args": ["run", "server"],
     "showOutput": "always",
     "tasks": [
         { 

@@ -41,7 +41,7 @@ export default function ImageLightboxReducer(state = Object.assign({}, emptyStat
             {
                 const result = Object.assign({}, state);
                 result.imageList.forEach(item => {
-                    if (item.blob_item.uid == action.dto[0].uid)
+                    if (item.blob_item.id == action.dto[0].id)
                     {
                         item.blob_item=action.data[0];
                         result.activeImage=item;

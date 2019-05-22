@@ -9,6 +9,8 @@ import fs from 'fs';
 import path from 'path'
 import serve from 'koa-static';
 import CircularJSON from 'circular-json';
+import { URL } from "url";
+
 //TO REMOVE IN FUTURE
 if (process.env.UPLOAD_PATH) {
   if (!fs.existsSync(process.env.UPLOAD_PATH)) {
@@ -59,7 +61,7 @@ const cqrsPreprocess = () => {
       let token = ctx.request.header.authorization;
       let lang = ctx.request.header.language;
       action.token = token;
-      action.referer = ctx.request.header.referer
+      action.referer = ctx.request.header.referer?(new URL(ctx.request.header.referer)).origin:'http://localhost.8080'
       action.language = lang;
       action.context.language = lang;
       result = await action.run();

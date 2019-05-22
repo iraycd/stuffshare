@@ -30,12 +30,12 @@ export default class GetUserInfoQuery extends BaseQuery {
         let result = await this.userServiceDI.setContext(this.context).getUserInfo({ user_id: user_Id });
         if (result.blob_profile != null) {
             let blobsResulst = await this.blobServiceDI.getBlobsBase64ByGuids({
-                uids: [result.blob_profile.blob_thumbmail.uid
+                ids: [result.blob_profile.blob_thumbmail.id
                 ]
             });
 
             let blobBase64 = blobsResulst.filter(element => {
-                return result.blob_profile.blob_thumbmail.uid == element.uid
+                return result.blob_profile.blob_thumbmail.id == element.id
             })[0]
             result.blob_profile.blob_thumbmail = Object.assign(new BlobBase64DTO(), blobBase64);
 

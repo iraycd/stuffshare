@@ -21,11 +21,18 @@ export default class Blob extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
-        blob_id: DataTypes.INTEGER,
-        item_id: DataTypes.INTEGER,
-        blob_thumbmail_id: DataTypes.INTEGER,
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+      },
+        blob_id:DataTypes.UUID,
+        item_id:DataTypes.UUID,
+        blob_thumbmail_id:DataTypes.UUID,
         user_id: {
-          type: DataTypes.INTEGER
+          type: DataTypes.UUID
         },
         order:DataTypes.INTEGER,
         status:DataTypes.INTEGER

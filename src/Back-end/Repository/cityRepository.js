@@ -67,7 +67,7 @@ export default class CityRepository extends BaseRepository {
 
     let query = `WITH 
                   ${withQuery.join(',')}
-                  SELECT c.id,c.name,c.longitude,c.latitude,c.population, fs.RANK FROM cities_prep c
+                  SELECT c.id,c.name,c.longitude,c.latitude,c.population FROM cities_prep c
                   ${PrepareSearch.clean(name_fs).length>2 ? 'JOIN  search_fts fs ON c.id= fs.[KEY]  ' : ''}`
 
     return this.sequelizeDI.sequelize.query(

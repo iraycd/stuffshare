@@ -8,7 +8,7 @@ module.exports = {
         table: 'Users',
         field: 'id',
       },
-      onDelete: 'no action',
+      onDelete: 'CASCADE',
       onUpdate: 'no action',
     })
   },

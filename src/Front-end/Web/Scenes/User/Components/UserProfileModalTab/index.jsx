@@ -68,7 +68,7 @@ class UserProfileModalTab extends React.Component {
     openImage(event) {
 
         this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userProfileModalTab.images)
-        this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
+        this.props.getFullsizeImage([{ id: this.props.auth.user.blob_profile.blob_item.id }])
     }
    
     logOut(event) {

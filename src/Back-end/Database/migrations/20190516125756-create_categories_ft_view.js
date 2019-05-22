@@ -8,7 +8,6 @@ module.exports = {
       WITH SCHEMABINDING
       AS (
       SELECT [id]
-          ,[uid]
             ,[category]
             ,ISNULL([category_pl],category) as [category_pl]
             ,ISNULL(category_us,category) as category_us
@@ -16,10 +15,6 @@ module.exports = {
         FROM [dbo].[Categories]
         WHERE status = 1
         )
-
-    
-
-
 
     `
 

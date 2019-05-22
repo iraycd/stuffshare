@@ -18,6 +18,13 @@ export default class V_User extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+      },
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -39,16 +46,12 @@ export default class V_User extends Model {
           type: DataTypes.DATEONLY,
           allowNull: false
         },
-        city: DataTypes.STRING,
-        city_id: DataTypes.INTEGER,
-        adress: DataTypes.STRING,
-        country: DataTypes.STRING,
-        country_id: DataTypes.INTEGER,
+       
         longitude: DataTypes.FLOAT,
         latitude: DataTypes.FLOAT,
         relogin_require: DataTypes.BOOLEAN,
         language: DataTypes.STRING,
-        blob_id:DataTypes.INTEGER
+        blob_id:DataTypes.UUID
 
       },
       { sequelize }

@@ -19,7 +19,14 @@ export default class UserAuths extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
-        user_id: DataTypes.INTEGER,
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
+        user_id:DataTypes.UUID,
         socialUser_id: DataTypes.STRING,
         socialType: DataTypes.INTEGER
       },

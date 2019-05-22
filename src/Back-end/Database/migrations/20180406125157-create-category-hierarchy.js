@@ -4,15 +4,16 @@ module.exports = {
     return queryInterface.createTable('CategoryHierarchies', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       category_child_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID
       },
       category_parent_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID
       },
       created_at: {
         allowNull: false,

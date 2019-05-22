@@ -200,7 +200,7 @@ class SetLatlng extends React.Component {
                     cityId: '',
                     zoom: 3
                 });
-                // this.props.getCities({ country_id: item.id, name: name });
+              //   this.props.getCities({ country_id: item.id, name: name });
                 return
             }
         })
@@ -400,7 +400,7 @@ class SetLatlng extends React.Component {
                         <Label for={this.state.guid} >{tran.translate('SETLATLNG_CITY_LABEL')}</Label>
                     </Col>
                     <Col class="col-6">
-                        {this.state.countryId > 0 ? cityForm : <span></span>}
+                        {this.state.countryId != undefined ? cityForm : <span></span>}
                     </Col>
                 </Row>
             </FormGroup>

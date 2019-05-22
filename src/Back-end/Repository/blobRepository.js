@@ -18,30 +18,30 @@ export default class BlobRepository extends BaseRepository {
     this.sequelizeDI = sequelizeDI;
   }
 
-  getByGuids({ uids, transaction }) {
+  getByGuids({ ids, transaction }) {
     return this.sequelizeDI.sequelize.query(
       `
-        select blob,type,uid
+        select blob,type,id
         from openjson(
             (	SELECT blobs.* FROM (
-                select TOP ${uids.length} file_stream as blob,file_type as type, BlobMappers.uid
+                select TOP ${ids.length} file_stream as blob,file_type as type, BlobMappers.id
                 from BlobStore
                 JOIN BlobMappers ON BlobMappers.stream_id = BlobStore.stream_id
-                WHERE uid IN (:uids)
+                WHERE id IN (:ids)
                ) as blobs
                 for json auto
             )
-        ) with(blob varchar(max),type varchar(10), uid varchar(100))
+        ) with(blob varchar(max),type varchar(10), id varchar(100))
     `,
       {
-        replacements: { uids: uids },
+        replacements: { ids: ids },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
       }
     );
 
   }
-  insertFile({ uid, path, name, transaction }) {
+  insertFile({ id, path, name, transaction }) {
     var blob = fs.readFileSync(path);
     return this.sequelizeDI.sequelize.query(
       `SET NOCOUNT ON
@@ -68,12 +68,12 @@ export default class BlobRepository extends BaseRepository {
          ,'${name}')
          
         INSERT INTO dbo.BlobMappers
-         (uid, stream_id,created_at,updated_at)    
-         SELECT '${uid}' , stream_id,GETDATE(),GETDATE()
+         (id, stream_id,created_at,updated_at)    
+         SELECT '${id}' , stream_id,GETDATE(),GETDATE()
          FROM @result;
          SET NOCOUNT OFF
-        SELECT TOP 1 id,uid  FROM BlobMappers
-        WHERE uid = '${uid}'
+        SELECT TOP 1 id,id  FROM BlobMappers
+        WHERE id = '${id}'
         SET NOCOUNT ON
         DELETE @result`,
       {

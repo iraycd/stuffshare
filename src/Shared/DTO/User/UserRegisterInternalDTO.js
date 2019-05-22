@@ -12,11 +12,6 @@ export default class UserRegisterInternalDTO extends BaseDTO {
         this.birthDate = '';
         this.password = '';
         this.passwordRepeat = ''
-        this.city = '';
-        this.city_id = '';
-        this.adress = '';
-        this.country = '';
-        this.country_id = '';
         this.longitude = '';
         this.latitude = '';
         this.uuid = '';

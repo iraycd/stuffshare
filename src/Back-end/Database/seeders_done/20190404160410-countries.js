@@ -6,6 +6,7 @@ let fs = require('fs');
 
 let Promise = require('bluebird');
 let readline = require('readline')
+let uuidv4 = require( "uuid/v4");
 
 
 // create instance of readline
@@ -58,6 +59,7 @@ module.exports = {
     await Promise.mapSeries(countries, async country => {
 
       return queryInterface.bulkInsert('Countries', [{
+        id:uuidv4(),
         name: country.name,
         uid:country.uid,
         name_clob:country.name_clob,

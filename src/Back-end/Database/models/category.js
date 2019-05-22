@@ -20,6 +20,13 @@ export default class Category extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
         category: {
           type: DataTypes.STRING,
           allowNull: false,

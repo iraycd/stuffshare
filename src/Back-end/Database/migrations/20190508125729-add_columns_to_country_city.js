@@ -5,7 +5,7 @@ module.exports = {
       .query(
         `
         ALTER TABLE Countries    ADD countryCode nvarchar(10) NULL
-        ALTER TABLE Cities    ADD country_id int  NULL
+        ALTER TABLE Cities    ADD country_id char(36)  NULL
      
 
 

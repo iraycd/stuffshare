@@ -29,9 +29,9 @@ export default class GetBlobsBase64ByGuidsQuery extends BaseQuery {
 
     async action() {
         let uidList = this.model.map(item => {
-            return item.uid;
+            return item.id;
         })
-        return await this.blobServiceDI.getBlobsBase64ByGuids({ uids: uidList });
+        return await this.blobServiceDI.getBlobsBase64ByGuids({ ids: uidList });
 
     }
 };

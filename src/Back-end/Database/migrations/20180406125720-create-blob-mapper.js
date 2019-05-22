@@ -3,8 +3,7 @@ module.exports = {
   up: (migration, Sequelize) => {
     return migration.sequelize.query(`
     CREATE TABLE [dbo].[BlobMappers](
-      [id] [int] IDENTITY(1,1) NOT NULL,
-      [uid] [nvarchar](50) NOT NULL,
+      [id] [char](36) NOT NULL,
       [stream_id] [uniqueidentifier] NOT NULL,
       [created_at] [datetimeoffset](7) NOT NULL,
       [updated_at] [datetimeoffset](7) NOT NULL,

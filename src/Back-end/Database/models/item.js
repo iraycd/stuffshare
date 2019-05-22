@@ -19,6 +19,13 @@ export default class Item extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -28,12 +35,11 @@ export default class Item extends Model {
           allowNull: false
         },
         user_id: {
-          type: DataTypes.STRING,
+          type: DataTypes.UUID,
           allowNull: false
         },
         clobSearch_pl: DataTypes.TEXT,
-        clobSearch_us: DataTypes.TEXT,
-        uid: DataTypes.STRING(50)
+        clobSearch_us: DataTypes.TEXT
       },
       { sequelize }
     );

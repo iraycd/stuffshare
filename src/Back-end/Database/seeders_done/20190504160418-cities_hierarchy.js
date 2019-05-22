@@ -30,9 +30,9 @@ module.exports = {
 
       UPDATE 
         Cities
-        SET name_clob=ISNULL(name_clob,name)
-        WHERE name_clob is null
-        `);
+        SET name_clob=ISNULL(NULLIF(name_clob,''),name)
+        WHERE NULLIF(name_clob,'') is null
+    `);
     
 
 

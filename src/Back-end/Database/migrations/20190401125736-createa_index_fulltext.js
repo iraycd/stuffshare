@@ -29,23 +29,11 @@ module.exports = {
 
     
 
-      SET @constraint = (SELECT CONSTRAINT_NAME
-                  FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
-                  WHERE OBJECTPROPERTY(OBJECT_ID(CONSTRAINT_SCHEMA + '.' + QUOTENAME(CONSTRAINT_NAME)), 'IsPrimaryKey') = 1
-                  AND TABLE_NAME = 'Regions' AND TABLE_SCHEMA = 'dbo')
-      
-      SET @create_index =	'CREATE FULLTEXT INDEX  ON [dbo].Regions
-                            (
-                              name_clob
-                            ) KEY INDEX '+@constraint
-      EXECUTE sp_executesql @create_index
-
 
       ALTER FULLTEXT INDEX ON dbo.Cities  
       START FULL POPULATION;  
 
-      ALTER FULLTEXT INDEX ON dbo.Regions  
-      START FULL POPULATION;  
+
 
       ALTER FULLTEXT INDEX ON dbo.Countries  
       START FULL POPULATION;  
@@ -54,9 +42,7 @@ module.exports = {
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.sequelize.query(`DROP FULLTEXT INDEX ON [dbo].Cities`).
-      then(succ => {
-        return queryInterface.sequelize.query(`DROP FULLTEXT INDEX ON [dbo].Regions`);
-      }).then(succ => {
+    then(succ => {
         return queryInterface.sequelize.query(`DROP FULLTEXT INDEX ON [dbo].Countries`);
       });
 

@@ -19,7 +19,7 @@ let saveBlobToFile = async ({ blob }) => {
 
       return {
         path: `${upload_path}/${newUid}.jpg`,
-        uid: newUid,
+        id: newUid,
         filename: `${newUid}.jpg`
       };
       break;
@@ -31,7 +31,7 @@ let saveBlobToFile = async ({ blob }) => {
 
       return {
         path: `${upload_path}/${newUid}.png`,
-        uid: newUid,
+        id: newUid,
         filename: `${newUid}.png`
       };
       break;
@@ -69,20 +69,20 @@ export default class BlobService extends BaseService {
       newBlob = await saveBlobToFile.bind(this)({ blob });
       let imgNormal = await Jimp.read(newBlob.path);
       await imgNormal
-        .contain(350, 350) // resize
+        .contain(300, 300) // resize
         .quality(60) // set JPEG quality
-        .writeAsync(`${upload_path}/${newBlob.uid}-min.png`); // save
+        .writeAsync(`${upload_path}/${newBlob.id}-min.png`); // save
 
       let blob_id = this.insertFile({
-        uid: blob.uid,
+        id: blob.id,
         path: newBlob.path,
         fileName: newBlob.filename
       });
       let uid_min = uuidv4()
       let blob_min_id = this.insertFile({
-        uid: uid_min,
-        path: `${upload_path}/${newBlob.uid}-min.png`,
-        fileName: `${newBlob.uid}-min.png`
+        id: uid_min,
+        path: `${upload_path}/${newBlob.id}-min.png`,
+        fileName: `${newBlob.id}-min.png`
       });
 
       return {
@@ -94,7 +94,7 @@ export default class BlobService extends BaseService {
       console.log(exception);
     } finally {
       await fs.unlink(`${newBlob.path}`);
-      await fs.unlink(`${upload_path}/${newBlob.uid}-min.png`);
+      await fs.unlink(`${upload_path}/${newBlob.id}-min.png`);
     }
   }
 
@@ -106,9 +106,9 @@ export default class BlobService extends BaseService {
    * @returns
    * @memberof BlobService
    */
-  async insertFile({ uid, path, fileName }) {
+  async insertFile({ id, path, fileName }) {
     let result = await this.unitOfWorkDI.blobRepository.insertFile({
-      uid: uid,
+      id: id,
       path: path,
       name: fileName
     });
@@ -159,8 +159,8 @@ export default class BlobService extends BaseService {
    * @returns
    * @memberof BlobService
    */
-  async getBlobsBase64ByGuids({ uids }) {
-    let result = await this.unitOfWorkDI.blobRepository.getByGuids({ uids });
+  async getBlobsBase64ByGuids({ ids }) {
+    let result = await this.unitOfWorkDI.blobRepository.getByGuids({ ids });
     return result.map(element => {
       switch (element.type) {
         case "jpg": {

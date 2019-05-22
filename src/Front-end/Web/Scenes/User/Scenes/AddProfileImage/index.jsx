@@ -103,7 +103,7 @@ class AddProfileImage extends React.Component {
     uploadImage(event) {
 
         let dto = new BlobBase64();
-        dto.uid = uuidv4();
+        dto.id = uuidv4();
         dto.blob = this.state.file.base64.split('base64,')[1];
         dto.type = this.state.file.type;
         this.props.uploadImage(
@@ -125,7 +125,7 @@ class AddProfileImage extends React.Component {
             if (item.id == event.currentTarget.getAttribute('data-tag')) {
 
                 this.props.openLightbox(item, this.props.userAccount.images)
-                this.props.getFullsizeImage([{ uid: item.blob_item.uid }])
+                this.props.getFullsizeImage([{ id: item.blob_item.id }])
 
 
             }

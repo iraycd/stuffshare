@@ -3,6 +3,7 @@
 import ServerException from "./Exceptions/serverException.js";
 import { Model } from "sequelize";
 import BaseDTO from "../../Shared/BaseObjects/baseDTO.js";
+import uuidv4 from "uuid/v4";
 
 /**
  *
@@ -99,7 +100,12 @@ export default class BaseRepository {
    */
   // @ts-ignore
   insert({ model, transaction }) {
-    return this.entityDAO.create(model, {
+    let item = model;
+    if(!model.id)
+    {
+      item.id=uuidv4();
+    }
+    return this.entityDAO.create(item, {
       transaction: this.getTran({ transaction })
     });
   }

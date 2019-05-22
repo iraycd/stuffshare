@@ -4,9 +4,10 @@ module.exports = {
     return queryInterface.createTable('Items', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       name: {
         allowNull: false,
@@ -18,7 +19,7 @@ module.exports = {
       },
       user_id: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID
        
       },
       clobSearch_pl: {

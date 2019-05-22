@@ -1,8 +1,9 @@
 "use strict";
+import uuidv4 from "uuid/v4";
 
 export default class BaseDTO {
     constructor() {
-        this.id = 0;
+        this.id = uuidv4()
         this.uid=''
     };
     validation(state) {

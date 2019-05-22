@@ -1,9 +1,22 @@
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.addColumn("Users", "language", Sequelize.STRING);
+    return queryInterface.sequelize
+      .query(
+        `
+        ALTER TABLE Users  ADD language nvarchar(20) NULL
+      `
+      )
+      
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn("Users", "language");
+
+ 
+      return queryInterface.sequelize.query(
+        `
+        ALTER TABLE Users  DROP COLUMN language
+        `
+    )
+
   }
 };

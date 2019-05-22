@@ -4,21 +4,22 @@ module.exports = {
     return queryInterface.createTable('Blobs', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       blob_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       item_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       blob_thumbmail_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       user_id:{
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
       },
       created_at: {
         allowNull: false,

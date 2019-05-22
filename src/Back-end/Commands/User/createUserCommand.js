@@ -64,10 +64,10 @@ export default class CreateUserCommand extends BaseCommand {
         name: result.name,
         email: result.email,
         uid: result.uid,
-        href: (new URL(this.referer)).origin//this.referer,//CONFIG.FRONT_END_URL,
+        href: this.referer?(new URL(this.referer)).origin:'http://localhost.8080'//this.referer,//CONFIG.FRONT_END_URL,
       }
     };
-    console.log(this.referer);
+    
     this.mailSenderDI.mailSend({
       xslt_file: EMAIL_TEMPLATE.authorization,
       model,

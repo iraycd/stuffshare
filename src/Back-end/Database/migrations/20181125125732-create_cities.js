@@ -4,18 +4,16 @@ module.exports = {
     return queryInterface.createTable('Cities', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        autoIncrement: false,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      region_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
+      
       latitude:{
         type: Sequelize.FLOAT
 

@@ -19,6 +19,13 @@ export default class Country extends Model {
   static init(sequelize, DataTypes) {
     return super.init(
       {
+        id: {
+          type: DataTypes.UUID,
+          primaryKey: true,
+          autoIncrement: false,
+          defaultValue: sequelize.UUIDV4
+
+        },
         name: {
           type: DataTypes.STRING,
           allowNull: true
