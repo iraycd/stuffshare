@@ -31,16 +31,19 @@ import UserProfileModalTab from '../UserProfileModalTab/index.jsx';
 
 class UserProfileModal extends React.Component {
 
-    constructor() {
-        super();
-        this.state = new UserLoginInternalDTO();
-        this.state.validation = [];
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.state.user=this.props.auth.user
+
         this.open = false;
         this.toggle = this.toggle.bind(this);
         this.state.activeTab = '1';
+        console.log(this.state);
+        console.log(props.auth.user)
 
     }
-
+   
     onOpenModal() {
         this.setState({ open: true });
     };
@@ -62,8 +65,8 @@ class UserProfileModal extends React.Component {
     }
     openImage(event) {
 
-        this.props.openLightbox(this.props.auth.user.blob_profile, [this.props.auth.user.blob_profile])
-        this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
+        this.props.openLightbox(this.state.user.blob_profile, [this.state.user.blob_profile])
+        this.props.getFullsizeImage([{ uid: this.state.user.blob_profile.blob_item.uid }])
     }
     logOut(event) {
         event.preventDefault();
@@ -107,7 +110,7 @@ class UserProfileModal extends React.Component {
                             onClick={() => { this.toggle('2'); }}
                         >
                             <i class="fa fa-book d-block g-font-size-25 u-tab-line-icon-pro"></i>
-                           <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SHARE_ITEMS_MODAL_TAB')}</span>
+                            <span className="g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SHARE_ITEMS_MODAL_TAB')}</span>
 
                         </NavLink>
                     </NavItem>
@@ -134,7 +137,7 @@ class UserProfileModal extends React.Component {
                 </Nav>
                 <TabContent className="g-pa-0" activeTab={this.state.activeTab}>
                     {this.state.activeTab == 1 ? <TabPane className="g-pa-0" tabId="1">
-                        <UserProfileModalTab></UserProfileModalTab>
+                        <UserProfileModalTab user={this.state.user}></UserProfileModalTab>
                     </TabPane> : undefined}
                     {this.state.activeTab == 2 ? <TabPane tabId="2">
                         <UserProfileModalTab></UserProfileModalTab>
@@ -202,7 +205,6 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer,
         auth: state.AuthReducer
 
     };

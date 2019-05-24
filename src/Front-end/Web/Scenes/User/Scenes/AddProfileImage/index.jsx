@@ -43,13 +43,27 @@ class AddProfileImage extends React.Component {
     }
 
     removeImage(event) {
+       this.props.loading(true);
         this.props.removeImage({ id: event.currentTarget.getAttribute('data-tag') }).then(succ => {
-            this.props.geUserInfo()
+            return this.props.geUserInfo()
+
+        }).then(succData => {
+            this.props.newUserContext(succData.data);
+            this.props.loading(false);
 
         })
     }
     setAsProfile(event) {
+        this.props.loading(true);
+
         this.props.setAsProfile({ blob_id: event.currentTarget.getAttribute('data-tag') })
+            .then(
+                succUser => {
+                    this.props.newUserContext(succUser.data);
+                    this.props.loading(false);
+
+                });
+
     }
     uploadClick(event) {
         this.refs.fileUploader.click();
@@ -106,25 +120,32 @@ class AddProfileImage extends React.Component {
         dto.id = uuidv4();
         dto.blob = this.state.file.base64.split('base64,')[1];
         dto.type = this.state.file.type;
+        this.props.loading(true);
+
         this.props.uploadImage(
             dto
         ).then(succ => {
-            this.setState({
-                file: null
-            })
             this.props.getUserImages(
                 { user_id: this.props.auth.user.id }
-            )
-            this.props.geUserInfo()
+            ).then(succ => {
+                return this.props.geUserInfo();
+            })
+            .then(succUser => {
+                this.props.newUserContext(succUser.data);
+                this.props.loading(false);
+
+            })
+
         })
+
 
     }
     clickImageHandler(event) {
 
-        this.props.userAccount.images.forEach(item => {
+        this.props.images.forEach(item => {
             if (item.id == event.currentTarget.getAttribute('data-tag')) {
 
-                this.props.openLightbox(item, this.props.userAccount.images)
+                this.props.openLightbox(item, this.props.images)
                 this.props.getFullsizeImage([{ id: item.blob_item.id }])
 
 
@@ -138,12 +159,12 @@ class AddProfileImage extends React.Component {
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
         let profId = this.props.auth.user.blob_profile ? this.props.auth.user.blob_profile.id : 0
 
-        if (this.props.addProfile.getImagesIsLoading == true) {
-            return (<BodyLoader zIndex={3} height="500px" size="100px" progress={50} />);
+        if (this.props.addProfile.getImagesIsLoading== true) {
+            return (<BodyLoader zIndex={3} height="500px" size="100px" />);
         }
 
 
-        let imgList = this.props.userAccount.images.map((item, index) => {
+        let imgList = this.props.images.map((item, index) => {
             let brdColor = "g-brd-gray-light-v4--hover";
             if (index == 0) {
                 brdColor = "g-brd-red-light-v4--hover"
@@ -237,7 +258,6 @@ const mapStateToProps = (state) => {
         auth: state.AuthReducer,
         addProfile: state.AddProfileImageReducer,
         loader: state.LoaderReducer,
-        userAccount: state.UserAccountReducer,
 
 
     };
@@ -264,12 +284,32 @@ const mapDispatchToProps = (dispatch) => {
         geUserInfo: () => {
             return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, null));
         },
+        
         openLightbox: (activeImage, images) => {
             return dispatch({
                 type: ADD_PROFILE_IMAGE_ACTIONS.OPEN_LIGHTBOX,
                 dto: {
                     images: images,
                     activeImage: activeImage
+                }
+            })
+
+        },
+        loading: (loadingState) => {
+            return dispatch({
+                type: ADD_PROFILE_IMAGE_ACTIONS.ADD_PROFILE_IMAGE_LOADING,
+                dto: {
+                   loading:loadingState
+                }
+            })
+
+        },
+        newUserContext: (user) => {
+            return dispatch({
+                type: ADD_PROFILE_IMAGE_ACTIONS.IS_AUTH,
+                dto: {
+                    user: user
+
                 }
             })
 

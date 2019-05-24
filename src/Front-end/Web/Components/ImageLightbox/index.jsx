@@ -49,7 +49,7 @@ class ImageLightbox extends React.Component {
         let img = this.props.lightbox.activeImage ?
             `data:${this.props.lightbox.activeImage.blob_item.type};base64,${this.props.lightbox.activeImage.blob_item.blob}` :
             ''
-        let imgReact = img != null ? <img style={{ maxWidth: '1100px', maxHeight: '900px' }} src={img} /> : <span></span>
+        let imgReact = img != null ? <img style={{ maxWidth: '80vw', maxHeight: '90vh' }} src={img} />: <span></span>
 
         let lightboxBody = !this.props.lightbox.isLoading ?
             (<Col onClick={this.closeLightboxHandler.bind(this)} style={{
@@ -62,7 +62,7 @@ class ImageLightbox extends React.Component {
 
 
             }} xs="12">
-                {img != null ? <img style={{ maxWidth: '1100px', maxHeight: '900px' }} src={img} /> : <span></span>}</Col>)
+                {img != null ? <img style={{ maxWidth: '80vw', maxHeight: '90vh' }} src={img} /> : <span></span>}</Col>)
             : <BodyLoader onClick={this.closeLightboxHandler.bind(this)} white="true" height="100%" size="130px" />
 
         if (this.props.lightbox.imageList.length > 1) {
@@ -76,15 +76,15 @@ class ImageLightbox extends React.Component {
                                 alignItems: 'center',
                                 alignSelf: 'center',
                                 alignContent: 'center',
-                                display: 'flex'
-
+                                display: 'flex',
+                                minHeight:'100vh'
 
                             }} xs="10">
                                 {imgReact}
                             </Col>
                         ) :(<Col xs="10"><BodyLoader  onClick={this.closeLightboxHandler.bind(this)} white="true"  height="100%" size="130px" /></Col>)}
 
-                    <Col xs="2" className="lighboxRight g-pa-10">
+                    <Col xs="2" className="lighboxRight g-pa-10" >
 
                         < Row >
                             {

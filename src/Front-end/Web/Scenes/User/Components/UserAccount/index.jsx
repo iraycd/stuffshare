@@ -32,76 +32,162 @@ import AddProfileImage from '../../Scenes/AddProfileImage/index.jsx';
 import ImageLightbox from './../../../../Components/ImageLightbox/index.jsx'
 import USER_ACCOUNTS_ACTION from './actions.js';
 import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
+import { withRouter } from 'react-router-dom';
+import PRIVS_ENUM from './../../../../../App/Privileges/privsEnum.js'
+import LinkAuth from '../../../../Components/LinkAuth/index.jsx';
+
 
 
 
 class UserAccount extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.state.images = [];
+        this.state.user = {};
+        this.tran = [];
+        this.phTrans = [];
+        this.state.isLoading = false;
 
     }
-    componentDidMount() {
-        this.props.getUserImages(
-            { user_id: this.props.auth.user.id }
-        );
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.match.params.id != nextProps.match.params.id) {
+            this.update(nextProps)
+        }
+        else if( this.props.userAccount.images.length!=nextProps.userAccount.images.length)
+        {
+            this.setState({
+                images:nextProps.userAccount.images
+            })
+        }
+        else if( this.props.auth.user.blob_id!=nextProps.auth.user.blob_id)
+        {
+            this.state.user = nextProps.auth.user;
+        }
     }
+    update(props) {
+        this.setState({ isLoading: true });
+
+        let userId = props.match.params.id ? props.match.params.id : this.props.auth.user.id;
+        if (props.match.params.id) {
+
+            let user = {};
+            this.props.getUserInfo({ id: userId }).then(succ => {
+                user = succ.data;
+
+                return this.props.getUserImages(
+                    { user_id: userId }
+                )
+            }).then(succ => {
+                this.setState({
+                    user: user,
+                    isLoading: false,
+                    images: succ.data
+                })
+            });
+
+        } else {
+            this.props.getUserImages(
+                { user_id: userId }
+            ).then(succ => {
+                this.setState({
+                    images: succ.data,
+                    user: this.props.auth.user,
+                    isLoading: false
+                })
+            })
+        }
+    }
+    componentWillMount(prevProps, prevState) {
+        this.setState({ isLoading: true });
+
+        let userId = this.props.match.params.id ? this.props.match.params.id : this.props.auth.user.id;
+        if (this.props.match.params.id) {
+
+            let user = {};
+            this.props.getUserInfo({ id: userId }).then(succ => {
+                user = succ.data;
+
+                return this.props.getUserImages(
+                    { user_id: userId }
+                )
+            }).then(succ => {
+                this.setState({
+                    user: user,
+                    isLoading: false,
+                    images: succ.data
+                })
+            });
+
+        } else {
+            this.props.getUserImages(
+                { user_id: userId }
+            ).then(succ => {
+                this.setState({
+                    images: succ.data,
+                    user: this.props.auth.user,
+                    isLoading: false
+                })
+            })
+        }
+
+    }
+
 
     init() {
         this.tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
+        this.phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
 
 
     }
     openImage(event) {
 
-        this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userAccount.images)
-        this.props.getFullsizeImage([{ id: this.props.auth.user.blob_profile.blob_item.id }])
+        this.props.openLightbox(this.state.user.blob_profile, this.state.images)
+        this.props.getFullsizeImage([{ id: this.state.user.blob_profile.blob_item.id }])
     }
 
     render() {
         this.init();
-        const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
 
-        if (this.props.loader.BODY_PROGRESS < 100) {
-            return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
+        if (this.state.isLoading == true) {
+            return (<BodyLoader zIndex={3} height="800px" size="100px" />);
         }
-        //  if (this.props.userAccount.getImagesIsLoading == true) {
-        //      return (<BodyLoader zIndex={3} height="800px" size="100px" progress={this.props.loader.BODY_PROGRESS} />);
-        //  }
 
-
-
-       
         let body =
             <Container className="g-py-15">
 
                 <Row>
                     <Col xs="3" className="g-pr-5 g-pl-0" >
                         <div class=" g-mb-50 g-mb-0--lg">
-                        <ImageProfile blob_profile={this.props.auth.user.blob_profile} default={noprofilepic} title={this.props.auth.user.name} openImage={this.openImage.bind(this)}/>
+                            <ImageProfile blob_profile={this.state.user.blob_profile} default={noprofilepic} title={this.state.user.name} openImage={this.openImage.bind(this)} />
 
 
                             <div class="list-group list-group-border-0 g-mb-40">
 
-                                <NavLink exact strict to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} exact strict to="/userAccount" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('EDIT_PROFILE_LINK')}</span>
-                                </NavLink>
-                                <NavLink to="/userAccount/addProfileImage" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                </LinkAuth>
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_NOT_OWNER]} exact strict to={`/user/${this.state.user.id}`} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                    <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('GO_TO_USER_PROFILE_LINK')}</span>
+                                </LinkAuth>
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} to="/userAccount/addProfileImage" className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">  {this.tran.translate('ADD_PROFILE_IMG_LINK')}</span>
-                                </NavLink>
-                                <NavLink to={"/userAccount/setCoordinates"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
+                                </LinkAuth>
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} to={"/userAccount/setCoordinates"} className="  list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase"> {this.tran.translate('SET_COORDINATE_LINK')}</span>
-                                </NavLink>
-                                <NavLink to={"/userAccount/removeAccount"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
+                                </LinkAuth>
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} to={"/userAccount/removeAccount"} className="list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('REMOVE_ACCOUNT_LINK')}</span>
-                                </NavLink>
+                                </LinkAuth>
 
-                                <NavLink to={"/userAccount/changePassword"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} to={"/userAccount/changePassword"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('CHANGE_PASSWORD_LINK')}</span>
-                                </NavLink>
-                                <NavLink to={"/userAccount/logOut"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
+                                </LinkAuth>
+                                <LinkAuth user_id={this.state.user.id} privs={[PRIVS_ENUM.IS_OWNER]} to={"/userAccount/logOut"} className=" list-group-item list-group-item-action justify-content-between u-link-v5     g-pl-7--hover ">
                                     <span className="g-line-height-1 g-letter-spacing-1 g-font-weight-500 g-font-size-12  text-uppercase">{this.tran.translate('LOG_OUT_LINK')}</span>
-                                </NavLink>
+                                </LinkAuth>
 
                             </div>
 
@@ -114,14 +200,13 @@ class UserAccount extends React.Component {
 
                         <Switch>
 
-
-                            <Route exact path={"/userAccount"} component={UserInfo} />
-
+                            <Route path={"/user/:id"} component={() => { return <UserInfo user={this.state.user}></UserInfo> }} />
+                            <Route exact path={"/userAccount"} component={() => { return <UserInfo user={this.state.user}></UserInfo> }} />
                             <Route path={"/userAccount/setCoordinates"} component={SetLatlng} />
                             <Route path={"/userAccount/removeAccount"} component={RemoveUser} />
                             <Route path={"/userAccount/logOut"} component={LogOut} />
                             <Route path={"/userAccount/changePassword"} component={ChangePassword} />
-                            <Route path={"/userAccount/addProfileImage"} component={AddProfileImage} />
+                            <Route path={"/userAccount/addProfileImage"} component={()=>{return <AddProfileImage images={this.state.images}></AddProfileImage>} }/>
 
 
 
@@ -172,16 +257,27 @@ const mapDispatchToProps = (dispatch) => {
             })
 
         },
+        refreshSet: (refresh) => {
+            return dispatch({
+                type: USER_ACCOUNTS_ACTION.SET_REFRESH_ACTION,
+                dto: {
+                   refresh:refresh
+                }
+            })
+
+        },
         getUserImages: (dto) => {
             return dispatch(new BaseService().queryThunt(QueryList.Blob.GET_USER_IMAGES, dto, null))
 
         },
+        getUserInfo: (dto) => {
+            return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, dto, null))
 
+        },
 
     }
 }
-
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(UserAccount);
+)(UserAccount));

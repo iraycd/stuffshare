@@ -27,12 +27,12 @@ class BaseService {
         }
         console.log(context)
         return (dispatch) => {
-            switch (loader) {
+          /*  switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
                 case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.SET_BODY_ACTION, actionName: action });
                 case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.SET_CONTAINER_ACTION, actionName: action });
                 default: ;
-            }
+            }*/
             dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'get',
@@ -52,12 +52,12 @@ class BaseService {
                     console.log(res);
                     dispatch({ type: action + "_FINALLY" });
 
-                    switch (loader) {
+                   /* switch (loader) {
                         case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.FINISH_INITIAL_ACTION, actionName: action });
                         case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.FINISH_BODY_ACTION, actionName: action });
                         case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.FINISH_CONTAINER_ACTION, actionName: action });
                         default: ;
-                    }
+                    }*/
                     if (res.status == 200) {
                         return Promise.resolve(res);
                     } else {
@@ -80,12 +80,12 @@ class BaseService {
             body = model;
         }
         return (dispatch) => {
-            switch (loader) {
+         /*   switch (loader) {
                 case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.SET_INITIAL_ACTION, actionName: action });
                 case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.SET_BODY_ACTION, actionName: action });
                 case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.SET_CONTAINER_ACTION, actionName: action });
                 default: ;
-            }
+            }*/
             let context = {
                 token: localStorage.getItem('token'),
                 lang: localStorage.getItem('lang')
@@ -116,12 +116,12 @@ class BaseService {
                 }).then(function (res) {
                     dispatch({ type: action + "_FINALLY" });
 
-                    switch (loader) {
+                   /* switch (loader) {
                         case Enums.LOADER.INITIAL: dispatch({ type: LOADER_ACTIONS.FINISH_INITIAL_ACTION, actionName: action });
                         case Enums.LOADER.BODY: dispatch({ type: LOADER_ACTIONS.FINISH_BODY_ACTION, actionName: action });
                         case Enums.LOADER.CONTAINER: dispatch({ type: LOADER_ACTIONS.FINISH_CONTAINER_ACTION, actionName: action });
                         default: ;
-                    }
+                    }*/
                     if (res.status == 200) {
                         return Promise.resolve(res);
                     } else {

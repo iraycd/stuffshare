@@ -33,8 +33,8 @@ class App extends React.Component {
   render() {
     let body = <div></div>;
     let loader = <div></div>;
-    if (this.props.loader.INITIAL_PROGRESS < 100) {
-      loader = (<BodyLoader   withImg={true}  zIndex={3} heightClass=" g-min-height-100vh" height="100vh" size="130px" progress={50} />);
+    if (this.props.loader.INITIAL_ACTION_LOADING == true) {
+      loader = (<BodyLoader withImg={true} zIndex={3} heightClass=" g-min-height-100vh" height="100vh" size="130px" progress={50} />);
 
       /*
       loader = (<div id="loading-wrapper">
@@ -56,9 +56,10 @@ class App extends React.Component {
           <Route path={"/forgot_password/:uid"} component={ForgotPasswordRedirect} />
           <Route path={"/authorize/:uid"} component={AuthorizeUser} />
           <RouterAuth path={"/userAccount"} component={UserAccount} />
+          <RouterAuth path={"/user/:id"} component={UserAccount} />
           <Route path={"/login/"} component={SignInModal} />
           <RouterAuth path={"/verifyImage"} component={VerifyImage} />
-          <RouterAuth exact={true}  path={"/item/new"} component={NewItem} />
+          <RouterAuth exact={true} path={"/item/new"} component={NewItem} />
           <Route path={"/item/:id"} component={Item} />
 
         </Switch>

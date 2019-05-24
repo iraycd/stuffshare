@@ -4,6 +4,7 @@ import USER_ACCOUNTS_ACTION from "../../Components/UserAccount/actions";
 import CommandList from "../../../../../../Shared/CommandList";
 import QueryList from "../../../../../../Shared/QueryList";
 import LIGHTBOX_ACTIONS from "../../../../Components/ImageLightbox/actions";
+import AUTH_ACTIONS from "../../../../Reducers/Auth/action";
 
 
 
@@ -16,7 +17,9 @@ const ADD_PROFILE_IMAGE_ACTIONS = {
     GET_USER_IMAGES: ActionsGen(QueryList.Blob.GET_USER_IMAGES),
     REMOVE_IMAGE: ActionsGen(CommandList.Blob.REMOVE_BLOB),
     UPLOAD_IMAGE: ActionsGen(CommandList.Blob.UPLOAD_IMAGE),
-    OPEN_LIGHTBOX:LIGHTBOX_ACTIONS.OPEN_LIGHTBOX
+    OPEN_LIGHTBOX:LIGHTBOX_ACTIONS.OPEN_LIGHTBOX,
+    IS_AUTH:AUTH_ACTIONS.IS_AUTH,
+    ADD_PROFILE_IMAGE_LOADING:'ADD_PROFILE_IMAGE_LOADING'
 
 }
 

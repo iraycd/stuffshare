@@ -33,17 +33,19 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 class UserProfileModalTab extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = new UserLoginInternalDTO();
         this.state.validation = [];
         this.open = false;
         this.state.activeTab = '1';
+        console.log(this.props.user)
+        this.state.user = this.props.user;
 
     }
     componentDidMount() {
         this.props.getUserImages(
-            { user_id: this.props.auth.user.id }
+            { user_id: this.state.user.id }
         );
     }
     onOpenModal() {
@@ -67,10 +69,10 @@ class UserProfileModalTab extends React.Component {
     }
     openImage(event) {
 
-        this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userProfileModalTab.images)
-        this.props.getFullsizeImage([{ id: this.props.auth.user.blob_profile.blob_item.id }])
+        this.props.openLightbox(this.state.user.blob_profile, this.props.userProfileModalTab.images)
+        this.props.getFullsizeImage([{ id: this.state.user.blob_profile.blob_item.id }])
     }
-   
+
     logOut(event) {
         event.preventDefault();
 
@@ -107,7 +109,7 @@ class UserProfileModalTab extends React.Component {
             }
 
         });
-       
+
     };
     onClickMyProfile(event) {
 
@@ -125,14 +127,14 @@ class UserProfileModalTab extends React.Component {
          }*/
 
 
-  
+
 
         let body =
             <Container className="g-pa-5">
                 <Row>
                     <Col xs="4" className="g-pr-0 g-py-5 g-pl-5">
                         <div class=" g-mb-50 g-mb-0--lg">
-                        <ImageProfile blob_profile={this.props.auth.user.blob_profile} default={noprofilepic} title={this.props.auth.user.name} openImage={this.openImage.bind(this)}/>
+                            <ImageProfile blob_profile={this.state.user.blob_profile} default={noprofilepic} title={this.state.user.name} openImage={this.openImage.bind(this)} />
 
 
                             <div class="list-group list-group-border-0 g-mb-40">
@@ -155,7 +157,7 @@ class UserProfileModalTab extends React.Component {
                     </Col>
                     <Col xs="8" className="g-pa-5">
 
-                        <UserInfo mapHeight="200"></UserInfo>
+                        <UserInfo mapHeight="200" user={this.state.user}></UserInfo>
 
                     </Col>
                 </Row>

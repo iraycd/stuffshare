@@ -5,11 +5,22 @@ let emptyState = {
 
     images:[],
 
-    getImagesIsLoading: false
+    getImagesIsLoading: false,
+    refresh:false
 
 }
 export default function UserAccountReducer(state = Object.assign({}, emptyState), action) {
     switch (action.type) {
+        
+        case USER_ACCOUNTS_ACTION.SET_REFRESH_ACTION.SUCCESS: {
+
+              const result = Object.assign({}, state);
+              result.refresh=dto.refresh;
+              return result;
+            //  console.log(action);
+           //   result.images = action.data;
+           //   return result;
+          } 
         case USER_ACCOUNTS_ACTION.GET_USER_IMAGES.SUCCESS: {
 
             const result = Object.assign({}, state);
@@ -31,7 +42,8 @@ export default function UserAccountReducer(state = Object.assign({}, emptyState)
         case USER_ACCOUNTS_ACTION.REMOVE_IMAGE.LOADING:
         {
             const result = Object.assign({}, state);
-            console.log('kupa');
+            result.getImagesIsLoading = true
+
             result.images = state.images.map(item => {
                 if(item.id == action.dto.id)
                 {
@@ -49,6 +61,8 @@ export default function UserAccountReducer(state = Object.assign({}, emptyState)
                 result.images = state.images.filter(item => {
                     return item.id != action.dto.id
                 })
+                result.getImagesIsLoading = false
+
                 return result;
             }
 

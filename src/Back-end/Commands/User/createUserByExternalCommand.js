@@ -138,7 +138,8 @@ export default class CreateUserByExternalCommand extends BaseCommand {
     const result = resultReq.data;
     console.log(result);
     const userInfo = await this.userServiceDI.toJsonParse(this.userServiceDI.setContext(this.context).checkMailInDb({ email: result.email }));
-    if (userInfo != null && userInfo.id > 0) {
+    console.log(userInfo)
+    if (userInfo != null && userInfo.id !='') {
       await this.checkIfExistAndLink(result, userInfo, this.model.provider);
       return;
     } else {

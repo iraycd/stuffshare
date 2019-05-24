@@ -30,11 +30,12 @@ class UserInfo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.state.user = props.user;
         this.state.validation = [];
         this.open = false;
         this.state.activeTab = '1';
-        this.state.mapHeight=props.mapHeight>0?props.mapHeight:500
-
+        this.state.mapHeight = props.mapHeight > 0 ? props.mapHeight : 500
+        console.log(this.state);
 
     }
 
@@ -54,55 +55,55 @@ class UserInfo extends React.Component {
 
         let modalBody = <div></div>;
 
-        let latlng = [this.props.auth.user.latitude, this.props.auth.user.longitude]
+        let latlng = [this.state.user.latitude, this.state.user.longitude]
 
         let body =
-                <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-left">
-                    <Col className="text-center mx-auto g-mb-10">
-                        <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('USER_INFO_HEADER')}</h5>
-                        <br />
-                    </Col>
-
-
-                    <Row>
-                        <Col xs="4" >
-                            <Label>{tran.translate('USER_PROFILE_MODAL_NAME_SURNAME')}</Label>
-                        </Col>
-                        <Col xs="8"><Label>{this.props.auth.user.name} {this.props.auth.user.surname}</Label>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs="4" >
-                            <Label>{tran.translate('USER_PROFILE_MODAL_EMAIL')}</Label>
-                        </Col>
-                        <Col xs="8"><Label>{this.props.auth.user.email} </Label>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs="4" >
-                            <Label>{tran.translate('USER_PROFILE_MODAL_PHONE')}</Label>
-                        </Col>
-                        <Col xs="8"><Label>{this.props.auth.user.phone} </Label>
-                        </Col>
-                    </Row>
+            <Form className="g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 text-left">
+                <Col className="text-center mx-auto g-mb-10">
+                    <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('USER_INFO_HEADER')}</h5>
                     <br />
-                    <Row>
-                        <Map className={`size-map-${this.state.mapHeight}px`} center={latlng} zoom={13}>
+                </Col>
 
 
-                            <TileLayer
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            />
-                            <Marker position={latlng}>
+                <Row>
+                    <Col xs="4" >
+                        <Label>{tran.translate('USER_PROFILE_MODAL_NAME_SURNAME')}</Label>
+                    </Col>
+                    <Col xs="8"><Label>{this.state.user.name} {this.state.user.surname}</Label>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs="4" >
+                        <Label>{tran.translate('USER_PROFILE_MODAL_EMAIL')}</Label>
+                    </Col>
+                    <Col xs="8"><Label>{this.state.user.email} </Label>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs="4" >
+                        <Label>{tran.translate('USER_PROFILE_MODAL_PHONE')}</Label>
+                    </Col>
+                    <Col xs="8"><Label>{this.state.user.phone} </Label>
+                    </Col>
+                </Row>
+                <br />
+                <Row>
+                    <Map className={`size-map-${this.state.mapHeight}px`} center={latlng} zoom={13}>
 
-                            </Marker>
 
-                        </Map>
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={latlng}>
+
+                        </Marker>
+
+                    </Map>
 
 
-                    </Row>
+                </Row>
 
-                </Form>
+            </Form>
         return (
 
             body
@@ -118,7 +119,6 @@ const mapStateToProps = (state) => {
     return {
         codeDict: state.DictionaryReducer,
         lang: state.LanguageReducer,
-        user: state.UserReducer,
         auth: state.AuthReducer
 
     };

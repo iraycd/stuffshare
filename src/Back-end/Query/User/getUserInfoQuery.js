@@ -26,7 +26,7 @@ export default class GetUserInfoQuery extends BaseQuery {
 
     async action() {
 
-        let user_Id = this.model.id > 0 ? this.model.id : this.context.user.id;
+        let user_Id = this.model.id !=''? this.model.id : this.context.user.id;
         let result = await this.userServiceDI.setContext(this.context).getUserInfo({ user_id: user_Id });
         if (result.blob_profile != null) {
             let blobsResulst = await this.blobServiceDI.getBlobsBase64ByGuids({

@@ -26,7 +26,7 @@ class ImageProfile extends React.Component {
             isVerified = this.props.blob_profile.status
         }
         // <div id="loading-text">LOADING <br />{this.props.progress + "%"}</div>
-        return (<div class="u-block-hover g-pos-rel">
+        return (<div class="u-block-hover g-pos-rel" style={{minHeight:"280px"}}>
             <figure >
 
                 <Img data-tag={uid} src={img.toString()} className={"img-fluid w-100   " + (isVerified == 1 ? (hasImg == true ? "u-block-hover__main--zoom-v1" : "") : "g-blur-10")} alt="Image Description" />

@@ -9,6 +9,7 @@ import Modal from 'react-responsive-modal'
 import { CSSTransitionGroup } from 'react-transition-group';
 import MODAL_ACTIONS from './actions.js';
 import { BrowserRouter, NavLink, Switch } from 'react-router-dom';
+import PRIVS_ENUM from './../../../App/Privileges/privsEnum.js'
 
 
 class LinkAuth extends React.Component {
@@ -19,18 +20,43 @@ class LinkAuth extends React.Component {
     }
 
 
+    isOwner() {
+        let userId = this.props.auth.user.id;
+        let userProps = this.props.user_id;
+        return userId==userProps
 
+    }
     render() {
 
-        if (this.props.auth.is_logged == true) {
-            return (
-                <NavLink exact={this.props.exact}
-                    strict={this.props.strict}
-                    to={this.props.to} className={this.props.className}>
-                    {this.props.children}
-                </NavLink>
-            );
-        } else {
+        let link = (<NavLink exact={this.props.exact}
+            strict={this.props.strict}
+            to={this.props.to} className={this.props.className}>
+            {this.props.children}
+        </NavLink>)
+
+        let privsFuncList = this.props.privs?this.props.privs.map(item => {
+            switch (item) {
+                case PRIVS_ENUM.IS_OWNER: return ()=>{return this.props.auth.user.id==this.props.user_id}
+                case PRIVS_ENUM.IS_LOGGED: return () => { return this.props.auth.is_logged == true }
+                case PRIVS_ENUM.IS_ANONYMOUS: return () => { return this.props.auth.is_logged != false };
+                case PRIVS_ENUM.IS_NOT_OWNER: return () => { return this.props.auth.user.id!=this.props.user_id};
+            }
+        }):[];
+        console.log(privsFuncList);
+        if (privsFuncList.length > 0) {
+            if (privsFuncList.filter(func => {
+                console.log(func());
+                return func();
+            }).length > 0) {
+                return link;
+            }else{
+                return <span class="hidden"></span>
+            }
+        }
+        else if (this.props.auth.is_logged == true) {
+            return link
+
+        }  else {
             return <span class="hidden"></span>
         }
 

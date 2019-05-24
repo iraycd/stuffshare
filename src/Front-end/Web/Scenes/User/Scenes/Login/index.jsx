@@ -241,7 +241,8 @@ const mapDispatchToProps = (dispatch) => {
                         type: LOGIN_ACTIONS.IS_AUTH,
                         dto: {
                             refresh_token: localStorage.refresh_token,
-                            token: localStorage.token
+                            token: localStorage.token,
+                            user: succ.data
                         }
                     })
                 })
@@ -263,7 +264,9 @@ const mapDispatchToProps = (dispatch) => {
                     type: LOGIN_ACTIONS.IS_AUTH,
                     dto: {
                         refresh_token: localStorage.refresh_token,
-                        token: localStorage.token
+                        token: localStorage.token,
+                        user: succ.data
+
                     }
                 })
             });
