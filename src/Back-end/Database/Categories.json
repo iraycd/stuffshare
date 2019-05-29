@@ -1,0 +1,5091 @@
+﻿[
+   {
+     "name": "",
+     "id": "721f3a6c-bdf8-4d7e-8764-675af73bcf5d"
+   },
+   {
+     "name": "Elektronika",
+     "id": "493f6398-6711-4092-bf86-899d66e0ba3a"
+   },
+   {
+     "name": "AGD Zobacz wszystkie z kategorii AGD",
+     "id": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "parentId": "493f6398-6711-4092-bf86-899d66e0ba3a"
+   },
+   {
+     "name": "AGD do zabudowy",
+     "id": "46765bdb-4e2f-41f7-bea0-50ebb83182d8",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-do-zabudowy-67524"
+   },
+   {
+     "name": "AGD drobne",
+     "id": "f88e3ccb-3674-4479-a48f-8058c76d32e0",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-drobne-67414"
+   },
+   {
+     "name": "AGD drobne do domu",
+     "id": "7704e8ce-fbb5-4e3f-8d3d-bf9b02208613",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-drobne-do-domu-67416"
+   },
+   {
+     "name": "AGD drobne - higiena i pielęgnacja",
+     "id": "f298d8af-b5ed-4f3f-9101-bdbb8e024667",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-drobne-higiena-i-pielegnacja-67418"
+   },
+   {
+     "name": "AGD drobne do kuchni",
+     "id": "57fb797a-9763-4a17-9216-5a046636e2c5",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-drobne-do-kuchni-67415"
+   },
+   {
+     "name": "AGD wolnostojące",
+     "id": "312a1648-0d23-4c8c-bd28-d44cf92374b7",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-wolnostojace-67413"
+   },
+   {
+     "name": "Czytniki ebooków",
+     "id": "925d8aea-1fbe-46a3-a65c-772735b45795",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/czytniki-ebookow-czytniki-110212"
+   },
+   {
+     "name": "Elektronika",
+     "id": "2e82bb51-f4bb-46a8-94e5-0e4fb8385347",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/elektronika-67193"
+   },
+   {
+     "name": "GPS i akcesoria",
+     "id": "3a62a927-1ddc-429d-9956-ab6d35540f59",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/gps-i-akcesoria-67093"
+   },
+   {
+     "name": "Kamery",
+     "id": "e9df5c09-403b-4f2b-9b77-b565c1f599ec",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/kamery-8785"
+   },
+   {
+     "name": "Lodówki do zabudowy",
+     "id": "503b8af3-81a2-47d9-ba2b-89c7aea57c92",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-do-zabudowy-lodowki-67528"
+   },
+   {
+     "name": "Mikrofony",
+     "id": "696abb64-8dc8-4c4b-a5bb-fa51d6bc9540",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/mikrofony-122354"
+   },
+   {
+     "name": "Nagłośnienie",
+     "id": "c88fb715-fca9-4353-8447-601ed65886b5",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/naglosnienie-122374"
+   },
+   {
+     "name": "Płyty grzewcze",
+     "id": "74060522-d9ef-4ab0-80e3-eaa9cd8f8bb0",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-do-zabudowy-plyty-grzewcze-67531"
+   },
+   {
+     "name": "Pralki",
+     "id": "9683fdf7-e3ba-4672-a2f2-90f5e079ea73",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/agd-wolnostojace-pralki-67441"
+   },
+   {
+     "name": "Sprzęt audio dla domu",
+     "id": "17695daa-933d-4dc5-ac86-6cdcdf7dd9d8",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/sprzet-audio-dla-domu-11"
+   },
+   {
+     "name": "Sprzęt audio przenośny",
+     "id": "5c8e78dd-2d79-4720-a017-9d6aa6a07755",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/sprzet-audio-przenosny-20134"
+   },
+   {
+     "name": "Sprzęt car audio",
+     "id": "55b86eb2-88de-4f4d-a762-4454f84ce4f1",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/sprzet-car-audio-709"
+   },
+   {
+     "name": "Telewizory",
+     "id": "6dbae517-9dd4-4180-85c5-397b2fe19dc4",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732"
+   },
+   {
+     "name": "Kino domowe",
+     "id": "2c42e427-a30a-4e3b-8005-56c397d1349d",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/tv-i-video-zestawy-kina-domowego-259429"
+   },
+   {
+     "name": "Projektory",
+     "id": "858c3031-de26-4107-979b-bac5fb58850e",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/tv-i-video-projektory-5111"
+   },
+   {
+     "name": "Odtwarzacze DVD",
+     "id": "98183432-4154-4d57-b596-a1c7dba62205",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/tv-i-video-odtwarzacze-dvd-259446"
+   },
+   {
+     "name": "Zasilanie",
+     "id": "8e642d25-8615-4362-9753-42c88bf50e56",
+     "parentId": "ff3b7fdb-01af-42fd-99e6-fd2e369730c3",
+     "url": "https://allegro.pl/kategoria/zasilanie-76254"
+   },
+   {
+     "name": "Zdaniem eksperta",
+     "id": "dee54113-acdc-425a-874b-49efe3042fff",
+     "parentId": "493f6398-6711-4092-bf86-899d66e0ba3a"
+   },
+   {
+     "name": "Test smartfona Oppo RX17 Pro – zjawiskowy i kosztowny",
+     "id": "bd37e6b0-399a-4930-94f2-cc95b301981c",
+     "parentId": "dee54113-acdc-425a-874b-49efe3042fff"
+   },
+   {
+     "name": "",
+     "id": "cf78057e-9b3d-42bb-a289-d8586ad6ba00",
+     "parentId": "dee54113-acdc-425a-874b-49efe3042fff",
+     "url": "https://allegro.pl/uzytkownik/SmA_KarcherPRO"
+   },
+   {
+     "name": "Oppo RX17 Pro to nietypowe połączenie flagowca ze średniakiem. Smartfon posiada ekran 6,4 cala typu AMOLED, Snapdragona 710 z 6 GB RAM-u oraz 128 GB pamięci wbudowanej. Kusi czytnikiem palca w ekranie i…",
+     "id": "b9be6fe1-0e2e-430c-b248-70c11b6644a0",
+     "parentId": "dee54113-acdc-425a-874b-49efe3042fff"
+   },
+   {
+     "name": "TV i video",
+     "id": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01"
+   },
+   {
+     "name": "Telewizory",
+     "id": "fc631059-51bd-44ac-89a3-48b66964ab5b",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732"
+   },
+   {
+     "name": "Telewizory LG",
+     "id": "4fd4c886-9541-4657-9af9-7a19afacd81e",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732?marka=LG"
+   },
+   {
+     "name": "Telewizory Philips",
+     "id": "b10f6e74-5861-4298-917b-1b920a255e6d",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732?marka=Philips"
+   },
+   {
+     "name": "Telewizory Samsung",
+     "id": "0f8a8741-e79f-4a4a-b226-aefa4a08ca73",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732?marka=Samsung"
+   },
+   {
+     "name": "Telewizory Sony",
+     "id": "e1c5b43b-8bd4-4e66-8940-9a44c9902f60",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732?order=m&marka=Sony"
+   },
+   {
+     "name": "Telwizory LED",
+     "id": "57163440-540d-4fbb-b809-611a034eb60c",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizory-257732?typ-telewizora=LED"
+   },
+   {
+     "name": "Zestawy kina domowego",
+     "id": "1b9c4e9c-52b1-4d1b-8b63-35e89a7971d6",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-zestawy-kina-domowego-259429"
+   },
+   {
+     "name": "Telewizja przemysłowa",
+     "id": "0f2aacea-6b92-471e-8fa4-d7b37854f247",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-telewizja-przemyslowa-5119"
+   },
+   {
+     "name": "Stoliki, uchwyty i półki pod telewizor",
+     "id": "ee56ad91-a3ff-45c0-aa66-2fdf957d11a4",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-stoliki-uchwyty-polki-14215"
+   },
+   {
+     "name": "Projektory",
+     "id": "b25a2e70-d16e-4edd-a145-8c74d4c454cd",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-projektory-5111"
+   },
+   {
+     "name": "Odtwarzacze DVD",
+     "id": "75253abd-989a-4085-a8f3-9521b915e387",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-odtwarzacze-dvd-259446"
+   },
+   {
+     "name": "Odtwarzacze Blu-ray",
+     "id": "54302cce-f9e3-4435-9127-28585915db44",
+     "parentId": "9fd2564f-5001-4edd-ba9b-2f7b6a798f01",
+     "url": "https://allegro.pl/kategoria/tv-i-video-odtwarzacze-blu-ray-259430"
+   },
+   {
+     "name": "Moda",
+     "id": "7ae19aeb-daed-4a7d-9dfd-cd2d4aa09376"
+   },
+   {
+     "name": "Moda damska",
+     "id": "6f845506-3653-4f4d-a839-2f7bf9c8a748"
+   },
+   {
+     "name": "Bielizna damska",
+     "id": "28f9c5f7-63da-4771-a16f-fce69a827fa7",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-75993"
+   },
+   {
+     "name": "Bluzy damskie",
+     "id": "85705373-b6fc-4152-bcef-2b5405d3bbdf",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-bluzy-76035"
+   },
+   {
+     "name": "Bluzki damskie",
+     "id": "b8c70de2-133b-4e7b-8c42-03de47eece1f",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-bluzki-76034"
+   },
+   {
+     "name": "Chusty i apaszki",
+     "id": "abf52695-0353-4a32-bba1-5b35e3463a9d",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-chusty-i-apaszki-15550"
+   },
+   {
+     "name": "Kombinezony",
+     "id": "c4de4379-d4c2-4977-be9a-f683c55dc7b7",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-kombinezony-78137"
+   },
+   {
+     "name": "Tuniki",
+     "id": "d52e01f5-85fa-4324-bf53-e711d7b6ee38",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-tuniki-76105"
+   },
+   {
+     "name": "Jeansy damskie",
+     "id": "e2f52656-9c01-4b24-a54a-d71dec142f3d",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-jeansy-254259"
+   },
+   {
+     "name": "Koszule damskie",
+     "id": "8026c602-3a81-429a-af55-90e8fa019c21",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-koszule-76043"
+   },
+   {
+     "name": "Kurtki damskie",
+     "id": "32969243-f842-45b7-a496-f998a18bfbac",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/okrycia-wierzchnie-kurtki-76076"
+   },
+   {
+     "name": "Piżamy damskie",
+     "id": "21baedc7-c2f3-4861-a3e0-4190162197cc",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-pizamy-76027"
+   },
+   {
+     "name": "Płaszcze damskie",
+     "id": "f28ba09e-928d-4cc1-8ef1-185b8b24362d",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/okrycia-wierzchnie-plaszcze-76077"
+   },
+   {
+     "name": "Portfele damskie",
+     "id": "7516d585-f5a0-4104-91ee-3a8853c84d5c",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-portfele-1490?plec=Produkt%20damski"
+   },
+   {
+     "name": "Skarpetki i kolanówki",
+     "id": "6c797fdb-6583-4ae0-be42-95e0c80fc1df",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-skarpetki-i-kolanowki-76005"
+   },
+   {
+     "name": "Pończochy",
+     "id": "858d47f1-a8f6-4134-b16c-777ac59ca577",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-ponczochy-76003"
+   },
+   {
+     "name": "Rajstopy",
+     "id": "a6e6da3f-90f4-4254-bffb-831fb729b5b8",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-rajstopy-76004"
+   },
+   {
+     "name": "Marynarki i żakiety damskie",
+     "id": "63e552bb-23ff-4e20-b8a8-c39f7ea41634",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-marynarki-i-zakiety-76044"
+   },
+   {
+     "name": "Torebki",
+     "id": "ece40a8b-1fcb-4df1-a116-8d8bd2e2a540",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-torebki-1492"
+   },
+   {
+     "name": "Moda ciążowa",
+     "id": "cce80719-64c0-4f55-a1bc-2912cf702a61",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/ciaza-i-macierzynstwo-78013"
+   },
+   {
+     "name": "Suknie wieczorowe",
+     "id": "337dbb67-bd69-422a-9921-31e4f0ff4ead",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-suknie-wieczorowe-124265"
+   },
+   {
+     "name": "Torebki",
+     "id": "e9a8f449-a6f3-45db-9dcd-b52ebca691db",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-torebki-1492"
+   },
+   {
+     "name": "Spódnice",
+     "id": "c8ecd5d4-e35c-4e48-960b-2918a97d7b8b",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-spodnice-i-spodniczki-76084"
+   },
+   {
+     "name": "Marynarki i żakiety",
+     "id": "40bf7ddc-4c0e-40c8-ab99-aa1e9e5060bb",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-marynarki-i-zakiety-76044"
+   },
+   {
+     "name": "Spodnie eleganckie damskie",
+     "id": "686592f8-bef4-4d1c-af42-e97bc9c6d7ba",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/spodnie-eleganckie-76096"
+   },
+   {
+     "name": "Swetry",
+     "id": "c84ed41f-317a-4b93-a6a1-7950778ca47d",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-swetry-76102"
+   },
+   {
+     "name": "Topy",
+     "id": "6ca78e6e-b974-42b7-8968-ce5e1b0056e4",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-topy-76103"
+   },
+   {
+     "name": "Bolerka",
+     "id": "c3b7e7c1-45e2-4320-a813-f81b9bdceebf",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/dodatki-damskie-bolerka-i-etole-111639"
+   },
+   {
+     "name": "Legginsy damskie",
+     "id": "3b395620-9c4b-42af-9b72-9c4d6b0c5438",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-legginsy-91193"
+   },
+   {
+     "name": "Kamizelki damskie",
+     "id": "906c5227-3293-46d7-8bf8-fc36089aa550",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/odziez-damska-kamizelki-76042"
+   },
+   {
+     "name": "Buty damskie",
+     "id": "a92dea97-f509-470e-b07e-2e494cc35398",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/obuwie-damskie-531"
+   },
+   {
+     "name": "Walizki",
+     "id": "861c0198-c2f7-457a-9074-498b09821633",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-walizki-256642?plec=Produkt%20męski"
+   },
+   {
+     "name": "Rękawiczki",
+     "id": "09bf61ea-008d-4286-add7-8184471ff069",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-rekawiczki-1493"
+   },
+   {
+     "name": "Plecaki",
+     "id": "d5f832ed-a1ba-413c-ab53-e7588ccd633b",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-plecaki-5556"
+   },
+   {
+     "name": "Szaliki i szale",
+     "id": "b632a361-d1f6-40fa-8c0f-03f09a3e9007",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-szaliki-i-szale-1495"
+   },
+   {
+     "name": "Onsie",
+     "id": "12da9b6c-694a-4209-bd77-f99e96a413b1",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-onesie-kombinezony-257206"
+   },
+   {
+     "name": "Biustonosze",
+     "id": "291deb46-4f17-4d07-8718-719a768c1e8a",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-biustonosze-75994"
+   },
+   {
+     "name": "Bielizna wyszczuplająca",
+     "id": "98a70199-cde4-4200-9a63-0336c922bca0",
+     "parentId": "6f845506-3653-4f4d-a839-2f7bf9c8a748",
+     "url": "https://allegro.pl/kategoria/bielizna-damska-bielizna-wyszczuplajaca-78717"
+   },
+   {
+     "name": "Moda męska",
+     "id": "63e3cc18-12c1-4d67-b082-b2efb6a977ad"
+   },
+   {
+     "name": "Bielizna męska",
+     "id": "d260f112-a9e4-4be6-91b2-36a281894096",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/bielizna-meska-256925"
+   },
+   {
+     "name": "Kamizelki męskie",
+     "id": "e371dde5-6f6b-4eb1-885b-522c28865795",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-kamizelki-87834"
+   },
+   {
+     "name": "Bluzy męskie",
+     "id": "6b542e1b-6494-4601-b8b5-e1477dbf0809",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-bluzy-87843"
+   },
+   {
+     "name": "Krawaty",
+     "id": "78684beb-94d9-409f-9af1-4666f5ff6359",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-krawaty-68950"
+   },
+   {
+     "name": "Poszetki",
+     "id": "ea72e128-8c27-44ff-ba98-d57594097539",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-poszetki-255954"
+   },
+   {
+     "name": "Koszulki z długim rękawem",
+     "id": "cd862c2e-2080-4bd8-a4da-09065629c977",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-koszulki-z-dlugim-rekawem-87876"
+   },
+   {
+     "name": "Jeansy męskie",
+     "id": "ae801ea1-c0a2-4504-be5e-edfc478b2235",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-jeansy-254260"
+   },
+   {
+     "name": "Koszule męskie",
+     "id": "a1b337d8-e776-4463-b834-21f3e6c57635",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-koszule-87836"
+   },
+   {
+     "name": "Kurtki męskie",
+     "id": "d6441533-244a-45f6-b7d3-e1d14ec190c7",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/okrycia-wierzchnie-kurtki-5537"
+   },
+   {
+     "name": "Piżamy męskie",
+     "id": "26a5d55b-9d2f-45a7-b9a2-44f626b76ecf",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/bielizna-meska-pizamy-256929"
+   },
+   {
+     "name": "Płaszcze męskie",
+     "id": "2e5d2580-8858-42fe-b8c9-4c0548a24e18",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/okrycia-wierzchnie-plaszcze-5538"
+   },
+   {
+     "name": "Swetry męskie",
+     "id": "5bec604d-db46-4793-a91b-f6014b44c5a5",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-swetry-87897"
+   },
+   {
+     "name": "Skarpetki męskie",
+     "id": "d557ccd4-5871-49a3-aaf4-5ad46d2129e8",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/bielizna-meska-skarpetki-256931"
+   },
+   {
+     "name": "Garnitury",
+     "id": "1d0d4d42-3e6c-4d5c-ac09-f8fbd7434785",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-garnitury-87833"
+   },
+   {
+     "name": "Marynarki męskie",
+     "id": "f0ee41fe-31f6-42e0-b176-b43c9a0315cc",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-marynarki-87839"
+   },
+   {
+     "name": "Spodnie wizytowe męskie",
+     "id": "431f9f3d-6d57-47ce-b986-752fee0da010",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/spodnie-eleganckie-87842"
+   },
+   {
+     "name": "Spodnie casual męskie",
+     "id": "3340997d-fa35-463b-83ff-341a6f260dd0",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/spodnie-casual-na-co-dzien-254779"
+   },
+   {
+     "name": "Koszulki polo męskie",
+     "id": "99d10745-86c9-46a9-81c7-5d1fc7a7895e",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-koszulki-polo-87875"
+   },
+   {
+     "name": "T-shirty męskie",
+     "id": "e9f92abb-9c91-4288-b137-02c016faa31d",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-t-shirty-87913"
+   },
+   {
+     "name": "Dresy męskie",
+     "id": "67ddebf5-85be-4aae-8f7d-d94fa94c476d",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/odziez-meska-dresy-kompletne-87844"
+   },
+   {
+     "name": "Muszki",
+     "id": "71b10cd6-a7e8-4b8e-8596-de5ca485664f",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-muszki-255439"
+   },
+   {
+     "name": "Aktówki i nesesery",
+     "id": "40268f95-dd3a-4142-a756-968f98726f83",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-nesesery-i-aktowki-1488?plec=Produkt%20męski"
+   },
+   {
+     "name": "Portfele męskie",
+     "id": "5ce27bf4-7a15-4f6d-9de4-f36b2103f3e8",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-portfele-1490?plec=Produkt%20męski"
+   },
+   {
+     "name": "Szelki męskie",
+     "id": "a5add40c-c629-4fad-9336-9cd48aaac2c8",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-szelki-74230?plec=Produkt%20m%C4%99ski"
+   },
+   {
+     "name": "Kaszkiety męskie",
+     "id": "30b45b13-f13a-41dd-be33-d129f95be3d4",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/nakrycia-glowy-kaszkiety-78139?plec=Produkt%20męski"
+   },
+   {
+     "name": "Czapki z daszkiem",
+     "id": "57146626-72bd-4a87-b946-4c9b39fc7099",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/nakrycia-glowy-czapki-z-daszkiem-5553?plec=Produkt%20męski"
+   },
+   {
+     "name": "Saszetki i nerki męskie",
+     "id": "d2289d86-582c-4034-a46d-dd61c6640aff",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-saszetki-i-nerki-27838?plec=Produkt%20męski"
+   },
+   {
+     "name": "Rękawiczki męskie",
+     "id": "7c2c526b-aa11-462e-a2c0-3671911793a2",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-rekawiczki-1493?plec=Produkt%20męski"
+   },
+   {
+     "name": "Okulary przeciwsłoneczne męskie",
+     "id": "c17b6aee-b8f4-4d44-aaeb-2842e1ee9512",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-okulary-przeciwsloneczne-1494?plec=Produkt%20męski"
+   },
+   {
+     "name": "Walizki",
+     "id": "6055439c-a4f9-4279-acdb-908d86465f6c",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/galanteria-i-dodatki-walizki-256642?plec=Produkt%20męski"
+   },
+   {
+     "name": "Szlafroki męskie",
+     "id": "5371cc95-4095-4acd-968b-7bbcd8781850",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/bielizna-meska-szlafroki-256932"
+   },
+   {
+     "name": "Majtki, bokserki",
+     "id": "257bc4c1-5e65-4baf-9a02-b80e6be232a1",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/bielizna-meska-majtki-256928"
+   },
+   {
+     "name": "Buty męskie",
+     "id": "225a5b42-4e81-4588-9170-ed4566ee5588",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/obuwie-meskie-532"
+   },
+   {
+     "name": "Półbuty",
+     "id": "5727075b-105f-4b90-b720-4da3044b9ac9",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/meskie-polbuty-5547"
+   },
+   {
+     "name": "Trekkingowe buty męskie",
+     "id": "119fe2f5-8fba-40de-804d-aa0f1940d4cb",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/meskie-trekkingowe-55207"
+   },
+   {
+     "name": "Sztyblety męskie",
+     "id": "84df6fdf-bdfb-41b2-9995-195e14d46b15",
+     "parentId": "63e3cc18-12c1-4d67-b082-b2efb6a977ad",
+     "url": "https://allegro.pl/kategoria/meskie-sztyblety-257112"
+   },
+   {
+     "name": "Dom i ogród",
+     "id": "2faf92c3-d4d9-4e9b-9869-905d33b530a2"
+   },
+   {
+     "name": "Wyposażenie",
+     "id": "13e61483-cab7-4c35-b726-82e2d968fcd0"
+   },
+   {
+     "name": "Akcesoria łazienkowe",
+     "id": "59df992c-af8c-4550-9238-d9d326d087d8",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-akcesoria-lazienkowe-54051"
+   },
+   {
+     "name": "Dekoracje i ozdoby",
+     "id": "4e5841f3-6ed7-401a-ae84-c7802bbcec52",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-dekoracje-i-ozdoby-9317"
+   },
+   {
+     "name": "Dywany i dywaniki",
+     "id": "60e5581d-3ec2-4cf7-accd-b5e3c4e1bcd5",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-dywany-i-dywaniki-9018"
+   },
+   {
+     "name": "Koszyki",
+     "id": "d2467e52-085f-40f7-a464-259a5ac74038",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-koszyki-68679"
+   },
+   {
+     "name": "Lustra",
+     "id": "3dae163a-1401-411b-8630-1f4112d94bc6",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-lustra-15973"
+   },
+   {
+     "name": "Szkatułki i kuferki",
+     "id": "422cfb48-f0d1-423b-b180-8da4ec65df3d",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-szkatulki-i-kuferki-110196"
+   },
+   {
+     "name": "Obrusy, serwetki, podkładki",
+     "id": "03f030e2-b32c-42a7-9811-229d888fd307",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-obrusy-serwetki-podkladki-68686"
+   },
+   {
+     "name": "Oświetlenie wewnętrzne",
+     "id": "a9213fa7-3dfa-4028-9f97-165856b8aa31",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-oswietlenie-5317"
+   },
+   {
+     "name": "Ozdoby świąteczne i okolicznościowe",
+     "id": "4c0290cd-bbb0-4b4d-9c7c-6ee50fff7fc5",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/meble-piwnica-garaz-251023"
+   },
+   {
+     "name": "Pościel i koce",
+     "id": "9c04c862-ab74-47df-b9f5-8ee50a912ab1",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-posciel-i-koce-9017"
+   },
+   {
+     "name": "Przybory kuchenne",
+     "id": "e603eae1-3a8d-471b-81d8-021715ba38b0",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-przybory-kuchenne-5328"
+   },
+   {
+     "name": "Pudełka, przechowywanie, organizery",
+     "id": "b0cc6f72-2e9e-4146-b58d-9b9a60adb2a6",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-pudelka-54045"
+   },
+   {
+     "name": "Ręczniki",
+     "id": "8075a693-a700-469b-89f2-d7fb3d0a8cf4",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-reczniki-11997"
+   },
+   {
+     "name": "Sauny i akcesoria",
+     "id": "f4270961-c435-4217-9627-f4fa5ba7ce33",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-sauny-i-akcesoria-110195"
+   },
+   {
+     "name": "Systemy domów inteligentnych",
+     "id": "599dba25-665a-4e78-a928-9b893413f055",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-inteligentny-dom-251242"
+   },
+   {
+     "name": "Świeczki, woski, olejki i akcesoria",
+     "id": "29488f8e-96c4-4250-b557-f3844275ff4f",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-swieczki-woski-olejki-i-akcesoria-254282"
+   },
+   {
+     "name": "Wystrój okien",
+     "id": "f15d9de3-8061-4976-8c78-008d6ddffef3",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-wystroj-okien-9016"
+   },
+   {
+     "name": "Wentylatory domowe",
+     "id": "fa30611a-8855-4d65-9e88-d3965e4c9ee9",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-wentylatory-domowe-255504"
+   },
+   {
+     "name": "Zastawa stołowa",
+     "id": "0d66c278-0fff-4d98-9c6a-55bb0286d32c",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-zastawa-stolowa-110879"
+   },
+   {
+     "name": "Zegary ścienne",
+     "id": "55c30c77-23a0-411b-b733-66484bafd6d9",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wyposazenie-zegary-541"
+   },
+   {
+     "name": "Lampy",
+     "id": "e9e2ddec-d7e5-4320-8337-1764fb551209",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/oswietlenie-lampy-5318"
+   },
+   {
+     "name": "Firanki",
+     "id": "285c796a-8a16-4192-b1d6-6a956341f2ad",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wystroj-okien-firanki-15981"
+   },
+   {
+     "name": "Zasłony",
+     "id": "dddc58c2-1690-4ce5-bacd-079f308e36be",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wystroj-okien-zaslony-15982"
+   },
+   {
+     "name": "Rolety",
+     "id": "5bb62524-332f-4ecc-9f42-bad518348141",
+     "parentId": "13e61483-cab7-4c35-b726-82e2d968fcd0",
+     "url": "https://allegro.pl/kategoria/wystroj-okien-rolety-15984"
+   },
+   {
+     "name": "Meble",
+     "id": "811ae132-9238-479b-aa58-8c0a9f1fd4ba"
+   },
+   {
+     "name": "Meble kuchenne",
+     "id": "b7392d27-eb36-4cd5-808a-d24a2ac18c50",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-kuchnia-1510"
+   },
+   {
+     "name": "Meble do przedpokoju",
+     "id": "24ee8b69-3130-41f6-83b8-2d62aa4b7873",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-przedpokoj-1514"
+   },
+   {
+     "name": "Meble do salonu",
+     "id": "e7aac7e2-4c8d-4060-9d85-46bd5b20dc12",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-salon-1515"
+   },
+   {
+     "name": "Meble do sypialni",
+     "id": "0e846657-a4d8-435b-adfc-40d0eac3e391",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-sypialnia-568"
+   },
+   {
+     "name": "Mable łazienkowe",
+     "id": "31da1838-b85c-433a-95a8-fea90a160629",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-lazienka-i-toaleta-1511"
+   },
+   {
+     "name": "Meble do pracowni",
+     "id": "f666daf2-4cbb-4e75-b10b-dca9574e45ea",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-pracownia-1513"
+   },
+   {
+     "name": "Meble dziecięce",
+     "id": "1e5a331e-6abf-42e1-9eaf-32ab322cd14e",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/pokoj-dzieciecy-meble-17273"
+   },
+   {
+     "name": "Meble młodzieżowe",
+     "id": "635a59b5-865d-4474-9a75-79445d228450",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-pokoj-mlodziezowy-251022"
+   },
+   {
+     "name": "Ozdoby świąteczne i okolicznościowe",
+     "id": "b8e289f8-cfd6-42ec-89e0-74bfef35ef1f",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-piwnica-garaz-251023"
+   },
+   {
+     "name": "Akcesoria meblowe",
+     "id": "34389bd0-9012-46f7-91e7-6316c127538b",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/meble-akcesoria-meblowe-68632"
+   },
+   {
+     "name": "Szafki kuchenne",
+     "id": "3c32f900-aaa9-4a01-b861-dc0549767cf2",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/kuchnia-szafki-kuchenne-20266"
+   },
+   {
+     "name": "Stoły kuchenne",
+     "id": "8b801cf3-8210-4955-b711-f0f11083fec0",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/kuchnia-stoly-kuchenne-112731"
+   },
+   {
+     "name": "Krzesła kuchenne",
+     "id": "13438a5a-c26b-4287-9952-100b18fbe2e8",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/kuchnia-krzesla-112728"
+   },
+   {
+     "name": "Fotele do salonu",
+     "id": "6266baa6-7e1c-43bd-9d10-9e3eef4126c7",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/salon-fotele-20285"
+   },
+   {
+     "name": "Narożniki do salonu",
+     "id": "6b5b50c0-9af4-4e4f-8916-2865de54f399",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/salon-narozniki-20286"
+   },
+   {
+     "name": "Szafki na buty",
+     "id": "f87c81e6-4e64-4ea7-a93c-6b54437c4de1",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/przedpokoj-szafki-na-buty-20277"
+   },
+   {
+     "name": "Szafy przesuwne i garderoby",
+     "id": "a0ca5742-85f6-4bba-8d17-e0e6352945a3",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/przedpokoj-garderoby-i-szafy-20276"
+   },
+   {
+     "name": "Łóżka do sypialni",
+     "id": "8687a886-20cb-45df-b808-e33b31c021ff",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/sypialnia-lozka-20290"
+   },
+   {
+     "name": "Materace na łóżko",
+     "id": "5eb62785-f42b-4a1a-b6bc-7047411270bf",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/sypialnia-materace-20292"
+   },
+   {
+     "name": "Półki łazienkowe",
+     "id": "5c640c5b-093a-4575-8c01-9c186dd804c4",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/lazienka-i-toaleta-polki-68670"
+   },
+   {
+     "name": "Hokery i krzesła barowe",
+     "id": "713fcecd-6dec-44f3-90fb-9fc6ce18a0b4",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/kuchnia-hokery-112726"
+   },
+   {
+     "name": "Kanapy i sofy rozkładane",
+     "id": "36173876-3790-41dc-bd54-1cd187bac351",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/salon-kanapy-20283"
+   },
+   {
+     "name": "Pufy do salonu",
+     "id": "a4757267-6775-42af-8ca6-a03133c0af08",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/salon-pufy-54090"
+   },
+   {
+     "name": "Szafy",
+     "id": "2d5ca264-5091-4290-9c03-4b465e6a025d",
+     "parentId": "811ae132-9238-479b-aa58-8c0a9f1fd4ba",
+     "url": "https://allegro.pl/kategoria/salon-szafy-112736"
+   },
+   {
+     "name": "Ogród",
+     "id": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172"
+   },
+   {
+     "name": "Architektura ogrodowa",
+     "id": "7a7e0b15-7ea0-4232-96ef-86e8535529b4",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-architektura-ogrodowa-77733"
+   },
+   {
+     "name": "Baseny ogrodowe",
+     "id": "e23cc61b-d40e-4b25-b2a8-9a991c208bb0",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/baseny-i-akcesoria-baseny-49846"
+   },
+   {
+     "name": "Doniczki i pojemniki",
+     "id": "9d0a0cbb-b278-4c9d-8a4b-be1fcedf8b19",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-doniczki-i-pojemniki-126187"
+   },
+   {
+     "name": "Agrowłókniny",
+     "id": "4cf92a97-a5fe-4880-a786-6524af2cc278",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-agrowlokniny-126186"
+   },
+   {
+     "name": "Akcesoria pszczelarskie",
+     "id": "1f40900a-f046-4eab-920f-492ed3c3b466",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-akcesoria-pszczelarskie-82255"
+   },
+   {
+     "name": "Nawadnianie",
+     "id": "c2400144-867f-4e76-9fc2-a27f6f07d4d5",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-nawadnianie-47492"
+   },
+   {
+     "name": "Grillowanie",
+     "id": "ec7a7bcd-1035-4650-9be0-71ba15ab946f",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/inspiracje/sezon-na-grilla"
+   },
+   {
+     "name": "Kompostowniki",
+     "id": "cdace791-0e8b-42b1-a237-7a1431e89978",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-kompostowniki-126183"
+   },
+   {
+     "name": "Hamaki ogrodowe",
+     "id": "a7e692c3-08f1-4fa5-8f0c-7f66b237909e",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/meble-ogrodowe-hamaki-82257"
+   },
+   {
+     "name": "Huśtawki ogrodowe",
+     "id": "e0908c79-34fd-4136-b71c-14054b9764be",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/meble-ogrodowe-hustawki-82258"
+   },
+   {
+     "name": "Leżaki ogrodowe",
+     "id": "fa5499f2-682f-4a2c-a7ef-8a04bc029202",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/meble-ogrodowe-lezaki-i-lezanki-82259"
+   },
+   {
+     "name": "Szamba i oczyszczalnie",
+     "id": "81f1d8db-e0ee-4f14-a695-4e3b8684c7a7",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-szamba-i-oczyszczalnie-126185"
+   },
+   {
+     "name": "Meble ogrodowe",
+     "id": "6946e925-8279-45fe-8af0-c53d9d3e659f",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-meble-ogrodowe-82256"
+   },
+   {
+     "name": "Ławki ogrodowe",
+     "id": "1e9f92d4-4858-46c1-807d-edbe8b02eb84",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/meble-ogrodowe-lawy-i-lawki-82260"
+   },
+   {
+     "name": "Narzędzia ogrodnicze",
+     "id": "2a7cf050-6521-4733-b7ad-1f9fd34cb354",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-narzedzia-ogrodnicze-1534"
+   },
+   {
+     "name": "Oczka wodne",
+     "id": "1da734e3-5238-4063-a902-b19b9c9dfcbc",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-oczka-wodne-148162"
+   },
+   {
+     "name": "Oświetlenie ogrodowe",
+     "id": "c5837eb1-b068-4af7-85a0-59cb8b182df5",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-oswietlenie-5315"
+   },
+   {
+     "name": "Nawozy",
+     "id": "624fff01-6a80-47c1-95c7-2166401e9a45",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/nawozy-i-preparaty-nawozy-126197"
+   },
+   {
+     "name": "Rośliny ogrodowe",
+     "id": "d7e047f0-4de7-49f3-9ad3-5b995d1d177c",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/ogrod-rosliny-776"
+   },
+   {
+     "name": "Kostka brukowa",
+     "id": "e22c598d-93de-4c98-8a4d-0e7358d554c1",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/podloza-kostka-brukowa-126193"
+   },
+   {
+     "name": "Altany ogrodowe",
+     "id": "5d7f47dd-4a9d-483e-8fe1-6c0469b94964",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/architektura-ogrodowa-altany-82282"
+   },
+   {
+     "name": "Domki ogrodowe narzędziowe",
+     "id": "c1907676-d21b-4ec8-bf94-2c81262429e0",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/architektura-ogrodowa-domki-82283"
+   },
+   {
+     "name": "Tunele foliowe ogrodowe",
+     "id": "857c5624-fb05-4962-99da-6fb9d639b0e7",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/architektura-ogrodowa-tunele-foliowe-82280"
+   },
+   {
+     "name": "Kosiarki",
+     "id": "8f6161a5-d456-469c-a71c-4b720872e95c",
+     "parentId": "e8811a5d-f426-4ee7-99c9-7ae4bd8e5172",
+     "url": "https://allegro.pl/kategoria/narzedzia-ogrodnicze-kosiarki-85196"
+   },
+   {
+     "name": "Narzędzia",
+     "id": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1"
+   },
+   {
+     "name": "Agregaty prądotwórcze",
+     "id": "f0d693ef-31b4-441b-bd90-c2080ee6ab93",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-agregaty-pradotworcze-147642"
+   },
+   {
+     "name": "Akcesoria i osprzęt",
+     "id": "133827d7-302c-4973-b43d-8fe806a28227",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-akcesoria-i-osprzet-147643"
+   },
+   {
+     "name": "Frezarki",
+     "id": "bb161c33-4e93-468b-852c-2ee94626d72f",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/obrobka-metali-frezarki-121404"
+   },
+   {
+     "name": "Klucze",
+     "id": "cc6b8752-ca1e-450f-9464-4df80b67a83a",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-klucze-147647"
+   },
+   {
+     "name": "Lutownice",
+     "id": "9424eca9-c0cd-4727-82a8-56c53ad7fc16",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-lutownice-147648"
+   },
+   {
+     "name": "Myjki ciśnieniowe",
+     "id": "cc24fad3-e3df-468d-8ba4-f3a42ab39a99",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-myjki-cisnieniowe-147652"
+   },
+   {
+     "name": "Przecinaki i dłuta",
+     "id": "f37de71a-b7fc-45bb-83c1-88b603f7e411",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-mlotki-przecinaki-i-dluta-147649"
+   },
+   {
+     "name": "Odkurzacze przemysłowe",
+     "id": "f5de7f22-1590-4453-af1a-43f6d441c89a",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-odkurzacze-przemyslowe-147653"
+   },
+   {
+     "name": "Piły i pilarki",
+     "id": "245b67c4-ba17-480e-90f7-711a4d9fb4c7",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-pily-i-pilarki-147655"
+   },
+   {
+     "name": "Przyrządy miernicze",
+     "id": "4988a62f-f005-468d-8888-f6a2e5f58499",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-przyrzady-miernicze-26789"
+   },
+   {
+     "name": "Spawarki",
+     "id": "ae773889-b5b4-4081-9fb8-0df68bc9fec6",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-spawarki-147656"
+   },
+   {
+     "name": "Sprężarki i kompresory",
+     "id": "c8112478-79ce-4dda-b0bd-2ad0798af6c3",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-sprezarki-i-kompresory-147657"
+   },
+   {
+     "name": "Nożyce i obcęgi",
+     "id": "d7a2d424-4602-467e-9dda-d97093b0990f",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-szczypce-nozyce-obcegi-147659"
+   },
+   {
+     "name": "Szlifierki i polerki",
+     "id": "04c3f92e-b910-4451-973a-66efdd00e711",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-szlifierki-i-polerki-147660"
+   },
+   {
+     "name": "Wiertarki",
+     "id": "7388a53f-ac0b-4556-9848-30c265517ce3",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-wiertarki-252043"
+   },
+   {
+     "name": "Wkrętarki",
+     "id": "f4298ad1-58d1-432b-82e7-932ce8b69369",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-wkretarki-147662"
+   },
+   {
+     "name": "Wkrętaki",
+     "id": "ab739baa-fb38-489e-af14-9d2bf5224f27",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-wkretaki-147661"
+   },
+   {
+     "name": "Zestawy narzędzi",
+     "id": "42e6a676-e40d-4fe0-9234-87a7c1444dc2",
+     "parentId": "1effe46c-0e0e-4a64-958b-d3fdb9eecda1",
+     "url": "https://allegro.pl/kategoria/narzedzia-zestawy-narzedzi-147666"
+   },
+   {
+     "name": "Budownictwo",
+     "id": "a216acf2-3187-4897-b55a-fa9ec781ff19"
+   },
+   {
+     "name": "Dachy",
+     "id": "6e0bb3bd-216e-488d-8d07-015cd9e7ca32",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-dachy-1521"
+   },
+   {
+     "name": "Elektryka",
+     "id": "b9ed3dcc-37ac-4a79-a57c-e9e6592f25d9",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-elektryka-i-akcesoria-1523"
+   },
+   {
+     "name": "Garaże",
+     "id": "0817f6eb-53ba-4020-8208-329e0fb7d7dc",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-garaze-68629"
+   },
+   {
+     "name": "Hydraulika i armatura",
+     "id": "89a9f99e-6498-4c3c-a6e9-d98e376fc2e5",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-hydraulika-i-armatura-1524"
+   },
+   {
+     "name": "Klimatyzacja i wentylacja",
+     "id": "137bee9d-f2c9-4d36-8aad-14c780d094a3",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-klimatyzacja-i-wentylacja-46099"
+   },
+   {
+     "name": "Kominki",
+     "id": "2c56d576-748c-4ea2-8dc8-2721c393c2e0",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-kominki-i-akcesoria-1525"
+   },
+   {
+     "name": "Odkurzacze centralne",
+     "id": "b57f9ca2-f740-46ca-9f48-606ae934c9bb",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-odkurzacze-centralne-68626"
+   },
+   {
+     "name": "Ogrodzenia i bramy",
+     "id": "644c1eb7-70e9-40e6-9c57-6fa56139b546",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-ogrodzenia-i-bramy-15957"
+   },
+   {
+     "name": "Ogrzewanie",
+     "id": "94d4dfdc-f81c-4b17-afea-45bcecab062e",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-ogrzewanie-111865"
+   },
+   {
+     "name": "Okna i parapety",
+     "id": "724b03b2-8ef3-4dd5-851c-5e109a2c1cd9",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-okna-i-parapety-15959"
+   },
+   {
+     "name": "Prace na wysokości",
+     "id": "88caf3d7-4798-4294-9926-034ec24dc89b",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-prace-na-wysokosci-68627"
+   },
+   {
+     "name": "Schody",
+     "id": "89314bd4-b6c4-4bfb-a456-f486897ea846",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-schody-46098"
+   },
+   {
+     "name": "Sprzęt budowlany",
+     "id": "8ddfbdae-c3d4-4b9a-b8c5-be6e3637755b",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-sprzet-budowlany-254840"
+   },
+   {
+     "name": "Ściany i elewacje",
+     "id": "b5e94f6d-a9d0-4c8b-aef8-1e733372d382",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/budownictwo-i-akcesoria-sciany-i-elewacje-1527"
+   },
+   {
+     "name": "Farby ścienne",
+     "id": "018f20b4-e4e6-4411-a03b-ce57c4238d64",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/sciany-i-elewacje-farby-126182"
+   },
+   {
+     "name": "Płytki ścienne",
+     "id": "a60b76be-fb2d-4266-b625-3b0fb9f11fad",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/sciany-i-elewacje-plytki-scienne-46165"
+   },
+   {
+     "name": "Tapety na ścianę",
+     "id": "23708040-7d30-4968-a88f-b474f1bc48c7",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/sciany-i-elewacje-tapety-46166"
+   },
+   {
+     "name": "Grzejniki, kaloryfery",
+     "id": "7fcbecef-1b40-499b-9baf-73cf173c64c4",
+     "parentId": "a216acf2-3187-4897-b55a-fa9ec781ff19",
+     "url": "https://allegro.pl/kategoria/ogrzewanie-grzejniki-111868"
+   },
+   {
+     "name": "Supermarket",
+     "id": "6155f2e4-592b-4d4d-91d7-86872ef5def2"
+   },
+   {
+     "name": "Artykuły przemysłowe",
+     "id": "74495502-9160-42c9-96fa-5669505d871c"
+   },
+   {
+     "name": "Proszki do prania",
+     "id": "6da7ff01-23ae-4327-a9d0-b70405c8f4f1",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-proszki-do-prania-260124"
+   },
+   {
+     "name": "Płyny do prania",
+     "id": "01f2c43d-6272-4376-9285-dd63cef1229c",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-plyny-do-prania-260128"
+   },
+   {
+     "name": "Kapsułki do prania",
+     "id": "f8bd1d7e-e49e-4362-9026-26d79cde8ba6",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-kapsulki-i-tabletki-do-prania-260126"
+   },
+   {
+     "name": "Wybielacze",
+     "id": "56d5122f-c0f4-4c90-b17a-969a4519b738",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-wybielacze-i-krochmale-260130"
+   },
+   {
+     "name": "Płyny do płukania",
+     "id": "5d6df9e0-0986-4335-a07b-fa300217ac2c",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-plyny-do-plukania-260125"
+   },
+   {
+     "name": "Suszarki na pranie",
+     "id": "c005eeaf-2252-4fc1-99eb-9e28448e83f9",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-suszarki-na-pranie-260136"
+   },
+   {
+     "name": "Deski do prasowania",
+     "id": "b6dc7f66-c88d-4b85-a68c-facb66e052cd",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/pranie-i-prasowanie-deski-do-prasowania-260134"
+   },
+   {
+     "name": "Tabletki do zmywarki",
+     "id": "8042affc-2f1f-4aee-9cdc-479abdefae99",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/zmywanie-tabletki-do-zmywarki-260244"
+   },
+   {
+     "name": "Nabłyszczacze do zmywarki",
+     "id": "5cde1ad6-6165-4bd5-80e7-82e861e518ff",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/zmywanie-nablyszczacze-do-zmywarki-260247"
+   },
+   {
+     "name": "Płyny do naczyń",
+     "id": "5c6720b4-4626-49ce-8c61-fb73258e5d8a",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/zmywanie-plyny-do-naczyn-260253"
+   },
+   {
+     "name": "Ociekacze i suszarki do naczyń",
+     "id": "00562246-977d-4de6-89ff-a69c0b250ee6",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/zmywanie-suszarki-i-ociekacze-260252"
+   },
+   {
+     "name": "Mopy",
+     "id": "420fce32-c2e5-4ad6-9ffe-3c687847dba5",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-mopy-260149"
+   },
+   {
+     "name": "Mop obrotowy",
+     "id": "3b6c052d-a3fc-4106-9b89-a8630b974257",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-mopy-260149?string=mop%20obrotowy"
+   },
+   {
+     "name": "Wiadra",
+     "id": "0ed37a28-0799-4ee2-a56b-ae7c183497c0",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-wiadra-260152"
+   },
+   {
+     "name": "Kosze na śmieci",
+     "id": "7cb520e2-570d-460d-8eb7-0fd16dd3d14a",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/recykling-i-wywoz-smieci-kosze-na-smieci-260295"
+   },
+   {
+     "name": "Kosze do segregacji śmieci",
+     "id": "bd03f11e-6020-4cff-8483-78420134120f",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-kosze-na-smieci-260146?string=kosz%20do%20segregacji"
+   },
+   {
+     "name": "Worki na śmieci",
+     "id": "3fad1b9e-cfd4-4b58-88e3-a68890e92784",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-worki-na-smieci-260153"
+   },
+   {
+     "name": "Worki próżniowe",
+     "id": "7c9e0a75-ef9c-460b-80f7-ecd9e624a2a5",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-worki-prozniowe-260154"
+   },
+   {
+     "name": "Miotły, zmiotki i szufelki",
+     "id": "7a077946-8d98-4a83-9f9b-34bcb0f6b3c1",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-miotly-zmiotki-i-szufelki-260147"
+   },
+   {
+     "name": "Szczotki do WC",
+     "id": "3882cfb2-c913-400e-ac9c-bed1cdb4e999",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/sprzatanie-szczotki-do-wc-260148"
+   },
+   {
+     "name": "Środki czyszczące",
+     "id": "c5451282-aaf6-4b1f-9a84-05bea5200d48",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/utrzymanie-czystosci-srodki-czyszczace-253359"
+   },
+   {
+     "name": "Środki myjące",
+     "id": "ccb993b8-7ed0-4b1b-b137-8512b46561a8",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/utrzymanie-czystosci-srodki-myjace-253360"
+   },
+   {
+     "name": "Odkamieniacze",
+     "id": "01889cd9-f310-4a30-ba24-314877bcf26f",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/utrzymanie-czystosci-odkamieniacze-253353"
+   },
+   {
+     "name": "Odświeżacze powietrza",
+     "id": "67ed444d-1a7d-4a50-90a2-c05fe8539a17",
+     "parentId": "74495502-9160-42c9-96fa-5669505d871c",
+     "url": "https://allegro.pl/kategoria/utrzymanie-czystosci-odswiezacze-powietrza-253354"
+   },
+   {
+     "name": "Produkty dla zwierząt",
+     "id": "73b3389d-a977-4c94-956d-e8dcb35e3667"
+   },
+   {
+     "name": "Karma dla psów",
+     "id": "44038332-8cf4-4a80-bccd-d34d809bd7ca",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-karmy-90060"
+   },
+   {
+     "name": "Karma dla kota",
+     "id": "e1de4656-602e-45f3-a9b4-94ff367448ec",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-karmy-90039"
+   },
+   {
+     "name": "Obroże dla psów",
+     "id": "5d65df2e-c77d-4285-8a4c-60db865c46f4",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-obroze-90070"
+   },
+   {
+     "name": "Legowiska dla psa",
+     "id": "e58032b7-96f7-4cee-94a2-b08c5b9378a8",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-legowiska-90064"
+   },
+   {
+     "name": "Ubranka dla psów",
+     "id": "26ea650e-0d3a-4431-b2f1-288029a1a2ca",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-ubranka-90054"
+   },
+   {
+     "name": "Smycze dla psów",
+     "id": "425c4f26-4fb4-4865-adc8-6fc0ae9a7450",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-smycze-257556"
+   },
+   {
+     "name": "Szelki dla psa",
+     "id": "9bab6936-4239-4c44-8fde-d9837ea40a8e",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-psow-szelki-90074"
+   },
+   {
+     "name": "Kuwety dla kotów",
+     "id": "29dfe934-d235-4b5f-aca4-e7dd787ad38f",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-kuwety-90052"
+   },
+   {
+     "name": "Żwirek dla kota",
+     "id": "625082f8-9099-4ba7-a2d0-f585c2b8fd98",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-zwirki-90051"
+   },
+   {
+     "name": "Transportery dla kotów",
+     "id": "08ceae34-b2c5-4e3e-b80b-25888063e2a6",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-torby-i-transportery-90044"
+   },
+   {
+     "name": "Drapak dla kota",
+     "id": "2df06347-01b8-44c5-bcd6-a7f1195bd71b",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-drapaki-90038"
+   },
+   {
+     "name": "Furminator dla kota",
+     "id": "cc5a11ca-b9da-40f2-9b19-34d7eeb5a96f",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-kotow-grzebienie-i-szczotki-90047?string=furminator"
+   },
+   {
+     "name": "Akwaria i zestawy",
+     "id": "1109d434-3ca8-4654-a6c7-abdc3b3263e6",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/akwarystyka-akwaria-i-zestawy-5338"
+   },
+   {
+     "name": "Filtry do akwarium",
+     "id": "27973dd1-7e8b-47f4-92fb-c861907591fe",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/akwarystyka-filtry-90098"
+   },
+   {
+     "name": "Oświetlenie do akwarium",
+     "id": "ace316ed-0fa2-4cd7-871c-426887d6cda0",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/akwarystyka-oswietlenie-90097"
+   },
+   {
+     "name": "Akwarystyka morska",
+     "id": "780724f9-9e6a-45c6-851e-b847ae862373",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/akwarystyka-akwarystyka-morska-90173"
+   },
+   {
+     "name": "Terraria",
+     "id": "5ca04322-e90f-43db-bb5b-ea1d01710d52",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/terrarystyka-terraria-i-wyposazenie-10769"
+   },
+   {
+     "name": "Klatki dla chomika",
+     "id": "4936eedf-ae29-4cc1-9f99-fe8661c0aaa2",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-gryzoni-i-krolikow-klatki-i-akwaria-90028?string=klatka%20dla%20chomika"
+   },
+   {
+     "name": "Klatki dla królika",
+     "id": "ab0318e1-9b4e-4a70-b176-1dfbb027b6d6",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-gryzoni-i-krolikow-klatki-i-akwaria-90028?string=klatka%20dla%20kr%C3%B3lika"
+   },
+   {
+     "name": "Klatki dla ptaków",
+     "id": "046a53af-bfb9-4625-84cf-48f7ea31cdff",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-ptakow-egzotycznych-klatki-i-woliery-90083"
+   },
+   {
+     "name": "Pokarm dla ptaków",
+     "id": "5ca8855c-58c2-46ff-8d6b-2d64e509092a",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-ptakow-egzotycznych-karmy-i-smakolyki-90086"
+   },
+   {
+     "name": "Budki lęgowe",
+     "id": "4393a5d9-8fc0-437d-83ca-866d7cbd9c89",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-ptakow-egzotycznych-budki-legowe-90081"
+   },
+   {
+     "name": "Obrączki dla gołębi",
+     "id": "9ea591ad-e8e0-429b-97db-7698c23c8080",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-golebi-obraczki-90036"
+   },
+   {
+     "name": "Gołębniki",
+     "id": "1ff5a0b5-8bfd-4b77-b515-21d538c37010",
+     "parentId": "73b3389d-a977-4c94-956d-e8dcb35e3667",
+     "url": "https://allegro.pl/kategoria/dla-golebi-golebniki-i-wyposazenie-90034"
+   },
+   {
+     "name": "Produkty spożywcze",
+     "id": "b2e48128-e8a2-43d3-84bf-0685bb018601"
+   },
+   {
+     "name": "Kawa ziarnista",
+     "id": "f783c4ae-8def-4a6c-834f-a0e698b33aad",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/kawy-kawy-ziarniste-74035"
+   },
+   {
+     "name": "Kawa ziarnista Lavazza",
+     "id": "ac7c080c-5cdb-4cc8-bb00-cb3600d54e03",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/kawy-kawy-ziarniste-74035?marka=Lavazza"
+   },
+   {
+     "name": "Kawa mielona",
+     "id": "4b7c3d10-3ea2-45f0-8046-26975d121047",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/kawy-kawy-mielone-74033"
+   },
+   {
+     "name": "Kapsułki do ekspresu",
+     "id": "3e083cd6-48cb-4dff-855d-343c771e3a57",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/kawy-kapsulki-do-ekspresow-74824"
+   },
+   {
+     "name": "Zielona herbata",
+     "id": "e3d4a411-48d3-45ab-a086-9c7ea03a1603",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/herbaty-herbaty-zielone-74044"
+   },
+   {
+     "name": "Matcha",
+     "id": "c16c793d-378c-4634-a796-6fae02837127",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/herbaty-74038?string=matcha"
+   },
+   {
+     "name": "Biała herbata",
+     "id": "3c8c22fe-c6ee-4774-a97e-5aeb1c9ba8b5",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/herbaty-herbaty-biale-74039"
+   },
+   {
+     "name": "Yerba mate i akcesoria",
+     "id": "57876fec-2069-4395-a262-0ced39dd48cb",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/yerba-mate-i-akcesoria-125772"
+   },
+   {
+     "name": "Miód",
+     "id": "06485a34-0ce3-48d4-80ca-25bc3b719062",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/miod-i-pylek-pszczeli-73976"
+   },
+   {
+     "name": "Bakalie",
+     "id": "3247918d-4912-4292-b3de-6f49268d9641",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/bakalie-orzechy-konfitury-bakalie-112641"
+   },
+   {
+     "name": "Zdrowa żywność",
+     "id": "de431b96-65f5-4d5d-ac14-3263306ea137",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/zdrowa-zywnosc-74062"
+   },
+   {
+     "name": "Produkty wegańskie i wegetariańskie",
+     "id": "a212b5e2-e0c9-4434-b033-baca456a17ec",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-wegetarianskie-74069"
+   },
+   {
+     "name": "Oleje i oliwy",
+     "id": "09d44ab8-b6e7-4e97-95b9-fb5585138b5b",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/oliwy-i-oleje-sosy-112619"
+   },
+   {
+     "name": "Olej kokosowy",
+     "id": "16b79f28-1e7e-4e46-af1f-93209e254920",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/oliwy-i-oleje-sosy-oleje-112625?string=olej%20kokosowy"
+   },
+   {
+     "name": "Superfood",
+     "id": "4e9834dc-45e4-48da-94ec-504ebf887125",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/superfood-253323"
+   },
+   {
+     "name": "Dekoracje cukiernicze",
+     "id": "36695843-cd32-4672-8830-245cec8700be",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/dekoracje-cukiernicze-dodatki-spozywcze-dekoracje-cukiernicze-111075"
+   },
+   {
+     "name": "Barwniki spożywcze",
+     "id": "a5372b43-43af-42f3-b172-3833d57ad097",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/dekoracje-cukiernicze-dodatki-spozywcze-barwniki-111074"
+   },
+   {
+     "name": "Grzyby suszone",
+     "id": "6d2f55ad-71e9-4693-a7eb-48113639ed2b",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/grzyby-suszone-73979"
+   },
+   {
+     "name": "Czekolady",
+     "id": "faab0795-aa54-43da-a82a-0203a9cf21af",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/slodycze-i-przekaski-czekolady-74020"
+   },
+   {
+     "name": "Żelki",
+     "id": "d1001c3e-9f4d-49c4-9c5c-6960a7e0c5c7",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/slodycze-i-przekaski-zelki-74023"
+   },
+   {
+     "name": "Cukierki i lizaki",
+     "id": "16ff470d-e358-4a52-b5f7-4b439dacd6bf",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/slodycze-i-przekaski-cukierki-i-lizaki-74018"
+   },
+   {
+     "name": "Pistacje",
+     "id": "d0b26312-9be5-463b-a7a0-030eb70a8590",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-spozywcze-bakalie-orzechy-konfitury-112640?string=pistacje"
+   },
+   {
+     "name": "Migdały",
+     "id": "419e78d2-bd07-4188-b6fc-7d00ecb08617",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-spozywcze-bakalie-orzechy-konfitury-112640?string=migda%C5%82y"
+   },
+   {
+     "name": "Orzechy włoskie",
+     "id": "dd361081-90a3-44cc-91ed-4145ba619456",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-spozywcze-bakalie-orzechy-konfitury-112640?string=orzechy%20w%C5%82oskie"
+   },
+   {
+     "name": "Makarony",
+     "id": "21dd34de-f118-47cf-86a4-409f2201792d",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-sypkie-makarony-111094"
+   },
+   {
+     "name": "Kasze i ryż",
+     "id": "8c50a7ff-bcad-4a63-bfe5-564a06bb8d35",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-sypkie-kasze-i-ryz-111093"
+   },
+   {
+     "name": "Stewia",
+     "id": "14e7e4d6-0071-43c0-8ea8-2f2b2fc006cc",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/produkty-sypkie-slodziki-111092?string=stewia"
+   },
+   {
+     "name": "Przyprawy",
+     "id": "c5bd85f6-3920-4c54-abad-b27d665721c3",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/przyprawy-i-ziola-74048"
+   },
+   {
+     "name": "Wina",
+     "id": "edac199f-dd3f-4d2c-9fd3-0fa4cf607b66",
+     "parentId": "b2e48128-e8a2-43d3-84bf-0685bb018601",
+     "url": "https://allegro.pl/kategoria/wina-101476"
+   },
+   {
+     "name": "Dziecko",
+     "id": "d0f3afd0-ff12-43a1-8363-d3b2510fc28b"
+   },
+   {
+     "name": "Zabawki Zobacz wszystkie Zabawki",
+     "id": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "parentId": "d0f3afd0-ff12-43a1-8363-d3b2510fc28b"
+   },
+   {
+     "name": "Klocki LEGO",
+     "id": "a6ca5145-1bd0-4595-b74e-84e48d4bfe74",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/klocki-lego-17865"
+   },
+   {
+     "name": "Klocki drewniane",
+     "id": "92b9fbed-8d6f-4348-a300-8fc41d4cdf82",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/klocki-drewniane-46097"
+   },
+   {
+     "name": "Klocki magnetyczne",
+     "id": "44897bfa-8da2-433a-8187-4d0b73e64820",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/klocki-magnetyczne-19535"
+   },
+   {
+     "name": "Zabawki edukacyjne",
+     "id": "58a5719a-ea23-4361-8c09-d217d28c58f6",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-edukacyjne-11821"
+   },
+   {
+     "name": "Zabawki antystresowe",
+     "id": "9459870e-384d-4630-bb06-d98797c0b368",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-antystresowe-259497"
+   },
+   {
+     "name": "Puzzle dla dzieci",
+     "id": "5bcb90e1-a193-431b-b67d-67b57714b0f8",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-puzzle-11840"
+   },
+   {
+     "name": "Zabawki militarne",
+     "id": "3386a60f-7b53-4f60-b996-296b1be330a9",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-militarne-93564"
+   },
+   {
+     "name": "Zabawki do kąpieli",
+     "id": "752e803f-79ae-4ad2-ae1f-30653e858df8",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-do-kapieli-19416"
+   },
+   {
+     "name": "Gry planszowe dla dzieci",
+     "id": "4e97a059-38c7-4235-8cb8-a47900aa5878",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/gry-planszowe-123958"
+   },
+   {
+     "name": "Gry zręcznościowe dla dzieci",
+     "id": "642a4aae-4c0f-4c28-93b7-70dd47476ca0",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/gry-zrecznosciowe-123948"
+   },
+   {
+     "name": "Przytulanki dla niemowląt",
+     "id": "96e73b56-573c-440e-abdb-14d19dce79ce",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/dla-niemowlat-przytulanki-124323"
+   },
+   {
+     "name": "Zabawki interaktywne dla niemowląt",
+     "id": "e3196744-49f8-488e-866b-935fa01b7432",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/dla-niemowlat-interaktywne-19411"
+   },
+   {
+     "name": "Maty edukacyjne",
+     "id": "d98a7eca-0ac8-4a34-9f9c-1401fa996b4a",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/dla-niemowlat-maty-edukacyjne-93578"
+   },
+   {
+     "name": "Pluszaki",
+     "id": "56a4d180-d771-4e7b-a8ef-d8c19e31e114",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-maskotki-11837"
+   },
+   {
+     "name": "Lalki bobasy",
+     "id": "d1c0e783-3fd4-4060-a015-daf8a18e2e24",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/lalki-i-akcesoria-bobasy-85270"
+   },
+   {
+     "name": "Lalki hiszpańskie",
+     "id": "85e9d380-4daf-4eb3-8f6b-16bd650cc982",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/lalki-i-akcesoria-lalki-hiszpanskie-259356"
+   },
+   {
+     "name": "Lalki Barbie",
+     "id": "6e7fac78-fa9b-486c-80a0-f8f2e38dcb89",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/lalki-i-akcesoria-barbie-11828"
+   },
+   {
+     "name": "Figurki dla dzieci",
+     "id": "4a4c481a-c162-47ef-bdab-7c7304e0ce74",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-figurki-11822"
+   },
+   {
+     "name": "Zabawki zdalnie sterowane",
+     "id": "3b2bc2e8-825a-4e3c-9bd4-5f5d66244edb",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-zdalnie-sterowane-11841"
+   },
+   {
+     "name": "Domki dla lalek",
+     "id": "6f5570c1-6d77-4e9f-b983-f656e4a0bcb4",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/akcesoria-dla-lalek-domki-dla-lalek-259368"
+   },
+   {
+     "name": "Kosiarki dla dzieci",
+     "id": "688eecb0-ef5a-4a1f-afad-e65cbdac841a",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/akcesoria-ogrodnicze-kosiarki-86288"
+   },
+   {
+     "name": "Wózki ogrodowe",
+     "id": "91fa98eb-2b16-496d-9129-68d5b6cab0ed",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/akcesoria-ogrodnicze-wozki-86290"
+   },
+   {
+     "name": "Taczki dla dzieci",
+     "id": "273d8837-4a10-47be-84fd-72d19296e9f1",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/akcesoria-ogrodnicze-taczki-86289"
+   },
+   {
+     "name": "Baseny dla dzieci",
+     "id": "0990fb51-3454-4378-b8d2-63755abea708",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-ogrodowe-baseny-i-zabawki-do-wody-86275"
+   },
+   {
+     "name": "Zabawki do piaskownicy",
+     "id": "b63209f3-6d48-4909-a07b-ef3b00eb9b0f",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/piaskownice-i-zabawki-do-piasku-zabawki-do-piasku-260304"
+   },
+   {
+     "name": "Zabawki do pływania",
+     "id": "aaa6c807-a5c3-4543-a42d-454865865de8",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/baseny-i-zabawki-do-wody-akcesoria-do-plywania-260301"
+   },
+   {
+     "name": "Trampoliny dla dzieci",
+     "id": "c7092f57-cf34-4e36-bfff-daa92e4d30ca",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/trampoliny-i-akcesoria-trampoliny-255106"
+   },
+   {
+     "name": "Zjeżdżalnie",
+     "id": "a0d61cc1-91a5-4390-9584-6d43b62e793d",
+     "parentId": "313f19ca-2dcc-4798-8be5-c2bfc08d6835",
+     "url": "https://allegro.pl/kategoria/zabawki-ogrodowe-zjezdzalnie-260261"
+   },
+   {
+     "name": "Uroda",
+     "id": "0031b63e-5cd3-4a27-8f61-2b96eb942967"
+   },
+   {
+     "name": "Pielęgnacja",
+     "id": "7dd92dc6-6499-4111-ab2c-dc92f73ea572"
+   },
+   {
+     "name": "Kosmetyki do pielęgnacji ciała",
+     "id": "a2fe54e4-6097-4379-ad2a-e134ef2dde22",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/pielegnacja-cialo-1433"
+   },
+   {
+     "name": "Żele pod prysznic",
+     "id": "f2591e3c-f975-4d37-b253-01ff9182c54a",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/kapiel-i-prysznic-zele-93059"
+   },
+   {
+     "name": "Sole i kule do kąpieli",
+     "id": "34cea4ae-a3b5-472e-8286-d68792511f55",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/kapiel-i-prysznic-sole-i-kule-93058"
+   },
+   {
+     "name": "Kosmetyki na rozstępy",
+     "id": "7d4faa6f-b2fc-46e7-9745-97b5b9f8c7aa",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/cialo-na-rozstepy-90404"
+   },
+   {
+     "name": "Olejki do ciała",
+     "id": "09e4effc-512e-46f2-821c-842fc41e8747",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/cialo-olejki-144742"
+   },
+   {
+     "name": "Peelingi i scruby do ciała",
+     "id": "bdf5ddfc-49af-4d91-84b1-ca69e69f7361",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/cialo-peelingi-i-scruby-90405"
+   },
+   {
+     "name": "Kremy do rąk",
+     "id": "e27cf5f5-debd-4bd4-a48d-0dc5d81d3462",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/dlonie-i-stopy-kremy-do-rak-5355"
+   },
+   {
+     "name": "Kremy do stóp",
+     "id": "9642edd5-7f42-4f76-ab8f-65870674e431",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/dlonie-i-stopy-kremy-do-stop-5356"
+   },
+   {
+     "name": "Skarpetki złuszczające",
+     "id": "ec513dfe-4b2e-47d9-8f82-dbecb3e23897",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/dlonie-i-stopy-skarpetki-zluszczajace-255530"
+   },
+   {
+     "name": "Golenie i depilacja",
+     "id": "bda8cd76-f6f1-45d9-86ae-0d5f37e0c969",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/pielegnacja-golenie-i-depilacja-1431"
+   },
+   {
+     "name": "Depilacja woskiem, pastą",
+     "id": "130064a2-cb99-48ab-bfcb-24ceca8f4970",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/dla-kobiet-depilacja-woskiem-pasta-93129"
+   },
+   {
+     "name": "Płyny do higieny intymnej",
+     "id": "a4a4cd59-9677-4b67-a128-5372a4429f66",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/higiena-intymna-plyny-do-higieny-intymnej-259327"
+   },
+   {
+     "name": "Kremy do twarzy",
+     "id": "5c499ee7-472f-4cd4-a204-f07911063613",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-kremy-do-twarzy-258462"
+   },
+   {
+     "name": "Kremy pod oczy",
+     "id": "7dfe2717-38d3-4941-8be0-bcd71934d620",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-kremy-pod-oczy-5359"
+   },
+   {
+     "name": "Kwasy, peelingi chemiczne",
+     "id": "c5f88096-ef3b-49c2-a518-6329dd6c27ef",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-kwasy-peelingi-chemiczne-258424"
+   },
+   {
+     "name": "Maseczki do twarzy",
+     "id": "05c66011-3d26-4442-8afb-6f96c82675f6",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-maseczki-5360"
+   },
+   {
+     "name": "Oczyszczanie i demakijaż",
+     "id": "879cff2c-6bb4-4c13-bdc8-14576b61f6f8",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-oczyszczanie-i-demakijaz-5361"
+   },
+   {
+     "name": "Olejki do twarzy",
+     "id": "deef0070-8743-4bd0-beff-5a1b3eaa7e63",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-olejki-do-twarzy-144743"
+   },
+   {
+     "name": "Serum do twarzy",
+     "id": "44e9fbdd-de2c-4f65-a7ef-63d4d0efd09e",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-serum-89000"
+   },
+   {
+     "name": "Toniki i hydrolaty",
+     "id": "97ecad8f-8fbf-45ee-b002-f1a79ab6bd6e",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/twarz-toniki-hydrolaty-wody-termalne-255028"
+   },
+   {
+     "name": "Tangle Teezer",
+     "id": "4403946d-5dfa-4333-a10e-4b94c068fb13",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/wlosy-szczotki-i-grzebienie-259388?marka=Tangle%20Teezer"
+   },
+   {
+     "name": "Suchy szampon",
+     "id": "894545e4-e457-416e-a351-10873d678ee9",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/wlosy-szampony-suche-259391"
+   },
+   {
+     "name": "Maski do włosów",
+     "id": "66a396db-6618-463b-9408-4f872862733d",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/wlosy-maski-do-wlosow-89001"
+   },
+   {
+     "name": "Farby do włosów",
+     "id": "dc54f0a0-82e4-4363-9078-7def8d055efb",
+     "parentId": "7dd92dc6-6499-4111-ab2c-dc92f73ea572",
+     "url": "https://allegro.pl/kategoria/wlosy-koloryzacja-47631"
+   },
+   {
+     "name": "Perfumy",
+     "id": "6e941de7-b555-4462-a4e2-40027c50ea0e"
+   },
+   {
+     "name": "Zapachy dla kobiet",
+     "id": "639c5936-2a4f-4df1-a8b8-4d1999f22e69",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-zapachy-dla-kobiet-17748"
+   },
+   {
+     "name": "Zapachy dla mężczyzn",
+     "id": "bfa51390-e2c9-4887-a7f1-7ca1583a8d7a",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-zapachy-dla-mezczyzn-17749"
+   },
+   {
+     "name": "Testery",
+     "id": "c4fb6ccc-e435-48a7-8f90-8e05c59ac1f8",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?string=tester"
+   },
+   {
+     "name": "Zestawy perfum",
+     "id": "7a203071-72ef-4366-aff2-d3cb8ce3e747",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-zestawy-1562"
+   },
+   {
+     "name": "Perfumy damskie",
+     "id": "d9ce30a2-7743-4df5-8f5d-ea9e07578291",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.plkategoria/zapachy-dla-kobiet-perfumy-i-wody-perfumowane-17752"
+   },
+   {
+     "name": "Perfumy męskie",
+     "id": "6e4aa13c-ad70-4604-a383-cde97355f747",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/zapachy-dla-mezczyzn-wody-perfumowane-17756"
+   },
+   {
+     "name": "Perfumy Versace",
+     "id": "8030a317-7903-4f69-a850-ac339bfe16c9",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Versace"
+   },
+   {
+     "name": "Perfumy Chloé",
+     "id": "aa3ac6c8-e82b-4273-8ec9-df9f10444491",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Chloé"
+   },
+   {
+     "name": "Perfumy Giorgio Armani",
+     "id": "831c83a8-8acf-4ae4-96ec-af7314ff718d",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Giorgio%20Armani"
+   },
+   {
+     "name": "Perfumy Hugo Boss",
+     "id": "4e073347-84a1-48cd-b50c-ecb6f3db8404",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Hugo%20Boss"
+   },
+   {
+     "name": "Perfumy Calvin Klein",
+     "id": "e181f106-79d1-426f-823d-bc47d5d3b5c0",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Calvin%20Klein"
+   },
+   {
+     "name": "Perfumy Gucci",
+     "id": "8e40c97f-b8e2-4330-a44f-680d662936c3",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Gucci"
+   },
+   {
+     "name": "Perfumy Lacoste",
+     "id": "b1411d3a-1ef4-4318-8b54-c3199023466f",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Lacoste"
+   },
+   {
+     "name": "Perfumy Lancôme",
+     "id": "179e6e8f-5057-4bcc-93ff-fec5285efb50",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Lancôme"
+   },
+   {
+     "name": "Perfumy Marc Jacobs",
+     "id": "e93c715f-c251-43f0-9ae4-24e5b3dd3ed7",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Marc%20Jacobs"
+   },
+   {
+     "name": "Perfumy Paco Rabanne",
+     "id": "08f122d2-138b-4d24-a3f4-a31b81ebf643",
+     "parentId": "6e941de7-b555-4462-a4e2-40027c50ea0e",
+     "url": "https://allegro.pl/kategoria/perfumy-i-wody-135?marka=Paco%20Rabanne"
+   },
+   {
+     "name": "Manicure i pedicure",
+     "id": "58c816dd-3edd-487f-a9c5-524724c8cffb"
+   },
+   {
+     "name": "Lakiery hybrydowe",
+     "id": "f4fbca30-ad7d-4219-8851-c5098bc6dd49",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-hybrydowe-126042"
+   },
+   {
+     "name": "Lakiery NeoNail",
+     "id": "aadca237-4269-415f-acba-515c0374e130",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-hybrydowe-126042?marka=NeoNail"
+   },
+   {
+     "name": "Lakiery Semilac",
+     "id": "55da3965-63b4-4ea4-9c26-18dd328670f7",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-hybrydowe-126042?marka=Semilac"
+   },
+   {
+     "name": "Lakiery termiczne",
+     "id": "d693386b-cc65-4ee5-a7a5-d5cca65543c0",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-hybrydowe-126042?wlasciwosci=termiczne"
+   },
+   {
+     "name": "Lakiery do paznokci",
+     "id": "a3204367-7423-482e-a8e4-9084cf167e76",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-do-paznokci-45680"
+   },
+   {
+     "name": "Lakiery Sally Hansen",
+     "id": "6f3fd04e-6088-4036-9dc3-5d71ac4318db",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-do-paznokci-45680?marka=Sally%20Hansen"
+   },
+   {
+     "name": "Lakiery matowe",
+     "id": "8da64347-a791-44c5-bd03-6920ba8cf0ff",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-lakiery-do-paznokci-45680?wykonczenie=Matowe"
+   },
+   {
+     "name": "Manicure japoński",
+     "id": "8be65647-d516-4dec-8d31-2fd045bd6ba4",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-manicure-japonski-257218"
+   },
+   {
+     "name": "Zdobienie paznokci",
+     "id": "02985cf3-842d-4edb-bb3d-044d58e7f541",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-ozdoby-i-przyrzady-do-zdobien-45682"
+   },
+   {
+     "name": "Frezarki do paznokci",
+     "id": "e16d7d02-dd57-4fbc-8f59-586d4b81d1e5",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/urzadzenia-frezarki-do-paznokci-45697"
+   },
+   {
+     "name": "Lampy UV i LED",
+     "id": "7207fe5d-8fbb-4987-b617-3f9848019ca8",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/urzadzenia-lampy-uv-i-led-45698"
+   },
+   {
+     "name": "Zestawy do hybryd",
+     "id": "5ced1d47-8dc4-47fa-b798-c4e287e2db75",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-zestawy-do-manicure-hybrydowego-257217"
+   },
+   {
+     "name": "Akcesoria i przybory",
+     "id": "205afe2b-ec77-4a66-830c-f3a11a30606c",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-akcesoria-i-przybory-45678"
+   },
+   {
+     "name": "Żele",
+     "id": "2b7db8b8-21f2-4509-94a3-0ae14d168003",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/akryle-i-zele-zele-257562"
+   },
+   {
+     "name": "Odżywki do skórek i paznokci",
+     "id": "4f0a042d-ca44-4ce8-9392-d7d161e7edf9",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-odzywki-do-paznokci-i-skorek-45681"
+   },
+   {
+     "name": "Sztuczne paznokcie i tipsy",
+     "id": "4e31e7d4-40c1-40a2-b229-efcd23b0113d",
+     "parentId": "58c816dd-3edd-487f-a9c5-524724c8cffb",
+     "url": "https://allegro.pl/kategoria/manicure-i-pedicure-sztuczne-paznokcie-tipsy-45684"
+   },
+   {
+     "name": "Makijaż",
+     "id": "98ca82b0-4fe7-432e-898d-592002f5b9bc"
+   },
+   {
+     "name": "Bazy pod cienie",
+     "id": "fe8afb1b-f6e2-4aa0-b621-84a9159f3c7e",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-bazy-pod-cienie-89012"
+   },
+   {
+     "name": "Cienie do powiek i palety cieni",
+     "id": "98ab0881-6046-4a97-bc75-2a77ebc8c925",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-cienie-45664"
+   },
+   {
+     "name": "Eyelinery",
+     "id": "6643c531-1a44-4661-b03c-ef6f221e030a",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-eyelinery-255558"
+   },
+   {
+     "name": "Korektory pod oczy",
+     "id": "8a73ff1b-c9a9-4f5f-9c29-edcf76db622c",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-korektory-pod-oczy-89013"
+   },
+   {
+     "name": "Kredki do oczu",
+     "id": "e11f1d30-ba90-4fa8-ac31-6513ce1ab73d",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-kredki-do-oczu-45665"
+   },
+   {
+     "name": "Kredki do brwi",
+     "id": "80b51c21-83eb-4ece-8066-7e2858818acc",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-makijaz-brwi-255559?rodzaj=kredki"
+   },
+   {
+     "name": "Pomady do brwi",
+     "id": "34679ded-067f-4a2b-9753-f32307e5a10b",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-makijaz-brwi-255559?rodzaj=pomady"
+   },
+   {
+     "name": "Cienie do brwi",
+     "id": "4513e7e7-79ea-4edd-b00d-b4540e2ede27",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-makijaz-brwi-255559?rodzaj=cienie"
+   },
+   {
+     "name": "Żele do brwi",
+     "id": "cf0d9167-023e-492e-aa8b-f855f51c3b88",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-makijaz-brwi-255559?rodzaj=żele"
+   },
+   {
+     "name": "Sztuczne rzęsy",
+     "id": "e0bee6ec-54b2-44ce-ad8f-d72e578a1192",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/przedluzanie-rzes-sztuczne-rzesy-rzesy-93074"
+   },
+   {
+     "name": "Rzęsy Ardell",
+     "id": "be6d796d-34de-4e43-9d42-f6b6b8185648",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/przedluzanie-rzes-sztuczne-rzesy-rzesy-93074?marka=Ardell"
+   },
+   {
+     "name": "Odżywki do rzęs",
+     "id": "d055366c-086b-4017-96da-fe54391b685a",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-serum-i-odzywki-do-brwi-i-rzes-255638"
+   },
+   {
+     "name": "Tusze do rzęs",
+     "id": "dde1f6b0-73f4-4b09-a9df-4b6a2cb58d9a",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/oczy-tusze-do-rzes-45666"
+   },
+   {
+     "name": "Fixery, utrwalacze",
+     "id": "ae3e9a58-5356-45c7-8526-e02c5fe36f9d",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-utrwalenie-makijazu-255989"
+   },
+   {
+     "name": "Bazy pod makijaż",
+     "id": "8642d04a-8462-4019-bc6e-49b3e196181c",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-bazy-pod-makijaz-89010"
+   },
+   {
+     "name": "Bronzery",
+     "id": "d1bcce23-da34-4557-b2f6-2687ca4821af",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-bronzery-255956"
+   },
+   {
+     "name": "Korektory do twarzy",
+     "id": "98268f40-e850-46f8-b5f4-cf67c654df23",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-korektory-89011"
+   },
+   {
+     "name": "Kremy BB",
+     "id": "2c1d3e04-b168-4c02-a712-4870b5232f74",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-kremy-koloryzujace-255958?rodzaj=krem%20BB"
+   },
+   {
+     "name": "Kremy CC",
+     "id": "baef2fe2-1ebb-4b09-bed6-16402a826efb",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-kremy-koloryzujace-255958?rodzaj=krem%20CC"
+   },
+   {
+     "name": "Podkłady",
+     "id": "f1bdfcc8-f150-43ad-9d16-4b3585686e51",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-podklady-45668"
+   },
+   {
+     "name": "Pudry",
+     "id": "9e3a4679-6f38-4e77-accc-95938f9d1b62",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-pudry-45669"
+   },
+   {
+     "name": "Rozświetlacze",
+     "id": "27c9f716-97aa-4e2b-a7ba-1967b6b1dcad",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-rozswietlacze-255957"
+   },
+   {
+     "name": "Róże",
+     "id": "2fbaf818-55cd-4833-8992-b44115bc4429",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/twarz-roze-do-policzkow-45670"
+   },
+   {
+     "name": "Błyszczyki",
+     "id": "9d170967-1e36-4afe-9a92-b85a18177206",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/usta-blyszczyki-45673"
+   },
+   {
+     "name": "Konturówki",
+     "id": "4f5d6000-c84f-4fb1-833c-262b6ed2ba26",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/usta-konturowki-45674"
+   },
+   {
+     "name": "Pomadki",
+     "id": "126e7b47-cda5-4566-91de-38088b927fd1",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/usta-pomadki-45675"
+   },
+   {
+     "name": "Pędzle do makijażu",
+     "id": "e44e99c6-ae13-4241-86a3-5d2c4b51be46",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/pedzle-i-akcesoria-pedzle-do-makijazu-89009"
+   },
+   {
+     "name": "Beauty Blender",
+     "id": "c83ddaba-5bd5-458a-994e-8ffb5db5a412",
+     "parentId": "98ca82b0-4fe7-432e-898d-592002f5b9bc",
+     "url": "https://allegro.pl/kategoria/pedzle-i-akcesoria-gabki-do-makijazu-255560?marka=Beauty%20Blender"
+   },
+   {
+     "name": "Dla mężczyzn",
+     "id": "e77aafb3-cc6d-447e-a77c-262f5cd0134a"
+   },
+   {
+     "name": "Kosmetyki dla mężczyzn",
+     "id": "65bb948a-12aa-4f62-9528-1fd4228cc7d5",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/twarz-dla-mezczyzn-88999"
+   },
+   {
+     "name": "Bielenda Man",
+     "id": "f78ff334-ece2-4b8a-8a71-0942cd200a46",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/twarz-dla-mezczyzn-88999?marka=Bielenda"
+   },
+   {
+     "name": "Dermika Men",
+     "id": "8acabb92-0ac7-4bda-9af9-ad64a68be49b",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/twarz-dla-mezczyzn-88999?marka=Dermika"
+   },
+   {
+     "name": "Eveline Men",
+     "id": "e44acf24-7ad9-4f50-a369-221c5f56e69d",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/twarz-dla-mezczyzn-88999?marka=Eveline"
+   },
+   {
+     "name": "AA Men",
+     "id": "626599c0-993f-4d40-8c02-6b5c04c1d7af",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/twarz-dla-mezczyzn-88999?marka=AA"
+   },
+   {
+     "name": "Pasta do włosów",
+     "id": "b8bf1cee-d61d-47a6-ac28-e689bf224042",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/wlosy-zele-gumy-woski-259383?string=pasta%20do%20włosów"
+   },
+   {
+     "name": "Pielęgnacja brody i wąsów",
+     "id": "691248d4-baff-43fd-bb37-53e0e3e59730",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/dla-mezczyzn-pielegnacja-brody-i-wasow-255206"
+   },
+   {
+     "name": "Dear Barber",
+     "id": "9004cc53-fa0b-480b-b573-9b6ee1c6d162",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/dla-mezczyzn-pielegnacja-brody-i-wasow-255206?marka=Dear%20Barber"
+   },
+   {
+     "name": "Golenie",
+     "id": "2f5fca20-453a-4345-8b2b-53aee8f54162",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/golenie-i-depilacja-dla-mezczyzn-93127"
+   },
+   {
+     "name": "Maszynki do golenia",
+     "id": "bde8cf35-e394-4f58-b0c6-3ab677e01d6f",
+     "parentId": "e77aafb3-cc6d-447e-a77c-262f5cd0134a",
+     "url": "https://allegro.pl/kategoria/dla-mezczyzn-maszynki-93138"
+   },
+   {
+     "name": "Zdrowie",
+     "id": "bca951f8-7bfe-4ab0-a9f4-ac08dbf92fc8"
+   },
+   {
+     "name": "Suplementy i leki bez recepty Zobacz wszystkie z kategorii Suplementy diety",
+     "id": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "parentId": "bca951f8-7bfe-4ab0-a9f4-ac08dbf92fc8"
+   },
+   {
+     "name": "Suplementy na odchudzanie",
+     "id": "95e1f1f6-055c-440b-9301-24f3dc2c7daf",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-kontrola-wagi-257513"
+   },
+   {
+     "name": "Suplementy na oczyszczanie",
+     "id": "e31420ee-4b70-4fa2-8050-fddb3078ed1e",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-oczyszczanie-122566"
+   },
+   {
+     "name": "Suplementy na odporność",
+     "id": "5dd49998-1651-4b3f-9773-7c04d4b86b3c",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-odpornosc-122567"
+   },
+   {
+     "name": "Suplementy dla dzieci",
+     "id": "35371729-f21c-4ecd-8794-4ad059f193e0",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-dla-dzieci-122565"
+   },
+   {
+     "name": "Witaminy i minerały",
+     "id": "5cf4fda0-0521-485a-b098-2f038d0ba245",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-preparaty-witaminowo-mineralne-122569"
+   },
+   {
+     "name": "Witamina C",
+     "id": "c849cfbf-c027-43c9-8f80-7e857b247b07",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-odpornosc-122567?string=witamina%20c"
+   },
+   {
+     "name": "Tran",
+     "id": "965b10f3-5e43-493f-86bc-867580dfb8af",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-odpornosc-122567?string=tran&podstawowy-skladnik=olej+rybi+(tran)"
+   },
+   {
+     "name": "Suplementy na skórę, włosy i paznokcie",
+     "id": "fa5014d0-65f1-402f-af16-600b180c8c73",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-skora-wlosy-paznokcie-122570"
+   },
+   {
+     "name": "Biotyna",
+     "id": "e3300581-1cde-4556-ab48-437b152db5e8",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-skora-wlosy-paznokcie-122570?podstawowy-skladnik=biotyna"
+   },
+   {
+     "name": "Kolagen",
+     "id": "6704f80b-ff7c-434a-b33c-8968cc57e353",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-skora-wlosy-paznokcie-122570?podstawowy-skladnik=kolagen"
+   },
+   {
+     "name": "Suplementy na potencję i libido",
+     "id": "8143829a-1d11-4712-b985-d925bfafdfac",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-sprawnosc-seksualna-122571"
+   },
+   {
+     "name": "Suplementy na stawy",
+     "id": "9326d536-4eb7-48a2-a985-aa595884868c",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-stawy-kosci-miesnie-122572"
+   },
+   {
+     "name": "Witamina D3",
+     "id": "954f7977-bc14-4cd5-934c-8f8c9b8cf567",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/zdrowie-medycyna-suplementy-diety-122564?string=witamina%20d3"
+   },
+   {
+     "name": "African Mango",
+     "id": "bacbefac-0d05-4f0f-8948-2544e979ac85",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/zdrowie-medycyna-suplementy-diety-122564"
+   },
+   {
+     "name": "Probiotyki",
+     "id": "2a13b108-c7be-4c9d-b769-2ab53bacb994",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/zdrowie?string=probiotyki"
+   },
+   {
+     "name": "Melatonina",
+     "id": "d34d6afe-93b8-4e20-a9f5-2ae4c15ab66e",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/zdrowie-medycyna-suplementy-diety-122564?string=melatonina"
+   },
+   {
+     "name": "Suplementy na wzrok",
+     "id": "e046f7f4-8f6a-4594-86c5-526adcfc2677",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-wzrok-122575"
+   },
+   {
+     "name": "Suplementy wspierające układ nerwowy",
+     "id": "b92bf951-8703-4fc9-8444-2c5e88ca5219",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/suplementy-diety-pamiec-uklad-nerwowy-122568"
+   },
+   {
+     "name": "Leki na alergię bez recepty",
+     "id": "a981481b-850d-44c4-92f6-121f0b8ba5f9",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-alergia-122433"
+   },
+   {
+     "name": "Leki na cukrzycę",
+     "id": "122b7f6a-24d1-453d-8698-9457e02d3c73",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-cukrzyca-122434"
+   },
+   {
+     "name": "Leki homeopatyczne",
+     "id": "16d1c837-6112-4a4f-a154-1919c606f8b3",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-homeopatia-122448"
+   },
+   {
+     "name": "Leki przeciwbólowe bez recepty",
+     "id": "8e6b8a82-2a54-4f4f-b195-37f3add22a30",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-przeciwbolowe-122464"
+   },
+   {
+     "name": "Leki na przeziębienie i grypę",
+     "id": "5bc21704-c089-42d9-b364-6da17bb2fc33",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-przeziebienie-grypa-122465"
+   },
+   {
+     "name": "Leki dla kobiet w ciąży",
+     "id": "ccd0d269-449c-4b4e-9843-96e4bf455851",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-dla-mam-i-kobiet-w-ciazy-122443"
+   },
+   {
+     "name": "Leki uspokajające",
+     "id": "b359140d-71e5-4c38-8d7d-a34271098288",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/pamiec-uklad-nerwowy-nasenne-uspokajajace-122454"
+   },
+   {
+     "name": "Rzucanie palenia",
+     "id": "f7ab45d9-0e25-4660-8c20-df63707d8b39",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-rzucanie-palenia-122472"
+   },
+   {
+     "name": "Leki na zatoki",
+     "id": "0f1e6b7c-3b0c-46ca-a2f1-a67321001158",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/leki-bez-recepty-nos-i-uszy-122450"
+   },
+   {
+     "name": "Leki na wątrobę",
+     "id": "12d7684e-09f4-41a7-8e97-d761499abd25",
+     "parentId": "427d7aef-bb8f-410d-ab8e-fe232fbe6f52",
+     "url": "https://allegro.pl/kategoria/uklad-pokarmowy-watroba-122493"
+   },
+   {
+     "name": "Kultura i rozrywka",
+     "id": "996cc60e-d871-4a9a-8f7b-bdf5bd312e6f"
+   },
+   {
+     "name": "Hyperion, Dan Simmons",
+     "id": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "parentId": "996cc60e-d871-4a9a-8f7b-bdf5bd312e6f",
+     "url": "https://allegro.pl/produkt/hyperion-dan-simmons-wojciech-szypula-2c47b7e9-2991-460c-8d6c-c316f08cedc3"
+   },
+   {
+     "name": "Książki Kubuś Puchatek",
+     "id": "e07776f6-6136-4061-9979-bc66f7a73ff2",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781?string=kubuś%20puchatek"
+   },
+   {
+     "name": "Elon Musk biografia",
+     "id": "8337aa00-7a14-4133-87ed-e70cb0594c02",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/produkt/elon-musk-biografia-tworcy-paypala-tesli-spacex-ashlee-vance-0ae41cc1-f628-418a-999d-ef1ea7524fe2"
+   },
+   {
+     "name": "Gravity Falls",
+     "id": "34cfe010-ec3c-4127-a373-f0601f1fd02d",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-obcojezyczne-91459?string=gravity%20falls"
+   },
+   {
+     "name": "Książki kucharskie",
+     "id": "5b8f31ba-4d24-4cfc-a2db-16a9a1cc59c4",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-kuchnia-potrawy-79205"
+   },
+   {
+     "name": "Tarot",
+     "id": "4d2ba3f5-7b92-496e-adbb-bacd96599b2c",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193?string=tarot"
+   },
+   {
+     "name": "Rok z Ewą Chodakowską",
+     "id": "cc1f6aad-91c7-4001-aff5-23442349be9e",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193?string=rok%20z%20ewa%20chodakowska"
+   },
+   {
+     "name": "Pierwszy rok życia dziecka",
+     "id": "c6814906-a738-4254-92eb-ba8061e2bed4",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193?string=pierwszy%20rok%20%C5%BCycia%20dziecka"
+   },
+   {
+     "name": "Książki do nauki prawa jazdy",
+     "id": "2cb0d7ab-0794-4bdf-9714-6a3d491c1054",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193?string=prawo%20jazdy"
+   },
+   {
+     "name": "Poradniki o psach",
+     "id": "b8c2802d-bdc1-41da-969f-4b8c0f4da5b9",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193?string=pies"
+   },
+   {
+     "name": "Trylogia Millenium",
+     "id": "c82de2eb-2905-4797-a027-8d33d808b2ed",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=Trylogia%20Millennium"
+   },
+   {
+     "name": "Chata, Young",
+     "id": "20a1078b-b9e7-4023-803b-59fab32e1907",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=Chata%20Young"
+   },
+   {
+     "name": "Książki Mikołajek",
+     "id": "dc06de75-bad5-48c2-bf11-c9d2d198fd91",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781?string=Mikołajek"
+   },
+   {
+     "name": "Książki Minecraft",
+     "id": "1e1f21b0-0950-40af-a48f-c3604789f96b",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=minecraft"
+   },
+   {
+     "name": "Książki Więzień Labiryntu",
+     "id": "48873b70-6a6b-45c6-9902-ab3e354b6ab1",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/listing?string=James%20Dashner%20Więzień%20Labiryntu"
+   },
+   {
+     "name": "Książki Hobbit",
+     "id": "880d31b6-af1b-4028-baad-21dcf903d2e5",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=hobbit"
+   },
+   {
+     "name": "Książki Igrzyska Śmierci",
+     "id": "03c60861-6826-49d3-8bbe-d0d6b7a177f0",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=Igrzyska"
+   },
+   {
+     "name": "Książki Opowieści z Narnii",
+     "id": "ed20dac5-d2c1-4de4-98fb-491005798796",
+     "parentId": "1ea43c5f-7249-4b6d-99bf-1ecfaf00be66",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781?string=Opowieści%20z%20Narnii"
+   },
+   {
+     "name": "Książki i komiksy",
+     "id": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22"
+   },
+   {
+     "name": "Audiobooki MP3",
+     "id": "af639a4f-cd6b-4e8e-b227-2fe74cacdb92",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/audiobooki-mp3-253753"
+   },
+   {
+     "name": "Literatura piękna, popularna, faktu",
+     "id": "21bc8b7e-f3fe-4873-8c50-03fdfe233732",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/literatura-piekna-popularna-i-faktu-79153"
+   },
+   {
+     "name": "Książki naukowe i popularnonaukowe",
+     "id": "81d82f75-de70-46f6-8f1f-b5a5d7d6efa3",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-naukowe-i-popularnonaukowe-79455"
+   },
+   {
+     "name": "Książki dla dzieci",
+     "id": "b7c29485-16ad-4e8d-918b-dc1f8f77a5b3",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781"
+   },
+   {
+     "name": "Książki do nauki języka obcego",
+     "id": "07b93bb8-63fb-4c4d-a943-f3768d019f1c",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-do-nauki-jezyka-obcego-66794"
+   },
+   {
+     "name": "Książki obcojęzyczne",
+     "id": "641adc11-d38d-4544-878e-08d5ee8ba605",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-obcojezyczne-91459"
+   },
+   {
+     "name": "Mapy, przewodniki i książki podróżnicze",
+     "id": "234d6160-085d-4bb9-b8c7-4c097149a521",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/mapy-przewodniki-ksiazki-podroznicze-79420"
+   },
+   {
+     "name": "Poradniki i albumy",
+     "id": "9130a6bd-a550-4248-a42a-a29705adc0d6",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/poradniki-i-albumy-79193"
+   },
+   {
+     "name": "Czasopisma",
+     "id": "df8c5e23-3673-4aff-8925-9bef6d733a29",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/czasopisma-118"
+   },
+   {
+     "name": "Komiksy",
+     "id": "7a550528-6535-48bf-8ba0-1dd74a5171ca",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413"
+   },
+   {
+     "name": "Podręczniki szkolne",
+     "id": "72ae9cc9-e6e5-4e31-a3cb-a39ce1ad7bec",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/podreczniki-do-szkol-podst-i-srednich-66820"
+   },
+   {
+     "name": "Audiobooki CD",
+     "id": "c0d0ddff-5b87-4693-814b-b19d5eed2582",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/audiobooki-cd-66813"
+   },
+   {
+     "name": "Ebooki",
+     "id": "fc286a89-c196-4b6c-b908-8f7734c6d9c2",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ebooki-5893"
+   },
+   {
+     "name": "Kalendarze",
+     "id": "e6feea82-c4ef-4afa-a870-3156cb1e5a7e",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/kalendarze-gadzety-i-akcesoria-28496"
+   },
+   {
+     "name": "Książki Harry Potter",
+     "id": "c3dbf26b-39ae-4137-8458-66416163c28a",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=harry%20potter"
+   },
+   {
+     "name": "Książki Wiedźmin",
+     "id": "4c0f705a-384b-4cc4-84cb-eb1c96c17c6f",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=wied%C5%BAmin"
+   },
+   {
+     "name": "Biblia",
+     "id": "bcfe5ec9-60ad-41bc-8d8d-8408b886f89c",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=biblia"
+   },
+   {
+     "name": "Książki Ciemniejsza Strona Greya",
+     "id": "c52eba81-3658-4e6b-8712-f2ecdf63828f",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/produkt/mroczniej-ciemniejsza-strona-greya-oczami-christiana-el-james-fd347acf-4f9c-4f84-ba3b-f3bc662317ab"
+   },
+   {
+     "name": "Książki Gra o Tron",
+     "id": "39d76694-e631-4292-a39c-a03f3e842eee",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-i-komiksy?string=gra%20o%20tron"
+   },
+   {
+     "name": "Komiksy Batman",
+     "id": "715267a2-0b37-416f-8962-f16032b4be0f",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413?string=batman"
+   },
+   {
+     "name": "Pan Tadeusz, Adam Mickiewicz",
+     "id": "eae0172a-d9fa-4eca-ab4e-561c83b7736f",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/produkt/pan-tadeusz-adam-mickiewicz-7b923f63-eedc-4866-b2a2-f8ead5441e11"
+   },
+   {
+     "name": "Komiksy Marvel",
+     "id": "cf68d4fd-442e-407c-99d7-4bb9156a9ac7",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413?string=marvel"
+   },
+   {
+     "name": "Komiksy Tytus, Romek i Atomek",
+     "id": "9f15a089-c438-411d-b09c-b03ce32062f9",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413?string=tytus%20romek%20i%20atomek"
+   },
+   {
+     "name": "Komiksy Kajko i Kokosz",
+     "id": "a01137a9-a9a0-4933-a16f-fb54a8171661",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413?string=kajko%20i%20kokosz"
+   },
+   {
+     "name": "Manga",
+     "id": "28135e31-438e-4665-a140-c568739b9acc",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/komiksy-79413?string=manga"
+   },
+   {
+     "name": "Książki Star Wars",
+     "id": "b543955a-fb2e-4c6a-9ec4-1b1f65ff37a5",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/literatura-piekna-popularna-i-faktu-79153?string=star%20wars"
+   },
+   {
+     "name": "Książki Fantasy",
+     "id": "d61a98da-3716-4ba9-9288-597ee991d985",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/literatura-piekna-popularna-i-faktu-fantasy-79156"
+   },
+   {
+     "name": "Ciasta Siostry Anastazji",
+     "id": "d28f2f0c-54f2-4cc4-9c54-2d46e4ea658c",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/produkt/wielka-ksiega-ciast-siostry-anastazji-anastazja-pustelnik-e9e5b0f6-d259-427e-89e8-18d69141baec"
+   },
+   {
+     "name": "Elementarze",
+     "id": "715a5dda-fad2-4f41-8410-3ad3a66a45bf",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781?string=elementarz"
+   },
+   {
+     "name": "Książki Kicia Kocia",
+     "id": "0f9917e3-5050-4013-986d-020bdb343622",
+     "parentId": "67fd4ebf-36bc-4e3e-a635-7e6f84265f22",
+     "url": "https://allegro.pl/kategoria/ksiazki-dla-dzieci-66781?string=kicia%20kocia"
+   },
+   {
+     "name": "Kody, doładowania i bilety",
+     "id": "5429908d-7845-419f-a1e8-eecc82eec151"
+   },
+   {
+     "name": "Bilety",
+     "id": "df63333c-42ac-43f0-8903-90b083c0036e",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/bilety-258044"
+   },
+   {
+     "name": "Kupony i vouchery",
+     "id": "55e37915-6360-4791-a09a-cdf7d34236c2",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/kupony-vouchery-121172"
+   },
+   {
+     "name": "Opaski identyfikacyjne imprezowe",
+     "id": "3c1a31b4-c576-44d0-834b-6c99147747bc",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/opaski-258045"
+   },
+   {
+     "name": "Kody i doładowania do gier",
+     "id": "2e73552e-dffe-4cd4-ab78-75265ab50e8d",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/gry-258092"
+   },
+   {
+     "name": "Kody i doładowania do muzyki online",
+     "id": "5e53169e-cce3-4a6b-91e9-7f0fd8f248d7",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/muzyka-258094"
+   },
+   {
+     "name": "Karty podarunkowe",
+     "id": "4beffae1-f277-4e1d-8b1e-851177dc7257",
+     "parentId": "5429908d-7845-419f-a1e8-eecc82eec151",
+     "url": "https://allegro.pl/kategoria/karty-podarunkowe-258107"
+   },
+   {
+     "name": "Sport i turystyka",
+     "id": "3ba02a69-5bd7-462c-8456-131502727aa8"
+   },
+   {
+     "name": "Siłownia i fitness",
+     "id": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee"
+   },
+   {
+     "name": "Trening fitness",
+     "id": "f3fc8e02-3f81-4126-999e-b3f36c0874d6",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-trening-fitness-110132"
+   },
+   {
+     "name": "Rowery stacjonarne",
+     "id": "a07a05d7-53f2-46c1-949a-84736e4735de",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-rowery-treningowe-110140"
+   },
+   {
+     "name": "Taśmy i gumy do ćwiczeń",
+     "id": "ad74e584-1413-4e4e-a907-8c1f9be0fca8",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-tasmy-i-gumy-do-cwiczen-110161"
+   },
+   {
+     "name": "Bieżnie",
+     "id": "775a5c1a-7626-4361-b96c-5f051246e455",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-bieznie-110133"
+   },
+   {
+     "name": "Orbitreki",
+     "id": "d1daa418-f664-4470-80d2-77cac63409a4",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-orbitreki-110138"
+   },
+   {
+     "name": "Maty do ćwiczeń",
+     "id": "82abc2b6-e220-4c2b-9001-e8c676ba2f59",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-maty-110136"
+   },
+   {
+     "name": "Piłki do ćwiczeń",
+     "id": "98050d89-f16d-4d90-b149-56d997ad7a9c",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-pilki-do-cwiczen-110139"
+   },
+   {
+     "name": "Rollery i wałki do masażu",
+     "id": "c9053f02-27c8-442a-9203-87ff1e612864",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-rollery-walki-kolka-i-pileczki-do-masazu-147564"
+   },
+   {
+     "name": "Steppery do ćwiczeń",
+     "id": "e3911665-721c-474e-94ca-5a9fdcc51e1c",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-stepy-i-steppery-110141"
+   },
+   {
+     "name": "Masażery i platformy wibracyjne",
+     "id": "ff6f5ed8-793a-423f-9b2b-6c78e9cdd98b",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-masazery-i-platformy-wibracyjne-110135"
+   },
+   {
+     "name": "Hantelki",
+     "id": "5dda2d31-04bc-465d-95ce-842d3fcea838",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-hantelki-110134"
+   },
+   {
+     "name": "Skakanki do ćwiczeń",
+     "id": "bd0b60b2-3b43-4176-b422-8c0be765da2e",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-fitness-skakanki-110159"
+   },
+   {
+     "name": "Trening siłowy",
+     "id": "6c9accfb-1145-4fb9-a74c-d62ff986f4fd",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-trening-silowy-110145"
+   },
+   {
+     "name": "Drążki i poręcze",
+     "id": "6fd801b5-5707-42f4-92e0-910535f5dbb0",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-silowy-drazki-i-porecze-110147"
+   },
+   {
+     "name": "Hantle",
+     "id": "07b53fa4-169d-49da-a4ea-30414d16aa84",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-silowy-hantle-110148"
+   },
+   {
+     "name": "Atlasy",
+     "id": "430f7768-3f02-458f-904d-400e5738ad34",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-silowy-atlasy-110146"
+   },
+   {
+     "name": "Sztangi",
+     "id": "37654e57-2773-4b90-a784-5827004aa016",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-silowy-sztangi-110153"
+   },
+   {
+     "name": "Ławki do ćwiczeń",
+     "id": "16ac7e09-b4be-44c4-9c98-95fb222c94aa",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/trening-silowy-lawki-110150"
+   },
+   {
+     "name": "Suplementy i odżywki dla sportowców",
+     "id": "09951be2-74cd-4be4-bf03-554924625c90",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-suplementy-i-odzywki-19655"
+   },
+   {
+     "name": "Węglowodany",
+     "id": "b4679705-7c6c-454e-ade5-bb39b091da61",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/suplementy-i-odzywki-weglowodany-19665"
+   },
+   {
+     "name": "Odżywki białkowe",
+     "id": "5043bf59-5deb-4883-b5ca-a6a566e775b6",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/suplementy-i-odzywki-odzywki-bialkowe-19662"
+   },
+   {
+     "name": "Odzież treningowa",
+     "id": "bccb48ca-928f-4bdf-aade-920b85c3ef38",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-odziez-19633"
+   },
+   {
+     "name": "Buty na siłownię i fitness",
+     "id": "64f01a66-b4cf-4a02-b8a1-6d56d7a08037",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-obuwie-256132"
+   },
+   {
+     "name": "Akcesoria treningowe",
+     "id": "edf19af0-e30b-47a1-83ae-0c8d74248bde",
+     "parentId": "d6c3ab2c-fe44-46bf-8881-30bdb3c787ee",
+     "url": "https://allegro.pl/kategoria/silownia-i-fitness-akcesoria-treningowe-147581"
+   },
+   {
+     "name": "Turystyka",
+     "id": "8355b632-6ebd-4df7-9dba-cedfe9334b8f"
+   },
+   {
+     "name": "Maty samopompujące",
+     "id": "38236f07-d2e9-4135-b8c5-1837ae9c4839",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/spiwory-materace-i-karimaty-maty-samopompujace-258212"
+   },
+   {
+     "name": "Namioty i akcesoria",
+     "id": "4f4bcffb-9656-4045-a86d-9d3c62e09242",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/turystyka-namioty-i-akcesoria-102857"
+   },
+   {
+     "name": "Buty turystyczne",
+     "id": "6f8ce342-4530-430b-a2b9-a8b3f808a86c",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/turystyka-obuwie-112282"
+   },
+   {
+     "name": "Namioty turystyczne",
+     "id": "bd524bda-3869-4b46-9cd4-f821d83f8860",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/namioty-i-akcesoria-namioty-257528?rodzaj=Turystyczne"
+   },
+   {
+     "name": "Hamaki",
+     "id": "4f92ebe8-706e-44a0-ad72-31ced198820e",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/meble-turystyczne-hamaki-147862"
+   },
+   {
+     "name": "Krzesła turystyczne",
+     "id": "a0d0cb03-b237-47f7-995f-d40b3e682c8a",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/meble-turystyczne-krzesla-147858"
+   },
+   {
+     "name": "Stoły turystyczne",
+     "id": "1de7bc69-1f9e-4e88-b531-4979d8607f61",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/meble-turystyczne-stoly-147859"
+   },
+   {
+     "name": "Pontony i łodzie",
+     "id": "532f98ee-493e-4cf5-b645-0020593d5534",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/turystyka-pontony-i-lodzie-102859"
+   },
+   {
+     "name": "Plecaki turystyczne",
+     "id": "8bd75f02-6d71-49c1-82ad-4fca50c7dee1",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/turystyka-plecaki-102858"
+   },
+   {
+     "name": "Plecaki miejskie",
+     "id": "4cb643ba-ff50-44d0-85d8-8857a7ea5653",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/plecaki-miejskie-147828"
+   },
+   {
+     "name": "Plecaki wojskowe, taktyczne",
+     "id": "9473ef0d-ab8c-400d-a1f5-c0a006ed4fb3",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/plecaki-wojskowe-taktyczne-148382"
+   },
+   {
+     "name": "Śpiwory",
+     "id": "4f75bf23-b6d7-4f24-a18e-1e68928edb13",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/spiwory-materace-i-karimaty-spiwory-257897"
+   },
+   {
+     "name": "Kije trekkingowe",
+     "id": "934fc3be-b798-4421-878c-5febd6abbe80",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/akcesoria-turystyczne-kije-trekkingowe-147865"
+   },
+   {
+     "name": "Kuchenki turystyczne",
+     "id": "c212a965-9a90-478d-a0ac-2ba3f6a768bb",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/kuchnia-turystyczna-kuchenki-turystyczne-258173"
+   },
+   {
+     "name": "Lodówki turystyczne",
+     "id": "4854eb00-7495-4d69-bc01-5093060791a1",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/kuchnia-turystyczna-lodowki-turystyczne-258175"
+   },
+   {
+     "name": "Naczynia turystyczne",
+     "id": "1d0cb57b-3feb-4453-a0bf-f5ee9c3ca0eb",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/kuchnia-turystyczna-naczynia-258177"
+   },
+   {
+     "name": "Saperki",
+     "id": "fbc0a944-226d-4f22-bf53-44617455b769",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/noze-scyzoryki-i-multitoole-saperki-258196"
+   },
+   {
+     "name": "Toalety turystyczne",
+     "id": "57849fcc-ed45-4c79-95c9-c7f5bb599a79",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/higiena-toalety-turystyczne-258169"
+   },
+   {
+     "name": "Materace dmuchane",
+     "id": "ef7d3dc6-81ab-4871-bbe0-f70320910bf6",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/na-plaze-na-piknik-materace-plazowe-i-akcesoria-dmuchane-258186"
+   },
+   {
+     "name": "Latarki i lampy turystyczne",
+     "id": "1b7ee13e-f17f-4272-8cb3-dee808863da2",
+     "parentId": "8355b632-6ebd-4df7-9dba-cedfe9334b8f",
+     "url": "https://allegro.pl/kategoria/turystyka-latarki-i-lampy-258148"
+   },
+   {
+     "name": "Akcesoria sportowe",
+     "id": "8077b6d6-018f-48a7-8a7e-08efe2206c91"
+   },
+   {
+     "name": "Sprzęt do biegania",
+     "id": "3f41e489-b51d-4b64-951b-011c64b47891",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/bieganie-147262"
+   },
+   {
+     "name": "Piłka nożna - sprzęt i akcesoria",
+     "id": "abcc9e02-2476-4259-9c06-9a9fcfa5ae63",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-druzynowe-pilka-nozna-13372"
+   },
+   {
+     "name": "Koszykówka - sprzęt",
+     "id": "2057d365-1e9c-43ee-9f74-b6a2a1ca9bb2",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-druzynowe-koszykowka-13371"
+   },
+   {
+     "name": "Siatkówka - sprzęt",
+     "id": "0eebc25e-90bc-4c02-83ab-eeb6d4548de6",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-druzynowe-siatkowka-13375"
+   },
+   {
+     "name": "Kije trekkingowe",
+     "id": "993da208-c583-4d4b-80cd-9eb1ca7d111b",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/akcesoria-turystyczne-kije-trekkingowe-147865"
+   },
+   {
+     "name": "Sporty walki - sprzęt i akcesoria",
+     "id": "e5f72425-3347-47cc-97e5-7bb893a84a60",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-walki-13522"
+   },
+   {
+     "name": "Hokej i unihokej - sprzęt",
+     "id": "08ed65c5-b548-4c1d-b105-f4a8ecfeb6df",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-druzynowe-hokej-i-unihokej-16652"
+   },
+   {
+     "name": "Sprzęt jeździecki",
+     "id": "f193e599-ad0f-4dbb-9e73-a990837ad957",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-towarzyskie-i-rekreacja-jezdziectwo-112302"
+   },
+   {
+     "name": "Piłkarzyki",
+     "id": "22c01da1-c6d5-4b13-82e3-d0a12d0f4a49",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-towarzyskie-i-rekreacja-pilkarzyki-52970"
+   },
+   {
+     "name": "Tenis ziemny - sprzęt",
+     "id": "e0b519df-97cf-4912-95dc-f14a6cbd4bc6",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/tenis-i-pokrewne-tenis-ziemny-13643"
+   },
+   {
+     "name": "Badminton - sprzęt",
+     "id": "c68d5911-c87e-44b5-af11-5e99c4ba0327",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/tenis-i-pokrewne-badminton-13640"
+   },
+   {
+     "name": "Sprzęt wspinaczkowy",
+     "id": "549610a4-5425-46ac-8fca-c6ed246aa85b",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/wspinaczka-sprzet-wspinaczkowy-112271"
+   },
+   {
+     "name": "Sprzęt jaskiniowy",
+     "id": "76b454ba-8738-4b84-9389-3135988f5e29",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/wspinaczka-sprzet-jaskiniowy-148084"
+   },
+   {
+     "name": "Rolki",
+     "id": "a1eb9bca-13a9-4800-94b0-ff749722b4c2",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/skating-slackline-rolki-260629"
+   },
+   {
+     "name": "Deskorolki",
+     "id": "caa09205-1de2-4189-9dc3-bcd05c4ab592",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/skating-slackline-deskorolki-148303"
+   },
+   {
+     "name": "Hulajnogi",
+     "id": "16481ba8-48f8-4ef2-968e-ea4ca85ea505",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/skating-slackline-hulajnogi-148305"
+   },
+   {
+     "name": "Hulajnogi elektryczne",
+     "id": "857c355e-7e20-4756-aed9-e083b36f07bc",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/skating-slackline-hulajnogi-elektryczne-260628"
+   },
+   {
+     "name": "Sprzęt do nurkowania",
+     "id": "1cef9d07-5973-4789-b28d-8998e57f4f55",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-wodne-nurkowanie-13539"
+   },
+   {
+     "name": "Sprzęt do pływania",
+     "id": "3baca61d-ddd2-4b55-869a-169d1b80b4e4",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-wodne-plywanie-13540"
+   },
+   {
+     "name": "Sprzęt kajakarski",
+     "id": "ff192253-d5f1-4326-9996-7af1efdd8828",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-wodne-kajakarstwo-13537"
+   },
+   {
+     "name": "Sprzęt żeglarski",
+     "id": "d95e6d68-ba7e-4d15-b778-f20c0eefd392",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-wodne-zeglarstwo-13542"
+   },
+   {
+     "name": "Nordic walking - sprzęt i akcesoria",
+     "id": "1b67e202-1f4c-4e2d-a3ca-bdbd6cbfa23d",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-towarzyskie-i-rekreacja-nordic-walking-16527"
+   },
+   {
+     "name": "Elektronika sportowa",
+     "id": "efdb67af-bc5e-49a8-885d-39b32636d0b2",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/elektronika-sportowa-252782"
+   },
+   {
+     "name": "Akcesoria kibica",
+     "id": "784dbbd9-024a-42fc-a5ee-0531fbf7817d",
+     "parentId": "8077b6d6-018f-48a7-8a7e-08efe2206c91",
+     "url": "https://allegro.pl/kategoria/sporty-druzynowe-dla-kibicow-124058"
+   },
+   {
+     "name": "Rowery i akcesoria",
+     "id": "d9adfd7d-9353-488f-8d09-e9a1f9b527af"
+   },
+   {
+     "name": "Rowery damskie",
+     "id": "8cc6ae94-cf5e-4509-a80b-e16726d8e6ae",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-i-akcesoria-rowery-16420?plec=kobieta"
+   },
+   {
+     "name": "Rowery górskie",
+     "id": "53eda5be-d39f-48d3-8aa7-3d6dcee20d96",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-mtb-gorskie-16483"
+   },
+   {
+     "name": "Rowery miejskie",
+     "id": "3cc29d4f-988e-4fe4-a5b9-20e295cce8bf",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-miejskie-16482"
+   },
+   {
+     "name": "Rowery elektryczne",
+     "id": "e0a0cfe3-4738-44d8-beea-4e6c2431905a",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-elektryczne-125056"
+   },
+   {
+     "name": "Rowery trekkingowe",
+     "id": "dd26513b-c919-4c0a-9b91-b3a011ab721a",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-trekkingowe-16485"
+   },
+   {
+     "name": "Rowery crossowe",
+     "id": "9544f12a-5b51-488a-b7d2-ebd63a2fa6d9",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-crossowe-125055"
+   },
+   {
+     "name": "Rowery szosowe",
+     "id": "2e2986f1-ac22-4351-bf1b-14da0bcfa99d",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-szosowe-16484"
+   },
+   {
+     "name": "Bagażniki, koszyki rowerowe i inne",
+     "id": "4363fb71-14a9-4057-8a14-eda74602b8ea",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-sprzet-bagazowy-98847"
+   },
+   {
+     "name": "Foteliki rowerowe",
+     "id": "44526b1f-5f58-4650-b282-9cc3568224dd",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-foteliki-rowerowe-16425"
+   },
+   {
+     "name": "Liczniki rowerowe",
+     "id": "1ffc0f47-ea35-4930-afd5-2589dc5222a9",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-liczniki-rowerowe-16426"
+   },
+   {
+     "name": "Lampki rowerowe",
+     "id": "c91986b0-cb11-4c80-ad75-20789e04cd13",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-oswietlenie-rowerowe-16427"
+   },
+   {
+     "name": "Przyczepki rowerowe",
+     "id": "3aa54b3b-39ac-460e-8bf0-39b2bc16d666",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-przyczepki-rowerowe-98846"
+   },
+   {
+     "name": "Zabezpieczenia rowerowe",
+     "id": "0da89642-5079-4aa5-be30-053aca8f92ed",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/akcesoria-zabezpieczenia-rowerowe-16430"
+   },
+   {
+     "name": "Kaski rowerowe",
+     "id": "df63b308-b7c5-4577-85b8-9580424d2276",
+     "parentId": "d9adfd7d-9353-488f-8d09-e9a1f9b527af",
+     "url": "https://allegro.pl/kategoria/rowery-i-akcesoria-kaski-110163"
+   },
+   {
+     "name": "Wędkarstwo",
+     "id": "a316930b-4416-4fa0-ad80-6175bda8c8e1"
+   },
+   {
+     "name": "Wędki",
+     "id": "725b54a8-9e60-4d9e-a870-e062fc3977bd",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-wedziska-132195"
+   },
+   {
+     "name": "Kołowrotki",
+     "id": "4330c8f5-e3c3-4f5f-b4f2-df162588effc",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-kolowrotki-132187"
+   },
+   {
+     "name": "Torby, pojemniki, krzesełka wędkarskie",
+     "id": "f8f24538-db47-4713-ad74-28031095305f",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-torby-pojemniki-krzeselka-121727"
+   },
+   {
+     "name": "Sprzęt elektroniczny dla wędkarzy",
+     "id": "6f7ef76b-28e1-41ee-814c-bc9c28b088c6",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-sprzet-elektroniczny-132208"
+   },
+   {
+     "name": "Akcesoria wędkarskie",
+     "id": "1623e1fc-1403-497d-b653-79a6f03e3ba4",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-akcesoria-wedkarskie-121725"
+   },
+   {
+     "name": "Zanęty",
+     "id": "c2471e50-0b35-473a-8375-98b5c2172973",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-zanety-121730"
+   },
+   {
+     "name": "Przynęty sztuczne",
+     "id": "bd429f63-8561-4239-ad0b-ec2aa4c68cf8",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/przynety-sztuczne-121771"
+   },
+   {
+     "name": "Przynęty naturalne",
+     "id": "da812efc-61e6-4743-b22f-cab39323fdea",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/przynety-naturalne-121770"
+   },
+   {
+     "name": "Buty wędkarskie",
+     "id": "3fc07e06-1771-4ce9-9abb-5eb7b4d68af2",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-obuwie-256136"
+   },
+   {
+     "name": "Odzież wędkarska",
+     "id": "d6dfe1ef-1c9f-49e5-ae08-d1b799a290bc",
+     "parentId": "a316930b-4416-4fa0-ad80-6175bda8c8e1",
+     "url": "https://allegro.pl/kategoria/wedkarstwo-odziez-121728"
+   },
+   {
+     "name": "Militaria",
+     "id": "64afaf49-478e-4858-a934-2d739b391014"
+   },
+   {
+     "name": "Wiatrówki",
+     "id": "4e9b790f-a62a-42a6-87e8-2b164dc1f043",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-wiatrowki-253883"
+   },
+   {
+     "name": "ASG",
+     "id": "00afb51d-366c-4932-9113-5f7790f9c425",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-asg-253882"
+   },
+   {
+     "name": "Sprzęt do samoobrony",
+     "id": "15ad935c-4b83-4db5-8923-ce3b4d95e040",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-samoobrona-253956"
+   },
+   {
+     "name": "Myślistwo",
+     "id": "5c3808b6-dd63-4554-a53d-d0ff9c2ce87c",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-myslistwo-253944"
+   },
+   {
+     "name": "Noże i maczety",
+     "id": "0c7dab01-48ba-4664-8575-f8aa0b6a4fbf",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-noze-maczety-253949"
+   },
+   {
+     "name": "Optyka myśliwska",
+     "id": "4479dcbe-7e32-4330-b8c4-6c28505d4721",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-optyka-253907"
+   },
+   {
+     "name": "Łucznictwo",
+     "id": "45f61eab-82f5-44e5-a1a2-c20fe016a91e",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-lucznictwo-253927"
+   },
+   {
+     "name": "Odzież wojskowa",
+     "id": "755564cc-c332-4112-82a0-ae0dbaf95cf9",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-odziez-253919"
+   },
+   {
+     "name": "Buty wojskowe",
+     "id": "6c93b598-35af-49f9-b424-948affb5a9cf",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-obuwie-256131"
+   },
+   {
+     "name": "Paintball - akcesoria",
+     "id": "3b0215f6-1c5a-4779-a86c-dc2d117769b8",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-paintball-253955"
+   },
+   {
+     "name": "Akcesoria ochronne",
+     "id": "01b05ddb-8e47-4a57-bbe7-cb536ef6fe2d",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-akcesoria-ochronne-253957"
+   },
+   {
+     "name": "Proce i dmuchawki",
+     "id": "92cba885-e722-4240-843b-ef195178e307",
+     "parentId": "64afaf49-478e-4858-a934-2d739b391014",
+     "url": "https://allegro.pl/kategoria/militaria-proce-i-dmuchawki-253950"
+   },
+   {
+     "name": "Motoryzacja",
+     "id": "f228d8bc-5621-44e9-8a0e-f95d8745ab5e"
+   },
+   {
+     "name": "Części Zobacz wszystkie w kategorii Części",
+     "id": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "parentId": "f228d8bc-5621-44e9-8a0e-f95d8745ab5e"
+   },
+   {
+     "name": "Klocki hamulcowe",
+     "id": "f043ed21-a1ab-4498-92a6-2426ccd504c2",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/hamulce-tarczowe-klocki-hamulcowe-250405"
+   },
+   {
+     "name": "Amortyzatory",
+     "id": "cdaae49c-5a7b-40a2-b5c8-7975f08d7b6b",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/amortyzatory-i-elementy-amortyzatory-19063"
+   },
+   {
+     "name": "Kompletne rozrządy",
+     "id": "ca73b576-e815-4118-adec-6856094205c1",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/rozrzad-kompletne-rozrzady-50844"
+   },
+   {
+     "name": "Zderzaki",
+     "id": "a27585e9-af1e-427d-ba51-64fb5043faee",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-czesci-karoserii-4094"
+   },
+   {
+     "name": "Błotniki",
+     "id": "436d31b7-4e1f-4c76-9356-3196ae92e97c",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-karoserii-blotniki-254682"
+   },
+   {
+     "name": "Grille (atrapy chłodnicy)",
+     "id": "1b0b5297-563b-4bb8-92bc-3e05d4b42836",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-karoserii-maski-254558"
+   },
+   {
+     "name": "Maski samochodowe",
+     "id": "d52d6360-1919-44eb-a496-dd752b7324fc",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-karoserii-maski-254558"
+   },
+   {
+     "name": "Szyby samochodowe",
+     "id": "87b83a95-a419-4b09-944b-0c8369143841",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-karoserii-szyby-4101"
+   },
+   {
+     "name": "Lusterka zewnętrzne",
+     "id": "8941fd38-7d91-4e6e-a9ba-faf25bac48c6",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-karoserii-lusterka-zewnetrzne-4099"
+   },
+   {
+     "name": "Filtry samochodowe",
+     "id": "2cc17b47-094c-4995-a8ce-8b34d764f625",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-filtry-49236"
+   },
+   {
+     "name": "Oświetlenie samochodowe",
+     "id": "227502c2-9c5c-4a8e-8ed6-0a0391ff80eb",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-oswietlenie-623"
+   },
+   {
+     "name": "Osprzęt i części do silników",
+     "id": "832cfa83-5299-42c9-bd7d-5dbbba4e495e",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-silniki-i-osprzet-50821"
+   },
+   {
+     "name": "Części do układu chłodzenia silnika",
+     "id": "248cf753-19ce-44f3-952b-156f9c740c1c",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-chlodzenia-silnika-18689"
+   },
+   {
+     "name": "Części do układu elektrycznego i zapłonowego",
+     "id": "0a4d6b87-884a-4205-be6f-49219ce11ff9",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-elektryczny-zaplon-4141"
+   },
+   {
+     "name": "Części do układu hamulcowego",
+     "id": "961a848b-21bb-478c-867e-c29e5fcd4749",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-hamulcowy-18834"
+   },
+   {
+     "name": "Części do układu kierowniczego",
+     "id": "9bf2a4c6-3e25-4b61-ba8d-eef1c55de17c",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-kierowniczy-250842"
+   },
+   {
+     "name": "Części do układu klimatyzacji",
+     "id": "7463455a-2a5c-4440-9432-0077f55a91eb",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-klimatyzacji-49183"
+   },
+   {
+     "name": "Części do układu napędowego",
+     "id": "d992b3a0-a6b1-4be4-834e-2d357ecb2e6f",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-napedowy-50863"
+   },
+   {
+     "name": "Części do układu paliwowego",
+     "id": "7f7d9468-4940-4cf9-bb19-adff3fc9e84a",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-paliwowy-18844"
+   },
+   {
+     "name": "Części do układu wentylacji",
+     "id": "2cff7a78-5a0e-4dc4-b455-b1f336408d60",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-wentylacji-258677"
+   },
+   {
+     "name": "Części do układu wydechowego",
+     "id": "91bc392b-fe91-4e36-870c-c76d848cbc97",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-wydechowy-18862"
+   },
+   {
+     "name": "Części do układu zawieszenia",
+     "id": "6680b1fa-fa74-4b1f-8ca6-b04dd51eac04",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-uklad-zawieszenia-8683"
+   },
+   {
+     "name": "Wycieraczki i spryskiwacze",
+     "id": "aed9da11-5aa0-401e-a3bf-380fcc904de2",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-wycieraczki-i-spryskiwacze-254179"
+   },
+   {
+     "name": "Wyposażenie wnętrza",
+     "id": "75b63373-2b1e-409d-b24e-1bba9e8e19a1",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-wyposazenie-wnetrza-622"
+   },
+   {
+     "name": "Ogrzewanie postojowe i chłodnictwo samochodowe",
+     "id": "ecc69432-ba91-4362-8d79-27a2ce3e405d",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-ogrzewanie-postojowe-i-chlodnictwo-samochodowe-258669"
+   },
+   {
+     "name": "Tuning mechaniczny",
+     "id": "0716f2aa-643b-4916-8e10-6d458f4eb159",
+     "parentId": "0906f1ed-0c05-4870-8696-f1d5f6efa732",
+     "url": "https://allegro.pl/kategoria/czesci-samochodowe-tuning-mechaniczny-8695"
+   },
+   {
+     "name": "Ogłoszenia i usługi",
+     "id": "746d9d24-fc4d-43df-be1e-17fd9df89c43"
+   },
+   {
+     "name": "Nieruchomości",
+     "id": "9f56cade-49ca-43c6-b300-f2a0477eb83c"
+   },
+   {
+     "name": "Mieszkania na sprzedaż",
+     "id": "efeb0e17-7d29-4256-8876-f658bd648159",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mieszkania-na-sprzedaz-112739"
+   },
+   {
+     "name": "Mieszkania - Warszawa",
+     "id": "5ee8c077-a78d-4c4d-a5e8-661d8d45e70f",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mazowieckie-warszawa-116301"
+   },
+   {
+     "name": "Domy na sprzedaż",
+     "id": "4519e088-7b83-40fc-b6fe-d8a756b4ea63",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/domy-na-sprzedaz-112740"
+   },
+   {
+     "name": "Domy Warszawa",
+     "id": "175fbec3-a65f-42e3-af0c-07c34760892d",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mazowieckie-warszawa-115566"
+   },
+   {
+     "name": "Działki na sprzedaż",
+     "id": "3640df60-7be5-4843-978b-7589f181ff44",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/dzialki-na-sprzedaz-112741"
+   },
+   {
+     "name": "Działki - Wielkopolskie",
+     "id": "8dbe571a-f956-4008-a7df-8f801daa0213",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/dzialki-na-sprzedaz-wielkopolskie-114687"
+   },
+   {
+     "name": "Działki - Pow. poznański",
+     "id": "dad154c2-183c-49a9-8001-00898fa3911c",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/wielkopolskie-pow-poznanski-115037"
+   },
+   {
+     "name": "Działki - Zachodniopomorskie",
+     "id": "a1bba4f3-b3f7-4617-859e-10d1ee2e72fa",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/dzialki-na-sprzedaz-zachodniopomorskie-114688"
+   },
+   {
+     "name": "Lokale i obiekty użytkowe na sprzedaż",
+     "id": "1aca641f-cf74-44ae-bd61-a1e279e30285",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/lokale-i-obiekty-uzytkowe-na-sprzedaz-112742"
+   },
+   {
+     "name": "Mieszkania do wynajęcia",
+     "id": "b088a01f-cee9-4ef4-b071-48b257600b98",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mieszkania-do-wynajecia-112745"
+   },
+   {
+     "name": "Mieszkania do wynajęcia - Kraków",
+     "id": "caca624f-c15a-4d31-ab23-a997c27a8d02",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/malopolskie-krakow-117011"
+   },
+   {
+     "name": "Mieszkania do wynajęcia - Mazowieckie",
+     "id": "4a8880f3-5aa3-47b2-af08-0751fd96954a",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mieszkania-do-wynajecia-mazowieckie-116886"
+   },
+   {
+     "name": "Mieszkania do wynajęcia - Warszawa",
+     "id": "f895446a-4568-43a5-924f-1fef46463f6e",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/mazowieckie-warszawa-117037"
+   },
+   {
+     "name": "Domy do wynajęcia",
+     "id": "8fb550f6-dc23-48a5-9e35-b4c2fcdf7ee4",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/domy-do-wynajecia-112746"
+   },
+   {
+     "name": "Pokoje do wynajęcia",
+     "id": "5f841d1f-3dbd-4578-9f07-a5996968e64f",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/pokoje-do-wynajecia-112747"
+   },
+   {
+     "name": "Działki do wynajęcia",
+     "id": "6f2d5433-6642-4860-9b1b-fd343294983b",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/dzialki-do-wynajecia-112748"
+   },
+   {
+     "name": "Lokale i obiekty użytkowe do wynajęcia",
+     "id": "ed76caa0-c738-4064-8145-5e39381c5563",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/lokale-i-obiekty-uzytkowe-do-wynajecia-112749"
+   },
+   {
+     "name": "Magazyny i hale do wynajęcia",
+     "id": "a5b5c15a-a741-49c4-a8ef-178798048608",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/magazyny-i-hale-do-wynajecia-112750"
+   },
+   {
+     "name": "Zagraniczne na sprzedaż",
+     "id": "58a1375a-be4c-4804-8b51-0c6231821c5f",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/zagraniczne-na-sprzedaz-59277"
+   },
+   {
+     "name": "Projekty domów",
+     "id": "ccf6a09d-734f-4ae6-a81e-fe1194f432f6",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/projekty-domow-111694"
+   },
+   {
+     "name": "Gotowe domy bez działki",
+     "id": "87bd5de8-601c-49f5-9fd0-3dbdfd9bcbe3",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/gotowe-domy-bez-dzialki-111695"
+   },
+   {
+     "name": "Domy modułowe",
+     "id": "181ca51d-09bd-4ebf-b425-32c7d4eb179e",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/gotowe-domy-bez-dzialki-domy-modulowe-111714"
+   },
+   {
+     "name": "Domy z bali",
+     "id": "2b5da03c-0bf5-4c20-a3af-eaf108d05a11",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/gotowe-domy-bez-dzialki-domy-z-bali-111715"
+   },
+   {
+     "name": "Domy kanadyjskie",
+     "id": "17dd0a8e-38fe-4297-b1e1-243e6fd1e487",
+     "parentId": "9f56cade-49ca-43c6-b300-f2a0477eb83c",
+     "url": "https://allegro.pl/kategoria/gotowe-domy-bez-dzialki-domy-kanadyjskie-111716"
+   },
+   {
+     "name": "Usługi i inne",
+     "id": "0b394e82-229d-4895-b33e-ffefc798015d"
+   },
+   {
+     "name": "Budowa i remont",
+     "id": "177491c7-1064-4775-92e3-ac716194109d",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-budowa-i-remont-258974"
+   },
+   {
+     "name": "Fotografia i filmowanie",
+     "id": "1c8e5aa3-dccd-46ee-927e-fa9794063fdd",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-fotografia-i-filmowanie-258982"
+   },
+   {
+     "name": "Usługi kosmetyczne",
+     "id": "4f592b58-fcc3-47f9-9966-0bd719dbdc49",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-kosmetyka-258977"
+   },
+   {
+     "name": "Kursy i szkolenia",
+     "id": "c6dfba8a-ba88-4abe-a948-3e17136bb64f",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-kursy-i-szkolenia-259071"
+   },
+   {
+     "name": "Meble i szafy na wymiar",
+     "id": "b55a9c1c-0547-42ce-a1a1-627f3130050e",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-meble-na-wymiar-258973"
+   },
+   {
+     "name": "Obsługa imprez",
+     "id": "6e0dc3c9-cb71-406b-9b66-fc4cc52d4688",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-obsluga-imprez-258978"
+   },
+   {
+     "name": "Naprawa sprzętu elektronicznego",
+     "id": "d59d42a6-54a9-449e-99a0-8089b2e05ade",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-serwis-sprzetu-elektronicznego-258979"
+   },
+   {
+     "name": "Sprzątanie",
+     "id": "22680428-1c55-4084-93e5-691681ba9fd9",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-sprzatanie-258976"
+   },
+   {
+     "name": "Usługi informatyczne",
+     "id": "8033df2b-b04a-48ca-a0c8-7912fcd3269a",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-uslugi-informatyczne-258980"
+   },
+   {
+     "name": "Pomoc drogowa i holowanie",
+     "id": "50a6e9c7-1add-40f1-be50-759cbccdff53",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-pomoc-drogowa-259015"
+   },
+   {
+     "name": "Regeneracja części samochodowych",
+     "id": "02e8b61f-6252-4899-80a1-adb50df3e909",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-regeneracja-czesci-259016"
+   },
+   {
+     "name": "Skup samochodów",
+     "id": "b6af98a1-80f7-44a5-b870-cc046bd281a9",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-skupy-pojazdow-259017"
+   },
+   {
+     "name": "Sprowadzanie samochodów",
+     "id": "020ba7ab-116e-41c9-81a1-5025aebc8d16",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-sprowadzanie-z-zagranicy-259018"
+   },
+   {
+     "name": "Usługi ślubne i wesela",
+     "id": "14cd1800-7554-4b13-91d9-499d0ba35a0d",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-transportowe-do-slubu-wesela-259037"
+   },
+   {
+     "name": "Transport pojazdów",
+     "id": "f89a7c9b-c6be-4376-b676-89a7c9b52265",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-transportowe-transport-pojazdow-259042"
+   },
+   {
+     "name": "Elektronika samochodowa",
+     "id": "f13f881b-b81e-4e4e-ad7d-4e121c7b3ac6",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-warsztatowe-elektronika-samochodowa-259046"
+   },
+   {
+     "name": "Instalacje gazowe",
+     "id": "216a00f9-48d0-4ba2-bdea-3d7c7a7a8e89",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-warsztatowe-instalacje-gazowe-259047"
+   },
+   {
+     "name": "Tapicerstwo",
+     "id": "0611d35d-1aae-41f0-a409-2317a5d90694",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-warsztatowe-tapicerstwo-259050"
+   },
+   {
+     "name": "Wynajem pojazdów",
+     "id": "58f55796-eaae-4f55-99ec-0a2d294cdaed",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-wynajem-pojazdow-259021"
+   },
+   {
+     "name": "Zabudowa pojazdów",
+     "id": "23dca36c-6aa9-4727-b500-44ddace08796",
+     "parentId": "0b394e82-229d-4895-b33e-ffefc798015d",
+     "url": "https://allegro.pl/kategoria/uslugi-motoryzacyjne-zabudowa-pojazdow-259022"
+   },
+   {
+     "name": "Motoryzacja",
+     "id": "8e392e62-d5b8-494b-8af2-1bc981700c55"
+   },
+   {
+     "name": "Łodzie",
+     "id": "d0ea6b21-564f-4065-b33d-07566703a7b6",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/inne-pojazdy-i-lodzie-lodzie-4080"
+   },
+   {
+     "name": "Maszyny budowlane",
+     "id": "74432fc8-a032-4e3f-bcfd-d770dd1b8f68",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-maszyny-budowlane-252943"
+   },
+   {
+     "name": "Koparki",
+     "id": "e764d432-32b8-46bc-af5f-f0d1e5c47381",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-budowlane-koparki-252961"
+   },
+   {
+     "name": "Ładowarki",
+     "id": "5ef357dc-640f-43af-b301-e03b60e717a1",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-budowlane-ladowarki-252964"
+   },
+   {
+     "name": "Maszyny rolnicze",
+     "id": "c5b26d19-d4a9-44d7-96ff-f9082e64a445",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-maszyny-rolnicze-252944"
+   },
+   {
+     "name": "Traktory",
+     "id": "6526e291-cd2c-4a52-bab2-7656495b89c8",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-rolnicze-traktory-252954"
+   },
+   {
+     "name": "Wózki widłowe",
+     "id": "d521c52d-878f-4da3-9b26-48261a836f7b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/maszyny-wozki-widlowe-252945"
+   },
+   {
+     "name": "Motocykle: Chopper, Cruiser",
+     "id": "336c3716-22a9-4d52-bb66-5e0bf6e1fa5b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/motocykle-i-quady-chopper-cruiser-257564"
+   },
+   {
+     "name": "Motocykle: Cross, Enduro",
+     "id": "b04ff2d1-ea6b-47ae-9905-8732cc596711",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/motocykle-i-quady-cross-enduro-257565"
+   },
+   {
+     "name": "Quady, ATV",
+     "id": "1af1122f-7d86-4743-bc45-1f7bed9f847b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/motocykle-i-quady-quady-atv-257567"
+   },
+   {
+     "name": "Skutery",
+     "id": "983d3418-dfa4-4608-b6fd-7182d1ff8e53",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/motocykle-i-quady-skutery-257568"
+   },
+   {
+     "name": "Motocykle Sportowe",
+     "id": "dce74efc-1de8-4529-8377-8e76fdf6bc71",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/motocykle-i-quady-sportowe-257569"
+   },
+   {
+     "name": "Naczepy",
+     "id": "7d570b8f-8a87-4abd-b724-302054ec9f99",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/przyczepy-naczepy-naczepy-18529"
+   },
+   {
+     "name": "Przyczepy",
+     "id": "7e0e4a4b-19b6-46b6-8f5d-d90ffc77791f",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/przyczepy-naczepy-przyczepy-18530"
+   },
+   {
+     "name": "Samochody Osobowe",
+     "id": "8b77d3e3-454b-4707-aaed-68200ecad813",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/samochody-osobowe-4029"
+   },
+   {
+     "name": "Audi",
+     "id": "d1d89474-357c-468e-b2b7-30634b39bb37",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-audi-4031"
+   },
+   {
+     "name": "BMW",
+     "id": "ea257772-86b6-4042-bead-d6c33bc35b78",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-bmw-4032"
+   },
+   {
+     "name": "Chevrolet",
+     "id": "d78d8ed1-92a4-4678-a436-93a15feb8f36",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-chevrolet-12399"
+   },
+   {
+     "name": "Citroen",
+     "id": "d3e32838-7c9a-4546-b882-c7c25fa42980",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-citroen-4033"
+   },
+   {
+     "name": "Fiat",
+     "id": "c1ae2270-aafb-4f38-b22a-afcb2b3babcb",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-fiat-4035"
+   },
+   {
+     "name": "Ford",
+     "id": "dc0ef160-fe5c-4869-ac8d-dfaa1533afe4",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-ford-4036"
+   },
+   {
+     "name": "Honda",
+     "id": "43f1e152-05c0-4ddb-b094-4005ee47d81e",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-honda-4037"
+   },
+   {
+     "name": "Hyundai",
+     "id": "d6e3d78d-f3ca-4011-a0fa-7f7475466c3c",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-hyundai-4038"
+   },
+   {
+     "name": "KIA",
+     "id": "ce1012ac-02db-419e-8e4f-3685dec5ef95",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-kia-8642"
+   },
+   {
+     "name": "Mazda",
+     "id": "4351b32f-f318-4659-b4b6-c9b1370d382b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-mazda-4040"
+   },
+   {
+     "name": "Mercedes-Benz",
+     "id": "dac8e95a-e25f-4dd1-9b38-691f06ab04a6",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-mercedes-benz-4041"
+   },
+   {
+     "name": "Mitsubishi",
+     "id": "725e1625-8de0-458c-9475-287f9939dd48",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-mitsubishi-4042"
+   },
+   {
+     "name": "Nissan",
+     "id": "30c97a96-2219-4ecf-a1eb-23ceabd2900b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-nissan-4043"
+   },
+   {
+     "name": "Opel",
+     "id": "943b8756-74d5-45dc-b69c-ca741ccada2b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-opel-4044"
+   },
+   {
+     "name": "Peugeot",
+     "id": "17b9829e-3a92-4776-a078-49da7072dfd6",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-peugeot-4045"
+   },
+   {
+     "name": "Renault",
+     "id": "80580dfd-bd58-4767-85c6-61241c296b11",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-renault-4047"
+   },
+   {
+     "name": "Seat",
+     "id": "738ad11f-7c41-4ab8-83de-ce2a4fc7be97",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-seat-4050"
+   },
+   {
+     "name": "Skoda",
+     "id": "a22d6ef3-1b4d-407d-915a-c35140260a6f",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-skoda-4051"
+   },
+   {
+     "name": "Suzuki",
+     "id": "a2488448-fbc5-4489-b592-0cbd43b430d7",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-suzuki-4053"
+   },
+   {
+     "name": "Toyota",
+     "id": "2cbc66bf-4ceb-4c7c-b50b-8e8432e2bb19",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-toyota-4054"
+   },
+   {
+     "name": "Volkswagen",
+     "id": "f2be9f40-3001-493a-b300-6fdd97797f70",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-volkswagen-4055"
+   },
+   {
+     "name": "Volvo",
+     "id": "52cfac14-45c0-42e9-8df3-913ecc73118e",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/osobowe-volvo-4056"
+   },
+   {
+     "name": "Samochody Dostawcze (do 3.5 t)",
+     "id": "84dbbe9b-f56c-4fb1-b059-38537b45ccb8",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/samochody-dostawcze-do-3-5-t-257753"
+   },
+   {
+     "name": "Samochody Ciężarowe (pow. 3.5 t)",
+     "id": "619f107b-6f3c-4c0e-b9b4-3e31d349581b",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/samochody-ciezarowe-pow-3-5-t-589"
+   },
+   {
+     "name": "Samochody Zabytkowe",
+     "id": "adc41843-115a-44b6-b34a-19f827bf728d",
+     "parentId": "8e392e62-d5b8-494b-8af2-1bc981700c55",
+     "url": "https://allegro.pl/kategoria/samochody-zabytkowe-594"
+   },
+   {
+     "name": "Kolekcje i sztuka",
+     "id": "09c3da0f-d718-4ccb-94c9-aecc5b50219b"
+   },
+   {
+     "name": "Kolekcje",
+     "id": "a9bf14cd-4904-4472-831b-e06e1d7e8001"
+   },
+   {
+     "name": "Birofilistyka",
+     "id": "c0944209-0cd1-48e4-bd50-eac7b285e83b",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/birofilistyka-953"
+   },
+   {
+     "name": "Znaczki pocztowe",
+     "id": "a0c53a4a-20aa-4287-bd8e-79e6ba475957",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/filatelistyka-76"
+   },
+   {
+     "name": "Militaria",
+     "id": "59e4fae9-2dc8-43ca-bf33-f035262ce2a5",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/militaria-691"
+   },
+   {
+     "name": "Broń biała",
+     "id": "4e1cf2e4-14c3-419e-90fe-7ad8509c7e32",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/bron-bron-biala-3691"
+   },
+   {
+     "name": "Bagnety i NoÅ¼e",
+     "id": "662cd393-2f3d-4d36-a0a2-fabe69bfda77",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/bron-biala-bagnety-i-noze-126047"
+   },
+   {
+     "name": "Naszywki militarne",
+     "id": "36be378f-3ccc-4ad9-91ee-dd8e8a6ebac3",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/militaria-naszywki-3741"
+   },
+   {
+     "name": "Odznaki militarne",
+     "id": "f23272c0-ff8d-4d3a-a5fb-46868fa45bb6",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/militaria-odznaki-3705"
+   },
+   {
+     "name": "Zbroje rycerskie i akcesoria",
+     "id": "ff3a8d5d-669f-4eea-84e7-10b8fe0c9055",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/militaria-rycerstwo-12068"
+   },
+   {
+     "name": "Figurki militarne",
+     "id": "1fac5e71-11a2-484a-a57e-521fe7fca99a",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/modelarstwo-figurki-3590"
+   },
+   {
+     "name": "Kolej, dioramy, makiety - modelarstwo",
+     "id": "369816d9-b93e-4640-816c-3f510d0dbdc9",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/modelarstwo-kolej-dioramy-makiety-1063"
+   },
+   {
+     "name": "Modele pociągów",
+     "id": "1fab5127-412b-4568-9d2c-bf4be99a7201",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/h0-1-87-tabor-kolejowy-26917"
+   },
+   {
+     "name": "Modele i makiety budynków",
+     "id": "4d75f5a8-a179-43f3-985d-ba5db0923926",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/kolej-dioramy-makiety-budownictwo-3599"
+   },
+   {
+     "name": "Modele samolotów",
+     "id": "02b9dc15-0913-471e-9ab0-df5aadc089c5",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/modelarstwo-lotnictwo-1064"
+   },
+   {
+     "name": "Modele pojazdów wojsowych",
+     "id": "8d69a80c-776b-442b-8e88-9fd753e58328",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/modelarstwo-pojazdy-wojskowe-1065"
+   },
+   {
+     "name": "Modele samochodów",
+     "id": "48cc919c-8135-45cf-9e90-9b1091c39dd5",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/modelarstwo-samochody-1066"
+   },
+   {
+     "name": "Drony",
+     "id": "ba8fd11a-9bf3-4386-9517-1ff9ca53e8a0",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/lotnicze-drony-250408"
+   },
+   {
+     "name": "Samochody zdalnie sterowane",
+     "id": "19ba95a3-e7e5-41cb-9d32-a2af27c6a870",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/zdalnie-sterowane-samochody-8762"
+   },
+   {
+     "name": "Monety kolekcjonerskie",
+     "id": "ce583cfb-76c1-4996-b0d8-ec2d51b3b759",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/numizmatyka-85"
+   },
+   {
+     "name": "Pamiątki PRL-u",
+     "id": "da90c1e8-51c6-4922-bf7f-6ab14da9cb8b",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/pamiatki-prl-u-47936"
+   },
+   {
+     "name": "Banknoty kolekcjonerskie",
+     "id": "ba6375f6-0c04-4e62-b511-0f583a66e30e",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/pieniadz-papierowy-380"
+   },
+   {
+     "name": "Pocztówki",
+     "id": "8b984a63-fbbf-402c-b54f-c2da8ae46b33",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/pocztowki-10234"
+   },
+   {
+     "name": "Malarstwo",
+     "id": "1b28e9e2-3265-4135-ba0e-a0b3d9f38744",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/tematyczne-malarstwo-10359"
+   },
+   {
+     "name": "Akcesoria papierosowe",
+     "id": "937bd514-4757-47f0-95c0-95d705a177ad",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/trafika-akcesoria-papierosowe-78995"
+   },
+   {
+     "name": "Fajki wodne",
+     "id": "8528af14-4cac-46af-a21f-76e9282af57a",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/trafika-fajki-wodne-126045"
+   },
+   {
+     "name": "Zapalniczki",
+     "id": "9ed8ff28-20f3-4b5f-af17-71eabbc3e7c1",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/trafika-zapalniczki-47956"
+   },
+   {
+     "name": "Etykiety do zapałek",
+     "id": "863488e0-ccd3-4b3f-a447-a53d3fa5cdba",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/pozostale-etykiety-zapalczane-3563"
+   },
+   {
+     "name": "Skamieliny, minerały i muszle",
+     "id": "fb56ef78-b866-46c4-bf21-b5781650eb1f",
+     "parentId": "a9bf14cd-4904-4472-831b-e06e1d7e8001",
+     "url": "https://allegro.pl/kategoria/pozostale-skamieliny-mineraly-i-muszle-1149"
+   },
+   {
+     "name": "Numizmatyka",
+     "id": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29"
+   },
+   {
+     "name": "Polska do 1864",
+     "id": "9be57f39-034b-4ecc-ae65-ded575ad89d6",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-polska-do-1864-359"
+   },
+   {
+     "name": "Polska 1916-1945",
+     "id": "b1e4b86e-d1f5-4cba-8f33-802148b32ea7",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-polska-1916-1945-254678"
+   },
+   {
+     "name": "Polska po 1945",
+     "id": "02794b37-ce42-402c-b57c-451f0b99c6cf",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-polska-po-1945-8751"
+   },
+   {
+     "name": "Monety tematyczne",
+     "id": "a638c5e3-14d6-48cc-ba8d-f8ff0c626008",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-tematyczne-4776"
+   },
+   {
+     "name": "Talary",
+     "id": "8d281fe9-67eb-44f9-8da2-b99b4bd64590",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-talary-1004"
+   },
+   {
+     "name": "Akcesoria numizmatyczne",
+     "id": "f1f0d7d1-5d8a-429b-8524-937a17a266e1",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-akcesoria-1082"
+   },
+   {
+     "name": "Ameryka Pn. i Pd.",
+     "id": "84a309ca-d2e2-4ccf-97c9-da23f2752a92",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-ameryka-pn-i-pd-89"
+   },
+   {
+     "name": "Europa",
+     "id": "c813aac9-a740-42b8-93c5-84cd82a9838c",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-europa-87"
+   },
+   {
+     "name": "Azja",
+     "id": "06f50279-8cc1-457e-afc2-4b4b07026b82",
+     "parentId": "b7b82aec-ff8b-4f4b-a12b-adfd144d7f29",
+     "url": "https://allegro.pl/kategoria/numizmatyka-azja-91"
+   },
+   {
+     "name": "Firma",
+     "id": "1c6b9491-ec29-47e2-99cd-2d5d179d6103"
+   },
+   {
+     "name": "Przemysł",
+     "id": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee"
+   },
+   {
+     "name": "Maszyny i urządzenia",
+     "id": "c838ddf8-910e-42fb-ba4e-bcdfe930acbf",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/maszyny-i-urzadzenia-121334"
+   },
+   {
+     "name": "Materiały i akcesoria",
+     "id": "755ee757-ea89-4660-9625-9451e28ac208",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-121333"
+   },
+   {
+     "name": "Profesjonalne urządzenia czyszczące",
+     "id": "e5659baa-7653-41b2-a130-31d48b05011b",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/profesjonalne-urzadzenia-czyszczace-260160"
+   },
+   {
+     "name": "Recykling i wywóz śmieci",
+     "id": "f4cea2d2-3394-46aa-819d-16908181ee79",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/recykling-i-wywoz-smieci-260285"
+   },
+   {
+     "name": "Wyposażenie pomieszczeń",
+     "id": "4d26f842-9b51-4dc4-a6b3-a63eec390a07",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/wyposazenie-pomieszczen-121332"
+   },
+   {
+     "name": "Oferty hurtowe",
+     "id": "0fe4421c-ee59-4b09-97df-e804b578b0cd",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/oferty-hurtowe-110232"
+   },
+   {
+     "name": "Hurtowa odzież używana",
+     "id": "c0c78446-c60a-449b-b0e6-beb331d55645",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/oferty-hurtowe-odziez-i-galanteria-110234"
+   },
+   {
+     "name": "Automatyka przemysłowa",
+     "id": "0f30b27b-d3c0-4737-9c45-321042d10fce",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/maszyny-i-urzadzenia-automatyka-przemyslowa-121338"
+   },
+   {
+     "name": "Obróbka metali, automatyka",
+     "id": "4c59042f-85e8-49ff-89ef-995ec4038c95",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/automatyka-przemyslowa-obrobka-metali-121396"
+   },
+   {
+     "name": "Frezarki",
+     "id": "99c0d7ae-6e67-4385-ada9-4047dbfb5077",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/obrobka-metali-frezarki-121404"
+   },
+   {
+     "name": "Tworzywa sztuczne",
+     "id": "e845d078-c0f7-4f83-9b5d-5b1da0cbd44f",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-tworzywa-sztuczne-121436"
+   },
+   {
+     "name": "Maszyny i urządzenia budowlane",
+     "id": "87d52e47-2e84-479f-ac5a-13230d5b879d",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/maszyny-i-urzadzenia-budowlane-121335"
+   },
+   {
+     "name": "Kontenery na śmieci",
+     "id": "020353ab-0238-4486-b0f6-3fb4c640fd6b",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/recykling-i-wywoz-smieci-kontenery-260290"
+   },
+   {
+     "name": "Maszyny i urządzenia Gastronomiczne",
+     "id": "3e7d6f30-60ed-4288-807d-4ab56ec336ac",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/maszyny-i-urzadzenia-gastronomiczne-121336"
+   },
+   {
+     "name": "Materiały i akcesoria budowlane",
+     "id": "d464b4b2-fc6b-40f2-b15c-4f3ce3c2936e",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-budownictwo-121423"
+   },
+   {
+     "name": "Materiały i akcesoria gastronomiczne",
+     "id": "8eac3ed2-5e4c-4408-905f-711c03f4ffc4",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-gastronomia-121429"
+   },
+   {
+     "name": "Kosze na śmieci",
+     "id": "f4c6b49d-3aad-487f-bc18-c28d34729a4b",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/recykling-i-wywoz-smieci-kosze-na-smieci-260295"
+   },
+   {
+     "name": "Przyrządy pomiarowe",
+     "id": "8bc9dd64-27df-4e9e-b9fe-333513269fe7",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-przyrzady-pomiarowe-121432"
+   },
+   {
+     "name": "Materiały i akcesoria rolnicze",
+     "id": "e1a5cec4-31e6-497d-94bb-7ca5e9b09b0a",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-rolnictwo-121428"
+   },
+   {
+     "name": "Akcesoria do sklepu i magazynu",
+     "id": "79cf29d4-d08b-4400-a334-6b7bbb9fa3a8",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-sklep-i-magazyn-121422"
+   },
+   {
+     "name": "Czytniki i skanery kodów",
+     "id": "00bb8bd2-5465-4aea-8e3d-73ac3d1f91b6",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/sklep-i-magazyn-czytniki-i-skanery-kodow-121463"
+   },
+   {
+     "name": "Spawanie",
+     "id": "bf3df882-adbb-4120-b65a-11e586a7d9a1",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-spawanie-121437"
+   },
+   {
+     "name": "Tworzywa sztuczne",
+     "id": "e5c9ec0d-2e97-4f7f-88d7-f12c00664f37",
+     "parentId": "bb7f08f0-4c53-4190-a36b-ff474a0b85ee",
+     "url": "https://allegro.pl/kategoria/materialy-i-akcesoria-tworzywa-sztuczne-121436"
+   },
+   {
+     "name": "Akcesoria BHP",
+     "id": "4ecb8f8c-9747-4977-8c31-00f406a5f03d"
+   },
+   {
+     "name": "Odzież robocza i BHP",
+     "id": "550bbc11-b9ed-4836-b1fc-d14b91350538",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-robocza-i-bhp-110233"
+   },
+   {
+     "name": "Artykuły BHP",
+     "id": "b69be6ad-a9f9-41e6-82c0-0c13f2e83b20",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-robocza-i-bhp-artykuly-bhp-110248"
+   },
+   {
+     "name": "Apteczki BHP",
+     "id": "e56c11bc-6549-4b36-bbf6-6efd7398db66",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/artykuly-bhp-apteczki-110254"
+   },
+   {
+     "name": "Kamizelki ochronne BHP",
+     "id": "e30506b1-1fe6-408e-bf47-a15f0fd4215b",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-kamizelki-110265"
+   },
+   {
+     "name": "Kaski ochronne BHP",
+     "id": "6e8fe54c-37a2-4a01-91d8-0b02666efdb4",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/artykuly-bhp-kaski-110253"
+   },
+   {
+     "name": "Kombinezony ochronne BHP",
+     "id": "22c0296b-1087-4dbc-82ff-6e778b97f605",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-kombinezony-110262"
+   },
+   {
+     "name": "Maski ochronne BHP",
+     "id": "6b87680f-01e7-4c6a-b88e-4af38157f647",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/oslona-twarzy-maski-110257"
+   },
+   {
+     "name": "Nakrycia głowy ochronne BHP",
+     "id": "ef03f453-4a6d-4823-a844-f4a3ffe65463",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-nakrycia-glowy-110264"
+   },
+   {
+     "name": "Obuwie ochronne BHP",
+     "id": "103ca719-eff0-4d09-9d37-d807e161589e",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-obuwie-110290"
+   },
+   {
+     "name": "Ochronniki słuchu",
+     "id": "b203d1a7-940c-48e5-bd97-c38395c23162",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/artykuly-bhp-ochronniki-sluchu-110252"
+   },
+   {
+     "name": "Okulary i gogle ochronne",
+     "id": "44c4a43a-5203-40fd-98aa-713a925cf0ac",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/oslona-twarzy-okulary-i-gogle-110256"
+   },
+   {
+     "name": "Rękawice ochronne BHP",
+     "id": "589e9a76-806a-45dc-b229-78edfe496e82",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-rekawice-110258"
+   },
+   {
+     "name": "Spodnie ochronne BHP",
+     "id": "31325b88-cc61-4f62-b32a-c36044659c6f",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/odziez-spodnie-110259"
+   },
+   {
+     "name": "Sprzęt asekuracyjny BHP",
+     "id": "99c6388c-f528-4016-a0ab-5d6d3b902620",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/artykuly-bhp-sprzet-asekuracyjny-125785"
+   },
+   {
+     "name": "Sprzęt przeciwpożarowy",
+     "id": "02ae0d03-bc02-426c-aaec-33fe0a2ebf95",
+     "parentId": "4ecb8f8c-9747-4977-8c31-00f406a5f03d",
+     "url": "https://allegro.pl/kategoria/artykuly-bhp-sprzet-ppoz-110250"
+   },
+   {
+     "name": "Biuro, reklama",
+     "id": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b"
+   },
+   {
+     "name": "Akcesoria biurowe",
+     "id": "916f6d90-9fde-4bda-a8fc-82a6e2254087",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/akcesoria-biurowe-64478"
+   },
+   {
+     "name": "Artykuły piśmiennicze",
+     "id": "72e90582-a5e2-4662-8859-20441d497383",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/artykuly-pismiennicze-64479"
+   },
+   {
+     "name": "Meble biurowe",
+     "id": "fcff2b93-aec2-4ff9-a640-b7e4edd834bd",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/meble-biurowe-64480"
+   },
+   {
+     "name": "Organizacja dokumentów",
+     "id": "7c4dc64f-a124-46c0-bd63-3b939550608a",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/organizacja-dokumentow-64481"
+   },
+   {
+     "name": "Pakowanie i wysyłka",
+     "id": "b368412b-8e50-4b16-bdd7-c91bf9bab9a3",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/pakowanie-i-wysylka-64482"
+   },
+   {
+     "name": "Papier biurowy",
+     "id": "21fee39d-f94f-459b-a1ce-0278e5e544d0",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/papier-papier-biurowy-64558"
+   },
+   {
+     "name": "Przybory kreślarskie",
+     "id": "b14c4157-1c8a-40f7-b79f-fe26eb0ee745",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/przybory-kreslarskie-64484"
+   },
+   {
+     "name": "Reklama",
+     "id": "0abc1a5b-2346-4be6-bafe-2a7c0d4a6b2f",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/reklama-64485"
+   },
+   {
+     "name": "Sprzęt biurowy",
+     "id": "2e914beb-7ae8-4f57-bb71-8a6f98a80e98",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/sprzet-biurowy-64486"
+   },
+   {
+     "name": "Sprzęt do prezentacji",
+     "id": "6e045b78-03b3-46a2-9fc4-5b2ac202c4f5",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/sprzet-do-prezentacji-64559"
+   },
+   {
+     "name": "Biurka",
+     "id": "63cb6ebd-752b-416b-82bf-72ace65c6821",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/meble-biurowe-biurka-101357"
+   },
+   {
+     "name": "Fotele biurowe",
+     "id": "abfd6543-c856-4c86-af7a-31bf3feea7fc",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/meble-biurowe-fotele-64519"
+   },
+   {
+     "name": "Szafy biurowe",
+     "id": "2300d31a-9e0a-4155-94b2-95f5b6ca216f",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/meble-biurowe-szafy-64525"
+   },
+   {
+     "name": "Półki i regały biurowe",
+     "id": "91be857b-be88-421f-846d-4f13c20c8808",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/meble-biurowe-polki-i-regaly-64522"
+   },
+   {
+     "name": "Folia do pakowania",
+     "id": "9c7731df-3ce0-4f16-b8fc-4fa8d6fcd4cd",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/pakowanie-i-wysylka-folia-64537"
+   },
+   {
+     "name": "Pudełka i kartony",
+     "id": "0581c442-03d1-41cd-954c-8047e43804cc",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/pakowanie-i-wysylka-pudelka-i-kartony-64540"
+   },
+   {
+     "name": "Taśmy pakowe",
+     "id": "11e8ae1c-c710-494d-9432-32d5245a3f0f",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/pakowanie-i-wysylka-tasmy-pakowe-64541"
+   },
+   {
+     "name": "Torby papierowe",
+     "id": "f29ef782-7e89-45c6-b4e4-a4a69230e4d3",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/pakowanie-i-wysylka-torby-papierowe-64542"
+   },
+   {
+     "name": "Papier biurowy",
+     "id": "2675afaf-0dca-4278-b014-cd92ca703b02",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/papier-papier-biurowy-64558"
+   },
+   {
+     "name": "Deski kreślarskie",
+     "id": "9e83abd9-f978-4f0e-9e6f-e3e4d64a22a0",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/przybory-kreslarskie-deski-kreslarskie-64562"
+   },
+   {
+     "name": "Tusze kreślarskie",
+     "id": "16a928ef-6200-483a-bf38-fd7c26ca3086",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/przybory-kreslarskie-tusze-kreslarskie-64567"
+   },
+   {
+     "name": "Wizytówki",
+     "id": "68c4fb9b-16ef-46c6-a242-3e68e8ce69c8",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/akcydensy-poligrafia-wizytowki-64640"
+   },
+   {
+     "name": "Ulotki",
+     "id": "a09ae82c-9cc8-4773-8397-0a6007140fac",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/akcydensy-poligrafia-ulotki-64639"
+   },
+   {
+     "name": "Tablice i szyldy reklamowe",
+     "id": "1e684d65-6c2c-45b3-a741-ae8eae7b507a",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/reklama-zewnetrzna-tablice-i-szyldy-64626"
+   },
+   {
+     "name": "Niszczarki",
+     "id": "e9804376-0aec-48e2-bb73-5e6f26795e13",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/sprzet-biurowy-niszczarki-64577"
+   },
+   {
+     "name": "Flipcharty",
+     "id": "bb11a8d1-2a25-430e-9852-dbf3bc7c1638",
+     "parentId": "fadd3b09-520c-4cab-b6e5-8a8eeae33a0b",
+     "url": "https://allegro.pl/kategoria/sprzet-do-prezentacji-flipcharty-64591"
+   },
+   {
+     "name": "Strefy tematyczne",
+     "id": "441d4744-c00c-4142-ba33-835f45b75150"
+   }
+ ]

@@ -4,7 +4,10 @@ let QueryList = {
     },
     Category: {
         GET_CATEGORIES: "getCategoryQuery",
-        GET_CATEGORIES_HIERARCHY: "getCategoryTreeQuery"
+        GET_CATEGORIES_HIERARCHY: "getCategoryTreeQuery",
+        GET_CATEGORIES_FREETEXT:"getCategoryFreetextQuery",
+        GET_CATEGORIES_ALL_TREE:"getCategoriesAllQuery"
+
     },
     User: {
         LOG_IN_INTERNAL: "userLogInInternalQuery",

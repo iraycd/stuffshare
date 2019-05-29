@@ -42,10 +42,10 @@ class LinkAuth extends React.Component {
                 case PRIVS_ENUM.IS_NOT_OWNER: return () => { return this.props.auth.user.id!=this.props.user_id};
             }
         }):[];
-        console.log(privsFuncList);
+        //console.log(privsFuncList);
         if (privsFuncList.length > 0) {
             if (privsFuncList.filter(func => {
-                console.log(func());
+                //console.log(func());
                 return func();
             }).length > 0) {
                 return link;

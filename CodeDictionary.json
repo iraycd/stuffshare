@@ -1,1039 +1,1730 @@
 {
     "LABEL": {
         "LABEL_LINK_LOGIN_LINK": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "LABEL_LINK_LOGIN_LINK",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Login",
-                "us": "Login"
+                "us": "Login",
+                "de": "Login",
+                "ru": "Логин",
+                "fr": "Connexion",
+                "es": "Nombre de usuario",
+                "no": "Logg inn",
+                "zh_cn": "登录"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "USER_PROFILE_MODAL_NAME_SURNAME": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
             "code": "USER_PROFILE_MODAL_NAME_SURNAME",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Imię i nazwisko",
-                "us": "Name and surname"
+                "us": "Name and surname",
+                "de": "Vorname und Nachname",
+                "ru": "Имя и фамилия",
+                "fr": "Nom et prénom",
+                "es": "Nombre y apellido",
+                "no": "Navn",
+                "zh_cn": "名称"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "USER_PROFILE_MODAL_EMAIL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
             "code": "USER_PROFILE_MODAL_EMAIL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "USER_PROFILE_MODAL_HEADER": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
             "code": "USER_PROFILE_MODAL_HEADER",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Panel użytkownika",
-                "us": "User panel"
+                "us": "User panel",
+                "de": "Das user Panel",
+                "ru": "Панель пользователя",
+                "fr": "Panneau de l'utilisateur",
+                "es": "El panel de usuario",
+                "no": "Elet",
+                "zh_cn": "用户小组"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "USER_PROFILE_MODAL_PHONE": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
             "code": "USER_PROFILE_MODAL_PHONE",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Telefon",
-                "us": "Phone"
+                "us": "Phone",
+                "de": "Telefon",
+                "ru": "Телефон",
+                "fr": "Téléphone",
+                "es": "Teléfono",
+                "no": "Telefon",
+                "zh_cn": "电话"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_CODE_LABEL": {
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
+            "uid": "",
             "code": "CODE_CODE_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Kod",
-                "us": "Code"
+                "us": "Code",
+                "de": "Code",
+                "ru": "Код",
+                "fr": "Code",
+                "es": "Código",
+                "no": "Kode",
+                "zh_cn": "代码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_TYPE_LABEL": {
+            "id": "692ea28b-affa-46f3-8184-e6b85b32ba36",
+            "uid": "",
             "code": "CODE_TYPE_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Typ kodu",
-                "us": "Code type"
+                "us": "Code type",
+                "de": "Typ Code",
+                "ru": "Тип кода",
+                "fr": "Type de code",
+                "es": "El tipo de código de",
+                "no": "Skriv inn koden",
+                "zh_cn": "类型的代码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_FORM_HEADER": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "CODE_FORM_HEADER",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Edycja słownika",
-                "us": "Dictionary edit"
+                "us": "Dictionary edit",
+                "de": "Die Bearbeitung des Wörterbuchs",
+                "ru": "Редактирование словаря",
+                "fr": "L'édition d'un dictionnaire",
+                "es": "Edición del diccionario",
+                "no": "Redigere ordlisten",
+                "zh_cn": "\"编辑\"的字典"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_STATUS_LABEL": {
+            "id": "692ea28b-affa-46f3-8184-e6b85b32ba36",
+            "uid": "",
             "code": "CODE_STATUS_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Status",
-                "us": "Status"
+                "us": "Status",
+                "de": "Status",
+                "ru": "Статус",
+                "fr": "Le statut de",
+                "es": "El estado de",
+                "no": "Status",
+                "zh_cn": "状态"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_PL_LABEL": {
-            "code": "CODE_PL_LABEL ",
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "CODE_PL_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Polski",
-                "us": "Polish"
+                "us": "Polish",
+                "de": "Polnisch",
+                "ru": "Польский",
+                "fr": "Polonais",
+                "es": "Polaco",
+                "no": "Polsk",
+                "zh_cn": "波兰"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_US_LABEL": {
+            "id": "692ea28b-affa-46f3-8184-e6b85b32ba36",
+            "uid": "",
             "code": "CODE_US_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Angielski",
-                "us": "English"
+                "us": "English",
+                "de": "Englisch",
+                "ru": "Английский",
+                "fr": "Anglais",
+                "es": "Inglés",
+                "no": "Engelsk",
+                "zh_cn": "英语"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LANG_POLISH_LABEL": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "LANG_POLISH_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Polski",
-                "us": "Polish"
+                "us": "Polish",
+                "de": "Polnisch",
+                "ru": "Польский",
+                "fr": "Polonais",
+                "es": "Polaco",
+                "no": "Polsk",
+                "zh_cn": "波兰"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LANG_ENGLISH_LABEL": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "LANG_ENGLISH_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Angielski",
-                "us": "English"
+                "us": "English",
+                "de": "Englisch",
+                "ru": "Английский",
+                "fr": "Anglais",
+                "es": "Inglés",
+                "no": "Engelsk",
+                "zh_cn": "英语"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "ADMIN_LINK_LABEL": {
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
+            "uid": "",
             "code": "ADMIN_LINK_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Panel admina",
-                "us": "Admin"
+                "us": "Admin",
+                "de": "Admin",
+                "ru": "Админ",
+                "fr": "Administrateur",
+                "es": "Admin",
+                "no": "Admin",
+                "zh_cn": "管理员"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "DICTIONARY_LINK_LABEL": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "DICTIONARY_LINK_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Edycja Słownika",
-                "us": "Dictionary list"
+                "us": "Dictionary list",
+                "de": "Die Bearbeitung Des Wörterbuchs",
+                "ru": "Редактирование Словаря",
+                "fr": "L'Édition D'Un Dictionnaire",
+                "es": "Edición Del Diccionario",
+                "no": "Redigere Ordlisten",
+                "zh_cn": "\"编辑\"的字典"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_FILTER_LABEL": {
+            "id": "692667c3-2491-4cb9-b456-d2bd7206b430",
+            "uid": "",
             "code": "CODE_FILTER_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Filtruj słownik",
-                "us": "Filter"
+                "us": "Filter",
+                "de": "Filtern Wörterbuch",
+                "ru": "Фильтровать словарь",
+                "fr": "Filtrer le dictionnaire",
+                "es": "Filtrar diccionario",
+                "no": "Filter ordliste",
+                "zh_cn": "过滤器的字典"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LANG_HOME_LINK_LABEL": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "LANG_HOME_LINK_LABEL",
-            "status": "100",
+            "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Strona główna",
-                "us": "Home"
+                "us": "Home",
+                "de": "Startseite",
+                "ru": "Главная страница",
+                "fr": "Page d'accueil",
+                "es": "Página de inicio",
+                "no": "Hjem",
+                "zh_cn": "家"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LANG_RUSSIA_LABEL": {
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
+            "uid": "",
             "code": "LANG_RUSSIA_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Rosyjski",
-                "us": "Russian"
+                "us": "Russian",
+                "de": "Russisch",
+                "ru": "Русский",
+                "fr": "Russe",
+                "es": "Ruso",
+                "no": "Russisk",
+                "zh_cn": "俄罗斯"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_USER_NAME_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_USER_NAME_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_PASSWORD_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_PASSWORD_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Hasło",
-                "us": "Password"
+                "us": "Password",
+                "de": "Passwort",
+                "ru": "Пароль",
+                "fr": "Le mot de passe",
+                "es": "La contraseña",
+                "no": "Passord",
+                "zh_cn": "密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_EMAIL_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_EMAIL_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PASSWORD_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_PASSWORD_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Hasło",
-                "us": "Password"
+                "us": "Password",
+                "de": "Passwort",
+                "ru": "Пароль",
+                "fr": "Le mot de passe",
+                "es": "La contraseña",
+                "no": "Passord",
+                "zh_cn": "密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PASSWORD_REPEAT_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_PASSWORD_REPEAT_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Powtórz hasło",
-                "us": "Repeat password"
+                "us": "Repeat password",
+                "de": "Wiederholen Sie das Passwort",
+                "ru": "Повторите пароль",
+                "fr": "Répétez le mot de passe",
+                "es": "Repita la contraseña",
+                "no": "Gjenta passord",
+                "zh_cn": "重复密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_NAME_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_NAME_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Imie",
-                "us": "Name"
+                "us": "Name",
+                "de": "Name",
+                "ru": "Имя",
+                "fr": "Le nom de",
+                "es": "El nombre de",
+                "no": "Navn",
+                "zh_cn": "名称"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_SURNAME_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_SURNAME_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Nazwisko",
-                "us": "Surname"
+                "us": "Surname",
+                "de": "Name",
+                "ru": "Имя",
+                "fr": "Le nom de",
+                "es": "El nombre de",
+                "no": "Navn",
+                "zh_cn": "名称"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PHONE_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_PHONE_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Telefon",
-                "us": "Phone"
+                "us": "Phone",
+                "de": "Telefon",
+                "ru": "Телефон",
+                "fr": "Téléphone",
+                "es": "Teléfono",
+                "no": "Telefon",
+                "zh_cn": "电话"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_BIRTHDATE_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_BIRTHDATE_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Data urodzin",
-                "us": "Birthdate"
+                "us": "Birthdate",
+                "de": "Geburtsdatum",
+                "ru": "Дата рождения",
+                "fr": "Date de naissance",
+                "es": "Fecha de nacimiento",
+                "no": "Fødselsdato",
+                "zh_cn": "出生日期"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD_USER_NAME_LABEL": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "FORGOT_PASSWORD_USER_NAME_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_FORM_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_FORM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Logowanie",
-                "us": "Login"
+                "us": "Login",
+                "de": "Eingang",
+                "ru": "Вход",
+                "fr": "Entrée",
+                "es": "La entrada",
+                "no": "Inngang",
+                "zh_cn": "入口"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_FORM_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_FORM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zakładanie konta",
-                "us": "Create account"
+                "us": "Create account",
+                "de": "Erstellen Sie ein Konto",
+                "ru": "Создание учетной записи",
+                "fr": "Création d'un compte",
+                "es": "Creación de una cuenta de",
+                "no": "Opprette en konto",
+                "zh_cn": "创建一个帐户"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD_FORM_HEADER": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "FORGOT_PASSWORD_FORM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Przypomnienie hasła",
-                "us": "Forgot password"
+                "us": "Forgot password",
+                "de": "Passwort-Erinnerung",
+                "ru": "Напоминание пароля",
+                "fr": "Rappel de mot de passe",
+                "es": "El recordatorio de la contraseña",
+                "no": "Passordet påminnelse",
+                "zh_cn": "密码提示"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_SUBMIT_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REGISTER_SUBMIT_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Załóż konto",
-                "us": "Create account"
+                "us": "Create account",
+                "de": "Erstellen Sie ein Konto",
+                "ru": "Создать учетную запись",
+                "fr": "Créer un compte",
+                "es": "Crear una cuenta",
+                "no": "For å opprette en konto",
+                "zh_cn": "创建一个帐户"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_SUBMIT_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_SUBMIT_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zaloguj",
-                "us": "Login"
+                "us": "Login",
+                "de": "Eingang",
+                "ru": "Вход",
+                "fr": "Entrée",
+                "es": "La entrada",
+                "no": "Inngang",
+                "zh_cn": "入口"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD_SUBMIT_LABEL": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "FORGOT_PASSWORD_SUBMIT_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Potwierdź",
-                "us": "Submit"
+                "us": "Submit",
+                "de": "Bestätigen Sie",
+                "ru": "Подтвердите",
+                "fr": "Confirmez",
+                "es": "Confirme",
+                "no": "Bekrefter",
+                "zh_cn": "确认"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "EDIT_PROFILE_LINK": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "EDIT_PROFILE_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Mój profil",
-                "us": "My profile"
+                "us": "My profile",
+                "de": "Mein Profil",
+                "ru": "Мой профиль",
+                "fr": "Mon profil",
+                "es": "Mi perfil",
+                "no": "Min profil",
+                "zh_cn": "我的档案"
             },
             "field": "",
             "toRefresh": true
         },
         "SET_COORDINATE_LINK": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SET_COORDINATE_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustaw lokalizację",
-                "us": "Set localisation"
+                "us": "Set localisation",
+                "de": "Standort installieren",
+                "ru": "Установить местоположение",
+                "fr": "Définir l'emplacement de la",
+                "es": "Definir la ubicación de la",
+                "no": "For å angi plasseringen",
+                "zh_cn": "到设定位置"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_ACCOUNT_LINK": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REMOVE_ACCOUNT_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Usuń konto",
-                "us": "Remove account"
+                "us": "Remove account",
+                "de": "Konto löschen",
+                "ru": "Удалить учетную запись",
+                "fr": "Supprimer le compte",
+                "es": "Eliminar la cuenta de",
+                "no": "Slett konto",
+                "zh_cn": "删除帐户"
             },
             "field": "",
             "toRefresh": true
         },
         "CHANGE_PASSWORD_LINK": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "CHANGE_PASSWORD_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zmień hasło",
-                "us": "Change password"
+                "us": "Change password",
+                "de": "Passwort ändern",
+                "ru": "Изменить пароль",
+                "fr": "Modifier le mot de passe",
+                "es": "Cambiar la contraseña",
+                "no": "For å endre passord",
+                "zh_cn": "要改变密码"
             },
             "field": "",
             "toRefresh": true
         },
         "LOG_OUT_LINK": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOG_OUT_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Wyloguj się",
-                "us": "Log out"
+                "us": "Log out",
+                "de": "Raus",
+                "ru": "Выйдите",
+                "fr": "Sortez",
+                "es": "Salga",
+                "no": "La",
+                "zh_cn": "离开"
             },
             "field": "",
             "toRefresh": true
         },
         "REFRESH_GEO_BUTTON_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REFRESH_GEO_BUTTON_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
-                "pl": "Odswież lokalizację",
-                "us": "Refresh localisation"
+                "pl": "Pobierz lokalizację",
+                "us": "Get location",
+                "de": "Download-Standort",
+                "ru": "Скачать местоположение",
+                "fr": "Emplacement de téléchargement",
+                "es": "Ubicación de descarga",
+                "no": "Last ned beliggenhet",
+                "zh_cn": "下载的位置"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_COUNTRY_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SETLATLNG_COUNTRY_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Kraj",
-                "us": "Country"
+                "us": "Country",
+                "de": "Land",
+                "ru": "Страна",
+                "fr": "Pays",
+                "es": "El país",
+                "no": "Land",
+                "zh_cn": "国"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_REGION_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SETLATLNG_REGION_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Województwo",
-                "us": "Region"
+                "us": "Region",
+                "de": "Bereich",
+                "ru": "Область",
+                "fr": "La zone",
+                "es": "El área de",
+                "no": "Regionen",
+                "zh_cn": "区域"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_CITY_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SETLATLNG_CITY_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Miasto",
-                "us": "City"
+                "us": "City",
+                "de": "Die Stadt",
+                "ru": "Город",
+                "fr": "La ville",
+                "es": "La ciudad",
+                "no": "Byen",
+                "zh_cn": "城市"
             },
             "field": "",
             "toRefresh": true
         },
         "ACCOUNT_LINK_HEADER": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "ACCOUNT_LINK_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustawienia użytkownika",
-                "us": "User settings"
+                "us": "User settings",
+                "de": "Systemoptionen",
+                "ru": "Настройки пользователя",
+                "fr": "Les paramètres de l'utilisateur",
+                "es": "Configuración de usuario",
+                "no": "Bruker innstillinger",
+                "zh_cn": "用户设置"
             },
             "field": "",
             "toRefresh": true
         },
         "SET_COORDINATES_BUTTON_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SET_COORDINATES_BUTTON_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zapisz",
-                "us": "Save"
+                "us": "Save",
+                "de": "Speichern",
+                "ru": "Сохранить",
+                "fr": "Enregistrer",
+                "es": "Guardar",
+                "no": "Lagre",
+                "zh_cn": "保存"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_FORM_HEADER": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SETLATLNG_FORM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustaw lokalizację",
-                "us": "Set localisation"
+                "us": "Set localisation",
+                "de": "Standort installieren",
+                "ru": "Установить местоположение",
+                "fr": "Définir l'emplacement de la",
+                "es": "Definir la ubicación de la",
+                "no": "For å angi plasseringen",
+                "zh_cn": "到设定位置"
             },
             "field": "",
             "toRefresh": true
         },
         "ADD_PROFILE_IMG_LINK": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "ADD_PROFILE_IMG_LINK",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustaw zdjęcie",
-                "us": "Set profile picture"
+                "us": "Set profile picture",
+                "de": "Setzen Sie Ihr Foto",
+                "ru": "Установите фотографию",
+                "fr": "Placez la photo de",
+                "es": "Instale la foto",
+                "no": "Installere photo",
+                "zh_cn": "安装的照片"
             },
             "field": "",
             "toRefresh": true
         },
         "USER_INFO_HEADER": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "USER_INFO_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Profil użytkownika",
-                "us": "User profile"
+                "us": "User profile",
+                "de": "Benutzerprofil",
+                "ru": "Профиль пользователя",
+                "fr": "Le profil de l'utilisateur",
+                "es": "El perfil de usuario",
+                "no": "Brukerprofil",
+                "zh_cn": "用户配置文件"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGIN_FORGOT_PASSWOD_BTN_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_FORGOT_PASSWOD_BTN_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Przypomnij hasło",
-                "us": "Forgot password"
+                "us": "Forgot password",
+                "de": "Passwort vergessen?",
+                "ru": "Напомнить пароль",
+                "fr": "Rappel du mot de passe",
+                "es": "Recordar contraseña",
+                "no": "For å minne passord",
+                "zh_cn": "提醒密码"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGIN_SOCIAL_LOGIN": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_SOCIAL_LOGIN",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Logowanie przez",
-                "us": "External account"
+                "us": "External account",
+                "de": "Eingang durch",
+                "ru": "Вход через",
+                "fr": "L'entrée par le",
+                "es": "La entrada a través de",
+                "no": "Inngang via",
+                "zh_cn": "入口通过"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGIN_SIGN_IN_BTN_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_SIGN_IN_BTN_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zaloguj",
-                "us": "Login"
+                "us": "Login",
+                "de": "Eingang",
+                "ru": "Вход",
+                "fr": "Entrée",
+                "es": "La entrada",
+                "no": "Inngang",
+                "zh_cn": "入口"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGIN_CREATEA_ACCOUNT_BTN_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGIN_CREATEA_ACCOUNT_BTN_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Rejestracja",
-                "us": "Register"
+                "us": "Register",
+                "de": "Registrieren",
+                "ru": "Регистрация",
+                "fr": "Et",
+                "es": "De",
+                "no": "Sjekk",
+                "zh_cn": "检查"
             },
             "field": "",
             "toRefresh": true
         },
         "SEARCH_HOMEPAGE_HEADER": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SEARCH_HOMEPAGE_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Szukaj",
-                "us": "Search"
+                "us": "Search",
+                "de": "Suche",
+                "ru": "Поиск",
+                "fr": "Recherche",
+                "es": "La búsqueda de",
+                "no": "Søk",
+                "zh_cn": "搜索"
             },
             "field": "",
             "toRefresh": true
         },
         "SEARCH_HOMEPAGE_TEXT": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SEARCH_HOMEPAGE_TEXT",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Szukaj ludzi z podobnymi zainteresowaniami.",
-                "us": "Find people with passions just like you"
+                "us": "Find people with passions just like you",
+                "de": "Suche nach Menschen mit ähnlichen Interessen.",
+                "ru": "Поиск людей с похожими интересами.",
+                "fr": "Recherche de personnes avec des intérêts similaires.",
+                "es": "La búsqueda de personas con intereses similares.",
+                "no": "Søk etter folk med samme interesser.",
+                "zh_cn": "搜索人的类似的利益。"
             },
             "field": "",
             "toRefresh": true
         },
         "SEARCH_BUTTON_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SEARCH_BUTTON_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Szukaj",
-                "us": "Search"
+                "us": "Search",
+                "de": "Suche",
+                "ru": "Поиск",
+                "fr": "Recherche",
+                "es": "La búsqueda de",
+                "no": "Søk",
+                "zh_cn": "搜索"
             },
             "field": "",
             "toRefresh": true
         },
         "USER_IMAGE_PROFILE_HEADER": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "USER_IMAGE_PROFILE_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Dodaj zdjęcie",
-                "us": "Add profile image"
+                "us": "Add profile image",
+                "de": "Foto hinzufügen",
+                "ru": "Добавить фото",
+                "fr": "Ajouter une photo",
+                "es": "Añadir una foto",
+                "no": "Legg til et bilde",
+                "zh_cn": "增加一个照片"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGOUT_USER_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGOUT_USER_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Wyloguj się",
-                "us": "Logout"
+                "us": "Logout",
+                "de": "Raus",
+                "ru": "Выйдите",
+                "fr": "Sortez",
+                "es": "Salga",
+                "no": "La",
+                "zh_cn": "离开"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGOUT_USER_TEXT_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGOUT_USER_TEXT_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Wylogowanie spowoduje wymuszenie ponownego zalogowania się na wszystkich urządzeniach",
-                "us": "Logout cause that you will need to login on all your devices"
+                "us": "Logout cause that you will need to login on all your devices",
+                "de": "Der Ausgang führt wieder angemeldet auf allen Ihren Geräten",
+                "ru": "Выход выполнит повторного входа в систему на всех ваших устройствах",
+                "fr": "Sortie effectuera reconnecter sur tous vos appareils",
+                "es": "La salida realizará volver a iniciar sesión en todos tus dispositivos",
+                "no": "Produksjonen vil re-login på alle enhetene dine",
+                "zh_cn": "输出将重新登上所有的设备"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGOUT_ACCOUNT_BUTTON_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGOUT_ACCOUNT_BUTTON_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Wyloguj się",
-                "us": "Logout"
+                "us": "Logout",
+                "de": "Raus",
+                "ru": "Выйдите",
+                "fr": "Sortez",
+                "es": "Salga",
+                "no": "La",
+                "zh_cn": "离开"
             },
             "field": "",
             "toRefresh": true
         },
         "CHANGEPASSWORD_FORM_HEADER": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "CHANGEPASSWORD_FORM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustaw nowe hasło",
-                "us": "Set new password"
+                "us": "Set new password",
+                "de": "Installieren Sie das neue Kennwort",
+                "ru": "Установите новый пароль",
+                "fr": "Définissez un nouveau mot de passe",
+                "es": "Instale la nueva contraseña",
+                "no": "Angi et nytt passord",
+                "zh_cn": "设置一个新的密码"
             },
             "field": "",
             "toRefresh": true
         },
         "CHANGE_PASSWORD_SUBMIT_LABEL": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "CHANGE_PASSWORD_SUBMIT_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zapisz hasło",
-                "us": "Save password"
+                "us": "Save password",
+                "de": "Passwort speichern",
+                "ru": "Сохранить пароль",
+                "fr": "Enregistrer le mot de passe",
+                "es": "Guardar la contraseña",
+                "no": "Lagre passord",
+                "zh_cn": "保存密码"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_USER_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REMOVE_USER_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Usuń konto",
-                "us": "Remove account"
+                "us": "Remove account",
+                "de": "Konto löschen",
+                "ru": "Удалить учетную запись",
+                "fr": "Supprimer le compte",
+                "es": "Eliminar la cuenta de",
+                "no": "Slett konto",
+                "zh_cn": "删除帐户"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_USER_TEXT_HEADER": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "REMOVE_USER_TEXT_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
-                "pl": "Usunięcie spowoduje niedwracalne straty. Czy jesteś pewny, że chcesz to zrobic?",
-                "us": "If you remove your account we will not be able to retrive data. Are you sure that you want to do it?"
+                "pl": "Usunięcie spowoduje utratę wszystkich danych. Czy jesteś pewny, że chcesz to zrobic?",
+                "us": "Deletion will result in the loss of all data. Or are you sure you want to do this?",
+                "de": "Das löschen führt zum Verlust aller Daten. Oder bist du sicher, dass du das machen willst?",
+                "fr": "Suppression entraîne la perte de toutes les données. Ou es-tu sûr que tu veux faire?",
+                "es": "La eliminación dará lugar a la pérdida de todos los datos. O ¿estás seguro de que quieres hacer esto?",
+                "ru": "Удаление приведет к потере всех данных. Или ты уверен, что хочешь это сделать?",
+                "no": "Sletting vil resultere i tap av alle data. Eller er du sikker på at du vil gjøre dette?",
+                "zh_cn": "删除将导致的损失的所有数据。 或者你确定你要这么做？"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_ACCOUNT_BUTTON_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REMOVE_ACCOUNT_BUTTON_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Usuń konto",
-                "us": "Remove account"
+                "us": "Remove account",
+                "de": "Konto löschen",
+                "ru": "Удалить учетную запись",
+                "fr": "Supprimer le compte",
+                "es": "Eliminar la cuenta de",
+                "no": "Slett konto",
+                "zh_cn": "删除帐户"
             },
             "field": "",
             "toRefresh": true
         },
         "PROFILE_MODAL_TAB": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "PROFILE_MODAL_TAB",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Profil użytkownika",
-                "us": "User profile"
+                "us": "User profile",
+                "de": "Benutzerprofil",
+                "ru": "Профиль пользователя",
+                "fr": "Le profil de l'utilisateur",
+                "es": "El perfil de usuario",
+                "no": "Brukerprofil",
+                "zh_cn": "用户配置文件"
             },
             "field": "",
             "toRefresh": true
         },
         "SHARE_ITEMS_MODAL_TAB": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SHARE_ITEMS_MODAL_TAB",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Przedmioty",
-                "us": "Shared Items"
+                "us": "Shared Items",
+                "de": "Gegenstände",
+                "ru": "Предметы",
+                "fr": "Objets",
+                "es": "Artículos",
+                "zh_cn": "项目",
+                "no": "Elementer"
             },
             "field": "",
             "toRefresh": true
         },
         "MESSAGES_MODAL_TAB": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "MESSAGES_MODAL_TAB",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Wiadomości",
-                "us": "Messages"
+                "us": "Messages",
+                "de": "News",
+                "ru": "Новости",
+                "fr": "Nouvelles",
+                "es": "Noticias",
+                "no": "Nyheter",
+                "zh_cn": "新闻"
             },
             "field": "",
             "toRefresh": true
         },
         "FRIENDS_MODAL_TAB": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "FRIENDS_MODAL_TAB",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Znajomi",
-                "us": "Friends"
+                "us": "Friends",
+                "de": "Freunde",
+                "ru": "Друзья",
+                "fr": "Amis",
+                "es": "Amigos",
+                "no": "Venner",
+                "zh_cn": "朋友"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_USER_TEXT": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "REMOVE_USER_TEXT",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Czy jesteś pewny, że chcesz usunąć konto?",
-                "us": "Are you sure that you want to remove account?"
+                "us": "Are you sure that you want to remove account?",
+                "de": "Sind Sie sicher, dass dein Konto löschen möchtest?",
+                "ru": "Вы уверены, что хотите удалить учетную запись?",
+                "fr": "Êtes-vous sûr de vouloir supprimer le compte?",
+                "es": "Está seguro de que desea eliminar la cuenta?",
+                "no": "Er du sikker på at du vil fjerne kontoen?",
+                "zh_cn": "你确定要删除的帐户吗？"
             },
             "field": "",
             "toRefresh": true
         },
         "YES_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "YES_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Tak",
-                "us": "Yes"
+                "us": "Yes",
+                "de": "So",
+                "ru": "Так",
+                "fr": "Ainsi",
+                "es": "Así",
+                "no": "Så",
+                "zh_cn": "所以"
             },
             "field": "",
             "toRefresh": true
         },
         "NO_LABEL": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "NO_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Nie",
-                "us": "No"
+                "us": "No",
+                "de": "Nicht",
+                "ru": "Не",
+                "fr": "Pas",
+                "es": "No",
+                "no": "Ikke",
+                "zh_cn": "不"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGOUT_CONFIRM_HEADER": {
-            "id": 0,
+            "id": "00ddec47-94af-420c-97b7-cfe7776698a4",
             "uid": "",
             "code": "LOGOUT_CONFIRM_HEADER",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Czy na pewno chcesz się wylogować?",
-                "us": "Are you sure that you want to logout?"
+                "us": "Are you sure that you want to logout?",
+                "de": "Sind Sie sicher, dass Sie gehen wollen?",
+                "ru": "Вы уверены, что хотите выйти?",
+                "fr": "Êtes-vous sûr de vouloir quitter?",
+                "es": "¿Estás seguro que quieres salir?",
+                "no": "Er du sikker på at du vil avslutte?",
+                "zh_cn": "你确定你要退出？"
             },
             "field": "",
             "toRefresh": true
         },
         "CHANGEPASSWORD_FORM_TEXT": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "CHANGEPASSWORD_FORM_TEXT",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustawione hasło będzie używane do przyszłych logowań",
-                "us": "With new password you will be able to login by email and password"
+                "us": "With new password you will be able to login by email and password",
+                "de": "Das gesetzte Kennwort verwendet wird für die nachfolgenden Anmeldungen",
+                "ru": "Установленный пароль будет использоваться для последующих входов в систему",
+                "fr": "Le mot de passe défini sera utilisé pour le suivi des entrées dans le système",
+                "es": "La contraseña será utilizada para las siguientes entradas en el sistema",
+                "no": "Et passord vil bli brukt for senere innlogginger",
+                "zh_cn": "一个密码将被用于随后的登录名"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_FORM_TEXT": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "SETLATLNG_FORM_TEXT",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Ustaw swoje położenie, żeby szybciej znaleźć nowe znajomości.",
-                "us": "Set you localisation to better find friends."
+                "us": "Set you localisation to better find friends.",
+                "de": "Stellen Sie Ihren Standort, um schneller neue Bekanntschaften.",
+                "ru": "Установите ваше местоположение, чтобы быстрее найти новые знакомства.",
+                "fr": "Définissez votre localisation, afin de trouver rapidement de nouvelles connaissances.",
+                "es": "Establezca su ubicación, para encontrar rápidamente los nuevos conocimientos.",
+                "no": "Angi posisjonen din til raskt å finne nye venner.",
+                "zh_cn": "设置你的位置，以迅速寻找新的朋友。"
             },
             "field": "",
             "toRefresh": true
         },
         "USER_IMAGE_PROFILE_TEXT": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "USER_IMAGE_PROFILE_TEXT",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Dodaj swoje zdjęcia (maksymalnie 5 zdjęć).",
-                "us": "Add your pictures (max 5 photos)."
+                "us": "Add your pictures (max 5 photos).",
+                "de": "Fügen Sie Ihre Fotos (bis zu 5 Fotos).",
+                "ru": "Добавить свои фотографии (до 5 фотографий).",
+                "fr": "Ajouter vos photos (5 photos).",
+                "es": "Añadir sus fotos (hasta 5 fotos).",
+                "no": "Legg til dine bilder (opp til 5 bilder).",
+                "zh_cn": "你的照片添加(达到5照片)。"
             },
             "field": "",
             "toRefresh": true
         },
         "IMAGE_VERIFY_LINK_LABEL": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "IMAGE_VERIFY_LINK_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Weryfikacja zdjęć",
-                "us": "Verify pictures"
+                "us": "Verify pictures",
+                "de": "Die überprüfung der Fotos",
+                "ru": "Проверка фотографий",
+                "fr": "Vérifier les photos",
+                "es": "Comprobación de fotos",
+                "no": "Sjekk bilder",
+                "zh_cn": "检查的照片"
             },
             "field": "",
             "toRefresh": true
         },
         "CATEGORY_LINK_LABEL": {
-            "id": 0,
+            "id": "5b95524c-6227-4229-aaf8-c9817045f216",
             "uid": "",
             "code": "CATEGORY_LINK_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Panel kategorii",
-                "us": "Categorii panel"
+                "us": "Categorii panel",
+                "de": "Panel Kategorie",
+                "ru": "Панель категории",
+                "fr": "Le panneau de la catégorie",
+                "es": "El panel de la categoría",
+                "no": "Panelet kategorier",
+                "zh_cn": "小组的类别"
             },
             "field": "",
             "toRefresh": true
         },
         "UPLOAD_IMAGE_BTN": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "UPLOAD_IMAGE_BTN",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Zapisz",
-                "us": "Save"
+                "us": "Save",
+                "de": "Speichern",
+                "ru": "Сохранить",
+                "fr": "Enregistrer",
+                "es": "Guardar",
+                "no": "Lagre",
+                "zh_cn": "保存"
             },
             "field": "",
             "toRefresh": true
         },
         "UPLOAD_IMAGE_LABEL": {
-            "id": 0,
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
             "uid": "",
             "code": "UPLOAD_IMAGE_LABEL",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Dodaj zdjęcie",
-                "us": "Add picture"
+                "us": "Add picture",
+                "de": "Foto hinzufügen",
+                "ru": "Добавить фото",
+                "fr": "Ajouter une photo",
+                "es": "Añadir una foto",
+                "no": "Legg til et bilde",
+                "zh_cn": "增加一个照片"
             },
             "field": "",
             "toRefresh": true
         },
         "IMAGE_NOT_VERIFIED": {
-            "id": 0,
+            "id": "425053a1-5c87-4c83-9355-3a91f1e657a2",
             "uid": "",
             "code": "IMAGE_NOT_VERIFIED",
             "status": "200",
             "type": "LABEL",
             "message": {
                 "pl": "Weryfikacja",
-                "us": "To verify"
+                "us": "To verify",
+                "de": "Rezension",
+                "ru": "Отзыв",
+                "fr": "Avis",
+                "es": "Reseña",
+                "no": "Mening",
+                "zh_cn": "见"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_DE_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_DE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Niemiecki",
+                "us": "German",
+                "de": "Deutsch",
+                "ru": "Немецкий",
+                "fr": "Allemand",
+                "es": "Alemán",
+                "no": "Tysk",
+                "zh_cn": "德"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_FR_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_FR_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Francuski",
+                "us": "French",
+                "de": "Französisch",
+                "ru": "Французский",
+                "fr": "Français",
+                "es": "Francés",
+                "no": "Fransk",
+                "zh_cn": "法语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_RU_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_RU_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Rosyjski",
+                "us": "Russian",
+                "de": "Russisch",
+                "ru": "Русский",
+                "fr": "Russe",
+                "es": "Ruso",
+                "no": "Russisk",
+                "zh_cn": "俄罗斯"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_ES_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_ES_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Hiszpański",
+                "us": "Spanish",
+                "de": "Spanisch",
+                "ru": "Испанский",
+                "fr": "Espagnol",
+                "es": "Español",
+                "no": "Spansk",
+                "zh_cn": "西班牙语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_NO_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_NO_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Norweski",
+                "us": "Norwegian",
+                "de": "Norwegisch",
+                "ru": "Норвежский",
+                "fr": "Norvégien",
+                "es": "Noruego",
+                "no": "Norsk",
+                "zh_cn": "挪威"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CODE_ZH_CN_LABEL": {
+            "id": "bde3bed4-2242-4b54-82af-61def5b37b70",
+            "uid": "",
+            "code": "CODE_ZH_CN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Chiński",
+                "us": "Chinese",
+                "de": "Chinesisch",
+                "ru": "Китайский",
+                "fr": "Chinois",
+                "es": "Chino",
+                "no": "Kinesisk",
+                "zh_cn": "中国"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LANG_FRANCE_LABEL": {
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "LANG_FRANCE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Francuski",
+                "us": "French",
+                "de": "Französisch",
+                "ru": "Французский",
+                "fr": "Français",
+                "es": "Francés",
+                "no": "Fransk",
+                "zh_cn": "法语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LANG_SPAIN_LABEL": {
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "LANG_SPAIN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Hiszpański",
+                "us": "Spanish",
+                "de": "Spanisch",
+                "ru": "Испанский",
+                "fr": "Espagnol",
+                "es": "Español",
+                "no": "Spansk",
+                "zh_cn": "西班牙语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LANG_NORWEGIAN_LABEL": {
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "LANG_NORWEGIAN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Norweski",
+                "us": "Norwegian",
+                "de": "Norwegisch",
+                "ru": "Норвежский",
+                "fr": "Norvégien",
+                "es": "Noruego",
+                "no": "Norsk",
+                "zh_cn": "挪威"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LANG_CHINESS_LABEL": {
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "LANG_CHINESS_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Chiński",
+                "us": "Chinese",
+                "de": "Chinesisch",
+                "ru": "Китайский",
+                "fr": "Chinois",
+                "es": "Chino",
+                "no": "Kinesisk",
+                "zh_cn": "中国"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "LANG_DEAUTSCH_LABEL": {
+            "id": "703c7c49-a5ee-4864-8d80-b1d3105bc197",
+            "uid": "",
+            "code": "LANG_DEAUTSCH_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Niemiecki",
+                "us": "German",
+                "de": "Deutsch",
+                "ru": "Немецкий",
+                "fr": "Allemand",
+                "es": "Alemán",
+                "no": "Tysk",
+                "zh_cn": "德"
             },
             "field": "",
             "toRefresh": true
@@ -1041,228 +1732,324 @@
     },
     "PLACEHOLDER": {
         "CODE_CODE_PLACEHOLDER": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "CODE_CODE_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "np. ( CODE_CODE_PLACEHOLDER )",
-                "us": "e.g ( CODE_CODE_PLACEHOLDER )"
+                "us": "e.g ( CODE_CODE_PLACEHOLDER )",
+                "de": "zum Beispiel, ( CODE_CODE_PLACEHOLDER )",
+                "ru": "например, ( CODE_CODE_PLACEHOLDER )",
+                "fr": "par exemple, ( CODE_CODE_PLACEHOLDER )",
+                "es": "por ejemplo, ( CODE_CODE_PLACEHOLDER )",
+                "no": "for eksempel, ( CODE_CODE_PLACEHOLDER )",
+                "zh_cn": "例如，(CODE_CODE_PLACEHOLDER)"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_PL_PLACEHOLDER": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "CODE_PL_PLACEHOLDER",
-            "status": "100",
+            "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Tłumaczenie polskie",
-                "us": "Polish translation"
+                "us": "Polish translation",
+                "de": "Die übersetzung auf Polnisch",
+                "ru": "Перевод на польский",
+                "fr": "Traduction en polonais",
+                "es": "Traducción al polaco",
+                "no": "Polsk oversettelse",
+                "zh_cn": "波兰翻译"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_US_PLACEHOLDER": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "CODE_US_PLACEHOLDER",
-            "status": "100",
+            "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Tłumaczenie angielskie",
-                "us": "English translation"
+                "us": "English translation",
+                "de": "Übersetzung auf Englisch",
+                "ru": "Перевод на английский",
+                "fr": "La traduction en anglais",
+                "es": "Traducción al inglés",
+                "no": "Engelsk oversettelse",
+                "zh_cn": "英文翻译"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "CODE_STATUS_PLACEHOLDER": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "CODE_STATUS_PLACEHOLDER",
-            "status": "100",
+            "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Wartość musi być w przedziale( 100 - 999 )",
-                "us": "Value must be between ( 100 - 999 )"
+                "us": "Value must be between ( 100 - 999 )",
+                "de": "Der Wert muss im Bereich von( 100 - 999 )",
+                "ru": "Значение должно быть в диапазоне( 100 - 999 )",
+                "fr": "La valeur doit être comprise dans la plage( 100 - 999 )",
+                "es": "El valor debe estar en el rango de( 100 - 999 )",
+                "no": "Verdien må være i området( 100 - 999 )",
+                "zh_cn": "值必须在范围的(100-999)"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD_USER_NAME_PLACEHOLDER": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "FORGOT_PASSWORD_USER_NAME_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_USER_NAME_PLACEHOLDER": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "LOGIN_USER_NAME_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "LOGIN_PASSWORD_PLACEHOLDER": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "LOGIN_PASSWORD_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Hasło",
-                "us": "Password"
+                "us": "Password",
+                "de": "Passwort",
+                "ru": "Пароль",
+                "fr": "Le mot de passe",
+                "es": "La contraseña",
+                "no": "Passord",
+                "zh_cn": "密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_EMAIL_PLACEHOLDER": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "REGISTER_EMAIL_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Email",
-                "us": "Email"
+                "us": "Email",
+                "de": "Email",
+                "ru": "Email",
+                "fr": "Email",
+                "es": "Email",
+                "no": "E-post",
+                "zh_cn": "电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PASSWORD_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "REGISTER_PASSWORD_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Hasło",
-                "us": "Password"
+                "us": "Password",
+                "de": "Passwort",
+                "ru": "Пароль",
+                "fr": "Le mot de passe",
+                "es": "La contraseña",
+                "no": "Passord",
+                "zh_cn": "密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PASSWORD_REPEAT_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "REGISTER_PASSWORD_REPEAT_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Powtórz hasło",
-                "us": "Repeat password"
+                "us": "Repeat password",
+                "de": "Wiederholen Sie das Passwort",
+                "ru": "Повторите пароль",
+                "fr": "Répétez le mot de passe",
+                "es": "Repita la contraseña",
+                "no": "Gjenta passord",
+                "zh_cn": "重复密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_NAME_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "REGISTER_NAME_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Imię",
-                "us": "Name"
+                "us": "Name",
+                "de": "Name",
+                "ru": "Имя",
+                "fr": "Le nom de",
+                "es": "El nombre de",
+                "no": "Navn",
+                "zh_cn": "名称"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_SURNAME_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "REGISTER_SURNAME_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Nazwisko",
-                "us": "Surname"
+                "us": "Surname",
+                "de": "Name",
+                "ru": "Имя",
+                "fr": "Le nom de",
+                "es": "El nombre de",
+                "no": "Navn",
+                "zh_cn": "名称"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_PHONE_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "REGISTER_PHONE_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "Telefon",
-                "us": "Phone"
+                "us": "Phone",
+                "de": "Telefon",
+                "ru": "Телефон",
+                "fr": "Téléphone",
+                "es": "Teléfono",
+                "no": "Telefon",
+                "zh_cn": "电话"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REGISTER_BIRTHDATE_PLACEHOLDER": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "REGISTER_BIRTHDATE_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "yyyy-mm-dd",
-                "us": "yyyy-mm-dd"
+                "us": "yyyy-mm-dd",
+                "de": "yyyy-mm-dd",
+                "ru": "yyyy-mm-dd",
+                "fr": "yyyy-mm-dd",
+                "es": "yyyy-mm-dd",
+                "no": "yyyy-mm-dd",
+                "zh_cn": "yyyy-mm-dd"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "SEARCH_HOMEPAGE_INPUT_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "SEARCH_HOMEPAGE_INPUT_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "np. Płyty winylowe",
-                "us": "eg. Vinyl records"
+                "us": "eg. Vinyl records",
+                "de": "zum Beispiel, Schallplatten",
+                "ru": "например, виниловые Пластинки",
+                "fr": "par exemple, vinyles",
+                "es": "por ejemplo, Discos de vinilo",
+                "no": "for eksempel, vinylplater",
+                "zh_cn": "例如，乙烯的记录"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_COUNTRY_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "SETLATLNG_COUNTRY_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "np. Polska",
-                "us": "eg. Poland"
+                "us": "eg. Poland",
+                "de": "zum Beispiel, Polen",
+                "ru": "например, Польша",
+                "fr": "par exemple, la Pologne",
+                "es": "por ejemplo, polonia",
+                "no": "for eksempel, Polen",
+                "zh_cn": "例如，波兰"
             },
             "field": "",
             "toRefresh": true
         },
         "SETLATLNG_CITY_PLACEHOLDER": {
-            "id": 0,
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
             "uid": "",
             "code": "SETLATLNG_CITY_PLACEHOLDER",
             "status": "200",
             "type": "PLACEHOLDER",
             "message": {
                 "pl": "np. Kraków",
-                "us": "eg. Cracow"
+                "us": "eg. Cracow",
+                "de": "zum Beispiel, Krakau",
+                "ru": "например, Краков",
+                "fr": "par exemple, Cracovie",
+                "es": "por ejemplo, cracovia",
+                "no": "for eksempel, Krakow",
+                "zh_cn": "例如，克拉科夫"
             },
             "field": "",
             "toRefresh": true
@@ -1270,63 +2057,98 @@
     },
     "VALIDATION": {
         "isNumber": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "isNumber",
-            "status": "100",
+            "status": "200",
             "type": "VALIDATION",
             "message": {
                 "pl": "Wartość musi być liczbą",
-                "us": "Value must be a number"
+                "us": "Value must be a number",
+                "de": "Der Wert muss eine Zahl sein",
+                "ru": "Значение должно быть числом",
+                "fr": "La valeur doit être un nombre",
+                "es": "El valor debe ser un número",
+                "no": "Verdien må være et tall",
+                "zh_cn": "值必须是一个数字"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "notEmpty": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "notEmpty",
-            "status": "100",
+            "status": "200",
             "type": "VALIDATION",
             "message": {
                 "pl": "Pole nie może być puste",
-                "us": "This field cannot be empty"
+                "us": "This field cannot be empty",
+                "de": "Das Feld darf nicht leer sein",
+                "ru": "Поле не может быть пустым",
+                "fr": "Le champ ne peut être vide",
+                "es": "El campo no puede estar vacío",
+                "no": "Feltet kan ikke være tomt",
+                "zh_cn": "现场不能是空的"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FILE_IS_TOO_BIG": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "FILE_IS_TOO_BIG",
-            "status": "100",
+            "status": "200",
             "type": "VALIDATION",
             "message": {
                 "pl": "Przeslany plik jest za duzy (Organieczeni do 2MB)",
-                "us": "Uploaded file is too big (2MB limitation)"
+                "us": "Uploaded file is too big (2MB limitation)",
+                "de": "Auf die Datei ist zu groß (Organieczeni bis 2 MB)",
+                "ru": "По файл слишком большой (Organieczeni до 2 МБ)",
+                "fr": "Sur le fichier est trop gros (Organieczeni à 2 MO)",
+                "es": "En el archivo es demasiado grande (Organieczeni hasta 2 MB)",
+                "no": "Filen er for stor (Organieczeni til 2 MB)",
+                "zh_cn": "文件太大了(Organieczeni2MB)"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "TOO_MANY_USER_IMAGES": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "TOO_MANY_USER_IMAGES",
-            "status": "100",
+            "status": "200",
             "type": "VALIDATION",
             "message": {
                 "pl": "Za dużo przesłanych zdjęć profilowych (Max. 5)",
-                "us": "Too many user profile images (Max. 5)"
+                "us": "Too many user profile images (Max. 5)",
+                "de": "Zu viel hochgeladenen Bilder der profile (Max. 5)",
+                "ru": "Слишком много загруженных изображений профилей (Max. 5)",
+                "fr": "Trop de diversité des profils (Max. 5)",
+                "es": "Demasiadas imágenes cargadas de perfiles (Max. 5)",
+                "no": "For mange er lastet opp bilder profil (Maks. 5)",
+                "zh_cn": "太多的图像上传文件(。 5)"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "UNRECOGNIZE_FILE_TYPE": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "UNRECOGNIZE_FILE_TYPE",
-            "status": "100",
+            "status": "200",
             "type": "VALIDATION",
             "message": {
                 "pl": "Niedozwolony format pliku (Oczekiwane JPG,PNG).",
-                "us": "Unrecognize file type (expected JPG,PNG)."
+                "us": "Unrecognize file type (expected JPG,PNG).",
+                "de": "Ungültiges Format der Datei (es wird Erwartet, JPG,PNG).",
+                "ru": "Недопустимый формат файла (Ожидается, JPG,PNG).",
+                "fr": "Format de fichier non valide (en attente, JPG,PNG).",
+                "es": "Formato de archivo no válido (se Espera, JPG,PNG).",
+                "no": "Ugyldig filformat (Forventet, JPG,PNG).",
+                "zh_cn": "无效的文件格式(预期,JPG,PNG)。"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "EMAIL_EXIST_IN_DB": {
@@ -1344,205 +2166,347 @@
     },
     "EMAIL": {
         "AUTHORIZATION_TITLE": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "AUTHORIZATION_TITLE",
             "status": "200",
             "type": "EMAIL",
             "message": {
                 "pl": "[StuffShare] Potwierdź email",
-                "us": "[StuffShare] Email authorization"
+                "us": "[StuffShare] Email authorization",
+                "de": "[StuffShare] email Bestätigen",
+                "ru": "[StuffShare] Подтвердите email",
+                "fr": "[StuffShare] Confirmer l'email",
+                "es": "[StuffShare] Confirme el email",
+                "no": "[StuffShare] Bekreft e-post",
+                "zh_cn": "[StuffShare]确认的电子邮件"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "NEW_USER_TITLE": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "NEW_USER_TITLE",
             "status": "200",
             "type": "EMAIL",
             "message": {
                 "pl": "[StuffShare] Cześć {0}",
-                "us": "[StuffShare] Hi {0}"
+                "us": "[StuffShare] Hi {0}",
+                "de": "[StuffShare] Hallo {0}",
+                "ru": "[StuffShare] Привет {0}",
+                "fr": "[StuffShare] Bonjour {0}",
+                "es": "[StuffShare] Hola {0}",
+                "no": "[StuffShare] Hallo {0}",
+                "zh_cn": "[StuffShare]你好{0}"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "FORGOT_PASSWORD",
             "status": "200",
             "type": "EMAIL",
             "message": {
                 "pl": "[StuffShare] Wygenerowano nowe hasło",
-                "us": "[StuffShare] New password received"
+                "us": "[StuffShare] New password received",
+                "de": "[StuffShare] wurde ein neues Passwort generiert am",
+                "ru": "[StuffShare] был сгенерирован новый пароль",
+                "fr": "[StuffShare] a été générée par le nouveau mot de passe",
+                "es": "[StuffShare] se ha generado una nueva contraseña",
+                "no": "[StuffShare] ble generert et nytt passord",
+                "zh_cn": "[StuffShare]是产生一个新的密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "FORGOT_PASSWORD_FIRST_MAIL": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "FORGOT_PASSWORD_FIRST_MAIL",
             "status": "200",
             "type": "EMAIL",
             "message": {
                 "pl": "[StuffShare] Rozpoczęcie procesu generowania hasła",
-                "us": "[StuffShare] Start process to generate new password"
+                "us": "[StuffShare] Start process to generate new password",
+                "ru": "[StuffShare] Запуск процесса генерации пароля",
+                "fr": "[StuffShare] le Lancement du processus de génération de mot de passe",
+                "es": "[StuffShare] Inicio del proceso de generación de contraseña",
+                "no": "[StuffShare] starter prosessen med passord generasjon",
+                "zh_cn": "[StuffShare]启动的过程中生成密码"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "REMOVE_USER_TITLE": {
+            "id": "01f838d7-98dc-443b-9f60-64146c83b1b2",
+            "uid": "",
             "code": "REMOVE_USER_TITLE",
             "status": "200",
             "type": "EMAIL",
             "message": {
                 "pl": "[StuffShare] Konto zostało usunięte",
-                "us": "[StuffShare] Your account has been removed"
+                "us": "[StuffShare] Your account has been removed",
+                "de": "[StuffShare] der Account wurde gelöscht",
+                "ru": "[StuffShare] Аккаунт удален",
+                "fr": "[StuffShare] suppression du Compte",
+                "es": "[StuffShare] eliminado de la Cuenta",
+                "no": "[StuffShare] Konto slettet",
+                "zh_cn": "[StuffShare]帐户中删除"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         }
     },
-    "INFO": {},
+    "INFO": {
+        "id": "af9e0c7e-61b0-468f-9510-191655e429ee",
+        "uid": "",
+        "code": "",
+        "status": "200",
+        "type": "INFO",
+        "message": {
+            "pl": "polska",
+            "us": "",
+            "de": "Poland",
+            "ru": "",
+            "fr": "",
+            "es": "",
+            "no": "",
+            "zh_cn": ""
+        },
+        "field": "",
+        "toRefresh": true
+    },
     "ERROR_GLOBAL": {},
     "ERROR": {
         "EMAIL_EXCEPTION": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "EMAIL_EXCEPTION",
-            "status": "500",
+            "status": "200",
             "type": "ERROR",
             "message": {
                 "pl": "Email nie został wysłany popranwie",
-                "us": "Exception in mail sending"
+                "us": "Exception in mail sending",
+                "de": "E-Mail nicht gesendet wurde popranwie",
+                "ru": "Электронной почты не был отправлен popranwie",
+                "fr": "L'e-mail n'a pas été envoyé popranwie",
+                "es": "El correo electrónico no ha sido enviado popranwie",
+                "no": "E-post har ikke blitt sendt popranwie",
+                "zh_cn": "电子邮件没有被送popranwie"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "VALIDATION_INVALID_ERROR": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "VALIDATION_INVALID_ERROR",
-            "status": "400",
+            "status": "200",
             "type": "ERROR",
             "message": {
                 "pl": "Niepoprawnie wypełnione dane",
-                "us": "Invalid data"
+                "us": "Invalid data",
+                "de": "Falsch ausgefüllte Daten",
+                "ru": "Неправильно заполненные данные",
+                "fr": "Mal remplis avec des données",
+                "es": "Incorrectos los datos",
+                "no": "Feil fylt data",
+                "zh_cn": "不正确填充数据"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "PRIVILEGES_INVALID_ERROR": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "PRIVILEGES_INVALID_ERROR",
-            "status": "400",
+            "status": "200",
             "type": "ERROR",
             "message": {
                 "pl": "Nie masz uprawnień do wykonania tej akcji.",
-                "us": "You don't have permission to run this action."
+                "us": "You don't have permission to run this action.",
+                "de": "Sie haben keine Berechtigung zum ausführen dieser Aktion.",
+                "ru": "У вас нет прав на выполнение этого действия.",
+                "fr": "Vous n'êtes pas autorisé à effectuer cette action.",
+                "es": "No tiene permisos para realizar esta acción.",
+                "no": "Du har ikke tillatelse til å utføre denne handlingen.",
+                "zh_cn": "你没有权限来执行这一行动。"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "EMAIL_NOT_EXIST": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "EMAIL_NOT_EXIST",
-            "status": "400",
+            "status": "200",
             "type": "ERROR",
             "message": {
                 "pl": "Podany email lub hasło są niepoprawne.",
-                "us": "Email or password is incorrect"
+                "us": "Email or password is incorrect",
+                "de": "E-Mail-Adresse oder Passwort sind falsch.",
+                "ru": "Адрес электронной почты или пароль неверны.",
+                "fr": "L'adresse e-mail ou mot de passe incorrect.",
+                "es": "La dirección de correo electrónico o la contraseña son incorrectos.",
+                "no": "E-postadressen eller passordet er feil.",
+                "zh_cn": "电子邮件地址或密码不正确。"
             },
             "field": "",
-            "validation": [],
             "toRefresh": true
         },
         "AUTHORIZATION_ERROR": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
             "code": "AUTHORIZATION_ERROR",
-            "status": "401",
+            "status": "200",
             "type": "ERROR",
             "message": {
                 "pl": "Musisz być zalogowany, żeby wykonać tę akcję.",
-                "us": "You are not log in."
+                "us": "You are not log in.",
+                "de": "Sie müssen angemeldet sein, um diese Aktion durchzuführen.",
+                "ru": "Вы должны быть авторизованы, чтобы выполнить это действие.",
+                "fr": "Vous devez être connecté pour effectuer cette action.",
+                "es": "Debe estar autorizado para realizar esta acción.",
+                "no": "Du må være pålogget for å utføre denne handlingen.",
+                "zh_cn": "你必须登录在执行这一行动。"
             },
             "field": "",
-            "validation": [],
+            "toRefresh": true
+        },
+        "EMAIL_EXIST_IN_DB": {
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
+            "uid": "",
+            "code": "EMAIL_EXIST_IN_DB",
+            "status": "200",
+            "type": "ERROR",
+            "message": {
+                "pl": "Użytkownik {0} jest juz zarejestrowany w systemie",
+                "us": "User {0} has been already registerd",
+                "de": "Der Benutzer {0} ist im System bereits registriert",
+                "ru": "Пользователь {0} уже зарегистрирован в системе",
+                "fr": "L'utilisateur {0} est déjà enregistré dans le système",
+                "es": "El usuario {0} ya está registrado en el sistema",
+                "no": "Brukeren {0} allerede er registrert i systemet",
+                "zh_cn": "用户{0}已经在系统中注册的"
+            },
+            "field": "",
             "toRefresh": true
         }
     },
     "SUCCESS_GLOBAL": {
         "SET_LANG_REQUIRE_INFO": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "SET_LANG_REQUIRE_INFO",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Ustaw piniezke lub ustaw współrzędne miasta z którego pochodzisz",
-                "us": "Set  geoocordinates"
+                "us": "Set  geoocordinates",
+                "de": "Installieren Sie piniezke installieren oder die Koordinaten der Stadt aus der Sie stammt",
+                "ru": "Установите piniezke или установить координаты города из которого вы родом",
+                "fr": "Installez piniezke ou de définir les coordonnées d'une ville à partir de laquelle vous venez",
+                "es": "Instale piniezke o fijar las coordenadas de la ciudad desde la que usted viene",
+                "no": "Installere piniezke eller angi koordinatene til byen fra der du kommer fra",
+                "zh_cn": "安装piniezke或设定坐标的城市从你来自哪里"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGGED_OUT_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "LOGGED_OUT_SUCCESS",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Nastąpiło wylogowanie.",
-                "us": "You've been logged out."
+                "us": "You've been logged out.",
+                "de": "Ereignete sich Abmelden.",
+                "ru": "Произошел выход из системы.",
+                "fr": "Déconnecté du système.",
+                "es": "Se produjo la salida del sistema.",
+                "no": "Det er veien ut av systemet.",
+                "zh_cn": "这是出路的系统。"
             },
             "field": "",
             "toRefresh": true
         },
         "LOGIN_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "LOGIN_SUCCESS",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Jesteś zalogowany",
-                "us": "You're logged in"
+                "us": "You're logged in",
+                "de": "Sie betraten",
+                "ru": "Вы вошли",
+                "fr": "Vous êtes connecté",
+                "es": "Has entrado",
+                "no": "Du angav",
+                "zh_cn": "你进入了"
             },
             "field": "",
             "toRefresh": true
         },
         "REMOVE_USER_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "REMOVE_USER_SUCCESS",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Twoje konto zostało usunięte.",
-                "us": "Your account has been removed."
+                "us": "Your account has been removed.",
+                "de": "Ihr Konto wurde gelöscht.",
+                "ru": "Ваш аккаунт был удален.",
+                "fr": "Votre compte a été supprimé.",
+                "es": "Tu cuenta ha sido eliminada.",
+                "no": "Din konto har blitt slettet.",
+                "zh_cn": "你的账户已被删除。"
             },
             "field": "",
             "toRefresh": true
         },
         "CHANGE_PASSWORD_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "CHANGE_PASSWORD_SUCCESS",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Twoje hasło zostało zmienione.",
-                "us": "Your password has been changed."
+                "us": "Your password has been changed.",
+                "de": "Ihr Passwort wurde geändert.",
+                "ru": "Ваш пароль изменен.",
+                "fr": "Votre mot de passe est modifié.",
+                "es": "La contraseña se ha cambiado.",
+                "no": "Ditt passord er endret.",
+                "zh_cn": "你的密码已经被改变。"
             },
             "field": "",
             "toRefresh": true
         },
         "SET_LANG_SAVE_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "SET_LANG_SAVE_SUCCESS",
             "status": "200",
             "type": "SUCCESS_GLOBAL",
             "message": {
                 "pl": "Twoja lokalizacja została uaktualniona.",
-                "us": "Your localisation has been saved."
+                "us": "Your localisation has been saved.",
+                "de": "Ihr Standort aktualisiert.",
+                "ru": "Ваше местоположение обновлена.",
+                "fr": "Votre emplacement est mis à jour.",
+                "es": "Su ubicación se ha actualizado.",
+                "no": "Posisjonen din er oppdatert.",
+                "zh_cn": "你的位置进行更新。"
             },
             "field": "",
             "toRefresh": true
@@ -1565,14 +2529,20 @@
     },
     "SUCCESS": {
         "LOGGED_OUT_SUCCESS": {
-            "id": 0,
+            "id": "cf30cbd9-959a-491a-ad88-b6b972dbdc02",
             "uid": "",
             "code": "LOGGED_OUT_SUCCESS",
             "status": "200",
             "type": "SUCCESS",
             "message": {
                 "pl": "Zostałeś wylogowany",
-                "us": "You've been logged out"
+                "us": "You've been logged out",
+                "de": "Deaktiviert wurden",
+                "ru": "Были отключены",
+                "fr": "Ont été désactivés",
+                "es": "Se han deshabilitado",
+                "no": "Ble deaktivert",
+                "zh_cn": "已被禁用"
             },
             "field": "",
             "toRefresh": true

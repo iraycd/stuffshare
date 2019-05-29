@@ -34,7 +34,7 @@ export default class CategoryHierarchy extends Model {
     );
   }
   static associate(models) {
-    CategoryHierarchy.hasOne(models.Category, { as: "category_parent", targetKey: 'category_parent_id', foreignKey: "id" });
+    CategoryHierarchy.belongsTo(models.Category, { as: "category_parent", targetKey: 'id', foreignKey: "category_parent_id" });
     CategoryHierarchy.hasMany(models.Category, { as: "category_children", targetKey: 'category_child_id', foreignKey: "id" });
   }
 }

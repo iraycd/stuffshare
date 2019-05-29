@@ -12,7 +12,14 @@ export default class DictionaryDTO extends BaseDTO {
         this.type = "INFO";
         this.message = {
             "pl": "",
-            "us": ""
+            "us": "",
+            "de": "",
+            "ru": "",
+            "fr": "",
+            "es": "",
+            "no": "",
+            "zh_cn": ""
+
         };
         this.field = "";
     };

@@ -22,6 +22,7 @@ import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
 import BodyLoader from '../Components/Loader/BodyLoader/index.jsx';
 import Item from './Items/Components/Item/index.jsx';
 import NewItem from './Items/Components/NewItem/index.jsx';
+import Categories from './Categories/index.jsx';
 
 
 class App extends React.Component {
@@ -53,6 +54,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path={"/"} component={Home} />
           <RouterAuth path={"/dictionary"} component={Dictionary} />
+          <RouterAuth path={"/categories"} component={Categories} />
           <Route path={"/forgot_password/:uid"} component={ForgotPasswordRedirect} />
           <Route path={"/authorize/:uid"} component={AuthorizeUser} />
           <RouterAuth path={"/userAccount"} component={UserAccount} />

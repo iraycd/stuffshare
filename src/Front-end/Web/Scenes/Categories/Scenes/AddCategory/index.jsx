@@ -12,7 +12,7 @@ import { withRouter } from 'react-router-dom';
 import translate from 'translate';
 
 
-class EditCategory extends React.Component {
+class DictionaryEdit extends React.Component {
 
     constructor(props) {
         super(props);
@@ -312,4 +312,4 @@ const mapDispatchToProps = (dispatch) => {
 export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(EditCategory));
+)(DictionaryEdit));

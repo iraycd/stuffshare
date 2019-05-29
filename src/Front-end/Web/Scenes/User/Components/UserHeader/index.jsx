@@ -41,6 +41,13 @@ class UserHeader extends React.Component {
         switch (this.props.lang) {
             case 'us': this.language = this.tran.translate('LANG_ENGLISH_LABEL'); break;
             case 'pl': this.language = this.tran.translate('LANG_POLISH_LABEL'); break;
+            case 'de': this.language = this.tran.translate('LANG_DEAUTSCH_LABEL'); break;
+            case 'ru': this.language = this.tran.translate('LANG_RUSSIA_LABEL'); break;
+            case 'fr': this.language = this.tran.translate('LANG_FRANCE_LABEL'); break;
+            case 'es': this.language = this.tran.translate('LANG_SPAIN_LABEL'); break;
+            case 'no': this.language = this.tran.translate('LANG_NORWEGIAN_LABEL'); break;
+            case 'zh_cn': this.language = this.tran.translate('LANG_CHINESS_LABEL'); break;
+           
             default: return 'brak';
 
         }
@@ -96,7 +103,11 @@ let width="";
                                 <li data-tag="pl" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_POLISH_LABEL')}</li>
                                 <li data-tag="us" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_ENGLISH_LABEL')}</li>
                                 <li data-tag="ru" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_RUSSIA_LABEL')}</li>
-                                <li data-tag="de" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_RUSSIA_LABEL')}</li>
+                                <li data-tag="de" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_DEAUTSCH_LABEL')}</li>
+                                <li data-tag="fr" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_FRANCE_LABEL')}</li>
+                                <li data-tag="es" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_SPAIN_LABEL')}</li>
+                                <li data-tag="no" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_NORWEGIAN_LABEL')}</li>
+                                <li data-tag="zh_cn" onClick={this.setLanguageHandler.bind(this)} className="d-block g-color-white g-color-primary--hover g-text-underline--none--hover g-py-5 g-px-20 pointer">{this.tran.translate('LANG_CHINESS_LABEL')}</li>
 
                             </ul>
                         </li>

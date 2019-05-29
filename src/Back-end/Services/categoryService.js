@@ -27,10 +27,47 @@ export default class CategoryService extends BaseService {
    */
   async getCategoryTree({ id }) {
     return await this.toJsonParse(
-      this.unitOfWorkDI.categoryRepository.getCategoryTree({ id })
+      this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids:[id] })
     );
   }
 
+  /**
+   *
+   *
+   * @param {{search,isFor}}
+   * @memberof CategoryService
+   */
+  async getCategoryFreetext({ search, isFor }) {
+    let result = await this.unitOfWorkDI.categoryRepository.getCategoryFreetext({ search, isFor })
+    
+    return result;
+  }
+  
+  async getAllCategoriesFlat({}) {
+    let result = await this.unitOfWorkDI.categoryRepository.getAllCategoriesFlat({  })
+    
+    return result;
+  }
+   /**
+   *
+   *
+   * @param {{model:CategoryDTO}}
+   * @memberof CategoryService
+   */
+  async getCategoryFreetextCategory({ model }) {
+    let result = await this.getCategoryFreetext({search:model.category});
+    console.log(result);
+    if(result.length>0){
+      let ids = result.map(item=>{return item.KEY});
+      console.log(ids);
+      return await this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids:ids })
+ 
+
+    }else{
+      return []
+    }
+      
+  }
   //CHECK privileges , status , if user have access to this category
   /**
    *
@@ -58,7 +95,7 @@ export default class CategoryService extends BaseService {
     await this.unitOfWorkDI.categoryRepository.removeCategory({ id });
   }
 
-  async setAsVerified({id}){
+  async setAsVerified({ id }) {
     await this.unitOfWorkDI.categoryRepository.setAsVerified({ id });
   }
 

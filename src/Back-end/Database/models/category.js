@@ -33,7 +33,19 @@ export default class Category extends Model {
         },
         category_pl: DataTypes.STRING,
         category_us: DataTypes.STRING,
-        status:DataTypes.INTEGER
+        category_de: DataTypes.STRING,
+        category_ru: DataTypes.STRING,
+        category_fr: DataTypes.STRING,
+        category_es: DataTypes.STRING,
+        category_no: DataTypes.STRING,
+        category_zh_cn: DataTypes.STRING,
+        status: DataTypes.INTEGER,
+        forThing: DataTypes.INTEGER,
+        forSell: DataTypes.INTEGER,
+        forEvent: DataTypes.INTEGER,
+        icon: DataTypes.STRING
+
+
       },
       { sequelize }
     );

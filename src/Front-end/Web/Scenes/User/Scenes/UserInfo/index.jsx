@@ -88,7 +88,7 @@ class UserInfo extends React.Component {
                 </Row>
                 <br />
                 <Row>
-                    <Map className={`size-map-${this.state.mapHeight}px`} center={latlng} zoom={13}>
+                    <Map className={`size-map-${this.state.mapHeight}px`}  style={{zIndex:3}}center={latlng} zoom={13}>
 
 
                         <TileLayer

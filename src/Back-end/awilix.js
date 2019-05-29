@@ -59,6 +59,9 @@ import SetProfileImageCommand from "./Commands/User/setProfileImageCommand.js";
 import CreateUserByExternalCommand from "./Commands/User/createUserByExternalCommand.js";
 import UserAuthRepository from "./Repository/userAuthRepository.js";
 import LogInByExternalQuery from "./Query/User/logInByExternalQuery.js";
+import GetCategoryFreetextQuery from "./Query/Category/getCategoryFreetextQuery.js";
+import GetCategoriesAllQuery from "./Query/Category/getCategoriesAllQuery.js";
+
 
 
 /**
@@ -130,6 +133,9 @@ exporter[QueryList.Category.GET_CATEGORIES] = asClass(GetCategoryQuery);
 exporter[QueryList.Category.GET_CATEGORIES_HIERARCHY] = asClass(
   GetCategoryTreeQuery
 );
+exporter[QueryList.Category.GET_CATEGORIES_ALL_TREE]=asClass(GetCategoriesAllQuery)
+
+exporter[QueryList.Category.GET_CATEGORIES_FREETEXT]=asClass(GetCategoryFreetextQuery)
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////BLOB//////////////////////////////

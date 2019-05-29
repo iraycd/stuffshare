@@ -156,6 +156,10 @@ class UserAccount extends React.Component {
         }
 
         let body =
+        <CSSTransitionGroup transitionName="fade"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+            >
             <Container className="g-py-15">
 
                 <Row>
@@ -214,6 +218,7 @@ class UserAccount extends React.Component {
                     </Col>
                 </Row>
             </Container >
+            </CSSTransitionGroup>
         return (
 
 

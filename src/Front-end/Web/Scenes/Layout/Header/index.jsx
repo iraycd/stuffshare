@@ -105,18 +105,18 @@ class Header extends React.Component {
               <div className="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
                 <ul className="navbar-nav text-uppercase g-font-weight-400 ml-auto">
                   <li className="nav-item g-mx-10--lg g-mx-15--xl">
-                    <Link to="/" className=" g-color-primary--hover nav-link g-py-7 g-px-0 ">{this.tran.translate('LANG_HOME_LINK_LABEL')}</Link>
+                    <Link to="/" className=" g-color-primary--hover nav-link g-py-7 g-px-0  g-letter-spacing-1 g-font-weight-500 ">{this.tran.translate('LANG_HOME_LINK_LABEL')}</Link>
                   </li>
 
                   <WrapperAuth>
 
                     <li class="nav-item hs-has-sub-menu g-mx-10--lg g-mx-15--xl  hs-event-prevented">
-                      <a id="nav-link--home" class="nav-link g-py-7 g-px-0 g-color-primary--hover  " href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--home">{this.tran.translate('ADMIN_LINK_LABEL')}</a>
+                      <a id="nav-link--home" class="nav-link g-py-7 g-px-0 g-color-primary--hover g-letter-spacing-1 g-font-weight-500 " href="#" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu--home">{this.tran.translate('ADMIN_LINK_LABEL')}</a>
 
                       <ul class=" u-shadow-v11 nav-link hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2  g-min-width-220 g-py-7 g-mt-9 g-mt-15--lg--scrolling animated display-none" id="nav-submenu--home" aria-labelledby="nav-link--home"  >
-                        <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</LinkAuth></li>
-                        <li class="dropdown-item "><LinkAuth to="/dictionary" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</LinkAuth></li>
-                        <li class="dropdown-item "><LinkAuth to="/verifyImage" className=" nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('IMAGE_VERIFY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item u-link-v5     g-pl-7--hover"><LinkAuth to="/dictionary" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item u-link-v5     g-pl-7--hover "><LinkAuth to="/categories" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item u-link-v5     g-pl-7--hover "><LinkAuth to="/verifyImage" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('IMAGE_VERIFY_LINK_LABEL')}</LinkAuth></li>
 
                       </ul>
                     </li>
