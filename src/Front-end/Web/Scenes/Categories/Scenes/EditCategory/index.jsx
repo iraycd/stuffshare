@@ -351,7 +351,7 @@ class CategoryEdit extends React.Component {
                     </Col>
                 </Row>
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
             </Form>
 
         );

@@ -17,6 +17,11 @@ import V_User from "./v_user.js";
 import Country from "./country.js";
 import City from "./city.js";
 import UserAuths from "./userauth.js";
+import CategoryOption from "./categoryOption.js";
+import CategoryOptionsTemplate from "./categoryOptionsTemplate.js";
+import CategoryOptionsTypeTemplate from "./categoryOptionsTypeTemplate.js";
+import CategoryOptionsType from "./CategoryOptionsType.js";
+
 
 
 var env = process.env.NODE_ENV || "development";
@@ -60,9 +65,12 @@ let models = {
   V_User: V_User.init(sequelize, Sequelize),
   Country: Country.init(sequelize, Sequelize),
   City: City.init(sequelize, Sequelize),
-  UserAuths: UserAuths.init(sequelize,Sequelize)
+  UserAuths: UserAuths.init(sequelize, Sequelize),
+  CategoryOptionsType: CategoryOptionsType.init(sequelize, Sequelize),
+  CategoryOptionsTypeTemplate: CategoryOptionsTypeTemplate.init(sequelize, Sequelize),
+  CategoryOptionsTemplate: CategoryOptionsTemplate.init(sequelize, Sequelize),
+  CategoryOption: CategoryOption.init(sequelize, Sequelize),
 
-  
 };
 
 Object.keys(models).forEach(modelName => {

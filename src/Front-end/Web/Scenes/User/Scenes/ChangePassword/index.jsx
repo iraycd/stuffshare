@@ -14,7 +14,7 @@ import LOGIN_ACTIONS from './actions.js';
 import CommandList from '../../../../../../Shared/CommandList.js';
 
 
-ChangePasswordDTO
+
 class ChangePassword extends React.Component {
 
     constructor(props) {

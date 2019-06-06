@@ -18,6 +18,8 @@ import CommandList from '../../../../../../Shared/CommandList.js';
 import uuidv4 from "uuid/v4";
 import CATEGORY_TREE_ACTIONS from '../CategoryTree/actions.js';
 
+import Collapsible from 'react-collapsible';
+
 
 
 
@@ -415,8 +417,21 @@ class AddCategory extends React.Component {
                         <IconTextbox onChange={this.iconHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_ICON__PLACEHOLDER')} value={this.state.category.icon} label={tran.translate('CATEGORY_ICON__LABEL')} field="icon" validation={this.state.validation} />
                     </Col>
                 </Row>
-
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
+                <Row className="g-my-20">
+                    <Collapsible trigger="Start 1 ">
+                        <Row className="g-ma-10">
+                            <p>This is the collapsible content. It can be any element or React component you like.</p>
+                            <p>It can even be another Collapsible component. Check out the next section!</p>
+                        </Row>
+                    </Collapsible>
+                    <Collapsible trigger="Start 2 ">
+                        <Row className="g-ma-10">
+                            <p>This is the collapsible content. It can be any element or React component you like.</p>
+                            <p>It can even be another Collapsible component. Check out the next section!</p>
+                        </Row>
+                    </Collapsible>
+                </Row>
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
             </Form>
 
         );

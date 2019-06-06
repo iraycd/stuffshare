@@ -7,13 +7,45 @@ module.exports = {
         autoIncrement: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        defaultplaceholder: Sequelize.UUIDV4
       },
       co_id: {
         type: Sequelize.UUID
       },
       cott_id:{
         type: Sequelize.UUID
+      },
+      placeholder: {
+        type: Sequelize.STRING,
+      }, 
+       placeholder_pl: {
+        type: Sequelize.STRING,
+      }, 
+      placeholder_us:{
+        type: Sequelize.STRING,
+
+      },
+      placeholder_de:{
+        type: Sequelize.STRING,
+
+      },
+      placeholder_ru:{
+        type: Sequelize.STRING,
+
+      },
+      placeholder_fr:{
+        type: Sequelize.STRING,
+
+      },placeholder_es:{
+        type: Sequelize.STRING,
+
+      },
+      placeholder_no:{
+        type: Sequelize.STRING,
+
+      },
+      placeholder_zh_cn:{
+        type: Sequelize.STRING,
       },
       value: {
         type: Sequelize.STRING,

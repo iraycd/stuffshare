@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4
       },
-      option_type_id: {
+      cot_id: {
         type: Sequelize.UUID,
       },
       type: {

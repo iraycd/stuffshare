@@ -11,7 +11,31 @@
     -webkit-filter: blur(10px);
     filter: blur(10px);
 }
+.Collapsible{
+    width:100%;
+    padding:1px;
+    text-align:left;
+}
+.Collapsible__contentInner{
+    border:1px solid rgba(200, 200, 200, 0.15);
+    border-color:#eee !important;
 
+}
+.Collapsible__trigger {
+    
+    width: 100%;
+    background-color: #fe6466;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px;
+    padding-left: 10px;
+    color:white;
+    letter-spacing:0.07143rem;
+    border:1px solid rgba(0, 0, 0, 0.15);
+
+
+}
 .menuAutocomplete
 {
     position: fixed; 
