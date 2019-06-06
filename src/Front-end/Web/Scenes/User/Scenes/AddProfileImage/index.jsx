@@ -179,7 +179,7 @@ class AddProfileImage extends React.Component {
                             <span data-tag={item.id} onClick={this.removeImage.bind(this)} class="g-z-index-3 u-icon-v3 u-icon-size--xs g-bg-white g-color-black g-rounded-50x g-cursor-pointer g-pos-abs g-top-10 g-right-10">
                                 <i class="fa fa-remove"></i>
                             </span>
-                            {item.status == 1 && item.id != profId ? <span data-tag={item.id} onClick={this.setAsProfile.bind(this)} class="g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-10">{tran.translate('SET_AS_PROFILE_IMAGE')}
+                            {item.status == 1 && item.id != profId ? <span data-tag={item.id} onClick={this.setAsProfile.bind(this)} class="g-letter-spacing-1 g-font-weight-500 rounded-0 g-font-size-9 text-uppercase g-z-index-3 btn btn-xs u-btn-primary g-mr-10 g-mb-15 g-pos-abs g-bottom-10 g-right-5">{tran.translate('SET_AS_PROFILE_IMAGE')}
                             </span> : <span></span>}
 
                             <span data-tag={item.id} onClick={this.clickImageHandler.bind(this)} class={(item.status == 0 ? "u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" : "") + " js-fancybox d-block u-block-hover u-block-hover--scale-down"} href="smooth-parallax-scroll/index.html" >

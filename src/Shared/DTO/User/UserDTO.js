@@ -27,6 +27,8 @@ export default class UserDTO extends BaseDTO {
     this.refresh_token = '';
     this.language='',
     this.blob_id='';
+    this.is_admin='';
+    this.is_root='';
   };
   validation(state) {
     const validator = new Validator();

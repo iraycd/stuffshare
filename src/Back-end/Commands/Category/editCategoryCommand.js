@@ -14,10 +14,10 @@ import AuthInfrastucture from "../../Architecture/Infrastructure/authInfrastuctu
 /**
  * 
  * @export
- * @class SetAsVerifiedCommand 
+ * @class DeleteCategoryCommand 
  * @extends BaseCommand
  */
-export default class SetAsVerifiedCommand extends BaseCommand {
+export default class EditCategoryCommand extends BaseCommand {
     /**
      * Creates an instance of InsertCategoryCommand.
      * @param  {{logFileInfrastructureDI : LogFileInfrastructure,  categoryServiceDI:CategoryService ,dbTransactionInfrastuctureDI:DbTransactionInfrastucture,authInfrastructureDI:AuthInfrastucture}}
@@ -32,7 +32,7 @@ export default class SetAsVerifiedCommand extends BaseCommand {
         this.model = Object.assign(new CategoryDTO(), dto);
     }
     async action() {
-       await this.categoryServiceDI.setContext(this.context).setAsVerified({ id: this.model.id ,status:this.model.status});
+       await this.categoryServiceDI.setContext(this.context).update({ model: this.model });
 
     }
 };

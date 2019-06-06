@@ -42,6 +42,8 @@ export default class UserService extends BaseService {
     let dto = Object.assign(new UserDTO(), model);
     dto.passwordHash = passwordHash;
     dto.salt = passwordSalt;
+    dto.is_admin = false;
+    dto.is_root = false;
     return await this.unitOfWorkDI.userRepository.insert({ model: dto });
   }
 
@@ -103,7 +105,7 @@ export default class UserService extends BaseService {
         email: user.email,
         language: user.language,
         expiresIn: expiresDate,
-        user:user
+        user: user
 
 
         //,language:
@@ -171,7 +173,7 @@ export default class UserService extends BaseService {
         email: user.email,
         language: user.language,
         expiresIn: expiresDate,
-        user:user
+        user: user
 
 
       };
@@ -297,7 +299,7 @@ export default class UserService extends BaseService {
         email: result.email,
         language: result.language,
         expiresIn: expiresDate,
-        user:result
+        user: result
         //,language:
       };
     }

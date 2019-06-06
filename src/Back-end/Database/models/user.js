@@ -24,7 +24,7 @@ export default class Users extends Model {
           autoIncrement: false,
           defaultValue: sequelize.UUIDV4
 
-      },
+        },
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -53,13 +53,15 @@ export default class Users extends Model {
         },
         is_authorized: DataTypes.BOOLEAN,
         passwordHash: DataTypes.STRING,
-        
+
         longitude: DataTypes.FLOAT,
         latitude: DataTypes.FLOAT,
         relogin_require: DataTypes.BOOLEAN,
         refresh_token: DataTypes.UUID,
         language: DataTypes.STRING,
         blob_id: DataTypes.UUID,
+        is_admin: DataTypes.BOOLEAN,
+        is_root: DataTypes.BOOLEAN
 
       },
       { sequelize }

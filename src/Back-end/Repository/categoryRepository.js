@@ -18,14 +18,13 @@ export default class CategoryRepository extends BaseRepository {
     super(sequelizeDI.Category);
     this.sequelizeDI = sequelizeDI;
   }
-  getAllCategoriesFlat({transaction})
-  {
+  getAllCategoriesFlat({ transaction }) {
     return this.sequelizeDI.sequelize.query(
       `
-      SELECT category_child_id,category_parent_id,category as title,status,icon,forThing,forSell,forEvent FROM Categories JOIN CategoryHierarchies ON Categories.id = CategoryHierarchies.category_child_id order by category  
+      SELECT Categories.id  as category_child_id,category_parent_id,category as title,category,status,icon,forThing,forSell,forEvent FROM Categories LEFT  JOIN CategoryHierarchies ON Categories.id = CategoryHierarchies.category_child_id order by category  
       `,
       {
-        replacements: {  },
+        replacements: {},
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
       }
@@ -44,15 +43,20 @@ export default class CategoryRepository extends BaseRepository {
         {
           model: this.sequelizeDI.Category,
           as: "category_children"
+          /* include: [{
+             model: this.sequelizeDI.Category,
+             as: "category_children"
+           }
+           ]*/
         },
         {
-          model: this.sequelizeDI.CategoryHierarchy,
-          as: "category_parent",
-          include: [{
-            model: this.sequelizeDI.Category,
-            as: "category_parent"
-          }
-          ]
+          model: this.sequelizeDI.Category,
+          as: "category_parent"
+          /* include: [{
+             model: this.sequelizeDI.Category,
+             as: "category_parent"
+           }
+           ]*/
         }
       ],
       transaction: this.getTran({ transaction })
@@ -60,15 +64,15 @@ export default class CategoryRepository extends BaseRepository {
   }
   removeCategory({ id, transaction }) {
     return this.entityDAO.destroy({
-      where: { id: this.toStr(id), status: 0 },
+      where: { id: id },
       transaction: this.getTran({ transaction })
     });
   }
 
-  setAsVerified({ id, transaction }) {
+  setAsVerified({ id, status, transaction }) {
     return this.entityDAO.update(
       {
-        status: this.toStr(1)
+        status: this.toStr(status)
       },
       {
         where: { id: this.toStr(id) },
@@ -77,21 +81,27 @@ export default class CategoryRepository extends BaseRepository {
     );
   }
 
-  getCategoryRelated({ uids, transaction }) {
+  getCategoryRelated({ id, transaction }) {
     return this.sequelizeDI.sequelize.query(
       `
-      WITH recus(category_id) AS (
+     
+       WITH recus(category_id) AS (
         SELECT category_child_id FROM CategoryHierarchies
-        WHERE Category_child_id IN (:uids)
+        WHERE Category_parent_id IN (:id)
         UNION ALL
-        SELECT CategoryHierarchies.category_parent_id  FROM recus JOIN CategoryHierarchies ON category_child_id=recus.category_id
+        SELECT CategoryHierarchies.category_child_id  FROM recus JOIN CategoryHierarchies ON Category_parent_id=recus.category_id
+        ),
+        union_recus AS (
+        SELECT category_id FROM recus
+        UNION ALL
+        SELECT :id
         )
-        SELECT  id,category,category_pl,category_us, COUNT(*) FROM recus JOIN Categories ON Id = category_id
-        GROUP BY id,category,category_pl,category_us
+          SELECT  id,category,category_pl,category_us FROM union_recus JOIN Categories ON Id = category_id
+          GROUP BY id,category,category_pl,category_us
         
     `,
       {
-        replacements: { uids: uids },
+        replacements: { id: id },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
       }

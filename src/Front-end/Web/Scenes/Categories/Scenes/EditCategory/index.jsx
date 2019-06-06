@@ -5,44 +5,60 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { DictionaryDTO, Enums, CommandList, QueryList, Translator } from './../../../../../../Shared/index.js';
+import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
 import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
 import { withRouter } from 'react-router-dom';
 import translate from 'translate';
+import CategoryDTO from '../../../../../../Shared/DTO/Categories/CategoryDTO.js';
+import QueryList from '../../../../../../Shared/QueryList.js';
+import Checkbox from '../../../../Components/FormComponent/Components/Checkbox/index.jsx';
+import IconTextbox from '../../../../Components/FormComponent/Components/IconTextbox/index.jsx';
+import CommandList from '../../../../../../Shared/CommandList.js';
+import CATEGORY_TREE_ACTIONS from '../CategoryTree/actions.js';
+
 
 
 class CategoryEdit extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = new DictionaryDTO();
+        this.state = {}
+        this.state.category = new CategoryDTO();
 
         this.state.validation = [];
-
-
     }
     componentWillReceiveProps(next) {
-        console.log(next);
-        const urlParams = new URLSearchParams(next.location.search);
+        if (next.match.params.parentId != this.state.category.id) {
+            this.props.getCategories(next.match.params.id).then(succ => {
+                console.log(succ.data);
+                this.setState({
+                    category: succ.data[0]
 
-        const type = urlParams.get('type');
-        const code = urlParams.get('code');
-        console.log(this.props.codeDict.data);
-        let dictList = this.props.codeDict.data[type];
-        console.log(dictList);
-        if (dictList != undefined) {
-            console.log('kupa');
-            let codeItem = dictList[code];
-            this.setState({
-                message: codeItem.message,
-                code: codeItem.code,
-                status: codeItem.statu,
-                type: codeItem.type,
-                validation: []
+                })
+
             })
+            this.state.category.id = next.match.params.id;
+            this.setState({
+                category: this.state.category
+            });
         }
-        console.log(code);
+
+    }
+    componentDidMount() {
+        this.props.getCategories(this.props.match.params.id).then(succ => {
+            console.log(succ.data);
+            this.setState({
+                category: succ.data[0]
+
+            })
+
+        })
+        this.state.category.id = this.props.match.params.id;
+        this.setState({
+            category: this.state.category
+        });
+
 
     }
     refreshValidation() {
@@ -52,24 +68,7 @@ class CategoryEdit extends React.Component {
             });
         }
     }
-    getDropDownValues() {
-        return [
-            { id: Enums.CODE.ERROR, value: Enums.CODE.ERROR }
-            , { id: Enums.CODE.INFO, value: Enums.CODE.INFO }
-            , { id: Enums.CODE.VALIDATION, value: Enums.CODE.VALIDATION }
-            , { id: Enums.CODE.WARNING, value: Enums.CODE.WARNING }
-            , { id: Enums.CODE.SUCCESS, value: Enums.CODE.SUCCESS }
-            , { id: Enums.CODE.ERROR_GLOBAL, value: Enums.CODE.ERROR_GLOBAL }
-            , { id: Enums.CODE.INFO_GLOBAL, value: Enums.CODE.INFO_GLOBAL }
-            , { id: Enums.CODE.SUCCESS_GLOBAL, value: Enums.CODE.SUCCESS_GLOBAL }
-            , { id: Enums.CODE.WARNING_GLOBAL, value: Enums.CODE.WARNING_GLOBAL }
-            , { id: Enums.CODE.LABEL, value: Enums.CODE.LABEL }
-            , { id: Enums.CODE.PLACEHOLDER, value: Enums.CODE.PLACEHOLDER }
-            , { id: Enums.CODE.EMAIL, value: Enums.CODE.EMAIL }
 
-
-        ]
-    }
     validation() {
         let validation = DictionaryDTO.prototype.validation(this.state);
         this.tran = Translator(this.props.codeDict.data.VALIDATION, this.props.lang);
@@ -82,102 +81,7 @@ class CategoryEdit extends React.Component {
         });
         return validation;
     }
-    codeHandler(event) {
-        this.setState({
-            code: event.target.value
-        });
 
-        this.refreshValidation();
-
-
-    }
-    statusHandler(event) {
-        this.setState({
-            status: event.target.value
-        });
-        this.refreshValidation();
-    }
-
-    plHandler(event) {
-        const pl = this.state.message;
-        pl.pl = event.target.value;
-        this.setState({
-            message: pl
-        });
-
-        this.refreshValidation();
-    }
-    usHandler(event) {
-        const us = this.state.message;
-        us.us = event.target.value;
-        this.setState({
-            message: us
-        });
-
-        this.refreshValidation();
-    }
-
-    deHandler(event) {
-        const de = this.state.message;
-        de.de = event.target.value;
-        this.setState({
-            message: de
-        });
-
-        this.refreshValidation();
-    }
-    frHandler(event) {
-        const fr = this.state.message;
-        fr.fr = event.target.value;
-        this.setState({
-            message: fr
-        });
-
-        this.refreshValidation();
-    }
-    ruHandler(event) {
-        const ru = this.state.message;
-        ru.ru = event.target.value;
-        this.setState({
-            message: ru
-        });
-
-        this.refreshValidation();
-    }
-    noHandler(event) {
-        const no = this.state.message;
-        no.no = event.target.value;
-        this.setState({
-            message: no
-        });
-
-        this.refreshValidation();
-    }
-    esHandler(event) {
-        const es = this.state.message;
-        es.es = event.target.value;
-        this.setState({
-            message: es
-        });
-
-        this.refreshValidation();
-    }
-    zhHandler(event) {
-        const zh = this.state.message;
-        zh.zh = event.target.value;
-        this.setState({
-            message: zh
-        });
-
-        this.refreshValidation();
-    }
-    typeHandler(event) {
-        this.setState({
-            type: event.target.value
-        });
-
-        this.refreshValidation();
-    }
     submitHanlder(event) {
         this.state.toRefresh = true;
 
@@ -186,99 +90,267 @@ class CategoryEdit extends React.Component {
         //   if (this.validation().length == 0) {
         // this.props.code=this.state;
 
-        this.props.addDictionary(this.state);
+        this.props.editCategory(this.state.category).then(succ => {
+            this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
+                Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('CATEOGRY_HAS_BEEN_MODIFIED_SUCCESS')
+            )
+
+        });
 
         //   }
+    }
+    esHandler(event) {
+        const cat = this.state.category;
+        cat.category_es = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    noHandler(event) {
+        const cat = this.state.category;
+        cat.category_no = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    plHandler(event) {
+        const cat = this.state.category;
+        cat.category_pl = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    zhcnHandler(event) {
+        const cat = this.state.category;
+        cat.category_zh_cn = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    frHandler(event) {
+        const cat = this.state.category;
+        cat.category_fr = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    ruHandler(event) {
+        const cat = this.state.category;
+        cat.category_ru = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    usHandler(event) {
+        const cat = this.state.category;
+        cat.category_us = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    catHandler(event) {
+        const cat = this.state.category;
+        cat.category = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    iconHandler(event) {
+        const cat = this.state.category;
+        cat.icon = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    deHandler(event) {
+        const cat = this.state.category;
+        cat.category_de = event.target.value;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    forThingHandler(event) {
+        const cat = this.state.category;
+        cat.forThing = event.target.checked;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    forSellHandler(event) {
+        const cat = this.state.category;
+        cat.forSell = event.target.checked;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
+    }
+    forEventHandler(event) {
+        const cat = this.state.category;
+        cat.forEvent = event.target.checked;
+        this.setState({
+            category: cat
+        });
+
+        this.refreshValidation();
     }
     translateSubmit(event) {
         console.log(event.target.innerText)
         let lang = event.target.innerText;
-        translate(this.state.message.pl, { engine: 'yandex', key: 'trnsl.1.1.20190525T222610Z.47a7d82b340b189e.59764ef074ae84f21bed0836d101d4743a754577', from: 'pl', to: lang}).then(text => {
+        let langFrom = this.state.category.lang ? this.state.category.lang : this.props.lang
+        if (langFrom == 'zh_cn') {
+            langFrom = 'zh';
+        } else if (langFrom == 'us') {
+            langFrom = 'en';
+        }
+        translate(this.state.category.category, { engine: 'yandex', key: 'trnsl.1.1.20190525T222610Z.47a7d82b340b189e.59764ef074ae84f21bed0836d101d4743a754577', from: langFrom, to: lang }).then(text => {
             console.log(text);  // Hola mundo
-            if(lang=='zh')
-            {
-                lang='zh_cn';
-            }else if(lang=='en'){
-                lang='us';
+            if (lang == 'zh') {
+                lang = 'zh_cn';
+            } else if (lang == 'en') {
+                lang = 'us';
             }
-            const de = this.state.message;
-            de[lang] = text
+            const de = this.state.category;
+            de["category_" + lang] = text;
+            console.log(de);
             this.setState({
-                message: de
+                category: de
             });
 
             this.refreshValidation();
         });
     }
 
+
+
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
+        let parent = this.state.category.category_parent.length == 1 ? this.state.category.category_parent[0] : {
+            forEvent: 1,
+            forSell: 1,
+            forThing: 1,
+        }
+        let children = this.state.category.category_children.length > 0 ? {
+            forEvent: Math.max(...(this.state.category.category_children.map(item => { return item.forEvent }))),
+            forSell: Math.max(...(this.state.category.category_children.map(item => { return item.forSell }))),
+            forThing: Math.max(...(this.state.category.category_children.map(item => { return item.forThing })))
+        } : {
+                forEvent: 0,
+                forSell: 0,
+                forThing: 0,
+            }
+
+
+        console.log(children);
+        //console.log(Math.max(...[100, 10, 1000]))
         return (
 
             <Form className="g-brd-around g-brd-gray-light-v4 g-pa-60 g-mb-30 text-center">
-                <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                    <h2 className="g-color-black mb-4">{tran.translate('CODE_FORM_HEADER')}</h2>
-                    <p className="lead "></p>
+                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+                    <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CATEGORY_EDIT_HEADER')}</h2>
                 </Col>
+                <Col className="text-center mx-auto g-max-width-600 g-mb-20">
+                    {this.state.category.category_parent ? (this.state.category.category_parent[0] ? <label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{tran.translate('CATEGORY_TYPE_LABEL') + ": " + this.state.category.category_parent[0].category}</label> : <span></span>) : <span></span>}
+                </Col>
+                <Row>
+                    <Col>
+                        <Checkbox disabled={parent.forThing == 0 || children.forThing == 1} onChange={this.forThingHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_FOR_THING_PLACEHOLDER')} value={this.state.category.forThing} label={tran.translate('CATEGORY_FOR_THING_LABEL')} field="forThing" validation={this.state.validation} />
+                    </Col>
+                    <Col>
+                        <Checkbox disabled={parent.forSell == 0 || children.forSell == 1} onChange={this.forSellHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_FOR_SELL_PLACEHOLDER')} value={this.state.category.forSell} label={tran.translate('CATEGORY_FOR_SELL_LABEL')} field="forSell" validation={this.state.validation} />
+                    </Col>  <Col>
+                        <Checkbox disabled={parent.forEvent == 0 || children.forEvent == 1} onChange={this.forEventHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_FOR_EVENT_PLACEHOLDER')} value={this.state.category.forEvent} label={tran.translate('CATEGORY_FOR_EVENT_LABEL')} field="forEvent" validation={this.state.validation} />
+                    </Col>
+                </Row>
+                <TextBox onChange={this.catHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('CATEGORY_NAME_LABEL')} value={this.state.category.category} field="category" validation={this.state.validation} />
 
-                <TextBox placeholder={phTrans.translate('CODE_CODE_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_CODE_LABEL')} value={this.state.code} onChange={this.codeHandler.bind(this)} field="code" validation={this.state.validation} />
-
-                <DropDownList isRequired={true} label={tran.translate('CODE_TYPE_LABEL')} valueOptions={this.getDropDownValues()} value={this.state.type} onChange={this.typeHandler.bind(this)} field="type" validation={this.state.validation} />
-
-                <TextBox placeholder={phTrans.translate('CODE_STATUS_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_STATUS_LABEL')} value={this.state.status} onChange={this.statusHandler.bind(this)} field="status" validation={this.state.validation} />
-
-                <TextBox placeholder={phTrans.translate('CODE_PL_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_PL_LABEL')} value={this.state.message.pl} onChange={this.plHandler.bind(this)} field="message.pl" validation={this.state.validation} />
 
                 <Row>
                     <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_US_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_US_LABEL')} value={this.state.message.us} onChange={this.usHandler.bind(this)} field="message.us" validation={this.state.validation} />
+                        <TextBox onChange={this.plHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_PL_PLACEHOLDER')} value={this.state.category.category_pl} isRequired={true} label={tran.translate('CATEGORY_PL_LABEL')} field="category_pl" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="en" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"}  isLoading={this.state.isLoading} />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_DE_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_DE_LABEL')} value={this.state.message.de} onChange={this.deHandler.bind(this)} field="message.de" validation={this.state.validation} />
-                    </Col>
-                    <Col xs="3"><ButtonLoader value="de" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn rounded-0"}  isLoading={this.state.isLoading} />
+                    <Col xs="3"><ButtonLoader value="pl" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_RU_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_RU_LABEL')} value={this.state.message.ru} onChange={this.ruHandler.bind(this)} field="message.ru" validation={this.state.validation} />
+                        <TextBox onChange={this.usHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_US_PLACEHOLDER')} value={this.state.category.category_us} isRequired={true} label={tran.translate('CATEGORY_US_LABEL')} field="category_us" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="ru" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btnrounded-0"}  isLoading={this.state.isLoading} />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_FR_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_FR_LABEL')} value={this.state.message.fr} onChange={this.frHandler.bind(this)} field="message.fr" validation={this.state.validation} />
-                    </Col>
-                    <Col xs="3"><ButtonLoader value="fr" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"}  isLoading={this.state.isLoading} />
+                    <Col xs="3"><ButtonLoader value="en" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_ES_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_ES_LABEL')} value={this.state.message.es} onChange={this.esHandler.bind(this)} field="message.es" validation={this.state.validation} />
+                        <TextBox onChange={this.deHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_DE_PLACEHOLDER')} value={this.state.category.category_de} isRequired={true} label={tran.translate('CATEGORY_DE_ELABEL')} field="category_de" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="es" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"}  isLoading={this.state.isLoading} />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_NO_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_NO_LABEL')} value={this.state.message.no} onChange={this.noHandler.bind(this)} field="message.no" validation={this.state.validation} />
-                    </Col>
-                    <Col xs="3"><ButtonLoader value="no" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btnrounded-0"}  isLoading={this.state.isLoading} />
+                    <Col xs="3"><ButtonLoader value="de" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <TextBox placeholder={phTrans.translate('CODE_ZH_CN_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_ZH_CN_LABEL')} value={this.state.message.zh_cn} onChange={this.zhHandler.bind(this)} field="message.zh_cn" validation={this.state.validation} />
+                        <TextBox onChange={this.ruHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_RU_PLACEHOLDER')} value={this.state.category.category_ru} isRequired={true} label={tran.translate('CATEGORY_RU_LABEL')} field="category_ru" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="zh" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btnrounded-0"} isLoading={this.state.isLoading} />
+                    <Col xs="3"><ButtonLoader value="ru" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <TextBox onChange={this.frHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_FR_PLACEHOLDER')} value={this.state.category.category_fr} isRequired={true} label={tran.translate('CATEGORY_FR_LABEL')} field="category_fr" validation={this.state.validation} />
+                    </Col>
+                    <Col xs="3"><ButtonLoader value="fr" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <TextBox onChange={this.esHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_ES_PLACEHOLDER')} value={this.state.category.category_es} isRequired={true} label={tran.translate('CATEGORY_ES_LABEL')} field="category_es" validation={this.state.validation} />
+                    </Col>
+                    <Col xs="3"><ButtonLoader value="es" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <TextBox onChange={this.noHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_NO_PLACEHOLDER')} value={this.state.category.category_no} isRequired={true} label={tran.translate('CATEGORY_NO_LABEL')} field="category_no" validation={this.state.validation} />
+                    </Col>
+                    <Col xs="3"><ButtonLoader value="no" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <TextBox onChange={this.zhcnHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_ZH_PLACEHOLDER')} value={this.state.category.category_zh_cn} isRequired={true} label={tran.translate('CATEGORY_ZH_LABEL')} field="category_zh_cn" validation={this.state.validation} />
+                    </Col>
+                    <Col xs="3"><ButtonLoader value="zh" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <IconTextbox onChange={this.iconHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_ICON__PLACEHOLDER')} value={this.state.category.icon} label={tran.translate('CATEGORY_ICON__LABEL')} field="icon" validation={this.state.validation} />
+                    </Col>
+                </Row>
+
                 <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
             </Form>
 
@@ -292,24 +364,33 @@ const mapStateToProps = (state) => {
 
     return {
         codeDict: state.DictionaryReducer,
-        lang: state.LanguageReducer
+        lang: state.LanguageReducer,
+        categoryTree: state.CategoryTreeReaducer
 
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addDictionary: (dto) => {
-            dispatch(new BaseService().commandThunt(CommandList.Dictionary.ADD_DICTIONARY, dto));
+        getCategories: (id) => {
+            return dispatch(new BaseService().queryThunt(QueryList.Category.GET_CATEGORIES_HIERARCHY, { id: id }));
         }, getDictionary: () => {
             dispatch({
                 type: QueryList.Dictionary.GET_DICTIONARY,
             })
+        },
+        editCategory: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.Category.EDIT_CATEGORY, dto));
+
+        }
+        , setNotification: (type, message) => {
+            dispatch({ type: CATEGORY_TREE_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
+
         }
     }
 }
 
-export default withRouter(connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(CategoryEdit));
+)(withRouter(CategoryEdit));

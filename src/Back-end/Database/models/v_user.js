@@ -24,7 +24,7 @@ export default class V_User extends Model {
           autoIncrement: false,
           defaultValue: sequelize.UUIDV4
 
-      },
+        },
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -46,19 +46,20 @@ export default class V_User extends Model {
           type: DataTypes.DATEONLY,
           allowNull: false
         },
-       
+
         longitude: DataTypes.FLOAT,
         latitude: DataTypes.FLOAT,
         relogin_require: DataTypes.BOOLEAN,
         language: DataTypes.STRING,
-        blob_id:DataTypes.UUID
-
+        blob_id: DataTypes.UUID,
+        is_admin: DataTypes.BOOLEAN,
+        is_root: DataTypes.BOOLEAN
       },
       { sequelize }
     );
   }
   static associate(models) {
-   // V_User.hasOne(models.Blob, { as: "blob_profile", targetKey: 'blob_id', foreignKey: "id" });
+    // V_User.hasOne(models.Blob, { as: "blob_profile", targetKey: 'blob_id', foreignKey: "id" });
     V_User.belongsTo(models.Blob, { as: "blob_profile", targetKey: 'id', foreignKey: "blob_id" });
 
     // Users.hasMany(models.UserAuth)

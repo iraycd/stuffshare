@@ -7,10 +7,16 @@ import SequelizeDB from "../Database/models/index.js"
  * @extends BaseRepository
  */
 export default class CategoryHierarchyRepository extends BaseRepository {
-    constructor({sequelizeDI}) {
+    constructor({ sequelizeDI }) {
         super(sequelizeDI.CategoryHierarchy)
 
     }
-
+    removeParent({ id, transaction }) {
+        return this.entityDAO.destroy({
+            where: { category_child_id: this.toStr(id) },
+            transaction: this.getTran({ transaction })
+        });
+    }
+    in
 
 }

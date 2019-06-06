@@ -27,7 +27,7 @@ export default class CategoryService extends BaseService {
    */
   async getCategoryTree({ id }) {
     return await this.toJsonParse(
-      this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids:[id] })
+      this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids: [id] })
     );
   }
 
@@ -39,34 +39,34 @@ export default class CategoryService extends BaseService {
    */
   async getCategoryFreetext({ search, isFor }) {
     let result = await this.unitOfWorkDI.categoryRepository.getCategoryFreetext({ search, isFor })
-    
-    return result;
-  }
-  
-  async getAllCategoriesFlat({}) {
-    let result = await this.unitOfWorkDI.categoryRepository.getAllCategoriesFlat({  })
-    
-    return result;
-  }
-   /**
-   *
-   *
-   * @param {{model:CategoryDTO}}
-   * @memberof CategoryService
-   */
-  async getCategoryFreetextCategory({ model }) {
-    let result = await this.getCategoryFreetext({search:model.category});
-    console.log(result);
-    if(result.length>0){
-      let ids = result.map(item=>{return item.KEY});
-      console.log(ids);
-      return await this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids:ids })
- 
 
-    }else{
+    return result;
+  }
+
+  async getAllCategoriesFlat({ }) {
+    let result = await this.unitOfWorkDI.categoryRepository.getAllCategoriesFlat({})
+
+    return result;
+  }
+  /**
+  *
+  *
+  * @param {{model:CategoryDTO}}
+  * @memberof CategoryService
+  */
+  async getCategoryFreetextCategory({ model }) {
+    let result = await this.getCategoryFreetext({ search: model.category });
+    console.log(result);
+    if (result.length > 0) {
+      let ids = result.map(item => { return item.KEY });
+      console.log(ids);
+      return await this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids: ids })
+
+
+    } else {
       return []
     }
-      
+
   }
   //CHECK privileges , status , if user have access to this category
   /**
@@ -76,7 +76,9 @@ export default class CategoryService extends BaseService {
    * @memberof CategoryService
    */
   async newCategory({ model }) {
-    model.status = 0;
+    if (!this.context.user.is_admin) {
+      model.status = 0;
+    }
     let result = await this.toJsonParse(
       this.unitOfWorkDI.categoryRepository.insert({ model })
     );
@@ -92,11 +94,38 @@ export default class CategoryService extends BaseService {
   }
 
   async removeCategory({ id }) {
-    await this.unitOfWorkDI.categoryRepository.removeCategory({ id });
+    let related = await this.unitOfWorkDI.categoryRepository.getCategoryRelated({ id: id });
+
+    let idList = related.map(item => {
+      return item.id;
+    })
+    return await this.unitOfWorkDI.categoryRepository.removeCategory({ id: idList });
+
   }
 
-  async setAsVerified({ id }) {
-    await this.unitOfWorkDI.categoryRepository.setAsVerified({ id });
+  async setAsVerified({ id, status }) {
+    let related = await this.unitOfWorkDI.categoryRepository.getCategoryRelated({ id: id });
+    let promises = related.map(item => {
+      return this.unitOfWorkDI.categoryRepository.setAsVerified({ id: item.id, status });
+    })
+    return await Promise.all(promises);
+  }
+  async setParent({ id, status, idParent }) {
+    let parent = {
+      status: status
+    }
+    if (idParent != null) {
+      parent = await this.getById({ id: idParent });
+    }
+    await this.setAsVerified({ id: id, status: parent.status }),
+
+      await Promise.all([
+        this.unitOfWorkDI.categoryHierarchyRepository.removeParent({ id }),
+        this.unitOfWorkDI.categoryHierarchyRepository.insert({ model: { category_child_id: id, category_parent_id: idParent } })
+
+      ]);
+
+
   }
 
   ///move to guids

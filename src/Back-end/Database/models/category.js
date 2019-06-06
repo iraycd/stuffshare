@@ -51,12 +51,19 @@ export default class Category extends Model {
     );
   }
   static associate(models) {
-    Category.belongsTo(models.CategoryHierarchy, { as: "category_parent", targetKey: 'category_child_id', foreignKey: "id" });
+  //  Category.belongsTo(models.CategoryHierarchy, { as: "category_parent", targetKey: 'category_child_id', foreignKey: "id" });
     Category.belongsToMany(models.Category, {
       through: { model: models.CategoryHierarchy },
       as: 'category_children',
       targetKey: 'id',
       foreignKey: "category_parent_id"
+    });
+
+    Category.belongsToMany(models.Category, {
+      through: { model: models.CategoryHierarchy },
+      as: 'category_parent',
+      targetKey: 'id',
+      foreignKey: "category_child_id"
     });
   }
 }

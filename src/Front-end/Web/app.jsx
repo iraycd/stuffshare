@@ -42,9 +42,14 @@ const init = () => {
     }
     if (localStorage.token) {
         logged = true;
-        store.dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_BY_REFRESH_TOKEN, { refresh_token: localStorage.refresh_token }, {}, Enums.LOADER.INITIAL)).then(refSucc => {
-
-            store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL)).then(succ => {
+        let userLogIn = {};
+        store.dispatch(new BaseService().queryThunt(QueryList.User.LOG_IN_BY_REFRESH_TOKEN, { refresh_token: localStorage.refresh_token }, {}, Enums.LOADER.INITIAL))
+            .then(refSucc => {
+                console.log(refSucc);
+                localStorage.refresh_token = refSucc.data.refresh_token
+                localStorage.token = refSucc.data.token;
+                return store.dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token, Enums.LOADER.INITIAL));
+            }).then(succ => {
 
                 console.log(succ.data);
                 store.dispatch({
@@ -62,15 +67,15 @@ const init = () => {
                     }
                 });
 
+            }).catch(ex => {
+                store.dispatch({
+                    type: AUTH_ACTIONS.CLEAR_CONTEXT,
+                    dto: {}
+                });
+                localStorage.removeItem("token");
+                localStorage.removeItem("refresh_token");
+                init();
             })
-        }).catch(ex => {
-            store.dispatch({
-                type: AUTH_ACTIONS.CLEAR_CONTEXT,
-                dto: {}
-            });
-            localStorage.removeItem("token");
-            localStorage.removeItem("refresh_token")
-        })
 
     }
     const language = localStorage.getItem('lang');
@@ -82,6 +87,7 @@ const init = () => {
     }
 
     setInterval(() => {
+     //   init();
         window.location.reload();
     }, 7200000)
 

@@ -45,13 +45,26 @@ const cqrsPreprocess = () => {
   const commandExec = async ctx => {
     const body = ctx.request.body;
     const action = ctx.state.container.resolve(body.action);
-    action.init(body.model);
+    let model = {};
+    if (typeof (body.model) == "object") {
+      model = body.model
+    } else {
+      model = JSON.parse(decodeURIComponent(body.model));
+    }
+    action.init(model);
     await cqrsHandler(action, ctx);
   };
   const queryExec = async ctx => {
+
     const query = JSON.parse(ctx.request.query.action);
     const action = ctx.state.container.resolve(query.action);
-    action.init(query.model);
+    let model = {};
+    if (typeof (query.model) == "object") {
+      model = query.model
+    } else {
+      model = JSON.parse(decodeURIComponent(query.model));
+    }
+    action.init(model);
     return await cqrsHandler(action, ctx);
   };
 
@@ -61,7 +74,7 @@ const cqrsPreprocess = () => {
       let token = ctx.request.header.authorization;
       let lang = ctx.request.header.language;
       action.token = token;
-      action.referer = ctx.request.header.referer?(new URL(ctx.request.header.referer)).origin:'http://localhost.8080'
+      action.referer = ctx.request.header.referer ? (new URL(ctx.request.header.referer)).origin : 'http://localhost.8080'
       action.language = lang;
       action.context.language = lang;
       result = await action.run();

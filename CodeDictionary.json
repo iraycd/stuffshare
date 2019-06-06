@@ -1728,6 +1728,386 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "CATEGORY_FOR_THING_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_FOR_THING_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Rzecz",
+                "us": "Thing",
+                "de": "Sache",
+                "ru": "Вещь",
+                "fr": "Chose",
+                "es": "La cosa",
+                "no": "Ting",
+                "zh_cn": "事情"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_FOR_SELL_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_FOR_SELL_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Sprzedaż",
+                "us": "Selling",
+                "de": "Verkauf",
+                "ru": "Продажа",
+                "fr": "Vente",
+                "es": "Venta",
+                "no": "Selger",
+                "zh_cn": "卖"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_FOR_EVENT_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_FOR_EVENT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wydarzenie",
+                "us": "Event",
+                "de": "Ereignis",
+                "ru": "Событие",
+                "fr": "L'événement",
+                "es": "El evento",
+                "no": "Hendelse",
+                "zh_cn": "事件"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_EDIT_HEADER": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_EDIT_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Edycja kategorii",
+                "us": "Edit categories",
+                "de": "So Bearbeiten Sie eine Kategorie",
+                "ru": "Редактирование категории",
+                "fr": "Modifier les catégories",
+                "es": "Para editar una categoría",
+                "no": "Rediger kategorier",
+                "zh_cn": "编辑类别"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_NAME_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Kategoria",
+                "us": "Category",
+                "de": "Kategorie",
+                "ru": "Категория",
+                "fr": "Catégories",
+                "es": "Categoría",
+                "no": "Kategori",
+                "zh_cn": "类别"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_PL_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_PL_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Polski",
+                "us": "Polish",
+                "de": "Polnisch",
+                "ru": "Польский",
+                "fr": "Polonais",
+                "es": "Polaco",
+                "no": "Polsk",
+                "zh_cn": "波兰"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_US_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_US_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Angielski",
+                "us": "English",
+                "de": "Englisch",
+                "ru": "Английский",
+                "fr": "Anglais",
+                "es": "Inglés",
+                "no": "Engelsk",
+                "zh_cn": "英语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_DE_ELABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_DE_ELABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Niemiecki",
+                "us": "German",
+                "de": "Deutsch",
+                "ru": "Немецкий",
+                "fr": "Allemand",
+                "es": "Alemán",
+                "no": "Tysk",
+                "zh_cn": "德"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_RU_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_RU_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Rosyjski",
+                "us": "Russian",
+                "de": "Russisch",
+                "ru": "Русский",
+                "fr": "Russe",
+                "es": "Ruso",
+                "no": "Russisk",
+                "zh_cn": "俄罗斯"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_FR_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_FR_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Francuski",
+                "us": "French",
+                "de": "Französisch",
+                "ru": "Французский",
+                "fr": "Français",
+                "es": "Francés",
+                "no": "Fransk",
+                "zh_cn": "法语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_ES_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_ES_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Hiszpański",
+                "us": "Spanish",
+                "de": "Spanisch",
+                "ru": "Испанский",
+                "fr": "Espagnol",
+                "es": "Español",
+                "no": "Spansk",
+                "zh_cn": "西班牙语"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_NO_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_NO_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Norweski",
+                "us": "Norwegian",
+                "de": "Norwegisch",
+                "ru": "Норвежский",
+                "fr": "Norvégien",
+                "es": "Noruego",
+                "no": "Norsk",
+                "zh_cn": "挪威"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_ZH_LABEL": {
+            "id": "d37a1255-305a-47a6-a448-b12e7a21b827",
+            "uid": "",
+            "code": "CATEGORY_ZH_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Chiński",
+                "us": "Chinese",
+                "de": "Chinesisch",
+                "ru": "Китайский",
+                "fr": "Chinois",
+                "es": "Chino",
+                "no": "Kinesisk",
+                "zh_cn": "中国"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_ICON__LABEL": {
+            "id": "eb8d7b1a-d735-4d7e-951c-5a591615a837",
+            "uid": "",
+            "code": "CATEGORY_ICON__LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ikona",
+                "us": "Icon",
+                "de": "Symbol",
+                "ru": "Значок",
+                "fr": "L'icône",
+                "es": "El icono de la",
+                "no": "Ikonet",
+                "zh_cn": "图标"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TYPE_LABEL": {
+            "id": "9611c44d-1c90-4d21-a240-a831d23b618a",
+            "uid": "",
+            "code": "CATEGORY_TYPE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Typ",
+                "us": "Type",
+                "de": "Art",
+                "ru": "Тип",
+                "fr": "Type",
+                "es": "El tipo de",
+                "no": "Type",
+                "zh_cn": "类型"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_REMOVE_TEXT_CONFIRM_HEADER": {
+            "id": "e83595a8-6f1b-412d-85bc-ca13d4bd513c",
+            "uid": "",
+            "code": "CATEGORY_TREE_REMOVE_TEXT_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Usuń kategorie",
+                "us": "Delete categories",
+                "de": "Kategorien löschen",
+                "ru": "Удалить категории",
+                "fr": "Supprimer des catégories",
+                "es": "Eliminar categorías",
+                "no": "Slette kategorier",
+                "zh_cn": "删除分类"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_REMOVE_CONFIRM_HEADER": {
+            "id": "e83595a8-6f1b-412d-85bc-ca13d4bd513c",
+            "uid": "",
+            "code": "CATEGORY_TREE_REMOVE_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wybrana kategoria: ",
+                "us": "Selected category: ",
+                "de": "Ausgewählte Kategorie: ",
+                "ru": "Выбранная категория: ",
+                "fr": "Catégorie sélectionnée: ",
+                "es": "La categoría seleccionada: ",
+                "no": "Valgte kategorien: ",
+                "zh_cn": "选择类别： "
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SET_AS_PROFILE_IMAGE": {
+            "id": "f6b9d6d2-d2bb-4b9b-9e08-e090e002916f",
+            "uid": "",
+            "code": "SET_AS_PROFILE_IMAGE",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw jako profilowe",
+                "us": "Set as profile",
+                "de": "Als Profil installieren",
+                "ru": "Установить в качестве профиля",
+                "fr": "Définir comme profil",
+                "es": "Establecer como perfil",
+                "no": "Sett som profil",
+                "zh_cn": "设置作为配置文件"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_TO_SPAM_TEXT_CONFIRM_HEADER": {
+            "id": "36c45898-90f3-474c-8108-f3985bbd6148",
+            "uid": "",
+            "code": "CATEGORY_TREE_TO_SPAM_TEXT_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Przenieś do spamu",
+                "us": "Move to spam",
+                "de": "Verschieben in den Spam",
+                "ru": "Переместить в спам",
+                "fr": "Déplacer dans le spam",
+                "es": "Mover al spam",
+                "no": "Gå til spam",
+                "zh_cn": "移动到垃圾邮件"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_TO_SPAM_CONFIRM_HEADER": {
+            "id": "0a4d9626-d30b-4766-a39e-cff968119724",
+            "uid": "",
+            "code": "CATEGORY_TREE_TO_SPAM_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy chcesz przenieść kategorie do spamu ?",
+                "us": "If you want to migrate categories in spam ?",
+                "de": "Möchten Sie übertragen in der Kategorie Spam ?",
+                "ru": "Хотите ли вы перенести категории в спам ?",
+                "fr": "Si vous voulez transférer de la catégorie dans le spam ?",
+                "es": "Si desea transferir en la categoría de spam ?",
+                "no": "Hvis du ønsker å migrere kategorier i spam ?",
+                "zh_cn": "如果你想要迁移类别中的垃圾邮件？"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -2507,6 +2887,44 @@
                 "es": "Su ubicación se ha actualizado.",
                 "no": "Posisjonen din er oppdatert.",
                 "zh_cn": "你的位置进行更新。"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEOGRY_HAS_BEEN_MODIFIED_SUCCESS": {
+            "id": "d5bc2ff4-21ab-4625-93a4-34e58017825c",
+            "uid": "",
+            "code": "CATEOGRY_HAS_BEEN_MODIFIED_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Kategoria zostałą zapisana",
+                "us": "The category has been saved",
+                "de": "Kategorie gespeichert wurde",
+                "ru": "Категория была сохранена",
+                "fr": "La catégorie a été enregistrée",
+                "es": "La categoría se ha guardado",
+                "no": "Kategorien har vært lagret",
+                "zh_cn": "该类别已经存"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEOGRY_HAS_BEEN_ADDED_SUCCESS": {
+            "id": "9f9ec7e3-b12c-4d1f-a715-f94f084784da",
+            "uid": "",
+            "code": "CATEOGRY_HAS_BEEN_ADDED_SUCCESS",
+            "status": "200",
+            "type": "SUCCESS_GLOBAL",
+            "message": {
+                "pl": "Kategoria zostałą stworzona",
+                "us": "The category was created",
+                "de": "Kategorie wurde erstellt",
+                "ru": "Категория была создана",
+                "fr": "La catégorie a été créée",
+                "es": "La categoría se ha establecido",
+                "no": "Kategorien ble opprettet",
+                "zh_cn": "该分类被创造了"
             },
             "field": "",
             "toRefresh": true

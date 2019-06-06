@@ -6,7 +6,11 @@ let CommandList = {
     },
     Category: {
         ADD_CATEGORY: "insertCategoryCommand",
-        SET_AS_VERIFIED: "setAsVerifiedCommand"
+        SET_AS_VERIFIED: "setAsVerifiedCommand",
+        DELETE_CATEGORY:"deleteCategoryCommand",
+        SET_PARENT:"setParentCategoryCommand",
+        EDIT_CATEGORY:"editCategoryCommand"
+
     },
     User: {
         CREATE_USER: "createUserCommand",

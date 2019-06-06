@@ -61,6 +61,9 @@ import UserAuthRepository from "./Repository/userAuthRepository.js";
 import LogInByExternalQuery from "./Query/User/logInByExternalQuery.js";
 import GetCategoryFreetextQuery from "./Query/Category/getCategoryFreetextQuery.js";
 import GetCategoriesAllQuery from "./Query/Category/getCategoriesAllQuery.js";
+import DeleteCategoryCommand from "./Commands/Category/deleteCategoryCommand.js";
+import SetParentCategoryCommand from "./Commands/Category/setParentCategoryCommand.js";
+import EditCategoryCommand from "./Commands/Category/editCategoryCommand.js";
 
 
 
@@ -88,7 +91,7 @@ let exporter = {
   cityRepositoryDI: asClass(CityRepository),
   cityServiceDI: asClass(CityService),
 
-  userAuthRepositoryDI:asClass(UserAuthRepository),
+  userAuthRepositoryDI: asClass(UserAuthRepository),
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(
@@ -121,21 +124,22 @@ exporter[QueryList.User.LOG_IN_INTERNAL] = asClass(UserLogInInternalQuery);
 exporter[QueryList.User.LOG_IN_BY_REFRESH_TOKEN] = asClass(
   LogInByRefreshTokenQuery
 );
-exporter[QueryList.User.LOGIN_BY_EXTERNAL]=asClass(LogInByExternalQuery)
+exporter[QueryList.User.LOGIN_BY_EXTERNAL] = asClass(LogInByExternalQuery)
 exporter[QueryList.User.GET_REFRESH_TOKEN] = asClass(GetRefreshTokenQuery);
 
 ////////////////////////////////Category/////////////////////////////////////////
 exporter[CommandList.Category.ADD_CATEGORY] = asClass(InsertCategoryCommand);
 exporter[CommandList.Category.SET_AS_VERIFIED] = asClass(SetAsVerifiedCommand);
-
-
+exporter[CommandList.Category.DELETE_CATEGORY] = asClass(DeleteCategoryCommand)
+exporter[CommandList.Category.SET_PARENT] = asClass(SetParentCategoryCommand)
+exporter[CommandList.Category.EDIT_CATEGORY] = asClass(EditCategoryCommand);
 exporter[QueryList.Category.GET_CATEGORIES] = asClass(GetCategoryQuery);
 exporter[QueryList.Category.GET_CATEGORIES_HIERARCHY] = asClass(
   GetCategoryTreeQuery
 );
-exporter[QueryList.Category.GET_CATEGORIES_ALL_TREE]=asClass(GetCategoriesAllQuery)
+exporter[QueryList.Category.GET_CATEGORIES_ALL_TREE] = asClass(GetCategoriesAllQuery)
 
-exporter[QueryList.Category.GET_CATEGORIES_FREETEXT]=asClass(GetCategoryFreetextQuery)
+exporter[QueryList.Category.GET_CATEGORIES_FREETEXT] = asClass(GetCategoryFreetextQuery)
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////BLOB//////////////////////////////
