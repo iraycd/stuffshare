@@ -181,6 +181,120 @@ class CategoryTree extends React.Component {
         });
 
     };
+    toVerifyClick(event) {
+        let id = event.currentTarget.getAttribute('data-tag');
+        let name = event.currentTarget.getAttribute('data-name');
+        let spamId = this.state.categories.filter(item => {
+            return item.category == '_TO_DO'
+        })[0];
+        console.log(spamId.category_child_id);
+        confirmAlert({
+            onClickOutside: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
+            onKeypressEscape: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity-0_8 g-px-50 text-center'>
+                        <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('CATEGORY_TREE_CHECK_TEXT_CONFIRM_HEADER')}</h1>
+                        <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('CATEGORY_TREE_CHECK_CONFIRM_HEADER') + " "} <strong>{name}</strong></p>
+                        <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
+                            onClick={() => {
+                                let dto = {
+                                    "id": id,
+                                    "status": 1,
+                                    "CategoryHierarchy": {
+                                        "category_parent_id": null
+                                    }
+                                }
+                                this.props.setParent(dto)
+                                onClose();
+                            }}
+                        >
+                            {Translator(this.props.codeList.data.LABEL, this.props.lang).translate('YES_LABEL')}
+                        </button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={() => {
+                            this.setState(
+                                {
+                                    loading: false
+                                }
+                            )
+                            onClose()
+                        }}>{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
+
+                    </div>
+                );
+            }
+
+        });
+    }
+    toDoClick(event) {
+        let id = event.currentTarget.getAttribute('data-tag');
+        let name = event.currentTarget.getAttribute('data-name');
+        let spamId = this.state.categories.filter(item => {
+            return item.category == '_TO_DO'
+        })[0];
+        console.log(spamId.category_child_id);
+        confirmAlert({
+            onClickOutside: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
+            onKeypressEscape: () => {
+                this.setState(
+                    {
+                        loading: false
+                    }
+                )
+            },
+            customUI: ({ onClose }) => {
+                return (
+                    <div className='g-py-40 g-brd-around rounded-0 g-brd-gray-light-v3 g-bg-white-opacity-0_8 g-px-50 text-center'>
+                        <h1 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('CATEGORY_TREE_TO_DO_TEXT_CONFIRM_HEADER')}</h1>
+                        <p className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('CATEGORY_TREE_TO_DO_CONFIRM_HEADER') + " "} <strong>{name}</strong></p>
+                        <button className="btn g-mr-5 g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md"
+                            onClick={() => {
+                                let dto = {
+                                    "id": id,
+                                    "status": 0,
+                                    "CategoryHierarchy": {
+                                        "category_parent_id": spamId.category_child_id
+                                    }
+                                }
+                                this.props.setParent(dto)
+                                onClose();
+                            }}
+                        >
+                            {Translator(this.props.codeList.data.LABEL, this.props.lang).translate('YES_LABEL')}
+                        </button>
+                        <button className="g-ml-5 btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md" onClick={() => {
+                            this.setState(
+                                {
+                                    loading: false
+                                }
+                            )
+                            onClose()
+                        }}>{Translator(this.props.codeList.data.LABEL, this.props.lang).translate('NO_LABEL')}</button>
+
+                    </div>
+                );
+            }
+
+        });
+    }
     toSpamClick(event) {
         let id = event.currentTarget.getAttribute('data-tag');
         let name = event.currentTarget.getAttribute('data-name');
@@ -283,7 +397,7 @@ class CategoryTree extends React.Component {
                     searchQuery={this.state.search}
                     onlyExpandSearchedNodes={true}
                     canDrag={(node) => {
-                        if (['_SPAM',"_NOT_VERIFIED","_VERIFIED"].includes(node.node.category)) {
+                        if (['_SPAM', "_NOT_VERIFIED", "_VERIFIED", "_TO_DO"].includes(node.node.category)) {
                             return false;
                         }
                         return true;
@@ -309,12 +423,24 @@ class CategoryTree extends React.Component {
                             <LinkAuth to={`/categories/add/${item.node.status}/${item.node.category_child_id}`} className="g-mx-5 dropdown-item u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-12 g-color-primary--hover">
                                 <i class="fa  fa-plus"></i>
                             </LinkAuth>)
-                        if (!['_SPAM',"_NOT_VERIFIED","_VERIFIED"].includes(item.node.category)) {
+                        if (!['_SPAM', "_NOT_VERIFIED", "_VERIFIED", "_TO_DO"].includes(item.node.category)) {
                             if (item.node.toSave == true) {
                                 item.buttons.push(
 
                                     <span data-status={item.parentNode.status} data-parent-tag={item.parentNode.category_child_id} data-tag={item.node.category_child_id} data-name={item.node.title} onClick={this.setParent.bind(this)} className="g-cursor-pointer g-mx-5 dropdown-item u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-12 g-color-primary--hover">
                                         <i class="fa fa-floppy-o"></i>
+                                    </span>)
+                            }
+                            if (item.node.status == 1) {
+                                item.buttons.push(
+                                    <span data-tag={item.node.category_child_id} data-name={item.node.category} onClick={this.toDoClick.bind(this)} className="g-cursor-pointer g-mx-5 dropdown-item u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-12 g-color-primary--hover">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </span>)
+                            }
+                            if (item.node.status == 0) {
+                                item.buttons.push(
+                                    <span data-tag={item.node.category_child_id} data-name={item.node.category} onClick={this.toVerifyClick.bind(this)} className="g-cursor-pointer g-mx-5 dropdown-item u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-12 g-color-primary--hover">
+                                        <i class="fa fa-check-square"></i>
                                     </span>)
                             }
 
@@ -326,6 +452,7 @@ class CategoryTree extends React.Component {
                                 <span data-tag={item.node.category_child_id} data-name={item.node.category} onClick={this.removeCategory.bind(this)} className="g-cursor-pointer g-mx-5 dropdown-item u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-12 g-color-primary--hover">
                                     <i class="fa  fa-close"></i>
                                 </span>)
+
 
 
                         }

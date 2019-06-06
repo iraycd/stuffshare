@@ -2108,6 +2108,82 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "CATEGORY_TREE_TO_DO_TEXT_CONFIRM_HEADER": {
+            "id": "167f9a69-ed41-4d95-b5c0-1cb957ad4ada",
+            "uid": "",
+            "code": "CATEGORY_TREE_TO_DO_TEXT_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Przenieś do TODO",
+                "us": "Move to TODO",
+                "de": "Verschieben in die TODO",
+                "ru": "Переместить в TODO",
+                "fr": "Déplacer dans la TODO",
+                "es": "Mover a TODO",
+                "no": "Gå til TODO",
+                "zh_cn": "移动到TODO"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_TO_DO_CONFIRM_HEADER": {
+            "id": "167f9a69-ed41-4d95-b5c0-1cb957ad4ada",
+            "uid": "",
+            "code": "CATEGORY_TREE_TO_DO_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy chcesz przneieść kategorie do TODO?",
+                "us": "Whether you want przneieść category in TODO?",
+                "de": "Ob Sie przneieść in der Kategorie TODO?",
+                "ru": "Хотите ли вы przneieść категории в TODO?",
+                "fr": "Si vous voulez przneieść la catégorie TODO?",
+                "es": "Si desea przneieść categoría en TODO?",
+                "no": "Om du vil przneieść kategori i TODO?",
+                "zh_cn": "是否你想要przneieść类别TODO?"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_CHECK_TEXT_CONFIRM_HEADER": {
+            "id": "167f9a69-ed41-4d95-b5c0-1cb957ad4ada",
+            "uid": "",
+            "code": "CATEGORY_TREE_CHECK_TEXT_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ustaw kategorie jako gotową",
+                "us": "Set the category as ready",
+                "de": "Legen Sie Kategorien wie das fertige",
+                "ru": "Установите категории, как готовую",
+                "fr": "Cochez la catégorie prêt",
+                "es": "La casilla de la categoría, como listo",
+                "no": "Angi kategori som klar",
+                "zh_cn": "设定的类别为准备"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_TREE_CHECK_CONFIRM_HEADER": {
+            "id": "167f9a69-ed41-4d95-b5c0-1cb957ad4ada",
+            "uid": "",
+            "code": "CATEGORY_TREE_CHECK_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy chcesz ustawić kategorie jako gotową?",
+                "us": "If you want to install categories, such as ready?",
+                "de": "Ob Sie Kategorien wie fertig?",
+                "ru": "Хотите ли вы установить категории, как готовой?",
+                "fr": "Si vous voulez installer dans la catégorie, comme fini?",
+                "es": "Si usted desea instalar una categoría, como la lista?",
+                "no": "Hvis du ønsker å installere kategorier, for eksempel klar?",
+                "zh_cn": "如果你想安装的类别，例如准备好了吗？"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
