@@ -49,7 +49,7 @@ const cqrsPreprocess = () => {
     if (typeof (body.model) == "object") {
       model = body.model
     } else {
-      model = JSON.parse(decodeURIComponent(body.model));
+      model = JSON.parse(unescape(body.model));
     }
     action.init(model);
     await cqrsHandler(action, ctx);
@@ -62,7 +62,7 @@ const cqrsPreprocess = () => {
     if (typeof (query.model) == "object") {
       model = query.model
     } else {
-      model = JSON.parse(decodeURIComponent(query.model));
+      model = JSON.parse(unescape(query.model));
     }
     action.init(model);
     return await cqrsHandler(action, ctx);
