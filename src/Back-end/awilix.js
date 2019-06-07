@@ -64,6 +64,11 @@ import GetCategoriesAllQuery from "./Query/Category/getCategoriesAllQuery.js";
 import DeleteCategoryCommand from "./Commands/Category/deleteCategoryCommand.js";
 import SetParentCategoryCommand from "./Commands/Category/setParentCategoryCommand.js";
 import EditCategoryCommand from "./Commands/Category/editCategoryCommand.js";
+import CategoryOptionsRepository from "./Repository/categoryOptionsRepository.js";
+import GetCategoryOptionsTypeQuery from "./Query/CategoryOptions/getCategoryOptionsTypeQuery.js";
+import CategoryOptionService from "./Services/categoryOptionService.js";
+
+
 
 
 
@@ -90,6 +95,8 @@ let exporter = {
   countryServiceDI: asClass(CountryService),
   cityRepositoryDI: asClass(CityRepository),
   cityServiceDI: asClass(CityService),
+  categoryOptionsRepositoryDI: asClass(CategoryOptionsRepository),
+  categoryOptionServiceDI: asClass(CategoryOptionService),
 
   userAuthRepositoryDI: asClass(UserAuthRepository),
   sequelizeDI: asValue(SequelizeDB)
@@ -141,6 +148,9 @@ exporter[QueryList.Category.GET_CATEGORIES_ALL_TREE] = asClass(GetCategoriesAllQ
 
 exporter[QueryList.Category.GET_CATEGORIES_FREETEXT] = asClass(GetCategoryFreetextQuery)
 ///////////////////////////////////////////////////////////////////////////
+////////////////////////////////CategoryOptions/////////////////////////////////////////
+
+exporter[QueryList.CategoryOptions.GET_OPTIONS_TYPE] = asClass(GetCategoryOptionsTypeQuery)
 
 ///////////////////////////////BLOB//////////////////////////////
 exporter[CommandList.Blob.UPLOAD_IMAGE] = asClass(UploadImageCommand);

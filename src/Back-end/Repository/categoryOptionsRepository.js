@@ -17,32 +17,24 @@ export default class CategoryOptionsRepository extends BaseRepository {
    */
   constructor({ sequelizeDI }) {
     super(sequelizeDI.CategoryOption);
-    this.CategoryOptionsTypeDB = sequelizeDI.CategoryOptionsType;
-    this.CategoryOptionsTypeTemplateDB = sequelizeDI.CategoryOptionsTypeTemplate
+    this.categoryOptionsTypeDB = sequelizeDI.CategoryOptionsType;
+    this.categoryOptionsTypeTemplateDB = sequelizeDI.CategoryOptionsTypeTemplate
     this.sequelizeDI = sequelizeDI;
   }
   getTypes({ transaction }) {
-    return this.entityDAO.findAll({
-      where: { id: ids },
+    return this.categoryOptionsTypeDB.findAll({
+      where: {  },
       include: [
         {
-          model: this.sequelizeDI.Category,
-          as: "category_children"
+          model: this.sequelizeDI.CategoryOptionsTypeTemplate,
+          as: "cat_options_temp"
           /* include: [{
              model: this.sequelizeDI.Category,
              as: "category_children"
            }
            ]*/
         },
-        {
-          model: this.sequelizeDI.Category,
-          as: "category_parent"
-          /* include: [{
-             model: this.sequelizeDI.Category,
-             as: "category_parent"
-           }
-           ]*/
-        }
+        
       ],
       transaction: this.getTran({ transaction })
     });

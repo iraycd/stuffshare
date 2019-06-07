@@ -12,6 +12,7 @@ import TextRepository from "./Repository/textRepository.js";
 import CountryRepository from "./Repository/countryRepository.js";
 import CityRepository from "./Repository/cityRepository.js";
 import UserAuthRepository from "./Repository/userAuthRepository.js";
+import CategoryOptionsRepository from "./Repository/categoryOptionsRepository.js";
 
 
 /**
@@ -24,11 +25,11 @@ export default class UnitOfWork extends BaseUnitOfWork {
 
     /**
      * Creates an instance of UnitOfWork.
-     * @param  { { categoryRepositoryDI:CategoryRepository,userAuthRepositoryDI: UserAuthRepository,userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository}} 
+     * @param  { { categoryRepositoryDI:CategoryRepository,categoryOptionsRepositoryDI:CategoryOptionsRepository,userAuthRepositoryDI: UserAuthRepository,userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository}} 
      * @memberof UnitOfWork
      */
     // @ts-ignore
-    constructor({ categoryRepositoryDI, userRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI ,blobMapperRepositoryDI,itemCategoryRepositoryDI,itemRepositoryDI,textRepositoryDI,countryRepositoryDI,cityRepositoryDI,userAuthRepositoryDI}) {
+    constructor({ categoryRepositoryDI, userRepositoryDI, categoryOptionsRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI, blobMapperRepositoryDI, itemCategoryRepositoryDI, itemRepositoryDI, textRepositoryDI, countryRepositoryDI, cityRepositoryDI, userAuthRepositoryDI }) {
         super()
 
         this.transaction = null;
@@ -43,11 +44,12 @@ export default class UnitOfWork extends BaseUnitOfWork {
             itemRepositoryDI,
             countryRepositoryDI,
             cityRepositoryDI,
-            userAuthRepositoryDI
+            userAuthRepositoryDI,
+            categoryOptionsRepositoryDI
         }
     };
 
-    
+
     /**
      * 
      * @return {UserRepository}
@@ -56,14 +58,25 @@ export default class UnitOfWork extends BaseUnitOfWork {
      */
     get userRepository() {
         return this.repositories.userRepositoryDI;
-    } 
+    }
 
-        /**
+
+      /**
      * 
-     * @return {UserAuthRepository}
+     * @return {CategoryOptionsRepository}
      * @readonly
      * @memberof UnitOfWork
      */
+    get categoryOptionsRepository() {
+        return this.repositories.categoryOptionsRepositoryDI
+    }
+
+    /**
+ * 
+ * @return {UserAuthRepository}
+ * @readonly
+ * @memberof UnitOfWork
+ */
     get userAuthRepository() {
         return this.repositories.userAuthRepositoryDI;
     }
@@ -77,15 +90,15 @@ export default class UnitOfWork extends BaseUnitOfWork {
     get blobRepository() {
         return this.repositories.blobRepositoryDI;
     }
- /**
-    * 
-    * @return {BlobMapperRepository}
-    * @readonly
-    * @memberof UnitOfWork
-    */
-   get blobMapperRepository() {
-    return this.repositories.blobMapperRepositoryDI;
-}
+    /**
+       * 
+       * @return {BlobMapperRepository}
+       * @readonly
+       * @memberof UnitOfWork
+       */
+    get blobMapperRepository() {
+        return this.repositories.blobMapperRepositoryDI;
+    }
 
     /**
      * @return {CategoryHierarchyRepository}
@@ -129,12 +142,12 @@ export default class UnitOfWork extends BaseUnitOfWork {
         return this.repositories.countryRepositoryDI;
     }
 
-   /**
-     * 
-     * @return {CityRepository}
-     * @readonly
-     * @memberof UnitOfWork
-     */
+    /**
+      * 
+      * @return {CityRepository}
+      * @readonly
+      * @memberof UnitOfWork
+      */
     get cityRepository() {
         return this.repositories.cityRepositoryDI;
     }   /**
@@ -160,7 +173,7 @@ export default class UnitOfWork extends BaseUnitOfWork {
     get textRepository() {
         return this.repositories.textRepositoryDI;
     }
-    
-  
+
+
 }
 

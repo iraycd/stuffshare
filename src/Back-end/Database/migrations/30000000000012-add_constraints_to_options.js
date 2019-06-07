@@ -1,11 +1,11 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.addConstraint('CategoryOptionsTypeTemplate', ['cot_id'], {
+    return queryInterface.addConstraint('CategoryOptionsTypeTemplates', ['cot_id'], {
       type: 'FOREIGN KEY',
       name: 'FK_cot_id', // useful if using queryInterface.removeConstraint
       references: {
-        table: 'CategoryOptionsType',
+        table: 'CategoryOptionsTypes',
         field: 'id',
       },
       onDelete: 'no action',
@@ -15,7 +15,7 @@ module.exports = {
         type: 'FOREIGN KEY',
         name: 'FK_cot_co', // useful if using queryInterface.removeConstraint
         references: {
-          table: 'CategoryOptionsType',
+          table: 'CategoryOptionsTypes',
           field: 'id',
         },
         onDelete: 'no action',
@@ -35,7 +35,7 @@ module.exports = {
       })
     }).then(succ => {
 
-      return queryInterface.addConstraint('CategoryOptionsTemplate', ['co_id'], {
+      return queryInterface.addConstraint('CategoryOptionsTemplates', ['co_id'], {
         type: 'FOREIGN KEY',
         name: 'FK_co_id_cot_id', // useful if using queryInterface.removeConstraint
         references: {
@@ -47,11 +47,11 @@ module.exports = {
       })
     }).then(succ => {
 
-      return queryInterface.addConstraint('CategoryOptionsTemplate', ['cott_id'], {
+      return queryInterface.addConstraint('CategoryOptionsTemplates', ['cott_id'], {
         type: 'FOREIGN KEY',
         name: 'FK_cott_id_cotemplate_id', // useful if using queryInterface.removeConstraint
         references: {
-          table: 'CategoryOptionsTypeTemplate',
+          table: 'CategoryOptionsTypeTemplates',
           field: 'id',
         },
         onDelete: 'no action',
@@ -66,11 +66,11 @@ module.exports = {
     .then(item => {
       return queryInterface.removeConstraint('CategoryOptions', 'FK_cot_co')
     }).then(item => {
-      return queryInterface.removeConstraint('CategoryOptionsTemplate', 'FK_co_id_cot_id')
+      return queryInterface.removeConstraint('CategoryOptionsTemplates', 'FK_co_id_cot_id')
     }).then(item => {
-      return queryInterface.removeConstraint('CategoryOptionsTemplate', 'FK_cott_id_cotemplate_id')
+      return queryInterface.removeConstraint('CategoryOptionsTemplates', 'FK_cott_id_cotemplate_id')
     }).then(item => {
-      return queryInterface.removeConstraint('CategoryOptionsTypeTemplate', 'FK_cot_id')
+      return queryInterface.removeConstraint('CategoryOptionsTypeTemplates', 'FK_cot_id')
     })
   }
 };

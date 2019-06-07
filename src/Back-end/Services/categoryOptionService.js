@@ -1,0 +1,26 @@
+import CategoryOptionsRepository from "../Repository/categoryOptionsRepository";
+import BaseService from "../Architecture/baseService";
+import UnitOfWork from "../unitOfWork";
+
+
+/*
+ *
+ * @export
+ * @class BlobService
+ * @extends BaseService
+ */
+export default class CategoryOptionService extends BaseService {
+    /**
+     * Creates an instance of UserService.
+     * @param   {{ unitOfWorkDI: UnitOfWork, categoryOptionsRepositoryDI:CategoryOptionsRepository}}
+     */
+    constructor({ unitOfWorkDI, blobRepositoryDI }) {
+        super({ unitOfWorkDI, repository: 'categoryOptionsRepository' });
+    }
+
+    async getType({ }) {
+        return await this.unitOfWorkDI.categoryOptionsRepository.getTypes({})
+    }
+
+
+}

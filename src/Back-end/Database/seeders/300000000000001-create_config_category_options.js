@@ -17,18 +17,18 @@ const uuidv4 = require("uuid/v4");
 // event is emitted after each line
 
 let save = async (queryInterface, category, template) => {
-  let result = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsType WHERE name='${category.name}'`);
+  let result = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsTypes WHERE name='${category.name}'`);
   if (result[0].length == 0) {
-    await queryInterface.bulkInsert('CategoryOptionsType', [category]);
+    await queryInterface.bulkInsert('CategoryOptionsTypes', [category]);
   }
-  result = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsType WHERE name='${category.name}'`);
+  result = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsTypes WHERE name='${category.name}'`);
 
   let mapPromises = template.map(async item => {
 
-    let check = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsTypeTemplate WHERE cot_id='${result[0][0].id}' AND [order]=${item.order}`);
+    let check = await queryInterface.sequelize.query(`SELECT * FROM CategoryOptionsTypeTemplates WHERE cot_id='${result[0][0].id}' AND [order]=${item.order}`);
     if (check[0].length == 0) {
       item.cot_id = result[0][0].id
-      return await queryInterface.bulkInsert('CategoryOptionsTypeTemplate', [item]);
+      return await queryInterface.bulkInsert('CategoryOptionsTypeTemplates', [item]);
 
     } else {
       return new Promise((res, rej) => {

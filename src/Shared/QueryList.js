@@ -9,6 +9,11 @@ let QueryList = {
         GET_CATEGORIES_ALL_TREE:"getCategoriesAllQuery"
 
     },
+    CategoryOptions: {
+        GET_OPTIONS_TYPE: "getCategoryOptionsTypeQuery",
+        
+
+    },
     User: {
         LOG_IN_INTERNAL: "userLogInInternalQuery",
         LOG_IN_BY_REFRESH_TOKEN: "logInByRefreshTokenQuery",
