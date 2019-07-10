@@ -2,29 +2,27 @@
     ./client/index.js
 */
 
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
-window.jQuery = $;
-import './assets/vendor/bootstrap/bootstrap.js';
-import './assets/js/custom.js';
-import './assets/js/hs.core.js';
-
-import './../../Shared/BaseObjects/Helper/commonFunctions.js';
-
-import App from './Scenes/index.jsx';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import configureStore from './store.js';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import { BaseService, LANGUAGE_ACTIONS } from './../App/index.js';
-import { Enums } from './../../Shared/index.js';
-
-import logo from './assets/img/logo/logo-1.png';
-import AUTH_ACTIONS from './Reducers/Auth/action.js';
+import { BrowserRouter, Route } from 'react-router-dom';
 import QueryList from '../../Shared/QueryList.js';
 import { LOADER_ACTIONS } from '../App/Reducers/Loader/actions.js';
+import './../../Shared/BaseObjects/Helper/commonFunctions.js';
+import { Enums } from './../../Shared/index.js';
+import { BaseService, LANGUAGE_ACTIONS } from './../App/index.js';
+import './assets/js/custom.js';
+import './assets/js/hs.core.js';
+import './assets/vendor/bootstrap/bootstrap.js';
+import AUTH_ACTIONS from './Reducers/Auth/action.js';
+import App from './Scenes/index.jsx';
+import configureStore from './store.js';
+window.jQuery = $;
+
+
+
+
 
 let store = configureStore({});
 //INIT

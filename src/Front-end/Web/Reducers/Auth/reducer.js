@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import AUTH_ACTIONS from './action';
 
 

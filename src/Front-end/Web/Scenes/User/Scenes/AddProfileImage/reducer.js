@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import ADD_PROFILE_IMAGE_ACTIONS from './actions';
 
 let emptyState = {

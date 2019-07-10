@@ -4,13 +4,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
+import { Col, Form } from 'reactstrap';
 import CommandList from '../../../../../../Shared/CommandList';
 import UserForgotPasswordDTO from '../../../../../../Shared/DTO/User/UserForgotPasswordDTO.js';
+import { Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
 import FORGOT_PASSWORD_ACTIONS from './actions.js';
 
 class ForgotPassword extends React.Component {

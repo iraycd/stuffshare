@@ -34,42 +34,42 @@ export default class CategoryOption extends Model {
           type: DataTypes.UUID,
           allowNull: true
         },
-        
+
         name: {
           type: DataTypes.STRING,
           allowNull: false
         },
-         name: {
+        name: {
           type: DataTypes.STRING,
           allowNull: false
-        },name_pl:{
+        }, name_pl: {
           type: DataTypes.STRING,
-  
-        } ,
-        name_us:{
-          type: DataTypes.STRING,
-  
+
         },
-        name_de:{
+        name_us: {
           type: DataTypes.STRING,
-  
+
         },
-        name_ru:{
+        name_de: {
           type: DataTypes.STRING,
-  
+
         },
-        name_fr:{
+        name_ru: {
           type: DataTypes.STRING,
-  
-        },name_es:{
-          type: DataTypes.STRING,
-  
+
         },
-        name_no:{
+        name_fr: {
           type: DataTypes.STRING,
-  
+
+        }, name_es: {
+          type: DataTypes.STRING,
+
         },
-        name_zh_cn:{
+        name_no: {
+          type: DataTypes.STRING,
+
+        },
+        name_zh_cn: {
           type: DataTypes.STRING,
         },
         status: {
@@ -78,32 +78,36 @@ export default class CategoryOption extends Model {
         order: {
           type: DataTypes.INTEGER,
         }
-   
-        
+
+
       },
       { sequelize }
     );
   }
   static associate(models) {
-   /* Item.belongsToMany(models.Category, {
-      through: {
-        model: models.ItemCategory,
-        targetKey: "id",
-        foreignKey: "continent_id"
-      },
-      as: "continents",
-      targetKey: "id",
-      foreignKey: "item_id"
-    });
-    
-    Item.hasMany(models.Blob, {
-      as: "blobs",
-      targetKey: "id",
-      foreignKey: "item_id"
-    });
-    //  Item.belongsTo(models.User);
-    // Item.hasMany(models.ItemCategory)
-    //  Blob.belongsTo(models.User);*/
+
+    CategoryOption.belongsTo(models.CategoryOptionsType, { as: "cat_opt", targetKey: 'id', foreignKey: "cot_id" });
+    CategoryOption.hasMany(models.CategoryOptionsTemplate, { as: "cat_opt_temp", targetKey: 'co_id', foreignKey: "co_id" });
+
+    /* Item.belongsToMany(models.Category, {
+       through: {
+         model: models.ItemCategory,
+         targetKey: "id",
+         foreignKey: "continent_id"
+       },
+       as: "continents",
+       targetKey: "id",
+       foreignKey: "item_id"
+     });
+     
+     Item.hasMany(models.Blob, {
+       as: "blobs",
+       targetKey: "id",
+       foreignKey: "item_id"
+     });
+     //  Item.belongsTo(models.User);
+     // Item.hasMany(models.ItemCategory)
+     //  Blob.belongsTo(models.User);*/
   }
 }
 

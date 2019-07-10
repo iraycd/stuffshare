@@ -27,7 +27,7 @@ export default class DropDownList extends FormComponent {
             <FormGroup color={formValidation.isDanger} className={formValidation.classError}>
                 <Label for={this.state.guid} class="col-3 ">{this.state.label} </Label>
                 <Col>
-                    <Input type="select" className="form-control rounded-0" value={this.props.value} id={this.state.guid} onChange={this.props.onChange}>
+                    <Input type="select" className="form-control rounded-0" value={this.props.value} id={this.state.guid} onChange={this.props.onChange} disabled={this.props.disabled}>
                         {optionValue}
 
                     </Input>

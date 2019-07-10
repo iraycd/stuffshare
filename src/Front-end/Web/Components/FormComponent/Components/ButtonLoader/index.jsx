@@ -21,7 +21,7 @@ export default class ButtonLoader extends React.Component {
         }
         let result = (
 
-            <Button onClick={this.props.onClick} size={this.props.size} disabled={isDisable} className={this.props.className}>{this.props.value} {loader}</Button>
+            <Button onClick={this.props.onClick} size={this.props.size} disabled={this.props.disabled?this.props.disabled:isDisable} className={this.props.className}>{this.props.value} {loader}</Button>
 
         );
         return result;

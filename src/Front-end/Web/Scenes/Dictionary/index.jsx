@@ -3,13 +3,12 @@
 */
 
 import React from 'react';
-
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Route, Switch } from 'react-router-dom'
-import DictionaryEdit from './Scenes/Edit/index.jsx';
-
 import { CSSTransitionGroup } from 'react-transition-group';
+import { Col, Container, Row } from 'reactstrap';
+import DictionaryEdit from './Scenes/Edit/index.jsx';
 import DictionaryList from './Scenes/List/index.jsx';
+
+
 export default class Dictionary extends React.Component {
 
     constructor() {

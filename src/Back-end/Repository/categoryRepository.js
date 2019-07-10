@@ -18,13 +18,19 @@ export default class CategoryRepository extends BaseRepository {
     super(sequelizeDI.Category);
     this.sequelizeDI = sequelizeDI;
   }
-  getAllCategoriesFlat({ transaction }) {
+  getAllCategoriesFlat({model, transaction }) {
     return this.sequelizeDI.sequelize.query(
       `
-      SELECT Categories.id  as category_child_id,category_parent_id,category as title,category,status,icon,forThing,forSell,forEvent FROM Categories LEFT  JOIN CategoryHierarchies ON Categories.id = CategoryHierarchies.category_child_id order by category  
+      SELECT
+       Categories.id  as category_child_id,
+        category_parent_id,category as title,
+        Categories.*
+      FROM Categories LEFT  JOIN CategoryHierarchies ON Categories.id = CategoryHierarchies.category_child_id
+      WHERE status=ISNULL(NULLIF(:status,0),status)
+       order by category  
       `,
       {
-        replacements: {},
+        replacements: {status:model.status},
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
       }
@@ -110,6 +116,35 @@ export default class CategoryRepository extends BaseRepository {
 
   }
 
+
+
+  getCategoriesParents({ ids, transaction }) {
+    return this.sequelizeDI.sequelize.query(
+      `
+      WITH recus(category_id) AS (
+        SELECT category_child_id FROM CategoryHierarchies
+        WHERE category_child_id IN (:id)
+        UNION ALL
+        SELECT CategoryHierarchies.Category_parent_id  FROM recus JOIN CategoryHierarchies ON category_child_id=recus.category_id
+        ),
+        union_recus AS (
+        SELECT category_id FROM recus
+        UNION ALL
+        SELECT :id
+        )
+          SELECT  id,category,category_pl,category_us FROM union_recus JOIN Categories ON Id = category_id
+          GROUP BY id,category,category_pl,category_us
+        
+    `,
+      {
+        replacements: { id: ids },
+        transaction: this.getTran({ transaction }),
+        type: this.sequelizeDI.sequelize.QueryTypes.SELECT
+      }
+    );
+
+
+  }
   getCategoryFreetext({ search, isFor, transaction }) {
     let lang = undefined;
     let freetext = PrepareSearch.prepareSmall(search)

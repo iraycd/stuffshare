@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import LOGIN_ACTIONS from './actions';
 
 let emptyState = {

@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import SIGN_IN_MODAL_ACTIONS from './actions';
 
 let emptyState = {

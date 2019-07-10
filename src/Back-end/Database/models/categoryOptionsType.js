@@ -43,7 +43,7 @@ export default class CategoryOptionsType extends Model {
   }
   static associate(models) {
     CategoryOptionsType.hasMany(models.CategoryOptionsTypeTemplate, {
-      as: "cat_options_temp",
+      as: "cat_options_type_temp",
       targetKey: "id",
       foreignKey: "cot_id"
     });

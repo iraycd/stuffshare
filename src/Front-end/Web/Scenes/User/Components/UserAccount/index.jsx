@@ -4,37 +4,25 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
-import { BaseService } from '../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from '../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import Modal from 'react-responsive-modal'
-import Login from '../../Scenes/Login/index.jsx';
-import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
-import Register from '../../Scenes/Register/index.jsx';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
-import noprofilepic from './../../../../assets/img/noprofilepic.jpg'
-import SIGN_IN_MODAL_ACTIONS from './actions.js';
-import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
-
-import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
-import UserProfileInfo from '../../Scenes/UserProfileInfo/index.jsx';
-import RemoveUser from '../../Scenes/RemoveUser/index.jsx';
-import UserInfo from '../../Scenes/UserInfo/index.jsx';
-import LogOut from '../../Scenes/LogOut/index.jsx';
-import ChangePassword from '../../Scenes/ChangePassword/index.jsx';
-import Img from 'react-image'
+import { Col, Container, Row } from 'reactstrap';
+import { Translator } from '../../../../../../Shared/index.js';
+import QueryList from '../../../../../../Shared/QueryList.js';
+import { BaseService } from '../../../../../App/index.js';
+import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
+import LinkAuth from '../../../../Components/LinkAuth/index.jsx';
 import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
 import AddProfileImage from '../../Scenes/AddProfileImage/index.jsx';
-import ImageLightbox from './../../../../Components/ImageLightbox/index.jsx'
+import ChangePassword from '../../Scenes/ChangePassword/index.jsx';
+import LogOut from '../../Scenes/LogOut/index.jsx';
+import RemoveUser from '../../Scenes/RemoveUser/index.jsx';
+import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
+import UserInfo from '../../Scenes/UserInfo/index.jsx';
+import PRIVS_ENUM from './../../../../../App/Privileges/privsEnum.js';
+import noprofilepic from './../../../../assets/img/noprofilepic.jpg';
 import USER_ACCOUNTS_ACTION from './actions.js';
-import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
-import { withRouter } from 'react-router-dom';
-import PRIVS_ENUM from './../../../../../App/Privileges/privsEnum.js'
-import LinkAuth from '../../../../Components/LinkAuth/index.jsx';
+
 
 
 

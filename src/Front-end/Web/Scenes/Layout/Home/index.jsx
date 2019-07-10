@@ -3,15 +3,15 @@
 */
 
 import React from 'react';
-
+import { connect } from 'react-redux';
 import { CSSTransitionGroup } from 'react-transition-group';
-import foto from './stock-photo-retro-music-hero-header-596721026.jpg';
-import SearchFreetext from '../../Search/Scenes/SearchFreetext/index.jsx';
 import WrapperAuth from '../../../Components/WrapperAuth/index.jsx';
+import SearchFreetext from '../../Search/Scenes/SearchFreetext/index.jsx';
 import Login from '../../User/Scenes/Login/index.jsx';
 import Register from '../../User/Scenes/Register/index.jsx';
-import { connect } from 'react-redux';
 import SetLatlng from '../../User/Scenes/SetLatlng/index.jsx';
+import foto from './stock-photo-retro-music-hero-header-596721026.jpg';
+
 
 class Home extends React.Component {
 

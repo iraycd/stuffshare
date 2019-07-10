@@ -2,20 +2,13 @@
     ./client/components/App.jsx
 */
 
-import React from 'react';
-import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, TabPane, TabContent, Nav, NavItem, NavLink } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
-import { CSSTransitionGroup } from 'react-transition-group';
-import logo from './../../../../assets/img/logo/logo-2.png';
-import CommandList from '../../../../../../Shared/CommandList.js';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'react-leaflet-markercluster/dist/styles.min.css'; // sass
 import 'leaflet/dist/leaflet.css';
+import React from 'react';
+import { Map, Marker, TileLayer } from 'react-leaflet';
+import 'react-leaflet-markercluster/dist/styles.min.css'; // sass
+import { connect } from 'react-redux';
+import { Col, Form, Label, Row } from 'reactstrap';
+import { Translator } from './../../../../../../Shared/index.js';
 
 //import { Map } from 'react-leaflet';
 delete L.Icon.Default.prototype._getIconUrl;

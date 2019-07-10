@@ -21,6 +21,22 @@ export default class CategoryOptionService extends BaseService {
     async getType({ }) {
         return await this.unitOfWorkDI.categoryOptionsRepository.getTypes({})
     }
+    async getRelatedOptions({category_ids})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.getRelatedOptions({category_ids})
+
+    }
+    async upsertTemplate({model})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.upsertTemplate({model})
+
+    }
+    async deleteTemplate({model})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.deleteTemplate({model})
+
+    }
 
 
+    
 }

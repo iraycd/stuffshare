@@ -3,19 +3,19 @@
 */
 
 import React from 'react';
+//import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import GoogleLogin from 'react-google-login';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
+import { withRouter } from 'react-router-dom';
+import { Button, Col, Form, Label } from 'reactstrap';
+import ExternalCredentialsDTO from '../../../../../../Shared/DTO/User/ExternalCredentialsDTO.js';
 import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
 import QueryList from '../../../../../../Shared/QueryList.js';
+import { CommandList, Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
 import LOGIN_ACTIONS from './actions.js';
-//import FacebookLogin from 'react-facebook-login';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import GoogleLogin from 'react-google-login';
-import ExternalCredentialsDTO from '../../../../../../Shared/DTO/User/ExternalCredentialsDTO.js';
-import { withRouter } from 'react-router-dom';
 
 class Login extends React.Component {
 

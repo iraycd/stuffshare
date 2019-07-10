@@ -36,7 +36,7 @@ class BaseService {
             dispatch({ type: action + "_LOADING", dto: model });
             return axios({
                 method: 'get',
-                url: WEB_CONFIG.API_URL[NODE_ENV] + '/query?action=' + escape(JSON.stringify({ "action": action, "model": escape(JSON.stringify(body)) })),
+                url: WEB_CONFIG.API_URL[NODE_ENV] + '/query?action=' + encodeURIComponent(JSON.stringify({ "action": action, "model": encodeURIComponent(JSON.stringify(body)) })),
                 headers: { "Authorization": `Bearer ${context.token}`, "Language": context.lang }
             })
                 .then(response => {

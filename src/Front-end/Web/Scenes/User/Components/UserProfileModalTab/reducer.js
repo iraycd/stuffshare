@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import USER_PROFILE_MODAL_ACTION from './actions';
 
 let emptyState = {

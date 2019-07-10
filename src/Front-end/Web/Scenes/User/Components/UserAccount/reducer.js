@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import USER_ACCOUNTS_ACTION from './actions';
 
 let emptyState = {

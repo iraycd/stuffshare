@@ -4,15 +4,13 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
-import { BaseService } from '../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from '../../../../Components/index.js';
+import { Col } from 'reactstrap';
 import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import UserProfileModal from '../UserProfileModal/index.jsx'
-import QueryList from '../../../../../../Shared/QueryList.js';
+import { CommandList, Translator } from '../../../../../../Shared/index.js';
+import { BaseService } from '../../../../../App/index.js';
 import ModalComponent from '../../../../Components/ModalComponent/index.jsx';
 import SignInModal from '../SignInModal/index.jsx';
+import UserProfileModal from '../UserProfileModal/index.jsx';
 import { USER_HEADER_ACTIONS } from './actions.js';
 
 

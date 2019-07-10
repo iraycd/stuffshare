@@ -3,22 +3,24 @@
 */
 
 import React from 'react';
+import Collapsible from 'react-collapsible';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
 import { withRouter } from 'react-router-dom';
+import { Col, Form, Row } from 'reactstrap';
 import translate from 'translate';
+import uuidv4 from "uuid/v4";
+import CommandList from '../../../../../../Shared/CommandList.js';
 import CategoryDTO from '../../../../../../Shared/DTO/Categories/CategoryDTO.js';
 import QueryList from '../../../../../../Shared/QueryList.js';
 import Checkbox from '../../../../Components/FormComponent/Components/Checkbox/index.jsx';
 import IconTextbox from '../../../../Components/FormComponent/Components/IconTextbox/index.jsx';
-import CommandList from '../../../../../../Shared/CommandList.js';
-import uuidv4 from "uuid/v4";
+import CategoryOptionTempMapper from '../../Components/CategoryOptionTempMapper/CategoryOptionTempMapper.jsx';
 import CATEGORY_TREE_ACTIONS from '../CategoryTree/actions.js';
+import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
 
-import Collapsible from 'react-collapsible';
+
 
 
 
@@ -33,7 +35,12 @@ class AddCategory extends React.Component {
         this.state.parentCategory = new CategoryDTO();
         this.state.category.category_parent = [];
         this.state.category.category_children = [];
-
+        this.state.categoryOptions = {
+            new: [],
+            edit: [],
+            delete: []
+        };
+        this.state.getCategoryOptionsTypeQuery = [];
         this.state.validation = [];
     }
     componentWillReceiveProps(next) {
@@ -82,6 +89,14 @@ class AddCategory extends React.Component {
 
     }
     componentDidMount() {
+        this.props.getCategoryOptionsType().then(succ => {
+            this.setState(
+                {
+                    getCategoryOptionsTypeQuery: succ.data
+                }
+            )
+
+        });
         if (this.props.match.params.parentId != "undefined") {
 
             this.props.getCategories(this.props.match.params.parentId).then(succ => {
@@ -283,6 +298,13 @@ class AddCategory extends React.Component {
 
         this.refreshValidation();
     }
+    addOptionHandler(event) {
+        let reuslt = this.state.categoryOptions;
+        reuslt.new.push({});
+        this.setState({
+            categoryOptions: reuslt
+        })
+    }
     translateSubmit(event) {
         console.log(event.target.innerText)
         let lang = event.target.innerText;
@@ -329,6 +351,8 @@ class AddCategory extends React.Component {
                 forSell: 0,
                 forThing: 0,
             }
+
+
 
 
         console.log(children);
@@ -417,19 +441,13 @@ class AddCategory extends React.Component {
                         <IconTextbox onChange={this.iconHandler.bind(this)} placeholder={phTrans.translate('CATEGORY_ICON__PLACEHOLDER')} value={this.state.category.icon} label={tran.translate('CATEGORY_ICON__LABEL')} field="icon" validation={this.state.validation} />
                     </Col>
                 </Row>
+                <ButtonLoader onClick={this.addOptionHandler.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase rounded-0"} value={tran.translate('CATEOGRY_ADD_NEW_OPTION_LINK')} />
                 <Row className="g-my-20">
-                    <Collapsible trigger="Start 1 ">
-                        <Row className="g-ma-10">
-                            <p>This is the collapsible content. It can be any element or React component you like.</p>
-                            <p>It can even be another Collapsible component. Check out the next section!</p>
-                        </Row>
-                    </Collapsible>
-                    <Collapsible trigger="Start 2 ">
-                        <Row className="g-ma-10">
-                            <p>This is the collapsible content. It can be any element or React component you like.</p>
-                            <p>It can even be another Collapsible component. Check out the next section!</p>
-                        </Row>
-                    </Collapsible>
+                    {this.state.categoryOptions.new.map(item => {
+                        return (<Collapsible trigger="Start 1 ">
+                            <CategoryOptionTempMapper></CategoryOptionTempMapper>
+                        </Collapsible>)
+                    })}
                 </Row>
                 <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
             </Form>
@@ -467,6 +485,8 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({ type: CATEGORY_TREE_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
 
         }
+
+
 
     }
 }

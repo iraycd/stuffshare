@@ -46,181 +46,303 @@ module.exports = {
     let category = {
       id: id,
       name: "NUMBER",
-      type: "NUMBER",
+      type: "SINGLE",
       status: true,
       created_at: date,
       updated_at: date
-    
-  };
 
-  let template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "long",
-    status: true,
-    order: 1,
-    created_at: date,
-    updated_at: date
+    };
 
-  }];
-  await save(queryInterface, category, template);
+    let template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "long",
+      status: true,
+      order: 1,
+      created_at: date,
+      updated_at: date
 
-//await queryInterface.bulkInsert('CategoryOptionsType', [category]);
-//await queryInterface.bulkInsert('CategoryOptionsTypeTemplate', [template]);
-
-id = uuidv4();
-  category = {
-    id: id,
-    name: "FLOAT",
-    type: "FLOAT",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-
-
-  }
-template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "float",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
-
-  }]
-  await save(queryInterface, category, template);
-
-id = uuidv4();
-  category = {
-    id: id,
-    name: "BETWEEN NUMBERS",
-    type: "BETWEEN",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-  }
-   template =[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "long",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
-
-  }, {
-    id: uuidv4(),
-    cot_id: id,
-    type: "long",
-    status: 1,
-    order: "2",
-    created_at: date,
-    updated_at: date
-
-  }]
-  
+    }];
     await save(queryInterface, category, template);
 
-id = uuidv4();
-  category = {
-    id: id,
-    name: "BETWEEN FLOAT",
-    type: "BETWEEN",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-  }
-    template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "float",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
+    //await queryInterface.bulkInsert('CategoryOptionsType', [category]);
+    //await queryInterface.bulkInsert('CategoryOptionsTypeTemplate', [template]);
 
-  }, {
-    id: uuidv4(),
-    cot_id: id,
-    type: "float",
-    status: 1,
-    order: "2",
-    created_at: date,
-    updated_at: date
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "FLOAT",
+      type: "SINGLE",
+      status: 1,
+      created_at: date,
+      updated_at: date,
 
-  }]
+
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
     await save(queryInterface, category, template);
 
-id = uuidv4();
-  category = {
-    id: id,
-    name: "SELECT NUMBERS",
-    type: "SELECT",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-  }
-    template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "long",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "DATE",
+      type: "SINGLE",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "datetime",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
 
-  }]
-  
-  await save(queryInterface, category, template);
-
-id = uuidv4();
-  category = {
-    id: id,
-    name: "SELECT VARCHARS",
-    type: "SELECT",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-  }
-    template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "nvarchar",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
-
-  }]
+    }]
     await save(queryInterface, category, template);
 
 
     id = uuidv4();
-  category = {
-    id: id,
-    name: "PAIR FLOAT",
-    type: "PAIR",
-    status: 1,
-    created_at: date,
-    updated_at: date,
-  }
-      template=[{
-    id: uuidv4(),
-    cot_id: id,
-    type: "float",
-    status: 1,
-    order: "1",
-    created_at: date,
-    updated_at: date
+    category = {
+      id: id,
+      name: "STRING",
+      type: "SINGLE",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
 
-  }]
-      await save(queryInterface, category, template);
+    }]
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "BOOLEAN",
+      type: "SINGLE",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "bit",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "BETWEEN NUMBERS",
+      type: "BETWEEN",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "long",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }, {
+      id: uuidv4(),
+      cot_id: id,
+      type: "long",
+      status: 1,
+      order: "2",
+      created_at: date,
+      updated_at: date
+
+    }]
+
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "BETWEEN FLOAT",
+      type: "BETWEEN",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }, {
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "2",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "SELECT NUMBERS",
+      type: "SELECT",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "long",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
+
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "SELECT VARCHARS",
+      type: "SELECT",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "MULTISELECT VARCHARS",
+      type: "MULTI_SELECT",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "MULTISELECT NUMBER",
+      type: "MULTI_SELECT",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
 
 
 
 
-},
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "BETWEEN DATE",
+      type: "BETWEEN",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "datetime",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }, {
+      id: uuidv4(),
+      cot_id: id,
+      type: "datetime",
+      status: 1,
+      order: "2",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+
+
+
+
+  },
 
   down: (queryInterface, Sequelize) => {
     //return //queryInterface.bulkDelete('Continents', null, {});

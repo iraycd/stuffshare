@@ -7,8 +7,10 @@ import ImageLightboxReducer from 'C:/Programowanie/Private/stuffshare/src/Front-
  import LanguageReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Reducers/Language/reducer.js';
  import VerifyImageReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Blob/Component/VerifyImage/reducer.js';
  import CategoryTreeReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Categories/Scenes/CategoryTree/reducer.js';
+ import CategoryTreePreviewReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Categories/Scenes/CategoryTreePreview/reducer.js';
+ import EditCategoryReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Categories/Scenes/EditCategory/reducer.js';
  import ItemReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Items/Components/Item/reducer.js';
- import NewItemReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Items/Components/NewItem/reducer.js';
+ import NewOfferItemReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/Items/Components/NewOfferItem/reducer.js';
  import SignInModalReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/SignInModal/reducer.js';
  import UserAccountReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/UserAccount/reducer.js';
  import UserHeaderReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Components/UserHeader/reducer.js';
@@ -23,4 +25,4 @@ import ImageLightboxReducer from 'C:/Programowanie/Private/stuffshare/src/Front-
  import SetLatlngReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/SetLatlng/reducer.js';
  import UserInfoReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/UserInfo/reducer.js';
  import UserProfileInfoReducer from 'C:/Programowanie/Private/stuffshare/src/Front-end/Web/Scenes/User/Scenes/UserProfileInfo/reducer.js';
- export default {ImageLightboxReducer,LinkAuthReducer,ModalComponentReducer,RouterAuthReducer,WrapperAuthReducer,AuthReducer,LanguageReducer,VerifyImageReducer,CategoryTreeReducer,ItemReducer,NewItemReducer,SignInModalReducer,UserAccountReducer,UserHeaderReducer,UserProfileModalTabReducer,AddProfileImageReducer,ChangePasswordReducer,ForgotPasswordReducer,LoginReducer,LogOutReducer,RegisterReducer,RemoveUserReducer,SetLatlngReducer,UserInfoReducer,UserProfileInfoReducer}
+ export default {ImageLightboxReducer,LinkAuthReducer,ModalComponentReducer,RouterAuthReducer,WrapperAuthReducer,AuthReducer,LanguageReducer,VerifyImageReducer,CategoryTreeReducer,CategoryTreePreviewReducer,EditCategoryReducer,ItemReducer,NewOfferItemReducer,SignInModalReducer,UserAccountReducer,UserHeaderReducer,UserProfileModalTabReducer,AddProfileImageReducer,ChangePasswordReducer,ForgotPasswordReducer,LoginReducer,LogOutReducer,RegisterReducer,RemoveUserReducer,SetLatlngReducer,UserInfoReducer,UserProfileInfoReducer}

@@ -29,7 +29,7 @@ export default class BaseService {
     let result = await response;
     const flattenDataValues = ({ dataValues }) => {
       const flattenedObject = {};
-     
+
       Object.keys(dataValues).forEach(key => {
         const dataValue = dataValues[key];
 
@@ -53,7 +53,7 @@ export default class BaseService {
 
       return flattenedObject;
     };
-    if(result==null){
+    if (result == null) {
       return null;
     }
     return Array.isArray(result)
@@ -97,7 +97,7 @@ export default class BaseService {
    * @memberof BaseService
    */
   async insert({ model }) {
-    return await this.toJsonParse( this.unitOfWorkDI[this.repository].insert({ model }));
+    return await this.toJsonParse(this.unitOfWorkDI[this.repository].insert({ model }));
   }
   /**
    *
@@ -109,6 +109,16 @@ export default class BaseService {
     return await this.unitOfWorkDI[this.repository].update({ model });
   }
 
+  /**
+     *
+     * @param  {{ model : BaseDTO }}
+     * @return {Promise<any>}
+     * @memberof BaseService
+     */
+  async upsert({ model }) {
+    return await this.unitOfWorkDI[this.repository].upsert({ model });
+
+  }
   /**
    *
    * @param  {{ model : BaseDTO }}

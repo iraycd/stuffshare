@@ -4,12 +4,8 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Translator } from './../../../../../../Shared/index.js';
 
 class SearchFreetext extends React.Component {
 

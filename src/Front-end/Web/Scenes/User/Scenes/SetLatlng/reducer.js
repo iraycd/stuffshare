@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import SET_LATLNG_ACTIONS from './actions';
 
 let emptyState = {

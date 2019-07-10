@@ -4,14 +4,13 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
+import { Col, Form, Label } from 'reactstrap';
+import CommandList from '../../../../../../Shared/CommandList.js';
+import ChangePasswordDTO from '../../../../../../Shared/DTO/User/ChangePasswordDTO.js';
 import { Enums, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import ChangePasswordDTO from '../../../../../../Shared/DTO/User/ChangePasswordDTO.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
 import LOGIN_ACTIONS from './actions.js';
-import CommandList from '../../../../../../Shared/CommandList.js';
 
 
 

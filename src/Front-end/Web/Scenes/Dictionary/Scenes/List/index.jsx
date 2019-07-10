@@ -3,14 +3,14 @@
 */
 
 import React from 'react';
-
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, ListGroup, ListGroupItem ,Badge } from 'reactstrap';
-
 import { connect } from 'react-redux';
-
-import { DictionaryDTO, Enums, CommandList, QueryList, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
 import { Link } from 'react-router-dom';
+import { Col, Input, Label, ListGroup, ListGroupItem } from 'reactstrap';
+import { CommandList, Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+
+
+
 
 class DictionaryList extends React.Component {
 

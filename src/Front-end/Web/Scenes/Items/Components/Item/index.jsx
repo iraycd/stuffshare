@@ -22,6 +22,7 @@ import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
 import ImageLightbox from './../../../../Components/ImageLightbox/index.jsx'
 import ITEM_ACTION from './actions.js';
 import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
+import CategoryOptionTempFormMapper from '../../../Categories/Components/CategoryOptionTempMapper/CategoryOptionTempFormMapper.jsx';
 
 
 

@@ -3,25 +3,24 @@
 */
 
 import React from 'react';
-
 import { connect } from 'react-redux';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Row, Container, Col } from 'reactstrap';
-
-import { Translator } from './../../../../../Shared/index.js';
-import UserHeader from '../../User/Components/UserHeader/index.jsx';
-
-import './../../../assets/js/helpers/hs.hamburgers.js';
-import './../../../assets/js/components/hs.header.js';
-import './../../../assets/js/components/hs.go-to.js';
-import './../../../assets/vendor/typedjs/typed.min.js';
-import './../../../assets/vendor/hs-megamenu/src/hs.megamenu.js';
-import './../../../assets/js/components/hs.popup.js';
-import './../../../assets/js/components/hs.dropdown.js';
-import logo from './../../../assets/img/logo/logo-1.png';
-import { LANGUAGE_ACTIONS, USER_ACTIONS } from './../../../../App/index.js';
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
 import LinkAuth from '../../../Components/LinkAuth/index.jsx';
 import WrapperAuth from '../../../Components/WrapperAuth/index.jsx';
+import UserHeader from '../../User/Components/UserHeader/index.jsx';
+import { Translator } from './../../../../../Shared/index.js';
+import logo from './../../../assets/img/logo/logo-1.png';
+import './../../../assets/js/components/hs.dropdown.js';
+import './../../../assets/js/components/hs.go-to.js';
+import './../../../assets/js/components/hs.header.js';
+import './../../../assets/js/components/hs.popup.js';
+import './../../../assets/js/helpers/hs.hamburgers.js';
+import './../../../assets/vendor/hs-megamenu/src/hs.megamenu.js';
+import './../../../assets/vendor/typedjs/typed.min.js';
+
+
+
 
 
 

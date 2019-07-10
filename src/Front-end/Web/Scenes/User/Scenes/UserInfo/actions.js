@@ -1,6 +1,6 @@
 import ActionsGen from "../../../../../App/actions";
 import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
-MODAL_ACTIONS
+
 
 
 const LOGIN_ACTIONS = {

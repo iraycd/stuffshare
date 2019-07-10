@@ -3,18 +3,16 @@
 */
 
 import React from 'react';
-
-import uuidv4 from 'uuid/v4';
-
 import { connect } from 'react-redux';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Row, Container, Col, Alert } from 'reactstrap';
-
-import { Translator, Enums } from './../../../../../Shared/index.js';
-import { LANGUAGE_ACTIONS, NOTIFICATIONS_ACTIONS } from './../../../../App/index.js';
-
 import { CSSTransitionGroup } from 'react-transition-group';
+import { Alert } from 'reactstrap';
+import { Enums, Translator } from './../../../../../Shared/index.js';
+import { NOTIFICATIONS_ACTIONS } from './../../../../App/index.js';
 
-import { Link } from 'react-router-dom';
+
+
+
+
 
 class Notification extends React.Component {
 

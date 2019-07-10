@@ -11,7 +11,7 @@ let QueryList = {
     },
     CategoryOptions: {
         GET_OPTIONS_TYPE: "getCategoryOptionsTypeQuery",
-        
+        GET_CATEGORY_OPTION:"getCategoryOptionsQuery"
 
     },
     User: {

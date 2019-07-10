@@ -7,9 +7,17 @@ let CommandList = {
     Category: {
         ADD_CATEGORY: "insertCategoryCommand",
         SET_AS_VERIFIED: "setAsVerifiedCommand",
-        DELETE_CATEGORY:"deleteCategoryCommand",
-        SET_PARENT:"setParentCategoryCommand",
-        EDIT_CATEGORY:"editCategoryCommand"
+        DELETE_CATEGORY: "deleteCategoryCommand",
+        SET_PARENT: "setParentCategoryCommand",
+        EDIT_CATEGORY: "editCategoryCommand"
+
+    },
+    Category_Options:
+    {
+        UPSERT_CATEGORY_OPTIONS: "upsertCategoryOptionsCommand",
+        DELETE_CATEGORY_OPTIONS: "deleteCategoryOptionsCommand",
+        UPSERT_CATEGORY_OPTIONS_TEMPLATE: "upsertCategoryOptionsTemplateCommand",
+        DELETE_CATEGORY_OPTIONS_TEMPLATE: "deleteCategoryOptionsTemplateCommand"
 
     },
     User: {
@@ -24,7 +32,7 @@ let CommandList = {
         SET_LANGUAGE: "setLanguageCommand",
         SET_COORDIATES: "setCoordinatesCommand",
         SET_PROFILE_IMAGE: "setProfileImageCommand",
-        CREATE_USER_EXTERNAL_PROV:"createUserByExternalCommand"
+        CREATE_USER_EXTERNAL_PROV: "createUserByExternalCommand"
     },
     Blob: {
         UPLOAD_IMAGE: "uploadImageCommand",

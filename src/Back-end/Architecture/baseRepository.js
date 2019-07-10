@@ -101,9 +101,8 @@ export default class BaseRepository {
   // @ts-ignore
   insert({ model, transaction }) {
     let item = model;
-    if(!model.id)
-    {
-      item.id=uuidv4();
+    if (!model.id) {
+      item.id = uuidv4();
     }
     return this.entityDAO.create(item, {
       transaction: this.getTran({ transaction })
@@ -119,6 +118,20 @@ export default class BaseRepository {
   update({ model, transaction }) {
     return this.entityDAO.update(model, {
       where: { id: this.toStr(model.id) },
+      transaction: this.getTran({ transaction })
+    });
+  }
+
+  /**
+   *
+   * @param  {{ model : BaseDTO}}
+   * @return {Promise<any>}
+   * @memberof BaseRepository
+   */
+  // @ts-ignore
+  upsert({ model, transaction }) {
+    return this.entityDAO.upsert(model, {
+
       transaction: this.getTran({ transaction })
     });
   }

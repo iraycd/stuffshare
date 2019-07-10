@@ -1,9 +1,8 @@
-import ActionsGen from "../../../../../App/actions";
-import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
-import USER_ACCOUNTS_ACTION from "../../Components/UserAccount/actions";
 import CommandList from "../../../../../../Shared/CommandList";
 import QueryList from "../../../../../../Shared/QueryList";
+import ActionsGen from "../../../../../App/actions";
 import LIGHTBOX_ACTIONS from "../../../../Components/ImageLightbox/actions";
+import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
 import AUTH_ACTIONS from "../../../../Reducers/Auth/action";
 
 

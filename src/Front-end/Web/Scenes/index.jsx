@@ -3,26 +3,25 @@
 */
 
 import React from 'react';
-import Header from './Layout/Header/index.jsx';
-import Footer from './Layout/Footer/index.jsx';
-import Home from './Layout/Home/index.jsx';
-import Dictionary from './Dictionary/index.jsx';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import logo from './../assets/img/logo/logo-2.png';
 import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
-import Notification from './Layout/Notifications/index.jsx';
-import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.jsx';
-import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
-import UserAccount from './User/Components/UserAccount/index.jsx';
 import ImageLightbox from '../Components/ImageLightbox/index.jsx';
-import RouterAuth from '../Components/RouterAuth/index.jsx';
-import SignInModal from './User/Components/SignInModal/index.jsx';
-import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
 import BodyLoader from '../Components/Loader/BodyLoader/index.jsx';
-import Item from './Items/Components/Item/index.jsx';
-import NewItem from './Items/Components/NewItem/index.jsx';
+import RouterAuth from '../Components/RouterAuth/index.jsx';
+import VerifyImage from './Blob/Component/VerifyImage/index.jsx';
 import Categories from './Categories/index.jsx';
+import Dictionary from './Dictionary/index.jsx';
+import Item from './Items/Components/Item/index.jsx';
+import NewOfferItem from './Items/Components/NewOfferItem/index.jsx';
+import Footer from './Layout/Footer/index.jsx';
+import Header from './Layout/Header/index.jsx';
+import Home from './Layout/Home/index.jsx';
+import Notification from './Layout/Notifications/index.jsx';
+import SignInModal from './User/Components/SignInModal/index.jsx';
+import UserAccount from './User/Components/UserAccount/index.jsx';
+import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
+import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.jsx';
 
 
 class App extends React.Component {
@@ -61,7 +60,7 @@ class App extends React.Component {
           <RouterAuth path={"/user/:id"} component={UserAccount} />
           <Route path={"/login/"} component={SignInModal} />
           <RouterAuth path={"/verifyImage"} component={VerifyImage} />
-          <RouterAuth exact={true} path={"/item/new"} component={NewItem} />
+          <RouterAuth exact={true} path={"/item/offer/new"} component={NewOfferItem} />
           <Route path={"/item/:id"} component={Item} />
 
         </Switch>

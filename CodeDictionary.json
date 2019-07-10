@@ -2184,6 +2184,139 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "CATEGORY_TEMP_OPTION_TYPE_LABEL": {
+            "id": "a702644a-8474-4ca5-957b-7d049407eb51",
+            "uid": "",
+            "code": "CATEGORY_TEMP_OPTION_TYPE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Typ",
+                "us": "Type",
+                "de": "Art",
+                "ru": "Тип",
+                "fr": "Type",
+                "es": "El tipo de",
+                "no": "Type",
+                "zh_cn": "类型"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_NEW_CHANGE_CATEGORY_TEXT_CONFIRM": {
+            "id": "567929cc-b8ec-4d7d-85bf-0bd358ab68fa",
+            "uid": "",
+            "code": "CATEGORY_NEW_CHANGE_CATEGORY_TEXT_CONFIRM",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Czy chcesz zmienić kategorie {0} na {1}?",
+                "us": "If you want to change the category {0} to {1}?",
+                "de": "Möchten Sie die Kategorie ändern {0} auf {1}?",
+                "ru": "Хотите ли вы изменить категории {0} на {1}?",
+                "fr": "Voulez-vous changer de catégorie {0} sur {1}?",
+                "es": "Si desea cambiar las categorías de {0} a {1}?",
+                "no": "Dersom du ønsker å endre kategorien {0} til {1}?",
+                "zh_cn": "如果你想要改变该类别的{0}{1}?"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "NEW_ITEM_SELL_CATEGORY_SET_HEADER": {
+            "id": "bd1f7fbf-b44c-48ee-b333-cb21ab1d2ebd",
+            "uid": "",
+            "code": "NEW_ITEM_SELL_CATEGORY_SET_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Dodaj nowe ogłoszenie w kategorii {0}",
+                "us": "Add a listing to the category {0}",
+                "de": "Inserat in der Kategorie {0}",
+                "ru": "Добавить объявление в категорию {0}",
+                "fr": "Ajouter une annonce dans la catégorie {0}",
+                "es": "Añadir el anuncio en la categoría de {0}",
+                "no": "Legge til en oppføring i kategorien {0}",
+                "zh_cn": "添加一个清单的类别{0}"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "NEW_ITEM_HEADER": {
+            "id": "1c9ca086-52ab-4e63-bb54-a7f69867527f",
+            "uid": "",
+            "code": "NEW_ITEM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nowe ogłoszenie",
+                "us": "New ad",
+                "de": "Neue Anzeige",
+                "ru": "Новые объявление",
+                "fr": "Nouvelle annonce",
+                "es": "Nuevas anuncio",
+                "no": "Ny annonse",
+                "zh_cn": "新的广告"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_NEW_CHANGE_CATEGORY_CONFIRM_HEADER": {
+            "id": "a11aa8a1-f9a8-45e8-bfa0-b74ef258d3eb",
+            "uid": "",
+            "code": "CATEGORY_NEW_CHANGE_CATEGORY_CONFIRM_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zmień kategorie",
+                "us": "Change category",
+                "de": "Ändern Sie die Kategorie",
+                "ru": "Изменение категории",
+                "fr": "Modifier les catégories",
+                "es": "El cambio de categoría",
+                "no": "Endre kategori",
+                "zh_cn": "更改类别"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ITEM_NAME_LABEL": {
+            "id": "2afc179c-f3b6-4857-a502-cbf14f0280f2",
+            "uid": "",
+            "code": "ITEM_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Tytuł ogłoszenia",
+                "us": "Ad title",
+                "de": "Header anzeigen",
+                "ru": "Заголовок объявления",
+                "fr": "Titre de l'annonce",
+                "es": "El título del anuncio",
+                "no": "Ad tittel",
+                "zh_cn": "广告标题"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ITEM_DESCRIPTION_LABEL": {
+            "id": "400d87bb-833c-4712-b06c-a71b7aefdcc9",
+            "uid": "",
+            "code": "ITEM_DESCRIPTION_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Opis",
+                "us": "Description",
+                "de": "Beschreibung",
+                "ru": "Описание",
+                "fr": "Description",
+                "es": "Descripción",
+                "no": "Beskrivelse",
+                "zh_cn": "描述"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -2506,6 +2639,25 @@
                 "es": "por ejemplo, cracovia",
                 "no": "for eksempel, Krakow",
                 "zh_cn": "例如，克拉科夫"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "FILTER_CATEGORIES_PLACEHOLDER": {
+            "id": "908ffe16-9ba7-497f-880f-89252d146006",
+            "uid": "",
+            "code": "FILTER_CATEGORIES_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Filtruj",
+                "us": "Filter",
+                "de": "Filter",
+                "ru": "Фильтр",
+                "fr": "Filtre",
+                "es": "El filtro",
+                "no": "Filter",
+                "zh_cn": "过滤器"
             },
             "field": "",
             "toRefresh": true

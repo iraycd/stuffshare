@@ -4,22 +4,14 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
-import { BaseService } from '../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from '../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import Modal from 'react-responsive-modal'
-import Login from '../../Scenes/Login/index.jsx';
+import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
+import { Translator } from '../../../../../../Shared/index.js';
 import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
+import Login from '../../Scenes/Login/index.jsx';
 import Register from '../../Scenes/Register/index.jsx';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
-import { CSSTransitionGroup } from 'react-transition-group';
 import logo from './../../../../assets/img/logo/logo-2.png';
 import SIGN_IN_MODAL_ACTIONS from './actions.js';
-import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
-import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 

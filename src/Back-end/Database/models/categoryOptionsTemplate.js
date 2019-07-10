@@ -110,6 +110,8 @@ export default class CategoryOptionsTemplate extends Model {
     );
   }
   static associate(models) {
+    CategoryOptionsTemplate.belongsTo(models.CategoryOptionsTypeTemplate, { as: "cat_opt_type_template", targetKey: 'id', foreignKey: "cott_id" });
+
    /* Item.belongsToMany(models.Category, {
       through: {
         model: models.ItemCategory,

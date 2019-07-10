@@ -67,6 +67,11 @@ import EditCategoryCommand from "./Commands/Category/editCategoryCommand.js";
 import CategoryOptionsRepository from "./Repository/categoryOptionsRepository.js";
 import GetCategoryOptionsTypeQuery from "./Query/CategoryOptions/getCategoryOptionsTypeQuery.js";
 import CategoryOptionService from "./Services/categoryOptionService.js";
+import UpsertCategoryOptionsCommand from "./Commands/CategoryOptions/upsertCategoryOptionsCommand.js";
+import GetCategoryOptionsQuery from "./Query/CategoryOptions/getCategoryOptionsQuery.js";
+import DeleteCategoryOptionsCommand from "./Commands/CategoryOptions/deleteCategoryOptionsCommand.js";
+import UpsertCategoryOptionsTemplateCommand from "./Commands/CategoryOptions/upsertCategoryOptionsTemplateCommand.js";
+import DeleteCategoryOptionsTemplateCommand from "./Commands/CategoryOptions/deleteCategoryOptionsTemplateCommand.js";
 
 
 
@@ -150,7 +155,18 @@ exporter[QueryList.Category.GET_CATEGORIES_FREETEXT] = asClass(GetCategoryFreete
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////////CategoryOptions/////////////////////////////////////////
 
-exporter[QueryList.CategoryOptions.GET_OPTIONS_TYPE] = asClass(GetCategoryOptionsTypeQuery)
+exporter[QueryList.CategoryOptions.GET_OPTIONS_TYPE] = asClass(GetCategoryOptionsTypeQuery);
+exporter[QueryList.CategoryOptions.GET_CATEGORY_OPTION] = asClass(GetCategoryOptionsQuery)
+
+
+exporter[CommandList.Category_Options.UPSERT_CATEGORY_OPTIONS] = asClass(UpsertCategoryOptionsCommand);
+exporter[CommandList.Category_Options.DELETE_CATEGORY_OPTIONS] = asClass(DeleteCategoryOptionsCommand);
+
+exporter[CommandList.Category_Options.UPSERT_CATEGORY_OPTIONS_TEMPLATE] = asClass(UpsertCategoryOptionsTemplateCommand);
+
+exporter[CommandList.Category_Options.DELETE_CATEGORY_OPTIONS_TEMPLATE] = asClass(DeleteCategoryOptionsTemplateCommand);
+
+
 
 ///////////////////////////////BLOB//////////////////////////////
 exporter[CommandList.Blob.UPLOAD_IMAGE] = asClass(UploadImageCommand);

@@ -3,15 +3,15 @@
 */
 
 import React from 'react';
-
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Route, Switch } from 'react-router-dom'
-//import DictionaryEdit from './Scenes/Edit/index.jsx';
-import CategoryTree from './Scenes/CategoryTree/index.jsx'
+import { Switch } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
+import { Col, Container, Row } from 'reactstrap';
 import RouterAuth from '../../Components/RouterAuth/index.jsx';
-import EditCategory from './Scenes/EditCategory/index.jsx';
 import AddCategory from './Scenes/AddCategory/index.jsx';
+//import DictionaryEdit from './Scenes/Edit/index.jsx';
+import CategoryTree from './Scenes/CategoryTree/index.jsx';
+import EditCategory from './Scenes/EditCategory/index.jsx';
+
 
 
 

@@ -4,14 +4,10 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
+import { Redirect } from 'react-router';
+import CommandList from '../../../../../../Shared/CommandList';
 import { Enums, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import CommandList from '../../../../../../Shared/CommandList';
-import UserForgotPasswordDTO from '../../../../../../Shared/DTO/User/UserForgotPasswordDTO.js';
-import { Redirect } from 'react-router'
 import AUTHORIZE_USER_ACTIONS from './actions.js';
 
 class AuthorizeUser extends React.Component {

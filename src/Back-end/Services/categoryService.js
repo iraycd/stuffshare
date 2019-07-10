@@ -43,8 +43,8 @@ export default class CategoryService extends BaseService {
     return result;
   }
 
-  async getAllCategoriesFlat({ }) {
-    let result = await this.unitOfWorkDI.categoryRepository.getAllCategoriesFlat({})
+  async getAllCategoriesFlat({ model}) {
+    let result = await this.unitOfWorkDI.categoryRepository.getAllCategoriesFlat({model})
 
     return result;
   }
@@ -102,7 +102,11 @@ export default class CategoryService extends BaseService {
     return await this.unitOfWorkDI.categoryRepository.removeCategory({ id: idList });
 
   }
+  async getCategoriesParents({ ids }) {
+    return await  this.unitOfWorkDI.categoryRepository.getCategoriesParents({ ids: ids })
+    
 
+  }
   async setAsVerified({ id, status }) {
     let related = await this.unitOfWorkDI.categoryRepository.getCategoryRelated({ id: id });
     let promises = related.map(item => {

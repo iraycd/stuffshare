@@ -21,6 +21,12 @@
     border-color:#eee !important;
 
 }
+.leaf_in_tree{
+    background-color: #777 !important;
+}
+.leaf_in_tree--active{
+    background-color: #333 !important;
+}
 .Collapsible__trigger {
     
     width: 100%;
@@ -31,6 +37,22 @@
     padding: 5px;
     padding-left: 10px;
     color:white;
+    letter-spacing:0.07143rem;
+    border:1px solid rgba(0, 0, 0, 0.15);
+
+
+}
+
+.Collapsible__trigger_options {
+    
+    width: 100%;
+    background-color: #dddddd;
+    color:black;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px;
+    padding-left: 10px;
     letter-spacing:0.07143rem;
     border:1px solid rgba(0, 0, 0, 0.15);
 

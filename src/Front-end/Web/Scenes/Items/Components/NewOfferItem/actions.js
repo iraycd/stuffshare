@@ -4,11 +4,10 @@ import ActionsGen from "../../../../../App/actions";
 import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
 import LIGHTBOX_ACTIONS from "../../../../Components/ImageLightbox/actions";
 
-
-const NEW_ITEM_ACTION = {
+const NEW_OFFER_ACTIONS = {
     OPEN_LIGHTBOX:LIGHTBOX_ACTIONS.OPEN_LIGHTBOX,
-    GET_USER_IMAGES: ActionsGen(QueryList.Blob.GET_USER_IMAGES),
     REMOVE_IMAGE: ActionsGen(CommandList.Blob.REMOVE_BLOB),
+    GET_CATEGORY_OPTION_FETCH:ActionsGen(QueryList.CategoryOptions.GET_CATEGORY_OPTION)
 }
 
-export default  NEW_ITEM_ACTION
+export default  NEW_OFFER_ACTIONS

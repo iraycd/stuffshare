@@ -3,21 +3,18 @@
 */
 
 import React from 'react';
-
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, ListGroup, ListGroupItem, Badge } from 'reactstrap';
-
+import { confirmAlert } from 'react-confirm-alert'; // Import
 import { connect } from 'react-redux';
-
-import { DictionaryDTO, Enums, CommandList, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { Link } from 'react-router-dom';
 import SortableTree from "react-sortable-tree";
 import 'react-sortable-tree/style.css'; // This only needs to be imported once in your app
+import { Col, Input } from 'reactstrap';
 import QueryList from '../../../../../../Shared/QueryList.js';
 import LinkAuth from '../../../../Components/LinkAuth/index.jsx';
-import ScrollArea from 'react-scrollbar';
-import { confirmAlert } from 'react-confirm-alert'; // Import
-import TextBox from '../../../../Components/FormComponent/Components/TextBox/index.jsx';
+import { CommandList, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+
+
+
 
 
 class CategoryTree extends React.Component {

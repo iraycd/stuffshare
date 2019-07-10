@@ -4,17 +4,13 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, TabPane, TabContent, Nav, NavItem, NavLink } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
-import { CSSTransitionGroup } from 'react-transition-group';
-import logo from './../../../../assets/img/logo/logo-2.png';
+import { Col, Container, Form, Label, Row } from 'reactstrap';
 import CommandList from '../../../../../../Shared/CommandList.js';
-
-class UserProfileInfo extends React.Component {
+import QueryList from '../../../../../../Shared/QueryList.js';
+import { Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import logo from './../../../../assets/img/logo/logo-2.png';
+import { ButtonLoader } from './../../../../Components/index.js';
 
     constructor() {
         super();

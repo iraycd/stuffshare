@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux';
-import LOGIN_ACTIONS from './actions';
 import FORGOT_PASSWORD_ACTIONS from './actions';
 
 FORGOT_PASSWORD_ACTIONS

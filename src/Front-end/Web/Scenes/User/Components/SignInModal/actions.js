@@ -1,6 +1,3 @@
-import CommandList from "../../../../../../Shared/CommandList";
-import QueryList from "../../../../../../Shared/QueryList";
-import ActionsGen from "../../../../../App/actions";
 import MODAL_ACTIONS from "../../../../Components/ModalComponent/actions";
 
 

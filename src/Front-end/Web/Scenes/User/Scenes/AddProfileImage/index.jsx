@@ -3,21 +3,17 @@
 */
 
 import React from 'react';
+import Img from 'react-image';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, TabPane, TabContent, Nav, NavItem, NavLink } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
-import { CSSTransitionGroup } from 'react-transition-group';
-import logo from './../../../../assets/img/logo/logo-2.png';
-import CommandList from '../../../../../../Shared/CommandList.js';
-import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
-import Img from 'react-image'
-import noprofilepic from './../../../../assets/img/noprofilepic.jpg'
-import BlobBase64 from './../../../../../../Shared/DTO/Blob/BlobBase64DTO.js'
+import { Col, Container, Form, Label, Row } from 'reactstrap';
 import uuidv4 from "uuid/v4";
+import CommandList from '../../../../../../Shared/CommandList.js';
+import QueryList from '../../../../../../Shared/QueryList.js';
+import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
+import BlobBase64 from './../../../../../../Shared/DTO/Blob/BlobBase64DTO.js';
+import { Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import noprofilepic from './../../../../assets/img/noprofilepic.jpg';
 import ADD_PROFILE_IMAGE_ACTIONS from './actions.js';
 
 

@@ -4,16 +4,16 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import UserRegisterInternalDTO from '../../../../../../Shared/DTO/User/UserRegisterInternalDTO.js';
-import DayPickerInputComponent from '../../../../Components/FormComponent/Components/DayPickerInputComponent/index.jsx';
-import CommandList from '../../../../../../Shared/CommandList.js';
+import { Col, Form } from 'reactstrap';
 //import Map from '../../../../Components/MapComponent/Map/index.js';
 //import MapMarker from '../../../../Components/MapComponent/MapMarker/index.js';
 import uuidv4 from "uuid/v4";
+import CommandList from '../../../../../../Shared/CommandList.js';
+import UserRegisterInternalDTO from '../../../../../../Shared/DTO/User/UserRegisterInternalDTO.js';
+import DayPickerInputComponent from '../../../../Components/FormComponent/Components/DayPickerInputComponent/index.jsx';
+import { Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
 import REGISTER_USER_ACTIONS from './actions.js';
 //import MapMarkerPopup from '../../../../Components/MapComponent/MapMarkerPopup/index.js';
 

@@ -3,32 +3,22 @@
 */
 
 import React from 'react';
-import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, TabPane, TabContent, Nav, NavItem } from 'reactstrap';
-import { Enums, CommandList, Translator } from '../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-//import { TextBox, DropDownList, ButtonLoader } from './../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import Modal from 'react-responsive-modal'
-import ForgotPassword from '../../Scenes/ForgotPassword/index.jsx';
-import Register from '../../Scenes/Register/index.jsx';
-import Login from '../../Scenes/Login/index.jsx';
-
-
-import { CSSTransitionGroup } from 'react-transition-group';
-import logo from './../../../../assets/img/logo/logo-2.png';
-import UserProfileInfo from '../../Scenes/UserProfileInfo/index.jsx'
-import QueryList from '../../../../../../Shared/QueryList.js';
-import { USER_ACTIONS } from '../../../../../App/Reducers/User/actions.js';
-import SetLatlng from '../../Scenes/SetLatlng/index.jsx';
-import noprofilepic from './../../../../assets/img/noprofilepic.jpg'
-import Img from 'react-image'
-import UserInfo from '../../Scenes/UserInfo/index.jsx';
-import USER_PROFILE_MODAL_ACTION from './actions.js';
-import { Link, NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
-import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'reactstrap';
+//import { TextBox, DropDownList, ButtonLoader } from './../../Components/index.js';
+import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
+import { CommandList, Enums, Translator } from '../../../../../../Shared/index.js';
+import QueryList from '../../../../../../Shared/QueryList.js';
+import ImageProfile from '../../../../Components/ImageProfile/index.jsx';
+import UserInfo from '../../Scenes/UserInfo/index.jsx';
+import { BaseService } from './../../../../../App/index.js';
+import noprofilepic from './../../../../assets/img/noprofilepic.jpg';
+import USER_PROFILE_MODAL_ACTION from './actions.js';
+
+
 
 
 class UserProfileModalTab extends React.Component {

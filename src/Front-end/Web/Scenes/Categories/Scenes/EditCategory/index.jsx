@@ -4,18 +4,20 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
 import { withRouter } from 'react-router-dom';
+import { Col, Form, Row } from 'reactstrap';
 import translate from 'translate';
+import CommandList from '../../../../../../Shared/CommandList.js';
 import CategoryDTO from '../../../../../../Shared/DTO/Categories/CategoryDTO.js';
 import QueryList from '../../../../../../Shared/QueryList.js';
 import Checkbox from '../../../../Components/FormComponent/Components/Checkbox/index.jsx';
 import IconTextbox from '../../../../Components/FormComponent/Components/IconTextbox/index.jsx';
-import CommandList from '../../../../../../Shared/CommandList.js';
+import CategoryOptionsList from '../../Components/CategoryOptionsList/CategoryOptionsList.jsx';
 import CATEGORY_TREE_ACTIONS from '../CategoryTree/actions.js';
+import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader, TextBox } from './../../../../Components/index.js';
+
 
 
 
@@ -27,6 +29,7 @@ class CategoryEdit extends React.Component {
         this.state.category = new CategoryDTO();
 
         this.state.validation = [];
+
     }
     componentWillReceiveProps(next) {
         if (next.match.params.parentId != this.state.category.id) {
@@ -37,6 +40,12 @@ class CategoryEdit extends React.Component {
 
                 })
 
+                return this.props.getCategoryOptions(this.props.match.params.id)
+            }).then(succ => {
+                this.setState({
+                    categoryOptions: succ.data
+                })
+                console.log(succ);
             })
             this.state.category.id = next.match.params.id;
             this.setState({
@@ -52,7 +61,11 @@ class CategoryEdit extends React.Component {
                 category: succ.data[0]
 
             })
-
+            return this.props.getCategoryOptions(this.props.match.params.id)
+        }).then(succ => {
+            this.setState({
+                categoryOptions: succ.data
+            })
         })
         this.state.category.id = this.props.match.params.id;
         this.setState({
@@ -352,6 +365,15 @@ class CategoryEdit extends React.Component {
                 </Row>
 
                 <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn u-btn-primary g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase rounded-0"} value={"Submit"} isLoading={this.props.codeDict.edit.isLoading} />
+                <div class="d-flex justify-content-center text-center g-mb-20 g-mt-20">
+                    <div className={`d-inline-block align-self-center g-width-100  g-height-1  g-bg-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3}`}></div>
+                    <span className={`align-self-center text-uppercase  g-color-gray-dark-v2 mx-4 g-color-gray-dark-v4 g-letter-spacing-2   g-font-weight-600 g-font-size-12`}>{tran.translate('CATEGORY_OPTIONS_LABEL')}</span>
+                    <div className={`d-inline-block align-self-center g-width-100 g-height-1 g-bg-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3}`}></div>
+                </div>
+                <Col className="g-my-20 text-center">
+                    <CategoryOptionsList category_id={this.state.category.id}></CategoryOptionsList>
+
+                </Col>
             </Form>
 
         );
@@ -378,6 +400,10 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({
                 type: QueryList.Dictionary.GET_DICTIONARY,
             })
+        },
+        getCategoryOptions: (id) => {
+            return dispatch(new BaseService().queryThunt(QueryList.CategoryOptions.GET_CATEGORY_OPTION, { id: id }));
+
         },
         editCategory: (dto) => {
             return dispatch(new BaseService().commandThunt(CommandList.Category.EDIT_CATEGORY, dto));

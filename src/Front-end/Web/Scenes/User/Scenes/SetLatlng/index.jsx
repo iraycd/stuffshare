@@ -2,24 +2,22 @@
     ./client/components/App.jsx
 */
 
-import React from 'react';
-import { connect } from 'react-redux';
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row } from 'reactstrap';
-import { Enums, Translator } from './../../../../../../Shared/index.js';
-import { BaseService } from './../../../../../App/index.js';
-import { TextBox, DropDownList, ButtonLoader } from './../../../../Components/index.js';
-import UserLoginInternalDTO from '../../../../../../Shared/DTO/User/UserLoginInternalDTO.js';
-import QueryList from '../../../../../../Shared/QueryList.js';
-import LOGIN_ACTIONS from './actions.js';
 import L from 'leaflet';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css';
+import React from 'react';
+import Autocomplete from 'react-autocomplete';
+import { geolocated } from 'react-geolocated';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css'; // sass
-import { geolocated } from 'react-geolocated';
-import 'leaflet/dist/leaflet.css';
-import Autocomplete from 'react-autocomplete'
-import SET_LATLNG_ACTIONS from './actions.js';
+import { connect } from 'react-redux';
+import { Col, Form, FormGroup, Label, Row } from 'reactstrap';
 import CommandList from '../../../../../../Shared/CommandList.js';
+import QueryList from '../../../../../../Shared/QueryList.js';
+import { Enums, Translator } from './../../../../../../Shared/index.js';
+import { BaseService } from './../../../../../App/index.js';
+import { ButtonLoader } from './../../../../Components/index.js';
+import SET_LATLNG_ACTIONS from './actions.js';
 
 //import { Map } from 'react-leaflet';
 delete L.Icon.Default.prototype._getIconUrl;

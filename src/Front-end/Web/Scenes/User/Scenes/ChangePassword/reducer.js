@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import CHANGE_PASSWORD_ACTIONS from './actions';
 
 let emptyState = {
