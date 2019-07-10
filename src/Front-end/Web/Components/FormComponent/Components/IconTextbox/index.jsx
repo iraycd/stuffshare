@@ -37,7 +37,3 @@ export default class IconTextbox extends FormComponent {
 
 
 }
-IconTextbox.propTypes = {
-    placeholder: React.PropTypes.string,
-    value: React.PropTypes.string,
-}

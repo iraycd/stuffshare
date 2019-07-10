@@ -9,7 +9,6 @@ module.exports = {
 
       ALTER TABLE [dbo].[CategoryHierarchies]  WITH CHECK ADD  CONSTRAINT [FK_cat_hierarchy] FOREIGN KEY([category_child_id])
       REFERENCES [dbo].[Categories] ([id])
-      ON DELETE CASCADE
       
 
     `

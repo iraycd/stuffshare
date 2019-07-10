@@ -41,12 +41,3 @@ export default class FormComponent extends React.Component {
 
 
 }
-
-FormComponent.propTypes = {
-    label: React.PropTypes.string,
-    onChange: React.PropTypes.func,
-    isRequired: React.PropTypes.bool,
-    field: React.PropTypes.string,
-    validation: React.PropTypes.array,
-
-}
