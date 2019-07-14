@@ -29,12 +29,3 @@ export default class ButtonLoader extends React.Component {
 
 
 }
-
-ButtonLoader.propTypes = {
-
-    value: React.PropTypes.string,
-    className: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    size: React.PropTypes.string,
-    isLoading: React.PropTypes.bool,
-}

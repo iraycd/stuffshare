@@ -32,7 +32,3 @@ export default class DayPickerInputComponent extends FormComponent {
 
 
 }
-DayPickerInputComponent.propTypes = {
-    placeholder: React.PropTypes.string,
-    value: React.PropTypes.string,
-}

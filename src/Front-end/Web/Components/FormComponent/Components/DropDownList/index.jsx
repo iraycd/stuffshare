@@ -41,9 +41,3 @@ export default class DropDownList extends FormComponent {
 
 
 }
-
-DropDownList.propTypes = {
-
-    value: React.PropTypes.string,
-    valueOptions: React.PropTypes.array,
-}

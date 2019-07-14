@@ -31,7 +31,3 @@ export default class Checkbox extends FormComponent {
 
 
 }
-Checkbox.propTypes = {
-    placeholder: React.PropTypes.string,
-    value: React.PropTypes.boolean,
-}

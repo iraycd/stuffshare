@@ -30,7 +30,3 @@ export default class TextArea extends FormComponent {
 
 
 }
-TextArea.propTypes = {
-    placeholder: React.PropTypes.string,
-    value: React.PropTypes.string,
-}
