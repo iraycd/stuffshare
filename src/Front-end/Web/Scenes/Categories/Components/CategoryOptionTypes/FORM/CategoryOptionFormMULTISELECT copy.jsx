@@ -16,7 +16,7 @@ import DropDownList from '../../../../../Components/FormComponent/Components/Dro
 
 
 
-class CategoryOptionFormMULTISELECT extends React.Component {
+class CategoryOptionFormSINGLE extends React.Component {
 
     constructor(props) {
         super(props);
@@ -96,5 +96,5 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(CategoryOptionFormMULTISELECT);
+)(CategoryOptionFormSINGLE);
 
