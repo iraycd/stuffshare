@@ -41,7 +41,9 @@ class CategoryOptionsList extends React.Component {
             <Col className="g-my-20 text-center">
                 <ButtonLoader onClick={this.addOptionHandler.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase rounded-0 g-mb-20"} value={tran.translate('CATEOGRY_ADD_NEW_OPTION_LINK')} />
 
-                {this.props.catOptions.catOptions.map(item => {
+                {this.props.catOptions.catOptions.sort((a,b)=>{
+                    return Number(a.order)>=Number(b.order)?1:-1
+                }).map(item => {
                     return (<CategoryOptionTempMapper item={item} category_id={this.props.category_id}  ></CategoryOptionTempMapper>
                     )
                 })}

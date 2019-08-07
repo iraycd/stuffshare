@@ -8,6 +8,7 @@ let CONFIG = {
     "image/png","image/jpeg"
   ],
   UPLOAD_PATH:"C:/Programowanie/Private/stuffshare/upload",//"F:/Private/cqrs-node/upload",//
+  LOCATION_IQ:"fcfb9eb913b786",
   DATABASE: {
     development: {
    

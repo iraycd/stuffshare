@@ -242,9 +242,14 @@ export default class UserService extends BaseService {
     return await this.toJsonParse(this.unitOfWorkDI.userRepository.getUserInfo({ user_id }));
   }
 
-  async setCoordinates({ longitude, latitude }) {
+  async setCoordinates({ longitude, latitude, zipcode, address, city_id, country_id, city }) {
     this.context.user.longitude = longitude;
     this.context.user.latitude = latitude;
+    this.context.user.zipcode = zipcode;
+    this.context.user.address = address;
+    this.context.user.city_id = city_id;
+    this.context.user.country_id = country_id;
+    this.context.user.city = city;
     await this.update({ model: this.context.user });
   }
 

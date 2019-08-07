@@ -1,11 +1,11 @@
 /*
     ./client/components/App.jsx
 */
-
+import uuidv4 from "uuid/v4";
 import React from 'react';
 import Collapsible from 'react-collapsible';
 import { connect } from 'react-redux';
-import { Container } from 'reactstrap';
+import { Container, Col } from 'reactstrap';
 import CategoryOptionsDTO from '../../../../../../Shared/DTO/CategoryOptions/CategoryOptionsDTO.js';
 import QueryList from '../../../../../../Shared/QueryList.js';
 import CategoryOptionSELECT from '../CategoryOptionTypes/CREATE_EDIT/CategoryOptionSELECT.jsx';
@@ -14,6 +14,11 @@ import { BaseService } from './../../../../../App/index.js';
 import { DropDownList } from './../../../../Components/index.js';
 import CategoryOptionSINGLE from '../CategoryOptionTypes/CREATE_EDIT/CategoryOptionSINGLE.jsx';
 import CategoryOptionBETWEEN from '../CategoryOptionTypes/CREATE_EDIT/CategoryOptionBETWEEN.jsx';
+import CategoryOptionGEO from '../CategoryOptionTypes/CREATE_EDIT/CategoryOptionGEO.jsx';
+import CategoryOptionIMAGE from '../CategoryOptionTypes/CREATE_EDIT/CategoryOptionIMAGE.jsx';
+import CATEGORY_EDIT_ACTIONS from "../../Scenes/EditCategory/actions.js";
+import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,18 +30,63 @@ class CategoryOptionTempMapper extends React.Component {
         this.state.getCategoryOptionsTypeQuery = [];
         this.state.validation = [];
         this.state.type = {};
-        this.state.catOption = Object.assign(new CategoryOptionsDTO(), props.catOptions.catOptions.filter(item => { return item.id == this.props.item.id })[0]);
+        let id = uuidv4();
+        this.props.addEmptyElement(id);
+        this.state.id = id;
+        this.state.loading = false;
+        this.state.catOption = Object.assign(new CategoryOptionsDTO(), props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]);
         if (!this.state.catOption.cat_opt) {
             this.state.catOption.cat_opt = {};
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.match.params.id != nextProps.match.params.id && nextProps.match.params.id != 'new') {
+            this.setState({
+                loading: true
+            });
+            this.props.getCategoryOption(nextProps.match.params.id).then(succ => {
+                console.log(succ.data[0])
+                this.props.cleanEmptyElement();
+                this.props.addEmptyElement(succ.data[0].id)
+                this.props.editEmptyElement(succ.data[0])
+                this.setState({
+                    catOption: succ.data[0],
+                    id: succ.data[0].id,
+                    loading: false
+                })
+
+            })
         }
 
     }
 
     componentDidMount() {
+
+        if (this.props.match.params.id != 'new') {
+
+            this.setState({
+                loading: true
+            });
+            this.props.getCategoryOption(this.props.match.params.id).then(succ => {
+                console.log(succ.data[0])
+                this.props.cleanEmptyElement();
+
+                this.props.addEmptyElement(succ.data[0].id)
+                this.props.editEmptyElement(succ.data[0])
+                this.setState({
+                    catOption: succ.data[0],
+                    id: succ.data[0].id,
+                    loading: false
+
+                })
+
+            })
+        }
         this.props.getCategoryOptionsType().then(succ => {
             this.setState(
                 {
-                    getCategoryOptionsTypeQuery: succ.data
+                    getCategoryOptionsTypeQuery: succ.data,
                 }
             )
 
@@ -46,9 +96,11 @@ class CategoryOptionTempMapper extends React.Component {
 
     }
     getDropDownValues() {
-        return this.state.getCategoryOptionsTypeQuery.map(item => {
+        let result = this.state.getCategoryOptionsTypeQuery.map(item => {
             return { id: item.id, value: item.name, type: item.type }
         });
+        return [{ id: undefined, value: '', type: undefined }, ...result]
+
     }
     refreshValidation() {
         if (this.state.toRefresh) {
@@ -80,12 +132,18 @@ class CategoryOptionTempMapper extends React.Component {
     typeHandler(event) {
         let catOption = this.state.catOption
         catOption.cat_opt.id = event.target.value
-        console.log(catOption)
+        let co = this.state.getCategoryOptionsTypeQuery.filter(item => {
+            return catOption.cat_opt.id == item.id
+        })
+
+        catOption.cat_opt = co[0];
+        this.props.editEmptyElement(catOption);
+
         this.setState({
             catOption: catOption
         });
-
         this.refreshValidation();
+
     }
 
     checkType(catType) {
@@ -98,22 +156,42 @@ class CategoryOptionTempMapper extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
+        if (this.state.loading == true) {
+            return <span></span>
+        }
         return (
-            <Collapsible triggerOpenedClassName={(this.props.item.category_id != undefined && this.props.item.category_id != this.props.category_id) ? "Collapsible__trigger_options" : ""} triggerClassName={(this.props.item.category_id != undefined && this.props.item.category_id != this.props.category_id) ? "Collapsible__trigger_options" : ""} trigger={this.props.item["name_" + this.props.lang] ? `${this.props.item["name_" + this.props.lang]} (${this.props.item.cat_opt.name})` : tran.translate('NEW_OPTION')} >
 
-                <Container className="g-ma-10">
-                    <DropDownList isRequired={true} label={tran.translate('CATEGORY_TEMP_OPTION_TYPE_LABEL')} onChange={this.typeHandler.bind(this)} valueOptions={this.getDropDownValues()} disabled={this.state.catOption.cat_opt.id} value={this.state.catOption.cat_opt.id} field="type" validation={this.state.validation} />
-                    {this.state.catOption.cat_opt.id ?
-                        this.checkType('SELECT').length > 0 ? <span><CategoryOptionSELECT catOptionsTemp={this.checkType('SELECT')[0]} category_id={this.props.category_id} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.props.item.id })[0]}></CategoryOptionSELECT></span> :
-                            this.checkType('MULTI_SELECT').length > 0 ? <span><CategoryOptionSELECT catOptionsTemp={this.checkType('MULTI_SELECT')[0]} category_id={this.props.category_id} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.props.item.id })[0]}></CategoryOptionSELECT></span> :
-                                this.checkType('SINGLE').length > 0 ? <span><CategoryOptionSINGLE catOptionsTemp={this.checkType('SINGLE')[0]} category_id={this.props.category_id} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.props.item.id })[0]}></CategoryOptionSINGLE></span> :
-                                    this.checkType('BETWEEN').length > 0 ? <span><CategoryOptionBETWEEN catOptionsTemp={this.checkType('BETWEEN')[0]} category_id={this.props.category_id} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.props.item.id })[0]}></CategoryOptionBETWEEN></span> :
+            <Container className="g-ma-10">
+                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+                    <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CATEGORY_OPTION_ADD_HEADER')}</h2>
+                    <br />
+                    <label class="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{tran.translate('CATEGORY_OPTION_ADD_HEADER_TEXT')}</label>
+                </Col>
+                {(this.state.catOption.category_link != undefined && this.state.catOption.category_link.length > 0) ?
+                    <Col className="g-mb-50">
+                        <Collapsible trigger={tran.translate('SHOW_DEPENDENCIES_CATEGORIES')+" - "+this.state.catOption.category_link.length} >
+                            <div>
+                                {this.state.catOption.category_link.map(item => {
+                                    return <Link to={"/categories/edit/" + item.category_id} className="g-font-size-11 col-md-11 col-xs-11 g-color-primary--hover nav-link">{item.category["category_"+this.props.lang]}</Link>
 
-                                        <span></span>
-                        : <span></span>
-                    }
-                </Container>
-            </Collapsible>)
+                                })}
+                            </div>
+                        </Collapsible>
+                    </Col>
+                    : <span></span>}
+                <DropDownList isRequired={true} label={tran.translate('CATEGORY_TEMP_OPTION_TYPE_LABEL')} onChange={this.typeHandler.bind(this)} valueOptions={this.getDropDownValues()} disabled={this.state.catOption.cat_opt.id} value={this.state.catOption.cat_opt.id} field="type" validation={this.state.validation} />
+                {this.state.catOption.cat_opt.id ?
+                    this.checkType('SELECT').length > 0 ? <div><CategoryOptionSELECT catOptionsTemp={this.checkType('SELECT')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionSELECT></div> :
+                        this.checkType('MULTI_SELECT').length > 0 ? <div><CategoryOptionSELECT catOptionsTemp={this.checkType('MULTI_SELECT')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionSELECT></div> :
+                            this.checkType('SINGLE').length > 0 ? <div><CategoryOptionSINGLE catOptionsTemp={this.checkType('SINGLE')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionSINGLE></div> :
+                                this.checkType('BETWEEN').length > 0 ? <div><CategoryOptionBETWEEN catOptionsTemp={this.checkType('BETWEEN')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionBETWEEN></div> :
+                                    this.checkType('GEOCOORDINATE').length > 0 ? <div><CategoryOptionGEO catOptionsTemp={this.checkType('GEOCOORDINATE')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionGEO></div> :
+                                        this.checkType('IMAGES').length > 0 ? <div><CategoryOptionIMAGE catOptionsTemp={this.checkType('IMAGES')[0]} catOption={this.props.catOptions.catOptions.filter(item => { return item.id == this.state.id })[0]}></CategoryOptionIMAGE></div> :
+                                            <span></span>
+                    : <span></span>
+                }
+            </Container>
+        )
     }
 }
 
@@ -131,15 +209,39 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getCategoryOptionsType: (id) => {
             return dispatch(new BaseService().queryThunt(QueryList.CategoryOptions.GET_OPTIONS_TYPE, {}));
+        },
+        addEmptyElement: (id) => {
+            dispatch({
+                type: CATEGORY_EDIT_ACTIONS.ADD_EMPTY_OPTION, dto: {
+                    id: id
+                }
+            });
+
+        },
+        editEmptyElement: (dto) => {
+            dispatch({
+                type: CATEGORY_EDIT_ACTIONS.UPDATE_EMPTY_ELEMENT, dto: dto
+            });
+
+        },
+        cleanEmptyElement: (dto) => {
+            dispatch({
+                type: CATEGORY_EDIT_ACTIONS.CLEAN, dto: dto
+            });
+
+        },
+        getCategoryOption: (id) => {
+            return dispatch(new BaseService().queryThunt(QueryList.CategoryOptions.GET_ALL_CETEGORIES_OPTIONS, { id: id }));
         }
+
 
 
 
     }
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
-    mapDispatchToProps
-)(CategoryOptionTempMapper);
+    mapDispatchToProps)
+    (CategoryOptionTempMapper));
 

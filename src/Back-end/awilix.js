@@ -72,6 +72,11 @@ import GetCategoryOptionsQuery from "./Query/CategoryOptions/getCategoryOptionsQ
 import DeleteCategoryOptionsCommand from "./Commands/CategoryOptions/deleteCategoryOptionsCommand.js";
 import UpsertCategoryOptionsTemplateCommand from "./Commands/CategoryOptions/upsertCategoryOptionsTemplateCommand.js";
 import DeleteCategoryOptionsTemplateCommand from "./Commands/CategoryOptions/deleteCategoryOptionsTemplateCommand.js";
+import ReverseGeocodeQuery from "./Query/City/reverseGeocodeQuery.js";
+import GeocodeQuery from "./Query/City/geocodeQuery.js";
+import GetCountriesByIdQuery from "./Query/Country/getCountriesByIdQuery.js";
+import GetAllCategoriesOptionQuery from "./Query/CategoryOptions/getAllCategoryOptionsQuery.js";
+
 
 
 
@@ -157,6 +162,7 @@ exporter[QueryList.Category.GET_CATEGORIES_FREETEXT] = asClass(GetCategoryFreete
 
 exporter[QueryList.CategoryOptions.GET_OPTIONS_TYPE] = asClass(GetCategoryOptionsTypeQuery);
 exporter[QueryList.CategoryOptions.GET_CATEGORY_OPTION] = asClass(GetCategoryOptionsQuery)
+exporter[QueryList.CategoryOptions.GET_ALL_CETEGORIES_OPTIONS] = asClass(GetAllCategoriesOptionQuery);
 
 
 exporter[CommandList.Category_Options.UPSERT_CATEGORY_OPTIONS] = asClass(UpsertCategoryOptionsCommand);
@@ -190,8 +196,12 @@ exporter[QueryList.Item.SEARCH_ITEM] = asClass(SearchItemQuery);
 ///////////////////COUNTRY////////////////////////////////
 
 exporter[QueryList.Country.GET_COUNTRY] = asClass(GetCountriesQuery);
+exporter[QueryList.Country.GET_COUNTRY_BY_ID] = asClass(GetCountriesByIdQuery);
+
 
 exporter[QueryList.City.GET_CITY] = asClass(GetCitiesQuery);
+exporter[QueryList.City.REVERSE_GEO]= asClass(ReverseGeocodeQuery)
+exporter[QueryList.City.REVERSE_LATLNG_GEO]= asClass(GeocodeQuery)
 
 
 

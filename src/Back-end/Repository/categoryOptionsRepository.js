@@ -49,9 +49,17 @@ export default class CategoryOptionsRepository extends BaseRepository {
   }
   getRelatedOptions({ category_ids, transaction }) {
     return this.categoryOptionDB.findAll({
-      where: { category_id: category_ids },
-      order: [['name', 'ASC'], ['cat_opt_temp','value', 'ASC']],
+      // where: { category_id: category_ids },
+      order: [['name', 'ASC'], ['cat_opt_temp', 'value', 'ASC']],
       include: [
+        {
+          model: this.sequelizeDI.CategoryOptionsLink,
+          as: "category_link",
+          required: true,
+          where: {
+            category_id: category_ids
+          },
+        },
         {
           model: this.sequelizeDI.CategoryOptionsType,
           as: "cat_opt",
@@ -117,6 +125,67 @@ export default class CategoryOptionsRepository extends BaseRepository {
   deleteTemplate({ model, transaction }) {
     return this.categoryOptionsTemplateDB.destroy({
       where: { id: this.toStr(model.id) },
+      transaction: this.getTran({ transaction })
+    });
+  }
+
+
+  upsertToCategory({ model, transaction }) {
+    return this.sequelizeDI.CategoryOptionsLink.upsert(model, {
+
+      transaction: this.getTran({ transaction })
+    });
+  }
+
+  getAllCategoriesOption({ id, transaction }) {
+    console.log(id);
+    let whereClaus = id ? { id: id } : {};
+
+    return this.categoryOptionDB.findAll({
+      where: whereClaus,
+      order: [['name', 'ASC'], ['cat_opt_temp', 'value', 'ASC']],
+      include: [
+        {
+          model: this.sequelizeDI.CategoryOptionsLink,
+          as: "category_link",
+          required: false,
+          include: [
+            {
+              model: this.sequelizeDI.Category,
+              as: "category"
+
+
+            },
+          ],
+        },
+        {
+          model: this.sequelizeDI.CategoryOptionsType,
+          as: "cat_opt",
+          required: true,
+          where: {
+            status: 1
+          },
+          include: [
+            {
+              model: this.sequelizeDI.CategoryOptionsTypeTemplate,
+              as: "cat_options_type_temp"
+
+
+            },
+          ],
+        },
+        {
+          model: this.sequelizeDI.CategoryOptionsTemplate,
+          as: "cat_opt_temp",
+
+          include: [{
+            model: this.sequelizeDI.CategoryOptionsTypeTemplate,
+            as: "cat_opt_type_template"
+          }
+          ]
+        },
+
+      ],
       transaction: this.getTran({ transaction })
     });
   }

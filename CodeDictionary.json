@@ -2317,6 +2317,485 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "SET_COORDINATE_QUERY_LINK": {
+            "id": "b6715efa-9ec8-492a-a50d-cf7ace2e5969",
+            "uid": "",
+            "code": "SET_COORDINATE_QUERY_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wybierz",
+                "us": "Select",
+                "de": "Wählen Sie",
+                "ru": "Выберите",
+                "fr": "Sélectionnez",
+                "es": "Seleccione",
+                "no": "Velg",
+                "zh_cn": "选择"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "GET_FORM_SEARCH_QUERY_BTN": {
+            "id": "4fd5a4f4-6efe-421b-8abd-c66a76b668ad",
+            "uid": "",
+            "code": "GET_FORM_SEARCH_QUERY_BTN",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Szukaj",
+                "us": "Search",
+                "de": "Suche",
+                "ru": "Поиск",
+                "fr": "Recherche",
+                "es": "La búsqueda de",
+                "no": "Søk",
+                "zh_cn": "搜索"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "GET_FORM_SEARCH_QUERY_LABEL": {
+            "id": "4fd5a4f4-6efe-421b-8abd-c66a76b668ad",
+            "uid": "",
+            "code": "GET_FORM_SEARCH_QUERY_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Lokalizacja",
+                "us": "Location",
+                "de": "Lage",
+                "ru": "Местоположение",
+                "fr": "Emplacement",
+                "es": "Ubicación",
+                "no": "Beliggenhet",
+                "zh_cn": "位置"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "GET_FORM_SEARCH_FROM_USER_BTN": {
+            "id": "b6715efa-9ec8-492a-a50d-cf7ace2e5969",
+            "uid": "",
+            "code": "GET_FORM_SEARCH_FROM_USER_BTN",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Skopiuj Twój adres ",
+                "us": "Copy Your address ",
+                "de": "Kopieren Sie Ihre Adresse ",
+                "ru": "Скопируйте Ваш адрес ",
+                "fr": "Copiez Votre adresse ",
+                "es": "Copie Su dirección ",
+                "no": "Kopier adressen Din ",
+                "zh_cn": "复制你的地址 "
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_ADDRESS_LABEL": {
+            "id": "0556b8b0-6951-4c0f-a641-f39d15782894",
+            "uid": "",
+            "code": "SETLATLNG_ADDRESS_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Adres",
+                "us": "Address",
+                "de": "Adresse",
+                "ru": "Адрес",
+                "fr": "Adresse",
+                "es": "La dirección de",
+                "no": "Adresse",
+                "zh_cn": "地址"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SET_FROM_USER_COORIDNATE": {
+            "id": "6e87b8c4-4d88-43a1-ae39-f9499ebd703a",
+            "uid": "",
+            "code": "SET_FROM_USER_COORIDNATE",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Lokalizacja użytkownika",
+                "us": "The location of the user",
+                "de": "Standort des Benutzers",
+                "ru": "Местоположение пользователя",
+                "fr": "L'emplacement de l'utilisateur",
+                "es": "La ubicación del usuario",
+                "no": "Plasseringen av brukeren",
+                "zh_cn": "用户的位置"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTIONS_LINK_LABEL": {
+            "id": "5dfb2084-c304-4955-af0e-7aef2f969265",
+            "uid": "",
+            "code": "CATEGORY_OPTIONS_LINK_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Opcje kategorii",
+                "us": "The category parameters",
+                "de": "Parameter der Kategorie",
+                "ru": "Параметры категории",
+                "fr": "Paramètres de catégorie",
+                "es": "La configuración de la categoría de",
+                "no": "Kategoriparameterne",
+                "zh_cn": "这类参数"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_IS_SEARCHABLE_LABEL": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "OPTION_IS_SEARCHABLE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wyszukiwanie",
+                "us": "Search",
+                "de": "Suche",
+                "ru": "Поиск",
+                "fr": "Recherche",
+                "es": "La búsqueda de",
+                "no": "Søk",
+                "zh_cn": "搜索"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_IS_REQUIRE_LABEL": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "OPTION_IS_REQUIRE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wymagane",
+                "us": "Required",
+                "de": "Erforderlich",
+                "ru": "Требуется",
+                "fr": "Vous souhaitez",
+                "es": "Se requiere",
+                "no": "Nødvendig",
+                "zh_cn": "需要"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_LIMIT_OF_LABEL": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "OPTION_LIMIT_OF_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Limit",
+                "us": "Limit",
+                "de": "Limit",
+                "ru": "Лимит",
+                "fr": "La limite",
+                "es": "El límite de",
+                "no": "Grense",
+                "zh_cn": "限制"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_ORDER_LABEL": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "OPTION_ORDER_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Kolejność",
+                "us": "Order",
+                "de": "Ordnung",
+                "ru": "Порядок",
+                "fr": "L'ordre",
+                "es": "El orden de",
+                "no": "Rekkefølge",
+                "zh_cn": "了"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTION_ADD_HEADER": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "CATEGORY_OPTION_ADD_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Opcja",
+                "us": "Option",
+                "de": "Option",
+                "ru": "Вариант",
+                "fr": "Option",
+                "es": "Opción",
+                "no": "Alternativet",
+                "zh_cn": "选项"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_LABEL": {
+            "id": "f0b5c915-6d8a-4e7a-a92e-60421a3bcd5a",
+            "uid": "",
+            "code": "OPTION_NAME_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa",
+                "us": "Name",
+                "de": "Titel",
+                "ru": "Название",
+                "fr": "Le nom de",
+                "es": "Nombre de la",
+                "no": "Navn",
+                "zh_cn": "名称"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_DE_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_DE_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (DE)",
+                "us": "Title (DE)",
+                "de": "Titel (DE)",
+                "ru": "Название (DE)",
+                "fr": "Nom (DE)",
+                "es": "Nombre de la (DE)",
+                "no": "Tittel (DE)",
+                "zh_cn": "标题(DE)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_PL_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_PL_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (PL)",
+                "us": "Title (PL)",
+                "de": "Titel (PL)",
+                "ru": "Название (PL)",
+                "fr": "Nom (PL)",
+                "es": "Nombre de la (PL)",
+                "no": "Tittel (PL)",
+                "zh_cn": "标题(PL)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_US_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_US_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (US)",
+                "us": "Title (US)",
+                "de": "Titel (US)",
+                "ru": "Название (US)",
+                "fr": "Nom (US)",
+                "es": "Nombre de la (US)",
+                "no": "Tittel (US)",
+                "zh_cn": "标题(US)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_RU_LABEL": {
+            "id": "f7af5168-650d-452e-8e1b-999d3e8f1759",
+            "uid": "",
+            "code": "OPTION_NAME_RU_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (RU)",
+                "us": "Title (RU)",
+                "de": "Titel (RU)",
+                "ru": "Название (RU)",
+                "fr": "Nom (RU)",
+                "es": "Nombre (RU)",
+                "no": "Tittel (RU)",
+                "zh_cn": "标题(EN)",
+                "zh": "标题(EN)d"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_FR_LABEL ": {
+            "id": "26ba1be1-8291-47a2-838b-a846a0f53d10",
+            "uid": "",
+            "code": "OPTION_NAME_FR_LABEL ",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (FR)",
+                "us": "Title (FR)",
+                "de": "Titel (FR)",
+                "ru": "Название (FR)",
+                "fr": "Nom (FR)",
+                "es": "Nombre (FR)",
+                "no": "Tittel (FR)",
+                "zh_cn": "标题(FR)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_ES_LABEL ": {
+            "id": "26ba1be1-8291-47a2-838b-a846a0f53d10",
+            "uid": "",
+            "code": "OPTION_NAME_ES_LABEL ",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (ES)",
+                "us": "Name (ES)",
+                "de": "Der name (ES)",
+                "ru": "Имя (ES)",
+                "fr": "Le nom de la (ES)",
+                "es": "Nombre (ES)",
+                "no": "Navn (ES)",
+                "zh_cn": "姓名(ES)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTION_ADD_HEADER_TEXT": {
+            "id": "79691f82-335a-4f0b-855c-c3bf1fa4fe6f",
+            "uid": "",
+            "code": "CATEGORY_OPTION_ADD_HEADER_TEXT",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Stwórz opcję, żeby móc ją umieszczać w kategoriach jako elementy do wyszukiwania.",
+                "us": "Create a function to put in the categories as elements to search for.",
+                "de": "Erstellen Sie eine Funktion, um es zu platzieren in den Kategorien als Elemente für die Suche.",
+                "ru": "Создайте функцию, чтобы ее помещать в категориях качестве элементов для поиска.",
+                "fr": "Créer une fonction pour placer dans les catégories comme des éléments de la recherche.",
+                "es": "Cree una función para colocar en categorías como elementos para la búsqueda.",
+                "no": "Opprette en funksjon for å sette i kategorier som elementer for å søke etter.",
+                "zh_cn": "创建一个职能放在该类别的因素来搜索。"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SHOW_DEPENDENCIES_CATEGORIES": {
+            "id": "3b5733bb-97de-4b55-8b01-e614057c5be2",
+            "uid": "",
+            "code": "SHOW_DEPENDENCIES_CATEGORIES",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zależność",
+                "us": "Dependence",
+                "de": "Die Abhängigkeit",
+                "ru": "Зависимость",
+                "fr": "La dépendance",
+                "es": "La dependencia",
+                "no": "Avhengighet",
+                "zh_cn": "依赖"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_FR_LABEL": {
+            "id": "c0d0d18c-1408-4a9d-952c-0130ff658851",
+            "uid": "",
+            "code": "OPTION_NAME_FR_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (FR)",
+                "us": "Title (FR)",
+                "de": "Titel (FR)",
+                "ru": "Название (FR)",
+                "fr": "Nom (FR)",
+                "es": "Nombre (FR)",
+                "no": "Tittel (FR)",
+                "zh_cn": "标题(FR)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_ES_LABEL": {
+            "id": "c0d0d18c-1408-4a9d-952c-0130ff658851",
+            "uid": "",
+            "code": "OPTION_NAME_ES_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (ES)",
+                "us": "Title (ES)",
+                "de": "Titel (ES)",
+                "ru": "Название (ES)",
+                "fr": "Nom (ES)",
+                "es": "Nombre (ES)",
+                "no": "Tittel (ES)",
+                "zh_cn": "标题(FR)",
+                "zh": "标题(ES)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_NO_LABEL": {
+            "id": "c0d0d18c-1408-4a9d-952c-0130ff658851",
+            "uid": "",
+            "code": "OPTION_NAME_NO_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (NO)",
+                "us": "Title (NO)",
+                "de": "Titel (NO)",
+                "ru": "Название (NO)",
+                "fr": "Nom (NO)",
+                "es": "Nombre (NO)",
+                "no": "Tittel (NO)",
+                "zh_cn": "标题(FR)",
+                "zh": "标题(NO)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_ZH_CN_LABEL": {
+            "id": "c0d0d18c-1408-4a9d-952c-0130ff658851",
+            "uid": "",
+            "code": "OPTION_NAME_ZH_CN_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nazwa (ZH-CN)",
+                "us": "Title (ZH-CN)",
+                "de": "Titel (ZH-CN)",
+                "ru": "Название (ZH-CN)",
+                "fr": "Nom (ZH-CN)",
+                "es": "Nombre (ZH-CN)",
+                "no": "Tittel (ZH-CN)",
+                "zh_cn": "姓名(LG-CN)",
+                "zh": "姓名(LG-CN"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -2661,6 +3140,82 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "GET_FORM_SEARCH_QUERY_PLACEHOLDER": {
+            "id": "4fd5a4f4-6efe-421b-8abd-c66a76b668ad",
+            "uid": "",
+            "code": "GET_FORM_SEARCH_QUERY_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Miasto, miejsce",
+                "us": "City place",
+                "de": "Stadt, Platz",
+                "ru": "Город, место",
+                "fr": "La ville, lieu de",
+                "es": "La ciudad, el lugar de",
+                "no": "City place",
+                "zh_cn": "城市地方"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "SETLATLNG_ADDRESS_PLACEHOLDER": {
+            "id": "8f32bd81-f20b-4bfe-a514-3324a72f275c",
+            "uid": "",
+            "code": "SETLATLNG_ADDRESS_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Ulica 13",
+                "us": "Street 13",
+                "de": "Straße 13",
+                "ru": "Улица 13",
+                "fr": "Rue 13",
+                "es": "Calle 13",
+                "no": "Tretten",
+                "zh_cn": "十三"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ITEM_DESCRIPTION_PLACEHOLDER": {
+            "id": "9630e8b9-51a7-44ec-95e7-6af6515b5999",
+            "uid": "",
+            "code": "ITEM_DESCRIPTION_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Opis ogłoszenia",
+                "us": "Ad description",
+                "de": "Beschreibung anzeigen",
+                "ru": "Описание объявления",
+                "fr": "Description de l'annonce",
+                "es": "Descripción del anuncio",
+                "no": "Annonse beskrivelse",
+                "zh_cn": "广告介绍"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "ITEM_NAME_PLACEHOLDER": {
+            "id": "9630e8b9-51a7-44ec-95e7-6af6515b5999",
+            "uid": "",
+            "code": "ITEM_NAME_PLACEHOLDER",
+            "status": "200",
+            "type": "PLACEHOLDER",
+            "message": {
+                "pl": "Tytuł ogłoszenia",
+                "us": "Ad title",
+                "de": "Header anzeigen",
+                "ru": "Заголовок объявления",
+                "fr": "Titre de l'annonce",
+                "es": "El título del anuncio",
+                "no": "Ad tittel",
+                "zh_cn": "广告标题"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "VALIDATION": {
@@ -2885,7 +3440,64 @@
             "zh_cn": ""
         },
         "field": "",
-        "toRefresh": true
+        "toRefresh": true,
+        "OPTION_NAME_PL_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_PL_LABEL",
+            "status": "200",
+            "type": "INFO",
+            "message": {
+                "pl": "Nazwa (PL)",
+                "us": "Title (EN)",
+                "de": "Titel (DE)",
+                "ru": "Название (RU)",
+                "fr": "Nom (FR)",
+                "es": "Nombre (ES)",
+                "no": "Tittel (NO)",
+                "zh_cn": "标题(EN)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_US_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_US_LABEL",
+            "status": "200",
+            "type": "INFO",
+            "message": {
+                "pl": "Nazwa (US)",
+                "us": "Name (US)",
+                "de": "Name (US)",
+                "ru": "Имя (US)",
+                "fr": "Nom (US)",
+                "es": "Nombre (US)",
+                "no": "Navn (US)",
+                "zh_cn": "名字(美国)"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_NAME_DE_LABEL": {
+            "id": "32400cc7-449b-4e62-8a67-c034b9443cf1",
+            "uid": "",
+            "code": "OPTION_NAME_DE_LABEL",
+            "status": "200",
+            "type": "INFO",
+            "message": {
+                "pl": "Nazwa (DE)",
+                "us": "Title (DE)",
+                "de": "Titel (DE)",
+                "ru": "Название (DE)",
+                "fr": "Nom (DE)",
+                "es": "Nombre de la (DE)",
+                "no": "Tittel (DE)",
+                "zh_cn": "标题(DE)"
+            },
+            "field": "",
+            "toRefresh": true
+        }
     },
     "ERROR_GLOBAL": {},
     "ERROR": {

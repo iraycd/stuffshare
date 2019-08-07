@@ -336,6 +336,117 @@ module.exports = {
       updated_at: date
 
     }]
+
+    
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "GEOCOORDINATE",
+      type: "GEOCOORDINATE",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    }, {
+      id: uuidv4(),
+      cot_id: id,
+      type: "float",
+      status: 1,
+      order: "2",
+      created_at: date,
+      updated_at: date
+
+    },
+    , {
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "3",
+      created_at: date,
+      updated_at: date
+
+    }
+    , {
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "4",
+      created_at: date,
+      updated_at: date
+
+    }
+  , {
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "5",
+      created_at: date,
+      updated_at: date
+
+    },
+    {
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "6",
+      created_at: date,
+      updated_at: date
+
+    },
+    {
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "7",
+      created_at: date,
+      updated_at: date
+
+    }]
+    await save(queryInterface, category, template);
+
+    id = uuidv4();
+    category = {
+      id: id,
+      name: "IMAGES",
+      type: "IMAGES",
+      status: 1,
+      created_at: date,
+      updated_at: date,
+    }
+    template = [{
+      id: uuidv4(),
+      cot_id: id,
+      type: "nvarchar",
+      status: 1,
+      order: "1",
+      created_at: date,
+      updated_at: date
+
+    },{
+      id: uuidv4(),
+      cot_id: id,
+      type: "bit",
+      status: 1,
+      order: "2",
+      created_at: date,
+      updated_at: date
+
+    }]
+
     await save(queryInterface, category, template);
 
 

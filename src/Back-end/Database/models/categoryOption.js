@@ -30,11 +30,7 @@ export default class CategoryOption extends Model {
           type: DataTypes.UUID,
           allowNull: true
         },
-        category_id: {
-          type: DataTypes.UUID,
-          allowNull: true
-        },
-
+     
         name: {
           type: DataTypes.STRING,
           allowNull: false
@@ -77,6 +73,14 @@ export default class CategoryOption extends Model {
         },
         order: {
           type: DataTypes.INTEGER,
+        },
+        is_searchable: {
+          type: DataTypes.BOOLEAN,
+        },is_require: {
+          type: DataTypes.BOOLEAN,
+        },
+        limit_of: {
+          type: DataTypes.INTEGER,
         }
 
 
@@ -88,7 +92,9 @@ export default class CategoryOption extends Model {
 
     CategoryOption.belongsTo(models.CategoryOptionsType, { as: "cat_opt", targetKey: 'id', foreignKey: "cot_id" });
     CategoryOption.hasMany(models.CategoryOptionsTemplate, { as: "cat_opt_temp", targetKey: 'co_id', foreignKey: "co_id" });
+    CategoryOption.hasMany(models.CategoryOptionsLink, { as: "category_link", targetKey: 'co_id', foreignKey: "co_id" });
 
+  
     /* Item.belongsToMany(models.Category, {
        through: {
          model: models.ItemCategory,

@@ -28,6 +28,8 @@ class NewOfferItem extends React.Component {
         this.state = new ItemDTO();
         this.state.validation = [];
         this.state.categoryId = 0;
+        this.state.categoryIcon = '';
+        this.state.categoryOptionValues=[];
 
     }
     componentDidMount() {
@@ -63,13 +65,14 @@ class NewOfferItem extends React.Component {
 
             this.setState({
                 categoryId: event.currentTarget.getAttribute('data-key'),
-                categoryName: event.currentTarget.getAttribute('data-name')
-
+                categoryName: event.currentTarget.getAttribute('data-name'),
+                categoryIcon: event.currentTarget.getAttribute('data-icon')
             });
 
         } else {
             let categoryId = event.currentTarget.getAttribute('data-key');
             let categoryName = event.currentTarget.getAttribute('data-name')
+            let categoryIcon = event.currentTarget.getAttribute('data-icon')
 
             confirmAlert({
                 onClickOutside: () => {
@@ -95,7 +98,8 @@ class NewOfferItem extends React.Component {
                                 onClick={() => {
                                     this.setState({
                                         categoryId: categoryId,
-                                        categoryName: categoryName
+                                        categoryName: categoryName,
+                                        categoryIcon: categoryIcon
                                     });
                                     this.props.getCategoryOptions(categoryId);
                                     onClose();
@@ -132,26 +136,76 @@ class NewOfferItem extends React.Component {
 
 
         let body =
-            <Container  className="g-pa-30 g-mb-30">
-                <Row>
-                    <Col xs="5">
+            <Container className="g-pa-30 g-mb-30">
+                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+                    <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{this.tran.translate('NEW_ITEM_HEADER')}</h5>
+                    {this.state.categoryId != 0 ? (<Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{this.tran.translate('NEW_ITEM_SELL_CATEGORY_SET_HEADER', ...[this.state.categoryName])}</Label>) : <span></span>}
+                </Col>
+                <Row><Col xs="12">
+                    {
+                        this.props.offerItem.catOptions.filter(item => {
+                            return Number(item.order) <= -10
+                        }).sort((a, b) => {
+                            return Number(a.order) > Number(b.order) ? 1 : -1
+                        }).map(item => {
+                            return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
+                            //    console.log(event.currentTarget.value);
+                              //  console.log(item.id);
+                              let res=values.map(el=>{
+                                  el.co_id=item.id
+                                  return el
+                              })
+                              this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id})
+                              this.state.categoryOptionValues.push(...res)
+                              console.log(this.state.categoryOptionValues)
+                            }}></CategoryOptionTempFormMapper>
+                        })
+                    }
+                </Col>
+                    {!this.state.categoryId ? (
+                        <Col xs="5">
 
-                        <CategoryTreePreview setOnlyLeaf={true} categoryId={this.state.categoryId} onClick={this.onClickTree.bind(this)}></CategoryTreePreview>
-                    </Col>
-                    <Col xs="7">
-                        <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                            <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{this.tran.translate('NEW_ITEM_HEADER')}</h5>
-                            {this.state.categoryId != 0 ? (<Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{this.tran.translate('NEW_ITEM_SELL_CATEGORY_SET_HEADER', ...[this.state.categoryName])}</Label>) : <span></span>}
+                            <CategoryTreePreview setOnlyLeaf={true} categoryId={this.state.categoryId} onClick={this.onClickTree.bind(this)}></CategoryTreePreview>
                         </Col>
+                    ) : <Col xs="6">
+                            {
+                                this.props.offerItem.catOptions.filter(item => {
+                                    return Number(item.order) < 0 && Number(item.order) > -10
+                                }).sort((a, b) => {
+                                    return Number(a.order) > Number(b.order) ? 1 : -1
+                                }).map(item => {
+                                    return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
+                                        let res=values.map(el=>{
+                                            el.co_id=item.id
+                                            return el
+                                        })
+                                        this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id })
+                                        this.state.categoryOptionValues.push(...res)
+                                        console.log(this.state.categoryOptionValues)
+
+                                    }}></CategoryOptionTempFormMapper>
+                                })
+                            }
+                        </Col>}
+                    <Col xs="6" className="g-pt-20">
+
 
                         <TextBox placeholder={phTrans.translate('ITEM_NAME_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_NAME_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
                         <TextArea placeholder={phTrans.translate('ITEM_DESCRIPTION_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_DESCRIPTION_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
                         {
-                            this.props.offerItem.catOptions.map(item => {
-                                return <CategoryOptionTempFormMapper catOption={item} onChange={(event) => {
-                                    console.log(event.currentTarget.value);
-                                    console.log(item.id);
-                                    
+                            this.props.offerItem.catOptions.filter(item => {
+                                return Number(item.order) >= 0
+                            }).sort((a, b) => {
+                                return Number(a.order) > Number(b.order) ? 1 : -1
+                            }).map(item => {
+                                return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
+                                    let res=values.map(el=>{
+                                        el.co_id=item.id
+                                        return el
+                                    })
+                                    this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id})
+                                    this.state.categoryOptionValues.push(...res)
+                                    console.log(this.state.categoryOptionValues)
                                 }}></CategoryOptionTempFormMapper>
                             })
                         }

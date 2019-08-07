@@ -61,7 +61,14 @@ export default class Users extends Model {
         language: DataTypes.STRING,
         blob_id: DataTypes.UUID,
         is_admin: DataTypes.BOOLEAN,
-        is_root: DataTypes.BOOLEAN
+        is_root: DataTypes.BOOLEAN,
+        zipcode: DataTypes.STRING,
+        address: DataTypes.STRING,
+        city_id: DataTypes.UUID,
+        country_id: DataTypes.UUID,
+        city: DataTypes.STRING
+
+
 
       },
       { sequelize }

@@ -11,7 +11,8 @@ let QueryList = {
     },
     CategoryOptions: {
         GET_OPTIONS_TYPE: "getCategoryOptionsTypeQuery",
-        GET_CATEGORY_OPTION:"getCategoryOptionsQuery"
+        GET_CATEGORY_OPTION:"getCategoryOptionsQuery",
+        GET_ALL_CETEGORIES_OPTIONS:"getAllCategoryOptionsQuery"
 
     },
     User: {
@@ -33,10 +34,13 @@ let QueryList = {
         SEARCH_ITEM: "searchItemQuery"
     },
     Country:{
-        GET_COUNTRY:"getCountriesQuery"
+        GET_COUNTRY:"getCountriesQuery",
+        GET_COUNTRY_BY_ID:"getCountriesByIdQuery"
     },
     City:{
-        GET_CITY:'getCitiesQuery'
+        GET_CITY:'getCitiesQuery',
+        REVERSE_GEO:'reverseGeocodeQuery',
+        REVERSE_LATLNG_GEO:'geocodeQuery'
     },
     
 }

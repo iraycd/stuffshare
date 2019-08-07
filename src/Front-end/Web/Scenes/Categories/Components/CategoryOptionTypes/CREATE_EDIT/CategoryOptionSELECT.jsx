@@ -13,6 +13,9 @@ import TextBox from '../../../../../Components/FormComponent/Components/TextBox/
 import { Translator } from './../../../../../../../Shared/index.js';
 import CategoryOptionSELECT_SINGLE from './CategoryOptionSELECT_SINGLE.jsx';
 import CATEGORY_EDIT_ACTIONS from './../../../Scenes/EditCategory/actions.js'
+import Checkbox from '../../../../../Components/FormComponent/Components/Checkbox/index.jsx';
+
+
 
 class CategoryOptionSELECT extends React.Component {
 
@@ -25,9 +28,9 @@ class CategoryOptionSELECT extends React.Component {
         this.state.catOption = Object.assign(new CategoryOptionsDTO(), this.props.catOption);
         this.state.catOption.cot_id = this.props.catOptionsTemp.id;
         this.state.catOption.category_id = this.state.catOption.category_id ? this.state.catOption.category_id : this.props.category_id
-        this.state.catOption.order = 1
+        this.state.catOption.order = this.state.catOption.order ? this.state.catOption.order : 1
         if (!this.state.catOption.cat_opt_temp) {
-            this.state.catOption.cat_opt_temp = [];
+            this.props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 1, "NEW OPTION");
         }
         this.state.catOption.cat_opt = this.state.catOption.cat_opt ? this.state.catOption.cat_opt : {}
         this.state.isSubmitLoading = false;
@@ -89,7 +92,7 @@ class CategoryOptionSELECT extends React.Component {
 
         this.setState({
             isSubmitLoading: true,
-            toRefresh:true
+            toRefresh: true
         })
         this.state.catOption.type = this.props.catOptionsTemp.type;
         this.state.catOption.cat_opt.name = this.props.catOptionsTemp.name;
@@ -97,9 +100,11 @@ class CategoryOptionSELECT extends React.Component {
         let id = this.state.catOption.id ? this.state.catOption.id : uuidv4();
         if (validator.length == 0) {
             this.state.catOption.status = 1;
-            this.state.catOption.id = id
+            this.state.catOption.id = id;
+            console.log(this.state.catOPtion)
             this.props.upsertCategoryOptions(this.state.catOption).then(succ => {
                 console.log('succ');
+
                 //window.location.reload();
                 this.setState({
                     isSubmitLoading: false
@@ -141,18 +146,31 @@ class CategoryOptionSELECT extends React.Component {
         this.refreshValidation();
     }
     addNewOption(event) {
-        this.props.addEmptyElementOption(uuidv4(), this.state.catOption.id)
+        this.props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 1, null, "NEW OPTION");
+
     }
 
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
+        if (this.state.catOption.id != this.props.catOption.id) {
+            this.setState(
+                {
+                    catOption: this.props.catOption
+                }
+            )
+        }
         return (<Container className="g-ma-10">
             <Form className="text-center">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-10">
                     <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CATEGORY_OPTION_ADD_HEADER')}</h2>
 
                 </Col>
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_SEARCHABLE_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_SEARCHABLE_LABEL')} value={this.state.catOption.is_searchable} onChange={(event) => { this.state.catOption.is_searchable = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_searchable" validation={this.state.validation} />
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_REQUIRE_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_REQUIRE_LABEL')} value={this.state.catOption.is_require} onChange={(event) => { this.state.catOption.is_require = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_require" validation={this.state.validation} />
+                <TextBox placeholder={phTrans.translate('OPTION_LIMIT_OF_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_LIMIT_OF_LABEL')} value={this.state.catOption.limit_of} onChange={(event) => { this.state.catOption.limit_of = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name" validation={this.state.validation} />
+                <TextBox placeholder={phTrans.translate('OPTION_ORDER_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_ORDER_LABEL')} value={this.state.catOption.order} onChange={(event) => { this.state.catOption.order = Number(event.target.value); this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="order" validation={this.state.validation} />
+
                 <TextBox placeholder={phTrans.translate('OPTION_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_LABEL')} value={this.state.catOption.name} onChange={(event) => { this.state.catOption.name = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name" validation={this.state.validation} />
 
                 <Row>
@@ -212,7 +230,6 @@ class CategoryOptionSELECT extends React.Component {
                     </Col>
                 </Row>
                 <ButtonLoader disabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Submit"} isLoading={this.state.isSubmitLoading} />
-                {this.state.catOption.status == 1 ? (<ButtonLoader disabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} onClick={this.removeHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Delete"} isLoading={this.state.isDeleteLoadingg} />) : <span></span>}
 
                 <hr class="g-brd-gray-light-v4 g-my-50" />
                 {this.state.catOption.status == 1 ? (<FormGroup>
@@ -222,12 +239,12 @@ class CategoryOptionSELECT extends React.Component {
                         <Button disabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} onClick={this.addNewOption.bind(this)} className="btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase rounded-0">{tran.translate('CATEGORY_OPTION_ADD_NEW_SELECT_OPTION')}</Button>
                     </Col>
                     <ListGroup>
-                        {this.props.catOption.cat_opt_temp.map(item => {
+                        {this.props.catOption.cat_opt_temp ? this.props.catOption.cat_opt_temp.map(item => {
                             console.log('reloaddd')
                             return <Collapsible triggerDisabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} triggerClassName="Collapsible__trigger_options" triggerOpenedClassName="Collapsible__trigger_options" lazyRender={true} trigger={item.value}>
                                 <CategoryOptionSELECT_SINGLE catSingleOption={item} coId={this.state.catOption.id} cottId={this.state.cott_id} type={this.state.cott_type} catOptId={this.state.catOption.id}></CategoryOptionSELECT_SINGLE>
                             </Collapsible>
-                        })}
+                        }) : <span></span>}
 
 
                     </ListGroup>
@@ -259,17 +276,18 @@ const mapDispatchToProps = (dispatch) => {
             return dispatch(new BaseService().commandThunt(CommandList.Category_Options.DELETE_CATEGORY_OPTIONS, dto));
 
         },
-        addEmptyElementOption: (id, co_id) => {
+        addEmptyElementOption: (id, co_id, order, name, value) => {
             dispatch({
                 type: CATEGORY_EDIT_ACTIONS.ADD_EMPTY_OPTION_ELEMENT, dto: {
                     id: id,
-                    co_id: co_id
+                    co_id: co_id,
+                    order: order,
+                    placeholder: name,
+                    value: value
                 }
             });
 
         }
-
-
 
 
     }

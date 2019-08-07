@@ -40,9 +40,6 @@ export default class CountryService extends BaseService {
    */
   async getCountryByName({country}) {
 
-    console.log('KUPAAAA');
-    console.log(this.unitOfWorkDI);
-
     let countryList = await this.unitOfWorkDI.countryRepository.getCountryByName({
       name_fs: country.name
     });

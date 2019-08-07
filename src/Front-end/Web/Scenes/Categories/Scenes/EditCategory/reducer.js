@@ -82,9 +82,9 @@ export default function EditCategoryReducer(state = Object.assign({}, emptyState
         case
             CATEGORY_EDIT_ACTIONS.ADD_EMPTY_OPTION: {
 
-                const result = Object.assign({}, state);
-
-                result.catOptions.push({ id: action.dto.id });
+                let result = Object.assign({}, state);
+               
+                result.catOptions.push({ id: action.dto.id, order: '100' });
                 return result;
             }
         case
@@ -92,18 +92,51 @@ export default function EditCategoryReducer(state = Object.assign({}, emptyState
 
                 const result = Object.assign({}, state);
                 console.log(result);
-
+                console.log(action.dto)
+                let cott_id = result
                 result.catOptions = result.catOptions.map(item => {
                     if (item.id == action.dto.co_id) {
+                        let cott_id = item.cat_opt.cat_options_type_temp.filter(item => { return item.order == action.dto.order })[0]
+                        console.log(cott_id)
                         if (item.cat_opt_temp == undefined) {
                             item.cat_opt_temp = [];
                         }
-                        item.cat_opt_temp.push({ id: action.dto.id, co_id: action.dto.co_id, value: 'NEW ELEMENT_' + action.dto.order ? action.dto.order : '', order: action.dto.order ? action.dto.order : 0 })
+                        item.cat_opt_temp.push({
+                            id: action.dto.id,
+                            co_id: action.dto.co_id,
+                            placeholder: action.dto.value ? undefined : action.dto.placeholder ? action.dto.placeholder : ('NEW ELEMENT_' + action.dto.order ? action.dto.order : ''),
+                            order: action.dto.order ? action.dto.order : 0
+                            , cott_id: cott_id ? cott_id : null,
+                            value: action.dto.value
+                        })
                     }
                     return item;
                 })
                 return result;
             }
+        case
+            CATEGORY_EDIT_ACTIONS.UPDATE_EMPTY_ELEMENT: {
+
+                const result = Object.assign({}, state);
+                console.log(action.dto)
+                result.catOptions = result.catOptions.map(item => {
+                    if (item.id == action.dto.id) {
+                        return action.dto
+                    }
+                    return item;
+                })
+                console.log(result)
+                return result;
+            }
+            case
+            CATEGORY_EDIT_ACTIONS.CLEAN: {
+
+                const result = Object.assign({}, state);
+                result.catOptions = []
+              
+                return result;
+            }
+            
         default:
             {
                 return state;

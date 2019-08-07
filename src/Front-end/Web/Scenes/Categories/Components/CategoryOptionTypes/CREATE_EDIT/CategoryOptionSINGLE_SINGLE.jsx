@@ -44,7 +44,7 @@ class CategoryOptionSINGLE_SINGLE extends React.Component {
                 this.validation();
             });
         }
-    }
+    } 
     translateSubmit(event) {
       
         let lang = event.target.value;

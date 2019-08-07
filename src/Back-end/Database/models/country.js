@@ -34,10 +34,7 @@ export default class Country extends Model {
           type: DataTypes.STRING(255),
           allowNull: true
         },
-        continent_id: {
-          type: DataTypes.INTEGER,
-          allowNull: false
-        },
+    
         uid: DataTypes.STRING(50),
 
         name_clob: DataTypes.TEXT,

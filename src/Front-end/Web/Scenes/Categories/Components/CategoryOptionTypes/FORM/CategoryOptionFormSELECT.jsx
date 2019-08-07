@@ -32,7 +32,8 @@ class CategoryOptionFormSELECT extends React.Component {
         this.setState({
             id: event.target.value
         });
-        this.props.onChange(event)
+
+        this.props.onChange(this.props.catOption,[{id:event.target.value,val:event.target.value,element:this.props.catOption.id}])
 
     }
     getDropDownValues() {
@@ -76,6 +77,10 @@ const mapDispatchToProps = (dispatch) => {
     return {
 
 
+
+        getReverseGeocode: (query) => {
+            return dispatch(new BaseService().queryThunt(QueryList.City.REVERSE_GEO, {query:query}));
+        }
 
 
 

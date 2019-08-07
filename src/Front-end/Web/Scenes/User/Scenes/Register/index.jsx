@@ -201,7 +201,13 @@ class Register extends React.Component {
                 <TextBox placeholder={phTrans.translate('REGISTER_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_NAME_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
 
 
-                <DayPickerInputComponent placeholder={phTrans.translate('REGISTER_BIRTHDATE_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_BIRTHDATE_LABEL')} onChange={this.birthDateHandler.bind(this)} field="birthDate" validation={this.state.validation} />
+                <DayPickerInputComponent 
+                   dateFormat="dd-MM-yyyy"
+                   showTimeSelect={false}
+                   scrollableYearDropdown={true}
+                   showYearDropdown={true}
+                   maxDate={ new Date()}
+                   minDate={null} value={this.state.birthDate} placeholder={phTrans.translate('REGISTER_BIRTHDATE_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_BIRTHDATE_LABEL')} onChange={this.birthDateHandler.bind(this)} field="birthDate" validation={this.state.validation} />
 
                 <TextBox placeholder={phTrans.translate('REGISTER_PHONE_PLACEHOLDER')} isRequired={true} label={tran.translate('REGISTER_PHONE_LABEL')} value={this.state.phone} onChange={this.phoneHandler.bind(this)} field="phone" validation={this.state.validation} />
 

@@ -217,9 +217,10 @@ class EditCategory extends React.Component {
         return (
 
             <Form className="g-brd-around g-brd-gray-light-v4 g-pa-60 g-mb-30 text-center">
-                <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                    <h2 className="g-color-black mb-4">{tran.translate('CODE_FORM_HEADER')}</h2>
-                    <p className="lead "></p>
+                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+                <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CODE_FORM_HEADER')}</h2>
+             <br/>
+
                 </Col>
 
                 <TextBox placeholder={phTrans.translate('CODE_CODE_PLACEHOLDER')} isRequired={true} label={tran.translate('CODE_CODE_LABEL')} value={this.state.code} onChange={this.codeHandler.bind(this)} field="code" validation={this.state.validation} />

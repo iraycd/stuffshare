@@ -371,7 +371,6 @@ class CategoryEdit extends React.Component {
                     <div className={`d-inline-block align-self-center g-width-100 g-height-1 g-bg-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3}`}></div>
                 </div>
                 <Col className="g-my-20 text-center">
-                    <CategoryOptionsList category_id={this.state.category.id}></CategoryOptionsList>
 
                 </Col>
             </Form>

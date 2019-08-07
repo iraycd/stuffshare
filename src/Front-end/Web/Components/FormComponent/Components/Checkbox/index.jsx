@@ -18,11 +18,13 @@ export default class Checkbox extends FormComponent {
 
         let result = (
             <FormGroup color={formValidation.isDanger} className={formValidation.classError}>
-                <Label for={this.state.guid} class="col-5 ">{this.state.label}</Label>
+                {this.state.label!=undefined?(<Label for={this.state.guid} class="col-5 ">{this.state.label}</Label>):<span></span>}
                 <Col >
-              
-                    <Input className="form-check-input mr-1" type={this.props.type?this.props.type:"checkbox"} disabled={this.props.disabled} checked={this.props.value} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
-                    {formValidation.FormValidation}
+                    <Label>
+                        <Input data-key={this.props["data-key"]} className="form-check-input mr-1" type={this.props.type ? this.props.type : "checkbox"} disabled={this.props.disabled} checked={this.props.value} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                        {this.props.labelInline}
+                        {formValidation.FormValidation}
+                    </Label>
                 </Col>
             </FormGroup>
         );

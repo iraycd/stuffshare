@@ -21,6 +21,7 @@ import CategoryOption from "./categoryOption.js";
 import CategoryOptionsTemplate from "./categoryOptionsTemplate.js";
 import CategoryOptionsTypeTemplate from "./categoryOptionsTypeTemplate.js";
 import CategoryOptionsType from "./CategoryOptionsType.js";
+import CategoryOptionsLink from "./categoryOptionsLink.js";
 
 
 
@@ -39,7 +40,7 @@ if (config.use_env_variable) {
 /*
 let models = {
   Blob: require('./blob'),
-  BlobMapper: require('./blobMapper'),
+  BlobMapper: reqsuire('./blobMapper'),
   Category: require('./category'),
   CategoryHierarchy: require('./categoryhierarchy'),
   Conversation: require('./conversation'),
@@ -70,7 +71,7 @@ let models = {
   CategoryOptionsTypeTemplate: CategoryOptionsTypeTemplate.init(sequelize, Sequelize),
   CategoryOptionsTemplate: CategoryOptionsTemplate.init(sequelize, Sequelize),
   CategoryOption: CategoryOption.init(sequelize, Sequelize),
-
+  CategoryOptionsLink:CategoryOptionsLink.init(sequelize,Sequelize)
 };
 
 Object.keys(models).forEach(modelName => {

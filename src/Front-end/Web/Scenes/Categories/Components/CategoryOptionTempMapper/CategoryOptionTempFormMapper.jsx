@@ -13,6 +13,9 @@ import { DictionaryDTO, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
 import { DropDownList } from './../../../../Components/index.js';
 import CategoryOptionFormMULTISELECT from '../CategoryOptionTypes/FORM/CategoryOptionFormMULTISELECT.jsx';
+import CategoryOptionFormSINGLE from '../CategoryOptionTypes/FORM/CategoryOptionFormSINGLE.jsx';
+import CategoryOptionFormGEO from '../CategoryOptionTypes/FORM/CategoryOptionFormGEO.jsx';
+import CategoryOptionFormIMAGE from '../CategoryOptionTypes/FORM/CategoryOptionFormIMAGE.jsx';
 
 
 
@@ -35,6 +38,7 @@ class CategoryOptionTempFormMapper extends React.Component {
             )
 
         });
+
     }
     getDropDownValues() {
         return this.state.getCategoryOptionsTypeQuery.map(item => {
@@ -48,7 +52,7 @@ class CategoryOptionTempFormMapper extends React.Component {
 
     checkType(catType) {
         return this.state.getCategoryOptionsTypeQuery.filter(item => {
-             return (item.type == catType && (item.id == this.props.catOption.cot_id))
+            return (item.type == catType && (item.id == this.props.catOption.cot_id))
 
         })
     }
@@ -59,12 +63,15 @@ class CategoryOptionTempFormMapper extends React.Component {
 
             <div>
                 {this.checkType('SELECT').length > 0 ? <div><CategoryOptionFormSELECT onChange={this.props.onChange} catOptionsTemp={this.checkType('SELECT')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormSELECT></div> :
-                       this.checkType('MULTI_SELECT').length > 0 ? <div><CategoryOptionFormMULTISELECT  onChange={this.props.onChange} catOptionsTemp={this.checkType('MULTI_SELECT')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormMULTISELECT></div> :
-               
-                       //        this.checkType('SINGLE').length > 0 ? <span><CategoryOptionSINGLE catOptionsTemp={this.checkType('SINGLE')[0]} category_id={this.props.category_id} catOption={this.props.catOptions}></CategoryOptionSINGLE></span> :
-                    //           this.checkType('BETWEEN').length > 0 ? <span><CategoryOptionBETWEEN catOptionsTemp={this.checkType('BETWEEN')[0]} category_id={this.props.category_id} catOption={this.props.catOptions}></CategoryOptionBETWEEN></span> :
+                    this.checkType('MULTI_SELECT').length > 0 ? <div><CategoryOptionFormMULTISELECT onChange={this.props.onChange} catOptionsTemp={this.checkType('MULTI_SELECT')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormMULTISELECT></div> :
+                        this.checkType('SINGLE').length > 0 ? <div><CategoryOptionFormSINGLE onChange={this.props.onChange} catOptionsTemp={this.checkType('SINGLE')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormSINGLE></div> :
+                            this.checkType('IMAGES').length > 0 ? <div><CategoryOptionFormIMAGE onChange={this.props.onChange} catOptionsTemp={this.checkType('IMAGES')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormIMAGE></div> :
+                                this.checkType('GEOCOORDINATE').length > 0 ? <div><CategoryOptionFormGEO categoryIcon={this.props.categoryIcon} onChange={this.props.onChange} catOptionsTemp={this.checkType('GEOCOORDINATE')[0]} category_id={this.props.category_id} catOption={this.props.catOption}></CategoryOptionFormGEO></div> :
 
-                    <span></span>
+                                    //        this.checkType('SINGLE').length > 0 ? <span><CategoryOptionSINGLE catOptionsTemp={this.checkType('SINGLE')[0]} category_id={this.props.category_id} catOption={this.props.catOptions}></CategoryOptionSINGLE></span> :
+                                    //           this.checkType('BETWEEN').length > 0 ? <span><CategoryOptionBETWEEN catOptionsTemp={this.checkType('BETWEEN')[0]} category_id={this.props.category_id} catOption={this.props.catOptions}></CategoryOptionBETWEEN></span> :
+
+                                    <span></span>
                 }
 
             </div>

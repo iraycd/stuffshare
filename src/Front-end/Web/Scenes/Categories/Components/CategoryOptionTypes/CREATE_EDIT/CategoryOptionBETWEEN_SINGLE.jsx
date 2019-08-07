@@ -27,7 +27,7 @@ class CategoryOptionBETWEEN extends React.Component {
         this.state.catOption.cot_id = this.props.catOptionsTemp.id;
         this.state.catOption.category_id = this.state.catOption.category_id ? this.state.catOption.category_id : this.props.category_id
         this.state.catOption.order = 1
-        if (this.state.catOption.status == 1 && this.props.catOption.cat_opt_temp.length==0) {
+        if (this.state.catOption.status == 1 && this.props.catOption.cat_opt_temp==undefined &&this.props.catOption.cat_opt_temp.length==0) {
             props.addEmptyElementOption(uuidv4(), this.state.catOption.id);
             props.addEmptyElementOption(uuidv4(), this.state.catOption.id);
 

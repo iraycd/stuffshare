@@ -56,6 +56,7 @@ module.exports = env => {
             filename: '[name].bundle.js',
             publicPath: '/'
         },
+        
         mode: 'development',
         module: {
 

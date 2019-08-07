@@ -66,9 +66,16 @@ const config = [{
 
 
     },
+    watch: true
+    ,
+    watchOptions: {
+        ignored: ['./src/Front-end/Web/assets', 'node_modules'],
+        poll: 10000 // Check for changes every second
+
+    },
     node: { fs: 'empty' },
     resolve: {
-    
+
         extensions: ['.js', '.jsx', '.css', '.sass', '.scss', '.png', '.jpg', '.gif', '.cur', '.woff', '.eot', '.ttf', '.svg', '.dtd', '.woff2'],
     },
     plugins: [HtmlWebpackPluginConfig,
@@ -97,16 +104,15 @@ const config = [{
             exportTxt += result.map(item => { return item.name }).join(',');
             exportTxt += '}';
             let importTxt = result.map(item => { return `import ${item.name} from '${item.path}';\n` }).join(' ')
-            try{
-            let filebody = fs.readFileSync(dirname + '/reducers.scenes.js');
-            if(filebody.toString()==`${importTxt}${exportTxt}`)
-            {
-                return;
-            }
-        }catch(ex){
-            console.log(ex);
+            try {
+                let filebody = fs.readFileSync(dirname + '/reducers.scenes.js');
+                if (filebody.toString() == `${importTxt}${exportTxt}`) {
+                    return;
+                }
+            } catch (ex) {
+                console.log(ex);
 
-        }
+            }
             const data = new Uint8Array(Buffer.from(`${importTxt}${exportTxt}`));
             fs.writeFileSync(dirname + '/reducers.scenes.js', data);
             console.log('REDUCES FINISHED');

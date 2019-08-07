@@ -29,6 +29,11 @@ export default class UserDTO extends BaseDTO {
     this.blob_id='';
     this.is_admin='';
     this.is_root='';
+    this.address='';
+    this.city_id='';
+    this.country_id='';
+    this.zipcode='';
+    this.city='';
   };
   validation(state) {
     const validator = new Validator();

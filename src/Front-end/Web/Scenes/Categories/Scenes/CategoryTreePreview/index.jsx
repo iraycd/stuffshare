@@ -159,7 +159,7 @@ class CategoryTreePreview extends React.Component {
                                 item.node.title = (
                                     <span>{item.node.icon ? <i className={item.node.icon}></i> : <span></span>}
 
-                                        <span data-name={item.node["category_" + this.props.lang]} data-key={item.node.category_child_id} onClick={(event) => { this.props.onClick(event); this.refreshTree.bind(this)() }} className="g-pl-7--hover text-uppercase u-link-v5 g-font-weight-600 g-max-width-200  g-mx-0 g-py-0 g-mx-10 g-pt-10 g-pb-10 g-pr-20  g-color-white g-font-size-12 g-cursor-pointer ">
+                                        <span data-name={item.node["category_" + this.props.lang]} data-key={item.node.category_child_id} data-icon={item.node.icon} onClick={(event) => { this.props.onClick(event); this.refreshTree.bind(this)() }} className="g-pl-7--hover text-uppercase u-link-v5 g-font-weight-600 g-max-width-200  g-mx-0 g-py-0 g-mx-10 g-pt-10 g-pb-10 g-pr-20  g-color-white g-font-size-12 g-cursor-pointer ">
                                             {item.node["category_" + this.props.lang].toUpperCase()}
                                         </span>
                                     </span>

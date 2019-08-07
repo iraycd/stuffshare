@@ -1,8 +1,8 @@
 import React from 'react';
-
-import { Button, Form, FormGroup, Label, Input, FormText, Col, Container, Row, FormFeedback } from 'reactstrap';
-
+import { Col, FormGroup, Input, Label } from 'reactstrap';
 import FormComponent from './../../index.jsx';
+
+
 export default class TextBox extends FormComponent {
 
     constructor() {

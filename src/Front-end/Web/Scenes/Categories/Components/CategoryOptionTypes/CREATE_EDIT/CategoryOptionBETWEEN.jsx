@@ -13,6 +13,9 @@ import TextBox from '../../../../../Components/FormComponent/Components/TextBox/
 import { Translator } from './../../../../../../../Shared/index.js';
 import CATEGORY_EDIT_ACTIONS from './../../../Scenes/EditCategory/actions.js'
 import CategoryOptionSINGLE_SINGLE from './CategoryOptionSINGLE_SINGLE.jsx';
+import Checkbox from '../../../../../Components/FormComponent/Components/Checkbox/index.jsx';
+import { withRouter } from 'react-router-dom';
+
 
 
 class CategoryOptionBETWEEN extends React.Component {
@@ -26,18 +29,17 @@ class CategoryOptionBETWEEN extends React.Component {
         this.state.catOption = Object.assign(new CategoryOptionsDTO(), this.props.catOption);
         this.state.catOption.cot_id = this.props.catOptionsTemp.id;
         this.state.catOption.category_id = this.state.catOption.category_id ? this.state.catOption.category_id : this.props.category_id
-        this.state.catOption.order = 1
-        if (this.state.catOption.status == 1 && this.props.catOption.cat_opt_temp.length == 0) {
-            props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 1),
-                props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 2)
+        this.state.catOption.order = this.state.catOption.order ? this.state.catOption.order : 1
 
-
-        }
         this.state.catOption.cat_opt = this.state.catOption.cat_opt ? this.state.catOption.cat_opt : {}
         this.state.isSubmitLoading = false;
         this.state.isDeleteLoadingg = false;
         this.state.cott_id = this.props.catOptionsTemp.cat_options_type_temp[0].id;
         this.state.cott_type = this.props.catOptionsTemp.cat_options_type_temp[0].type
+        if (this.props.catOption.cat_opt_temp == undefined || this.props.catOption.cat_opt_temp.length == 0) {
+            this.props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 1, "ORDER 1");
+            this.props.addEmptyElementOption(uuidv4(), this.state.catOption.id, 2, "ORDER 2")
+        }
 
     }
 
@@ -103,16 +105,19 @@ class CategoryOptionBETWEEN extends React.Component {
             this.state.catOption.status = 1;
             this.state.catOption.id = id
             if (this.state.catOption.cat_opt_temp == undefined) {
-                this.state.catOption.cat_opt_temp = [];
-                this.state.catOption.cat_opt_temp.push({ id: uuidv4(), co_id: this.state.catOption.id, placeholder: 'ORDER 1', order: 1 })
-                this.state.catOption.cat_opt_temp.push({ id: uuidv4(), co_id: this.state.catOption.id, placeholder: 'ORDER 2', order: 2 })
+                this.state.catOption.cat_opt_temp = this.props.catOption.cat_opt_temp;
+                //  this.state.catOption.cat_opt_temp.push({ id: uuidv4(), co_id: this.state.catOption.id, placeholder: 'NEW ELEMENT' })
 
+                //   this.state.catOption.cat_opt_temp.push({ id: uuidv4(), co_id: this.state.catOption.id, placeholder: 'NEW ELEMENT' })
 
             }
             this.props.upsertCategoryOptions(this.state.catOption).then(succ => {
 
+                this.props.history.push(`/categoryOptions/${this.state.catOption.id}`);
+
                 console.log('succ');
                 //window.location.reload();
+
                 this.setState({
                     isSubmitLoading: false
                 })
@@ -159,87 +164,88 @@ class CategoryOptionBETWEEN extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
-        return (<Container className="g-ma-10">
+        return (<Col className="g-pa-0 g-ma-0" >
             <Form className="text-center">
-                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
-                    <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CATEGORY_OPTION_ADD_HEADER')}</h2>
 
-                </Col>
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_SEARCHABLE_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_SEARCHABLE_LABEL')} value={this.state.catOption.is_searchable} onChange={(event) => { this.state.catOption.is_searchable = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_searchable" validation={this.state.validation} />
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_REQUIRE_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_REQUIRE_LABEL')} value={this.state.catOption.is_require} onChange={(event) => { this.state.catOption.is_require = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_require" validation={this.state.validation} />
+                <TextBox placeholder={phTrans.translate('OPTION_LIMIT_OF_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_LIMIT_OF_LABEL')} value={this.state.catOption.limit_of} onChange={(event) => { this.state.catOption.limit_of = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name" validation={this.state.validation} />
+                <TextBox placeholder={phTrans.translate('OPTION_ORDER_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_ORDER_LABEL')} value={this.state.catOption.order} onChange={(event) => { this.state.catOption.order = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="order" validation={this.state.validation} />
+
                 <TextBox placeholder={phTrans.translate('OPTION_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_LABEL')} value={this.state.catOption.name} onChange={(event) => { this.state.catOption.name = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name" validation={this.state.validation} />
 
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_PL_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_PL_LABEL')} value={this.state.catOption.name_pl} onChange={(event) => { this.state.catOption.name_pl = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_pl" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="pl" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="pl" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_US_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_US_LABEL')} value={this.state.catOption.name_us} onChange={(event) => { this.state.catOption.name_us = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_us" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="en" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="en" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_DE_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_DE_LABEL')} value={this.state.catOption.name_de} onChange={(event) => { this.state.catOption.name_de = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_de" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="de" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="de" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_RU_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_RU_LABEL')} value={this.state.catOption.name_ru} onChange={(event) => { this.state.catOption.name_ru = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_ru" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="ru" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="ru" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_FR_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_FR_LABEL')} value={this.state.catOption.name_fr} onChange={(event) => { this.state.catOption.name_fr = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_fr" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="fr" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="fr" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_ES_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_ES_LABEL')} value={this.state.catOption.name_es} onChange={(event) => { this.state.catOption.name_es = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_es" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="es" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="es" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_NO_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_NO_LABEL')} value={this.state.catOption.name_no} onChange={(event) => { this.state.catOption.name_no = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_no" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="no" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="no" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <TextBox placeholder={phTrans.translate('OPTION_NAME_ZH_CN_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_ZH_CN_LABEL')} value={this.state.catOption.name_zh_cn} onChange={(event) => { this.state.catOption.name_zh_cn = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name_zh_cn" validation={this.state.validation} />
                     </Col>
-                    <Col xs="3"><ButtonLoader value="zh" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
+                    <Col xs="2"><ButtonLoader value="zh" onClick={this.translateSubmit.bind(this)} size={"md"} className={"btn  rounded-0"} />
                     </Col>
                 </Row>
-                <ButtonLoader disabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Submit"} isLoading={this.state.isSubmitLoading} />
-                {this.state.catOption.status == 1 ? (<ButtonLoader disabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} onClick={this.removeHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Delete"} isLoading={this.state.isDeleteLoadingg} />) : <span></span>}
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase u-btn-primary rounded-0"} value={"Submit"} isLoading={this.state.isSubmitLoading} />
 
                 <hr class="g-brd-gray-light-v4 g-my-50" />
                 {this.state.catOption.status == 1 ? (<FormGroup>
                     <ListGroup>
-                        {this.props.catOption.cat_opt_temp.map(item => {
+                        {this.props.catOption.cat_opt_temp ? this.props.catOption.cat_opt_temp.map(item => {
                             return <Collapsible triggerDisabled={this.state.catOption.category_id != undefined && this.state.catOption.category_id != this.props.category_id} triggerClassName="Collapsible__trigger_options" triggerOpenedClassName="Collapsible__trigger_options" lazyRender={true} trigger={item.placeholder}>
                                 <CategoryOptionSINGLE_SINGLE catSingleOption={item} coId={this.state.catOption.id} cottId={this.state.cott_id} type={this.state.cott_type} catOptId={this.state.catOption.id}></CategoryOptionSINGLE_SINGLE>
                             </Collapsible>
-                        })}
+                        }) : <span></span>}
 
 
                     </ListGroup>
                 </FormGroup>) : <span></span>}
             </Form>
-        </Container>)
+        </Col>)
     }
 }
 
@@ -265,12 +271,13 @@ const mapDispatchToProps = (dispatch) => {
             return dispatch(new BaseService().commandThunt(CommandList.Category_Options.DELETE_CATEGORY_OPTIONS, dto));
 
         },
-        addEmptyElementOption: (id, co_id, order) => {
+        addEmptyElementOption: (id, co_id, order, name) => {
             dispatch({
                 type: CATEGORY_EDIT_ACTIONS.ADD_EMPTY_OPTION_ELEMENT, dto: {
                     id: id,
                     co_id: co_id,
-                    order: order
+                    order: order,
+                    placeholder: name
                 }
             });
 
@@ -285,5 +292,5 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(CategoryOptionBETWEEN);
+)(withRouter(CategoryOptionBETWEEN));
 

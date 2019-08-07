@@ -43,7 +43,12 @@ export default class SetCoordinatesCommand extends BaseCommand {
       .setContext(this.context)
       .setCoordinates({
         longitude: this.model.longitude,
-        latitude: this.model.latitude
+        latitude: this.model.latitude,
+        zipcode:this.model.zipcode,
+        address:this.model.address,
+        city_id:this.model.city_id,
+        city: this.model.city,
+        country_id:this.model.country_id
       });
   }
 }

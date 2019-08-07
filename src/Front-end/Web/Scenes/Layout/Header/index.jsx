@@ -116,7 +116,9 @@ class Header extends React.Component {
                         <li class="dropdown-item u-link-v5     g-pl-7--hover"><LinkAuth to="/dictionary" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('DICTIONARY_LINK_LABEL')}</LinkAuth></li>
                         <li class="dropdown-item u-link-v5     g-pl-7--hover "><LinkAuth to="/categories" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_LINK_LABEL')}</LinkAuth></li>
                         <li class="dropdown-item u-link-v5     g-pl-7--hover "><LinkAuth to="/verifyImage" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('IMAGE_VERIFY_LINK_LABEL')}</LinkAuth></li>
+                        <li class="dropdown-item u-link-v5     g-pl-7--hover "><LinkAuth to="/categoryOptions/new" className=" g-letter-spacing-1 g-font-weight-500 nav-link g-py-1 g-px-0  g-font-size-12 g-color-primary--hover">{this.tran.translate('CATEGORY_OPTIONS_LINK_LABEL')}</LinkAuth></li>
 
+                        
                       </ul>
                     </li>
                   </WrapperAuth>

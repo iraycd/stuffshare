@@ -22,6 +22,7 @@ import SignInModal from './User/Components/SignInModal/index.jsx';
 import UserAccount from './User/Components/UserAccount/index.jsx';
 import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
 import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.jsx';
+import CategoryOptions from './Categories/categoryOptions.jsx';
 
 
 class App extends React.Component {
@@ -62,7 +63,7 @@ class App extends React.Component {
           <RouterAuth path={"/verifyImage"} component={VerifyImage} />
           <RouterAuth exact={true} path={"/item/offer/new"} component={NewOfferItem} />
           <Route path={"/item/:id"} component={Item} />
-
+          <RouterAuth path={"/categoryOptions/:id"} component={CategoryOptions} />
         </Switch>
         <Footer />
       </div>);

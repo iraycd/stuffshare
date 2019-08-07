@@ -89,14 +89,7 @@ class AddCategory extends React.Component {
 
     }
     componentDidMount() {
-        this.props.getCategoryOptionsType().then(succ => {
-            this.setState(
-                {
-                    getCategoryOptionsTypeQuery: succ.data
-                }
-            )
-
-        });
+       
         if (this.props.match.params.parentId != "undefined") {
 
             this.props.getCategories(this.props.match.params.parentId).then(succ => {
@@ -170,7 +163,7 @@ class AddCategory extends React.Component {
         event.preventDefault();
         //   if (this.validation().length == 0) {
         // this.props.code=this.state;
-
+        this.state.category.id=this.state.category.id?this.state.category.id:uuidv4()
         this.props.addCategories(this.state.category).then(succ => {
             this.props.history.push(`/categories/edit/${this.state.category.id}`);
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,

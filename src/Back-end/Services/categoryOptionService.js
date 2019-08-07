@@ -36,7 +36,17 @@ export default class CategoryOptionService extends BaseService {
         return await this.unitOfWorkDI.categoryOptionsRepository.deleteTemplate({model})
 
     }
+    
+    async upsertToCategory({model})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.upsertToCategory({model})
 
+    }
+    async getAllCategoriesOption({id})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.getAllCategoriesOption({id})
+
+    }
 
     
 }

@@ -31,7 +31,8 @@ export default class UpsertCategoryOptionsCommand extends BaseCommand {
         this.model = Object.assign(new CategoryOptionsDTO(), dto);
     }
     async action() {
+           
        await this.categoryOptionServiceDI.setContext(this.context).upsert({ model:this.model });
-
+//await this.categoryOptionServiceDI.setContext(this.context).upsertToCategory({model:this.model.category_link})
     }
 };
