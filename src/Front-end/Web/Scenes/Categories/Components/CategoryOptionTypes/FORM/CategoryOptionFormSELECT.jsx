@@ -48,10 +48,12 @@ class CategoryOptionFormSELECT extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
+        const link = this.props.catOption.category_link[0];
+
         console.log(this.props.catOption)
         return (
             <DropDownList
-                isRequired={true}
+                isRequired={link.is_require?link.is_require:this.props.catOption.is_require}
                 label={this.props.catOption["name_" + this.props.lang]}
                 valueOptions={this.getDropDownValues.bind(this)()}
                 value={this.state.id}

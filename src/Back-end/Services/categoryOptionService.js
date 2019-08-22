@@ -48,5 +48,16 @@ export default class CategoryOptionService extends BaseService {
 
     }
 
+  //  async upsertCategoryOptionsForCategoryCommand({model})
+    //{
+   //     return await this.unitOfWorkDI.categoryOptionsRepository.upsertCategoryOptionsForCategoryCommand({model})
+
+   // }
+    async removeCategoryOptionsForCategory({id})
+    {
+        return await this.unitOfWorkDI.categoryOptionsRepository.removeCategoryOptionsForCategory({id})
+
+    }
+
     
 }

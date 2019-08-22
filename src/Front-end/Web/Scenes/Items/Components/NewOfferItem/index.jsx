@@ -196,7 +196,7 @@ class NewOfferItem extends React.Component {
                             this.props.offerItem.catOptions.filter(item => {
                                 return Number(item.order) >= 0
                             }).sort((a, b) => {
-                                return Number(a.order) > Number(b.order) ? 1 : -1
+                                return Number(a.category_link[0].order?a.category_link[0].order:a.order) > Number(b.category_link[0].order?b.category_link[0].order:b.order) ? 1 : -1
                             }).map(item => {
                                 return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
                                     let res=values.map(el=>{

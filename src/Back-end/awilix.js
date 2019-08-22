@@ -76,6 +76,8 @@ import ReverseGeocodeQuery from "./Query/City/reverseGeocodeQuery.js";
 import GeocodeQuery from "./Query/City/geocodeQuery.js";
 import GetCountriesByIdQuery from "./Query/Country/getCountriesByIdQuery.js";
 import GetAllCategoriesOptionQuery from "./Query/CategoryOptions/getAllCategoryOptionsQuery.js";
+import DeleteCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/deleteCategoryOptionsForCategoryCommand.js";
+import UpsertCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/upsertCategoryOptionsForCategoryCommand.js";
 
 
 
@@ -164,12 +166,11 @@ exporter[QueryList.CategoryOptions.GET_OPTIONS_TYPE] = asClass(GetCategoryOption
 exporter[QueryList.CategoryOptions.GET_CATEGORY_OPTION] = asClass(GetCategoryOptionsQuery)
 exporter[QueryList.CategoryOptions.GET_ALL_CETEGORIES_OPTIONS] = asClass(GetAllCategoriesOptionQuery);
 
-
 exporter[CommandList.Category_Options.UPSERT_CATEGORY_OPTIONS] = asClass(UpsertCategoryOptionsCommand);
 exporter[CommandList.Category_Options.DELETE_CATEGORY_OPTIONS] = asClass(DeleteCategoryOptionsCommand);
-
 exporter[CommandList.Category_Options.UPSERT_CATEGORY_OPTIONS_TEMPLATE] = asClass(UpsertCategoryOptionsTemplateCommand);
-
+exporter[CommandList.Category_Options.DELETE_CAETEGORY_OPTIONS_FOR_CATEGORY] = asClass(DeleteCategoryOptionsForCategoryCommand);
+exporter[CommandList.Category_Options.UPSERT_CAETEGORY_OPTIONS_FOR_CATEGORY] = asClass(UpsertCategoryOptionsForCategoryCommand);
 exporter[CommandList.Category_Options.DELETE_CATEGORY_OPTIONS_TEMPLATE] = asClass(DeleteCategoryOptionsTemplateCommand);
 
 

@@ -191,5 +191,23 @@ export default class CategoryOptionsRepository extends BaseRepository {
   }
 
 
+  /**
+   *
+   * @param  {{ model : BaseDTO}}
+   * @return {Promise<any>}
+   * @memberof BaseRepository
+   */
+  // @ts-ignore
+  upsertCategoryOptionsForCategory({ model, transaction }) {
+    return this.sequelizeDI.CategoryOptionsLink.upsert(model, {
+      transaction: this.getTran({ transaction })
+    });
+  }
+  removeCategoryOptionsForCategory({ id, transaction }) {
+    return this.sequelizeDI.CategoryOptionsLink.destroy({
+      where: { id: this.toStr(id) },
+      transaction: this.getTran({ transaction })
+    });
+  }
 }
 

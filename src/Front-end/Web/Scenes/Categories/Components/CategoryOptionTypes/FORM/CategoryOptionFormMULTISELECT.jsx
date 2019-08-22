@@ -57,6 +57,8 @@ class CategoryOptionFormMULTISELECT extends React.Component {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
         console.log(this.props.catOption.cat_opt_temp);
+        const link = this.props.catOption.category_link[0];
+
         return (
             <div class="g-mb-10">
                 <div>{this.props.catOption["name_" + this.props.lang]}</div>

@@ -122,6 +122,8 @@ class CategoryOptionFormIMAGE extends React.Component {
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
         console.log(this.props.catOption.cat_opt_temp);
         console.log(this.props.catOption.limit_of);
+        const link = this.props.catOption.category_link[0];
+
         let imgList = this.state.images.map((item, index) => {
             let brdColor = "g-brd-gray-light-v4--hover";
             if (index == 0) {
@@ -194,7 +196,7 @@ class CategoryOptionFormIMAGE extends React.Component {
         return (
             <Form className=" g-mb-5 text-center g-px-5 text-center">
                 <Col className="text-center mx-auto g-max-width-600 ">
-                    <Label className="g-line-height-1_8 g-letter-spacing-1  ">{this.props.catOption["name_" + this.props.lang].format(this.props.catOption.limit_of)} </Label>
+                    <Label className="g-line-height-1_8 g-letter-spacing-1  ">{this.props.catOption["name_" + this.props.lang].format(link.limit_of?link.limit_of:this.props.catOption.limit_of)} </Label>
                 </Col>
                 <Col>
                     <Row className="g-brd-around g-brd-gray-light-v3 g-px-5 g-py-1" style={{ backgroundColor: "#eee" }}>

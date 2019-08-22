@@ -17,7 +17,10 @@ let CommandList = {
         UPSERT_CATEGORY_OPTIONS: "upsertCategoryOptionsCommand",
         DELETE_CATEGORY_OPTIONS: "deleteCategoryOptionsCommand",
         UPSERT_CATEGORY_OPTIONS_TEMPLATE: "upsertCategoryOptionsTemplateCommand",
-        DELETE_CATEGORY_OPTIONS_TEMPLATE: "deleteCategoryOptionsTemplateCommand"
+        DELETE_CATEGORY_OPTIONS_TEMPLATE: "deleteCategoryOptionsTemplateCommand",
+        DELETE_CAETEGORY_OPTIONS_FOR_CATEGORY:"deleteCategoryOptionsForCategoryCommand",
+        UPSERT_CAETEGORY_OPTIONS_FOR_CATEGORY:"upsertCategoryOptionsForCategoryCommand"
+
 
     },
     User: {

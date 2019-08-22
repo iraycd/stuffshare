@@ -28,7 +28,7 @@ export default class Categories extends React.Component {
                 transitionAppear={true}
                 transitionAppearTimeout={500}
             >
-                <Container style={{ minWidth: '90vw' }} className="g-pa-30 g-mb-30">
+                <Container style={{ minWidth: '80vw' }} className="g-pa-30 g-mb-30">
                     <Row>
                         <Col xs="4">
                             <CategoryTree />

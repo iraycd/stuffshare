@@ -34,8 +34,21 @@ export default class CategoryOptionsLink extends Model {
           type: DataTypes.UUID,
           allowNull: true
         },
-
-
+        is_require: {
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        }, order: {
+          type: DataTypes.INTEGER,
+          allowNull: true
+        }, is_searchable: {
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        }, limit_of: {
+          type: DataTypes.INTEGER,
+          allowNull: true
+        },
+       
+  
       },
       { sequelize }
     );

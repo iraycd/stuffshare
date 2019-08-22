@@ -60,12 +60,13 @@ class CategoryOptionFormSINGLE extends React.Component {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
         console.log(this.props.catOption.cat_opt_temp);
-        console.log(this.props.catOption);
+        console.log(this.props.catOption.category_link);
+        const link = this.props.catOption.category_link[0];
         console.log('kupaaa');
         return (
             <div class="g-mb-10">
                 {['FLOAT', 'STRING', 'NUMBER'].includes(this.props.catOption.cat_opt.name) ?
-                    <TextBox placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]}  onChange={this.onChange.bind(this)} isRequired={true} label={this.props.catOption["name_" + this.props.lang]} value={this.state.email} field="email" validation={[]} />
+                    <TextBox placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]}  onChange={this.onChange.bind(this)} isRequired={link.is_require} label={this.props.catOption["name_" + this.props.lang]} value={this.state.email} field="email" validation={[]} />
                     : <span></span>}
                 {['DATE'].includes(this.props.catOption.cat_opt.name) ?
                 <DayPickerInputComponent

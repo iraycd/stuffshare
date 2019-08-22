@@ -5,7 +5,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Col, Form, Row } from 'reactstrap';
+import { Col, Form, Row, Input } from 'reactstrap';
 import translate from 'translate';
 import CommandList from '../../../../../../Shared/CommandList.js';
 import CategoryDTO from '../../../../../../Shared/DTO/Categories/CategoryDTO.js';
@@ -17,6 +17,8 @@ import CATEGORY_TREE_ACTIONS from '../CategoryTree/actions.js';
 import { DictionaryDTO, Enums, Translator } from './../../../../../../Shared/index.js';
 import { BaseService } from './../../../../../App/index.js';
 import { ButtonLoader, TextBox } from './../../../../Components/index.js';
+import { Link } from 'react-router-dom';
+import uuidv4 from "uuid/v4";
 
 
 
@@ -27,8 +29,9 @@ class CategoryEdit extends React.Component {
         super(props);
         this.state = {}
         this.state.category = new CategoryDTO();
-
+        this.state.categoryOptions = [];
         this.state.validation = [];
+        this.state.rowEdit = ''
 
     }
     componentWillReceiveProps(next) {
@@ -255,9 +258,68 @@ class CategoryEdit extends React.Component {
             this.refreshValidation();
         });
     }
+    onSaveRow(event) {
+        let row = this.state.rowEdit;
+        let link = row.category_link.filter(item => {
+            return item.category_id == this.state.category.id
+        })[0];
+        link.is_require = this.state.rowEdit.is_require
+        link.is_searchable = this.state.rowEdit.is_searchable
+        link.limit_of = this.state.rowEdit.limit_of
+        link.order = this.state.rowEdit.order
+        console.log(link);
+        this.props.saveCategoryOption(link).then(succ => {
+            console.log(succ)
+            this.setState({
+                rowEdit: ''
+            })
+        })
+    }
+    onEditRow(event) {
+        let row = this.state.categoryOptions.filter(item => {
+            return item.id == event.currentTarget.getAttribute('data-tag')
+        })[0]
+        let link = row.category_link.filter(item => {
+            return item.category_id == this.state.category.id
+        })[0];
+        row.is_require = link.is_require ? link.is_require : row.is_require
+        row.is_searchable = link.is_searchable ? link.is_searchable : row.is_searchable
+        row.limit_of = link.limit_of ? link.limit_of : row.limit_of
+        row.order = link.order ? link.order : row.order
+        this.setState({
+            rowEdit: row
+        })
+    }
+    onDeleteRow(event) {
+        let id = event.currentTarget.getAttribute('data-tag');
+        let row = this.state.categoryOptions.filter(item => {
+            return item.id == id
+        })[0];
+        let link = row.category_link.filter(item => {
+            return item.category_id == this.state.category.id
+        })[0];
+        let catOptions = this.state.categoryOptions.filter(item => {
+            return item.id != id
+        })
+        this.props.deleteCategoryOption({ id: link.id }).then(succ => {
+            this.setState(
+                { categoryOptions: catOptions?catOptions:[] }
+            )
+            console.log(succ)
 
-
-
+        })
+    }
+    addNewCategoryOptionHanlder(event)
+    {
+        let link={}
+        console.log(this.state.catOptionId);
+        link.co_id=this.state.catOptionId;
+        link.category_id=this.state.category.id;
+        link.id=uuidv4();
+        console.log(link);
+        this.props.saveCategoryOption(link).then(succ => {
+            location.reload();
+        })    }
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
@@ -369,10 +431,91 @@ class CategoryEdit extends React.Component {
                     <div className={`d-inline-block align-self-center g-width-100  g-height-1  g-bg-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3}`}></div>
                     <span className={`align-self-center text-uppercase  g-color-gray-dark-v2 mx-4 g-color-gray-dark-v4 g-letter-spacing-2   g-font-weight-600 g-font-size-12`}>{tran.translate('CATEGORY_OPTIONS_LABEL')}</span>
                     <div className={`d-inline-block align-self-center g-width-100 g-height-1 g-bg-gray-light-v${this.props.borderClass > 0 ? this.props.borderClass : 3}`}></div>
-                </div>
+                </div>     
                 <Col className="g-my-20 text-center">
+                    <div class="">
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_NAME_TBL_HEADER')}</th>
+                                    <th c>{tran.translate('CATEGORY_OPTION_TYPE_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_REQUIRE_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_SEARCHABLE_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_LIMIT_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_NAME_OPTION_HEADER')}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                                {this.state.categoryOptions.sort((a, b) => {
+                                return Number(a.category_link[0].order?a.category_link[0].order:a.order) > Number(b.category_link[0].order?b.category_link[0].order:b.order) ? 1 : -1
+                            }).map(item => {
+                                    console.log(item);
+                                    let link = item.category_link[0]
+                                    console.log(link)
+                                    link = link ? link : '';
+                                    if (item.id == this.state.rowEdit.id) {
+                                        return (<tr className="g-bg-color-black">
+                                            <td className="g-width-100"> <Input className=" form-control rounded-0" type={"number"} value={this.state.rowEdit.order} onChange={(event) => { let row = this.state.rowEdit; row.order = event.target.value; this.setState({ rowEdit: row }) }} /></td>
+                                            <td>  <Link to={"/categoryOptions/" + item.id} className="g-font-size-11 col-md-11 col-xs-11 g-color-primary--hover nav-link">{this.state.rowEdit["name_" + this.props.lang]}</Link></td>
+                                            <td className="g-font-size-11  g-color-primary--hover ">{this.state.rowEdit.cat_opt.name}</td>
+                                            <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_require} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_require = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
+                                            </td>
+                                            <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_searchable} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_searchable = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
+                                            </td>
+                                            <td> <Input onChange={(event) => { let row = this.state.rowEdit; row.limit_of = event.target.value; this.setState({ rowEdit: row }) }} className=" form-control rounded-0" type={"number"} value={this.state.rowEdit.limit_of} /></td>
+
+                                            <td>
+                                                <Row>
+                                                    <Col>
+                                                        <span data-tag={item.id} onClick={this.onSaveRow.bind(this)} class="g-cursor-pointer g-mx-5 g-my-5  u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-16 g-color-primary--hover"><i class="fa  fa-floppy-o"></i></span>
+                                                    </Col>
+
+                                                </Row>
+                                            </td>
+                                        </tr>)
+                                    }
+                                    return (<tr className="g-bg-color-black">
+                                        <td>{link.order ? link.order : item.order}</td>
+                                        <td>  <Link to={"/categoryOptions/" + item.id} className="g-font-size-11 col-md-11 col-xs-11 g-color-primary--hover nav-link">{item["name_" + this.props.lang]}</Link></td>
+                                        <td className="g-font-size-11  g-color-primary--hover ">{item.cat_opt.name}</td>
+                                        <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={true} checked={link.is_require!=undefined ? link.is_require : item.is_require} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                                        </td>
+                                        <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={true} checked={link.is_searchable!=undefined ? link.is_searchable : item.is_searchable} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                                        </td>
+                                        <td>{link.limit_of ? link.limit_of : item.limit_of}</td>
+
+                                        <td>
+                                            {item.category_link.filter(item => {
+                                                return item.category_id == this.state.category.id
+                                            }).length > 0 ? <Row>
+                                                    <Col>
+                                                        <span data-tag={item.id} onClick={this.onEditRow.bind(this)} class="g-cursor-pointer g-mx-5 g-my-5  u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-16 g-color-primary--hover"><i class="fa  fa-pencil-square-o"></i></span>
+                                                    </Col>
+                                                    <Col>
+                                                        <span data-tag={item.id} onClick={this.onDeleteRow.bind(this)} class="g-cursor-pointer g-mx-5 g-my-5  u-link-v5 g-font-weight-500 nav-link g-py-0 g-px-0  g-font-size-16 g-color-primary--hover"><i class="fa  fa-trash"></i></span>
+                                                    </Col>
+                                                </Row> : <Link to={"/categories/edit/" + item.category_link[0].category_id} class="u-label u-label-info g-color-white">PARENT</Link>}
+
+                                        </td>
+                                    </tr>)
+                                })
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
                 </Col>
+                <Row className="g-mt-50">
+                    <Col>
+                        <TextBox onChange={(event)=>{this.setState({catOptionId:event.target.value})}} placeholder={"GUID"} value={this.state.catOptionId} isRequired={true} label={tran.translate('ADD_NEW_CATEGORY_OPTION_ID')} field="category_pl" validation={this.state.validation} />
+                    </Col>
+                    <Col xs="3"><ButtonLoader value={tran.translate('CATEGORY_ADD_NEW_CAEGORY_OPTION')} onClick={this.addNewCategoryOptionHanlder.bind(this)} size={"md"} className={"btn  rounded-0"} isLoading={this.state.isLoading} />
+                    </Col>
+                </Row>
+
             </Form>
 
         );
@@ -395,7 +538,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getCategories: (id) => {
             return dispatch(new BaseService().queryThunt(QueryList.Category.GET_CATEGORIES_HIERARCHY, { id: id }));
-        }, getDictionary: () => {
+        },
+        getDictionary: () => {
             dispatch({
                 type: QueryList.Dictionary.GET_DICTIONARY,
             })
@@ -406,6 +550,15 @@ const mapDispatchToProps = (dispatch) => {
         },
         editCategory: (dto) => {
             return dispatch(new BaseService().commandThunt(CommandList.Category.EDIT_CATEGORY, dto));
+
+        },
+
+        saveCategoryOption: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.Category_Options.UPSERT_CAETEGORY_OPTIONS_FOR_CATEGORY, dto));
+
+        },
+        deleteCategoryOption: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.Category_Options.DELETE_CAETEGORY_OPTIONS_FOR_CATEGORY, dto));
 
         }
         , setNotification: (type, message) => {
