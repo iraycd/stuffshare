@@ -20,7 +20,7 @@ import UserAuths from "./userauth.js";
 import CategoryOption from "./categoryOption.js";
 import CategoryOptionsTemplate from "./categoryOptionsTemplate.js";
 import CategoryOptionsTypeTemplate from "./categoryOptionsTypeTemplate.js";
-import CategoryOptionsType from "./CategoryOptionsType.js";
+import CategoryOptionsType from "./categoryOptionsType.js";
 import CategoryOptionsLink from "./categoryOptionsLink.js";
 
 
