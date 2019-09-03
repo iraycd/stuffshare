@@ -33,10 +33,20 @@ class CategoryOptionFormMULTISELECT extends React.Component {
         // let checked = event.target.checked;
         let checked = this.state.checked;
         checked = checked.filter(item => {
-            return item.id != event.target.getAttribute('data-key')
+            return item.cat_opt_id != event.currentTarget.getAttribute('data-key')
         })
-        checked.push({  id: event.target.getAttribute('data-key'),val: event.target.checked,element:this.props.catOption.id})
-        console.log(event.target.getAttribute('data-key'))
+        checked.push({
+            id:uuidv4(),
+            cat_opt_id: event.currentTarget.getAttribute('data-key'),
+            val: event.target.checked,
+            element: this.props.catOption.id,
+            select: this.props.catOption.cat_opt_temp.filter(item => {
+                return item.id == event.currentTarget.getAttribute('data-key')
+            })[0],
+            type:'MULTISELECT'
+        })
+        console.log(event.currentTarget.getAttribute('data-key'))
+
 
         this.setState({
             checked: checked
@@ -56,7 +66,6 @@ class CategoryOptionFormMULTISELECT extends React.Component {
     render() {
         const tran = Translator(this.props.codeDict.data.LABEL, this.props.lang);
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
-        console.log(this.props.catOption.cat_opt_temp);
         const link = this.props.catOption.category_link[0];
 
         return (
@@ -66,7 +75,7 @@ class CategoryOptionFormMULTISELECT extends React.Component {
                     {this.props.catOption.cat_opt_temp.map(item => {
                         return (
                             <Col xs="4">
-                                <Checkbox data-key={item.id} validation={[]} value={this.state.checked.filter(el => { return el.id == item.id }).length > 0 ? this.state.checked.filter(el => { return el.id == item.id })[0].value : false} onChange={this.onChange.bind(this)} labelInline={item["value_" + this.props.lang]}></Checkbox>
+                                <Checkbox data-key={item.id} validation={[]} value={this.state.checked.filter(el => { return el.cat_opt_id == item.id }).length > 0 ? this.state.checked.filter(el => { return el.cat_opt_id == item.id })[0].value : false} onChange={this.onChange.bind(this)} labelInline={item["value_" + this.props.lang]}></Checkbox>
                             </Col>
                         )
                     })}

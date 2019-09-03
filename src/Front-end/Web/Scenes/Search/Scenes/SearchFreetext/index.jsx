@@ -33,7 +33,7 @@ class SearchFreetext extends React.Component {
       <div class="container  g-flex-centered  g-z-index-1 g-py-40">
         <div class="row  g-flex-centered align-self-center">
           <div class=" g-width-780 align-self-center g-pa-5">
-            <div class="g-bg-white-opacity-0_9 g-rounded-0   g-pa-10 g-pa-10--md  ">
+            <div class="g-bg-white-opacity-0_8 g-rounded-0   g-pa-10 g-pa-10--md  ">
               <div class="g-brd-around g-brd-gray-light-v1  g-pa-50 g-pa-30--md text-center">
                 <h3 class="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('SEARCH_HOMEPAGE_HEADER')}</h3>
                 <p class="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{tran.translate('SEARCH_HOMEPAGE_TEXT')}

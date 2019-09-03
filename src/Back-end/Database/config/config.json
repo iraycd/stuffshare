@@ -4,6 +4,8 @@
     "password": "stuffshare",
     "dialect": "mssql",
     "dialectOptions": {
+      "requestTimeout": 300000,
+      "options": { "requestTimeout": 300000 },
       "connectionString": "Server=localhost\\SQLEXPRESS;Database=stuffShareDB;Trusted_Connection=yes;"
     },
     "define": {
@@ -14,10 +16,12 @@
     "username": "stuffshare",
     "password": "stuffshare",
     "dialect": "mssql",
+    "logging":false,
     "dialectOptions": {
       "connectionString": "Server=localhost\\SQLEXPRESS;Database=stuffShareDB;Trusted_Connection=yes;"
     },
     "define": {
+      "logging":false,
       "underscored": true
     }
   },
@@ -26,8 +30,10 @@
     "username": "DB_A43E8B_stuffshare_admin",
     "password": "stuffShare123",
     "database": "DB_A43E8B_stuffshare",
+    "logging":false,
     "dialect": "mssql",
     "define": {
+      "logging":false,
       "underscored": true
     }
   }

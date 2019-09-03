@@ -2967,6 +2967,44 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "SAVE_NEW_ITEM_LINK": {
+            "id": "99b48409-d08a-4268-b14a-2560574e4a76",
+            "uid": "",
+            "code": "SAVE_NEW_ITEM_LINK",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Zapisz",
+                "us": "Save",
+                "de": "Speichern",
+                "ru": "Сохранить",
+                "fr": "Enregistrer",
+                "es": "Guardar",
+                "no": "Lagre",
+                "zh_cn": "保存"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "BLOB_VERIFY_IMAGE_HEADER": {
+            "id": "6340bb93-f587-4857-9467-121f0ade76b2",
+            "uid": "",
+            "code": "BLOB_VERIFY_IMAGE_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Weryfikacja zdjęć",
+                "us": "Check photos",
+                "de": "Die überprüfung der Fotos",
+                "ru": "Проверка фотографий",
+                "fr": "Vérifier les photos",
+                "es": "Comprobación de fotos",
+                "no": "Sjekk bilder",
+                "zh_cn": "检查的照片"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {

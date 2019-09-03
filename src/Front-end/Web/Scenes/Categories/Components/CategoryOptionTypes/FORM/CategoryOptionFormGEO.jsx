@@ -56,13 +56,13 @@ class CategoryOptionFormGEO extends React.Component {
     onChange(state) {
         let id = this.props.catOption.id;
             let result = [
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0].id,val: state.cityId,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0].id,val: state.countryId,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0].id,val: state.countryValue,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2})[0].id,val: state.latitude,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5})[0].id,val: state.cityValue,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7})[0].id,val: state.address,element:id},
-                {id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1})[0].id,val: state.longitude,element:id}
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0].id,val: state.cityId,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0].id,val: state.countryId,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0].id,val: state.countryValue,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2})[0].id,val: state.latitude,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5})[0].id,val: state.cityValue,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7})[0].id,val: state.address,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7 })[0]},
+                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1})[0].id,val: state.longitude,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1 })[0]}
             ]
 
 

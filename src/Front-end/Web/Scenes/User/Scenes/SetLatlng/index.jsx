@@ -35,11 +35,11 @@ class SetLatlng extends React.Component {
         super(props);
     }
     submitHandler(dto) {
-console.log(dto)
         this.props.setLatLng(dto).then(succ => {
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                 Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('SET_LANG_SAVE_SUCCESS')
             );
+           
         })
 
     }
@@ -86,7 +86,17 @@ const mapDispatchToProps = (dispatch) => {
         ,
         setLatLng: (dto) => {
             return dispatch(new BaseService().queryThunt(CommandList.User.SET_COORDIATES, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
-                return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
+                return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token)).then(succ=>{
+                    dispatch({
+                        type: SET_LATLNG_ACTIONS.IS_AUTH,
+                        dto: {
+                            refresh_token: localStorage.refresh_token,
+                            token: localStorage.token,
+                            user: succ.data
+                        }
+                    })
+                    return succ
+                })
 
             })
         }

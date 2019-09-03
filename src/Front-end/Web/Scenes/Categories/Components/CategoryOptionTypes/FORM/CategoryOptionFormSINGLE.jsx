@@ -21,7 +21,7 @@ class CategoryOptionFormSINGLE extends React.Component {
         super(props);
         this.state = {}
         this.state.validation = [];
-        this.state.dataValue=null;
+        this.state.dataValue = null;
         this.state.id = this.props.values ? this.props.values : {};
 
     }
@@ -33,7 +33,7 @@ class CategoryOptionFormSINGLE extends React.Component {
             id: event.target.value
         });
         console.log(this.props.catOption)
-        this.props.onChange(this.props.catOption,[{id:this.props.catOption.cat_opt_temp[0].id,val:event.target.value,element:this.props.catOption.id}])
+        this.props.onChange(this.props.catOption, [{id:uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: event.target.value, element: this.props.catOption.id, type: 'SINGLE' }])
 
 
     }
@@ -42,7 +42,7 @@ class CategoryOptionFormSINGLE extends React.Component {
             dataValue: event
         });
 
-        this.props.onChange(this.props.catOption,[{id:this.props.catOption.cat_opt_temp[0].id,val:event,element:this.props.catOption.id}])
+        this.props.onChange(this.props.catOption, [{id:uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: event, element: this.props.catOption.id, type: 'SINGLE' }])
 
 
 
@@ -66,15 +66,15 @@ class CategoryOptionFormSINGLE extends React.Component {
         return (
             <div class="g-mb-10">
                 {['FLOAT', 'STRING', 'NUMBER'].includes(this.props.catOption.cat_opt.name) ?
-                    <TextBox placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]}  onChange={this.onChange.bind(this)} isRequired={link.is_require} label={this.props.catOption["name_" + this.props.lang]} value={this.state.email} field="email" validation={[]} />
+                    <TextBox placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]} onChange={this.onChange.bind(this)} isRequired={link.is_require ? link.is_require : this.props.catOption.is_require} label={this.props.catOption["name_" + this.props.lang]} value={this.state.email} field="email" validation={[]} />
                     : <span></span>}
                 {['DATE'].includes(this.props.catOption.cat_opt.name) ?
-                <DayPickerInputComponent
-                dateFormat="dd-MM-yyyy"
-                showTimeSelect={false}
-                minDate={null}
-                 value={this.state.dataValue} placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]} onChange={this.dateHandler.bind(this)} isRequired={true} label={this.props.catOption["name_" + this.props.lang]} field="birthDate" validation={[]} />
-                : <span></span>}
+                    <DayPickerInputComponent
+                        dateFormat="dd-MM-yyyy"
+                        showTimeSelect={false}
+                        minDate={null}
+                        value={this.state.dataValue} placeholder={this.props.catOption.cat_opt_temp[0]["placeholder_" + this.props.lang]} onChange={this.dateHandler.bind(this)} isRequired={true} label={this.props.catOption["name_" + this.props.lang]} field="birthDate" validation={[]} />
+                    : <span></span>}
 
             </div >
 

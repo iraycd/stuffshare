@@ -19,8 +19,15 @@ if (process.env.UPLOAD_PATH) {
   }
 }
 // @ts-ignore
-let koaBody = koaBodyImport();
-//const cqrsPreprocess =require( './Architecture/cqrsPreprocess');
+let koaBody = koaBodyImport({
+  multipart: true,
+  formLimit: "10mb",
+  jsonLimit: "10mb",
+  textLimit: "10mb",
+  enableTypes: ['json', 'form', 'text']
+});
+
+
 const app = new Koa();
 const router = new KoaRouter();
 

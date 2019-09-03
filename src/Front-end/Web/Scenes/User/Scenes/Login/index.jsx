@@ -24,6 +24,9 @@ class Login extends React.Component {
         this.state = new UserLoginInternalDTO();
         this.state.validation = [];
         this.state.exception = undefined;
+        this.state.isLoading = false;
+        this.state.fbLoading = false;
+        this.state.googleLoading = false;
     }
     refreshValidation() {
         if (this.state.toRefresh) {
@@ -65,12 +68,18 @@ class Login extends React.Component {
 
     submitHanlder(event) {
         this.state.toRefresh = true;
+        this.setState({
+            toRefresh: true,
+            isLoading: true
+        })
         event.preventDefault();
         if (this.validation().length == 0) {
             // this.props.code=this.state;
             this.state.language
             this.props.loginInternal(this.state).then((succ, err) => {
-
+                this.setState({
+                    isLoading: false
+                })
                 this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                     Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
                 );
@@ -82,11 +91,22 @@ class Login extends React.Component {
 
                 }
             }).catch(ex => {
+
+                this.setState({
+                    isLoading: false
+                })
                 console.log(ex.data);
                 this.setState({ exception: Object.assign({}, ex.data.error) });
+                this.props.setNotification(Enums.CODE.ERROR_GLOBAL,
+                    Translator(this.props.codeDict.data.ERROR, this.props.lang).translate('EMAIL_NOT_EXIST')
+                );
             });
 
 
+        } else {
+            this.setState({
+                isLoading: false
+            })
         }
     }
 
@@ -103,6 +123,13 @@ class Login extends React.Component {
     responseFacebook(response) {
         console.log(response);
         console.log(location.href);
+        if(this.state.fbLodaing==true)
+        {
+            return
+        }
+        this.setState({
+            fbLodaing: true
+        })
         let externalDTO = new ExternalCredentialsDTO();
         externalDTO.provider = 1;
         externalDTO.token = response.accessToken;
@@ -113,6 +140,9 @@ class Login extends React.Component {
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                 Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
             );
+            this.setState({
+                fbLodaing: false
+            })
             if (redirectTo) {
                 this.props.history.push(redirectTo);
 
@@ -120,7 +150,14 @@ class Login extends React.Component {
         });
     }
     responseGoogle(response) {
+        if(this.state.googleLoading==true)
+        {
+            return
+        }
         console.log(response);
+        this.setState({
+            googleLoading: true
+        })
         console.log(this.props);
         let externalDTO = new ExternalCredentialsDTO();
         externalDTO.provider = 2;
@@ -132,6 +169,9 @@ class Login extends React.Component {
             this.props.setNotification(Enums.CODE.SUCCESS_GLOBAL,
                 Translator(this.props.codeDict.data.SUCCESS_GLOBAL, this.props.lang).translate('LOGIN_SUCCESS')
             );
+            this.setState({
+                googleLoading: false
+            })
             if (redirectTo) {
                 this.props.history.push(redirectTo);
 
@@ -159,7 +199,7 @@ class Login extends React.Component {
                 <TextBox type="password" placeholder={phTrans.translate('LOGIN_PASSWORD_PLACEHOLDER')} isRequired={true} label={tran.translate('LOGIN_PASSWORD_LABEL')} value={this.state.password} onChange={this.passwordHandler.bind(this)} field="password" validation={this.state.validation} />
 
 
-                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase "} value={tran.translate('LOGIN_SUBMIT_LABEL')} isLoading={this.props.login.isLoading} />
+                <ButtonLoader onClick={this.submitHanlder.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase "} value={tran.translate('LOGIN_SUBMIT_LABEL')} isLoading={this.state.isLoading} />
                 <br />
                 <br />
                 <Button onClick={this.props.openForgotPassword.bind(this)} className={"g-color-gray-dark-v4  g-letter-spacing-1 float-right btn btn-sm u-btn-outline-darkgray g-color-white--hover g-brd-none rounded-0 g-mr-10 g-mb-15 "} >{tran.translate('LOGIN_FORGOT_PASSWOD_BTN_LABEL')}</Button>
@@ -177,8 +217,10 @@ class Login extends React.Component {
                         scope="public_profile,email,user_birthday,hometown,gender,user_friends"
                         callback={this.responseFacebook.bind(this)}
                         render={renderProps => (
-                            <a className="u-icon-v3 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-facebook g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
-                                onClick={renderProps.onClick}><i class="fa fa-facebook"></i></a>
+                            <a className="u-icon-v3 g-pt-7 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-facebook g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
+                                onClick={this.state.fbLoading == true?()=>{console.log('waiting')}:renderProps.onClick}>
+
+                                {this.state.fbLoading == true ? <span><i class="fa fa-spinner fa-spin" /></span> : <i class="fa fa-facebook"></i>}</a>
                         )}
                     />
                 </li>
@@ -186,8 +228,10 @@ class Login extends React.Component {
                         <GoogleLogin
                             clientId="147564742271-2itiv8meefk578crmklrmba06tiseor4.apps.googleusercontent.com"
                             render={renderProps => (
-                                <a className="u-icon-v3 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-google-plus g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
-                                    onClick={renderProps.onClick}><i class="fa fa-google-plus"></i></a>
+                                <a disbaled={true} className="u-icon-v3 g-pt-7 g-width-35 g-cursor-pointer g-height-35 g-font-size-16 g-color-white g-color-white--hover g-bg-google-plus g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in"
+                                    onClick={this.state.googleLoading == true?()=>{console.log('waiting')}:renderProps.onClick}>
+                                    {this.state.googleLoading == true ? <span  ><i class="fa fa-spinner fa-spin" /></span> : <i class="fa  fa-google-plus"></i>}</a>
+
                             )}
                             accessType='offline'
                             onSuccess={this.responseGoogle.bind(this)}

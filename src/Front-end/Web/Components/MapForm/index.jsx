@@ -16,6 +16,9 @@ import { Enums, Translator } from '../../../../Shared/index.js';
 import QueryList from '../../../../Shared/QueryList.js';
 import { BaseService } from './../../../App/index.js';
 import { ButtonLoader } from './../index.js';
+import SET_LATLNG_ACTIONS from '../../Scenes/User/Scenes/SetLatlng/actions.js';
+
+
 
 
 //import { Map } from 'react-leaflet';
@@ -106,9 +109,7 @@ class MapForm extends React.Component {
             })
             return
         } else {
-            this.props.setNotification(Enums.CODE.INFO_GLOBAL,
-                Translator(this.props.codeDict.data.INFO_GLOBAL, this.props.lang).translate('SET_LANG_REQUIRE_INFO')
-            );
+
 
 
             if (this.props.coords && this.longitude == 0 && this.latitude == 0) {
@@ -510,87 +511,87 @@ class MapForm extends React.Component {
             onChange={this.cityHander.bind(this)}
             onSelect={this.citySelect.bind(this)}
         />
-       // g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 
+        // g-brd-around g-brd-gray-light-v3 g-pa-30 g-mb-10 
         let body = <Form className=" g-pa-20">
             <Col className="text-center mx-auto g-mb-10">
                 {this.props.form_header ? (<h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-15">{this.props.form_header}{/*tran.translate('SETLATLNG_FORM_HEADER')*/}</h5>
-                ): <span></span>}
+                ) : <span></span>}
                 {this.props.form_text ? <Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-10">{this.props.form_text}{/*tran.translate('SETLATLNG_FORM_TEXT')*/}</Label> : <span></span>}
             </Col>
             <FormGroup >
-                    <Row>
-                        <Col class="col-3">
+                <Row>
+                    <Col class="col-3">
 
-                            <Label for={this.state.guid} >{tran.translate('SETLATLNG_COUNTRY_LABEL')}</Label>
+                        <Label for={this.state.guid} >{tran.translate('SETLATLNG_COUNTRY_LABEL')}</Label>
 
-                        </Col>
-                        <Col class="col-6">
-                            {countryForm}
-                        </Col>
-                    </Row>
-                </FormGroup>
+                    </Col>
+                    <Col class="col-6">
+                        {countryForm}
+                    </Col>
+                </Row>
+            </FormGroup>
 
-                <FormGroup >
-                    <Row>
-                        <Col class="col-3">
+            <FormGroup >
+                <Row>
+                    <Col class="col-3">
 
-                            <Label for={this.state.guid} >{tran.translate('SETLATLNG_CITY_LABEL')}</Label>
-                        </Col>
-                        <Col class="col-6">
-                            {this.state.countryId != undefined && this.state.countryId != '' ? cityForm : <span></span>}
-                        </Col>
-                    </Row>
-                </FormGroup>
-                <FormGroup >
-                    <Row>
-                        <Col class="col-3">
+                        <Label for={this.state.guid} >{tran.translate('SETLATLNG_CITY_LABEL')}</Label>
+                    </Col>
+                    <Col class="col-6">
+                        {this.state.countryId != undefined && this.state.countryId != '' ? cityForm : <span></span>}
+                    </Col>
+                </Row>
+            </FormGroup>
+            <FormGroup >
+                <Row>
+                    <Col class="col-3">
 
-                            <Label >{tran.translate('SETLATLNG_ADDRESS_LABEL')}</Label>
-                        </Col>
-                        <Col class="col-6">
-                            {this.state.cityValue != undefined && this.state.cityValue != '' ?
-                                <Input className="form-control rounded-0" type="search" value={this.state.address} id={this.state.guid} onChange={this.getAddress.bind(this)} placeholder={phTrans.translate('SETLATLNG_ADDRESS_PLACEHOLDER')} />
+                        <Label >{tran.translate('SETLATLNG_ADDRESS_LABEL')}</Label>
+                    </Col>
+                    <Col class="col-6">
+                        {this.state.cityValue != undefined && this.state.cityValue != '' ?
+                            <Input className="form-control rounded-0" type="search" value={this.state.address} id={this.state.guid} onChange={this.getAddress.bind(this)} placeholder={phTrans.translate('SETLATLNG_ADDRESS_PLACEHOLDER')} />
 
-                                : <span></span>}
-                        </Col>
-                    </Row>
-                </FormGroup>
-                <FormGroup >
-                    <Row>
-                        {map}
-                    </Row>
-                </FormGroup>
-                <br />
+                            : <span></span>}
+                    </Col>
+                </Row>
+            </FormGroup>
+            <FormGroup >
+                <Row>
+                    {map}
+                </Row>
+            </FormGroup>
+            <br />
 
-                {this.props.coords ? <ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase g-mr-10 "} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} /> : <span></span>}
+            {this.props.coords ? <ButtonLoader onClick={this.refreshGeolocation.bind(this)} size={"md"} className={"btn rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase g-mr-10 "} value={tran.translate('REFRESH_GEO_BUTTON_LABEL')} /> : <span></span>}
 
-                {this.props.onSubmit ? <ButtonLoader disabled={this.state.zipcode == '' || this.state.zipcode == undefined} onClick={this.submitHandler.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('SET_COORDINATES_BUTTON_LABEL')} isLoading={this.props.latlng.isLoading} />
-                    : <span></span>}
-                {this.props.onChange  ? <ButtonLoader onClick={this.getUsersCoordinate.bind(this)} size={"md"} className={"btn rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase "} value={tran.translate('SET_FROM_USER_COORIDNATE')} isLoading={this.props.latlng.isLoading} />
-                    : <span></span>}
+            {this.props.onSubmit ? <ButtonLoader disabled={this.state.zipcode == '' || this.state.zipcode == undefined} onClick={this.submitHandler.bind(this)} size={"md"} className={"btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase"} value={tran.translate('SET_COORDINATES_BUTTON_LABEL')} isLoading={this.props.latlng.isLoading} />
+                : <span></span>}
+            {this.props.onChange ? <ButtonLoader onClick={this.getUsersCoordinate.bind(this)} size={"md"} className={"btn rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase "} value={tran.translate('SET_FROM_USER_COORIDNATE')} isLoading={this.props.latlng.isLoading} />
+                : <span></span>}
         </Form >
 
-            return body
-    
-    
-        }
+        return body
+
+
     }
-    
-    
+}
+
+
 const mapStateToProps = (state) => {
 
     return {
-                codeDict: state.DictionaryReducer,
-            lang: state.LanguageReducer,
-            latlng: state.SetLatlngReducer,
-            auth: state.AuthReducer
-    
-        };
-    }
-    
+        codeDict: state.DictionaryReducer,
+        lang: state.LanguageReducer,
+        latlng: state.SetLatlngReducer,
+        auth: state.AuthReducer
+
+    };
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
-                getCountries: (dto) => {
+        getCountries: (dto) => {
             return dispatch(new BaseService().queryThunt(QueryList.Country.GET_COUNTRY, dto, null, Enums.LOADER.SET_CONTAINER_ACTION))
         },
 
@@ -613,22 +614,19 @@ const mapDispatchToProps = (dispatch) => {
             return dispatch(new BaseService().queryThunt(CommandList.User.SET_COORDIATES, dto, null, Enums.LOADER.SET_CONTAINER_ACTION)).then(succ => {
                 return dispatch(new BaseService().queryThunt(QueryList.User.USER_INFO, {}, localStorage.token));
 
-        })
-    }
-        , setNotification: (type, message) => {
-                dispatch({ type: SET_LATLNG_ACTIONS.SET_NOTIFICATION_GLOBAL, notification: { message: message, type: type } });
-
-            }
+            })
         }
+
     }
-    
-    
+}
+
+
 export default geolocated({
-                positionOptions: {
-                enableHighAccuracy: false,
-        },
-        userDecisionTimeout: 5000,
-    })(connect(
-        mapStateToProps,
-        mapDispatchToProps
-    )(MapForm)); 
+    positionOptions: {
+        enableHighAccuracy: false,
+    },
+    userDecisionTimeout: 5000,
+})(connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MapForm)); 

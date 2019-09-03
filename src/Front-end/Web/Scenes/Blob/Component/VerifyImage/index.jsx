@@ -53,7 +53,7 @@ class VerifyImage extends React.Component {
     openImage(event) {
 
         this.props.openLightbox(this.props.auth.user.blob_profile, [this.props.auth.user.blob_profile])
-        this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
+        this.props.getFullsizeImage([{ is: this.props.auth.user.blob_profile.blob_item.id }])
     }
     clickImageHandler(event) {
 
@@ -61,7 +61,7 @@ class VerifyImage extends React.Component {
             if (item.id == event.currentTarget.getAttribute('data-tag')) {
 
                 this.props.openLightbox(item, this.props.verifyImage.images)
-                this.props.getFullsizeImage([{ uid: item.blob_item.uid }])
+                this.props.getFullsizeImage([{ id: item.blob_item.id }])
                 /*   this.props.getFullsizeImage([{ uid: item.blob_item.uid }]).then(succ=>{
                        console.log(succ);
                        item.blob_item=succ.data[0];
@@ -126,8 +126,10 @@ class VerifyImage extends React.Component {
 
             <Form className="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-10 text-center">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-50">
-                    <h5 className="g-color-black mb-3">{this.tran.translate('BLOB_VERIFY_IMAGE_HEADER')}</h5>
-                    <p className="lead "></p>
+                <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+                    <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{this.tran.translate('BLOB_VERIFY_IMAGE_HEADER')}</h2>
+                </Col>
+                    
                 </Col>
                 <Container>
                     <Row>

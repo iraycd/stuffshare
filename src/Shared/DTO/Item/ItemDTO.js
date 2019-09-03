@@ -10,8 +10,16 @@ export default class ItemDTO extends BaseDTO {
     this.description = "";
     this.user_id = "";
     this.clobSearch = "";
-    this.clobSearch_pl = "";
-    this.clobSearch_us = "";
+    this.clobSearch_pl=''
+    this.clobSearch_us=''
+    this.clobSearch_de=''
+    this.clobSearch_fr=''
+    this.clobSearch_ru=''
+    this.clobSearch_no=''
+    this.clobSearch_es=''
+    this.clobSearch_zh_cn=''
+    this.longitude=''
+    this.latitude=''
   }
   validation(state) {
   

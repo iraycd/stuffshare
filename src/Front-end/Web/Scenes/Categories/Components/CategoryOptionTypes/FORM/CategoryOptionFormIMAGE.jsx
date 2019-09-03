@@ -75,7 +75,7 @@ class CategoryOptionFormIMAGE extends React.Component {
                     });
 
                     this.props.onChange(this.props.catOption,this.state.images.map(item=>{
-                        return {id:this.props.catOption.cat_opt_temp[0].id,val: item.id,content:item,element:item.id};
+                        return {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp[0].id,val: item.id,content:item,element:item.id,type:'IMAGE'};
 
                     }))
                 }
@@ -158,7 +158,7 @@ class CategoryOptionFormIMAGE extends React.Component {
 
         })
 
-        if (imgList.length < this.props.catOption.limit_of) {
+        if (imgList.length < (link.limit_of?link.limit_of:this.props.catOption.limit_of)) {
             imgList.push(<Col xs="2" className="g-pa-0 g-ma-0">
 
                 <div class={"g-brd-around g-brd-gray-light-v4 g-cursor-pointer  "}>

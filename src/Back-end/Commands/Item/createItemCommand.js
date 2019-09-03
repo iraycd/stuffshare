@@ -46,15 +46,15 @@ export default class CreateItemCommand extends BaseCommand {
 
   get validation() {
     let funcList = [];
-    this.model.blobs.forEach(item => {
-      let blob = Object.assign(new BlobBase64DTO(), item);
-      funcList.push(() => {
-        return BlobValidators.checkUploadedFileType.bind(this)(blob);
-      });
-      funcList.push(() => {
-        return BlobValidators.getSizeOfUplodedFile.bind(this)(blob);
-      });
-    });
+    /* this.model.blobs.forEach(item => {
+       let blob = Object.assign(new BlobBase64DTO(), item);
+       funcList.push(() => {
+         return BlobValidators.checkUploadedFileType.bind(this)(blob);
+       });
+       funcList.push(() => {
+         return BlobValidators.getSizeOfUplodedFile.bind(this)(blob);
+       });
+     });*/
     return funcList;
   }
   init(dto) {
@@ -96,29 +96,61 @@ export default class CreateItemCommand extends BaseCommand {
   }
 
   createSearchClob(itemId) {
-    let clob_pl = "";
-    let clob_us = "";
-    this.model.categories.forEach(item => {
-      clob_pl += (item.category_pl ? item.category_pl : item.category) + ";";
-
-      clob_us += (item.category_us ? item.category_us : item.category) + ";";
-    });
-    if (this.context.user.language == "pl") {
-      clob_pl += this.model.name + ";";
-      clob_pl += this.model.description + ";";
-    } else if (this.context.user.language == "us") {
-      clob_us += this.model.name + ";";
-      clob_us += this.model.description + ";";
+    let clobs = {
+      pl: "",
+      us: "",
+      de: "",
+      ru: "",
+      fr: "",
+      es: "",
+      no: "",
+      zh_cn: ""
     }
+    Object.keys(clobs).forEach(item => {
+      clobs[item] += this.model.name + ";";
+      clobs[item] += this.model.description + ";";;
+      this.model.catOptions.filter(cat => {
+       // console.log(this.model.catOptions);
+       // console.log(cat);
+        return ['SINGLE', 'SELECT', 'MULTISELECT', 'GEO'].includes(cat.type)
+      }).forEach(cat => {
+        //console.log(cat)
+        clobs[item] += (cat.select ? cat.select["value_" + item] : cat.val) + ";"
+      })
+    })
+    Object.keys(clobs).forEach(item => {
+      this.model["clobSearch_" + item] = clobs[item];
+    })
+    //console.log(clobs)
     this.model.user_id = this.context.user.id;
-    this.model.clobSearch_us = clob_us;
-    this.model.clobSearch_pl = clob_pl;
+    //this.model.clobSearch_us = clob_us;
+    //this.model.clobSearch_pl = clob_pl;
+
+    //ADD CATEGORIES NAME TOO
+    //ADD HASH TAGS
+  }
+  getCategoriesValue() {
+    let catOptions = this.model.catOptions.filter(cat => {
+      return cat.type == 'GEO';
+    });
+
+    this.model.latitude = catOptions.length > 0 ? catOptions.filter(item => { return item.catOption.order == 2 })[0].val : null
+    this.model.longitude = catOptions.length > 0 ? catOptions.filter(item => { return item.catOption.order == 1 })[0].val : null
+
+    this.model.blobs = this.model.catOptions.filter(cat => {
+      return cat.type == 'IMAGE';
+    }).map(item => { return item.content });
+
+
   }
   async action() {
-    this.createSearchClob();
+   // console.log(this.model);
+    this.createSearchClob.bind(this)();
+    this.getCategoriesValue.bind(this)();
+
     let item = await this.itemServiceDI.insert({ model: this.model });
     await this.insertBlobs(item.id);
-    await this.insertCategories(item.id);
+    //await this.insertCategories(item.id);
 
     //  console.log(categories);
     //  this.itemServiceDI.auth(this.authData);

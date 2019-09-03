@@ -19,6 +19,7 @@ export default class BlobRepository extends BaseRepository {
   }
 
   getByGuids({ ids, transaction }) {
+    console.log('getByGuids')
     return this.sequelizeDI.sequelize.query(
       `
         select blob,type,id
@@ -70,14 +71,14 @@ export default class BlobRepository extends BaseRepository {
         INSERT INTO dbo.BlobMappers
          (id, stream_id,created_at,updated_at)    
          SELECT '${id}' , stream_id,GETDATE(),GETDATE()
-         FROM @result;
-         SET NOCOUNT OFF
+         FROM @result;   
+        DELETE @result   
+        SET NOCOUNT OFF
         SELECT TOP 1 id,id  FROM BlobMappers
         WHERE id = '${id}'
-        SET NOCOUNT ON
-        DELETE @result`,
+        SET NOCOUNT ON`,
       {
-
+        logging: false,
         replacements: { blob: blob },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT,

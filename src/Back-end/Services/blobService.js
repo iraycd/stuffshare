@@ -73,25 +73,26 @@ export default class BlobService extends BaseService {
         .quality(60) // set JPEG quality
         .writeAsync(`${upload_path}/${newBlob.id}-min.png`); // save
 
-      let blob_id = this.insertFile({
+      let blob_id = await this.insertFile({
         id: blob.id,
         path: newBlob.path,
         fileName: newBlob.filename
       });
       let uid_min = uuidv4()
-      let blob_min_id = this.insertFile({
+      let blob_min_id = await this.insertFile({
         id: uid_min,
         path: `${upload_path}/${newBlob.id}-min.png`,
         fileName: `${newBlob.id}-min.png`
       });
 
       return {
-        blob_id: await blob_id,
-        blob_min_id: await blob_min_id
+        blob_id:  blob_id,
+        blob_min_id:  blob_min_id
       };
       ///write to db
     } catch (exception) {
-      console.log(exception);
+      console.log(exception.parent.message);
+      throw exception.parent.message
     } finally {
       await fs.unlink(`${newBlob.path}`);
       await fs.unlink(`${upload_path}/${newBlob.id}-min.png`);

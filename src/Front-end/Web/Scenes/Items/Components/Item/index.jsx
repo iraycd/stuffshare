@@ -48,6 +48,10 @@ class Item extends React.Component {
         this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userAccount.images)
         this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
     }
+    submit()
+    {
+        
+    }
 
     render() {
         this.init();

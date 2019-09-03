@@ -15,9 +15,7 @@ export default class Footer extends React.Component {
 
      <footer class="text-center">
         <div class="g-color-white g-bg-primary-dark g-py-40 g-px-15">
-          <a class="d-inline-block g-mb-30" href="/">
-            <img class="img-fluid g-width-130" src="assets/img/logo-light.png" alt="Image description"/>
-          </a>
+         
           <p class="g-color-white-opacity-0_7 g-mb-30">Integer accumsan maximus leo, et consectetur metus vestibulum in. Vestibulum viverra justo odio maximus efficitur</p>
           <ul class="list-inline d-inline-block g-mb-30">
             <li class="list-inline-item g-mr-10">

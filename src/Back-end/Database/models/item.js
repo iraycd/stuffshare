@@ -39,7 +39,16 @@ export default class Item extends Model {
           allowNull: false
         },
         clobSearch_pl: DataTypes.TEXT,
-        clobSearch_us: DataTypes.TEXT
+        clobSearch_us: DataTypes.TEXT,
+        clobSearch_de: DataTypes.TEXT,
+        clobSearch_fr: DataTypes.TEXT,
+        clobSearch_ru: DataTypes.TEXT,
+        clobSearch_no: DataTypes.TEXT,
+        clobSearch_es: DataTypes.TEXT,
+        clobSearch_zh_cn: DataTypes.TEXT,
+        longitude: DataTypes.FLOAT,
+        latitude: DataTypes.FLOAT
+       
       },
       { sequelize }
     );

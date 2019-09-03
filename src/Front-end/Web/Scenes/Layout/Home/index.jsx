@@ -29,11 +29,11 @@ class Home extends React.Component {
       transitionAppear={true}
       transitionAppearTimeout={500}
     >
-      <section class="g-min-height-80vh g-flex-centered g-bg-cover g-bg-pos-top-center  g-bg-black-opacity-0_5--after" style={{ backgroundImage: `url(${foto})`, backgroundSize: 'cover', }}>
+      <section class="g-min-height-80vh g-flex-centered g-bg-cover g-bg-pos-top-center  g-bg-black-opacity-0_1--after" style={{ backgroundImage: `url(${foto})`, backgroundSize: '100vw 80vh', }}>
         <WrapperAuth>
           {this.props.auth.user && this.props.auth.user.longitude == 0 && this.props.auth.user.latitude == 0 ?
             <div class=" w-100  g-flex-centered  g-z-index-1 g-py-40 ">
-              <div class=" g-bg-white-opacity-0_9 g-flex-centered align-self-center g-mx-20">
+              <div class=" g-bg-white-opacity-0_8 g-flex-centered align-self-center g-mx-20">
                 <div class=" align-self-center g-pa-10 g-width-760">
                   <SetLatlng></SetLatlng> </div></div></div> : <SearchFreetext></SearchFreetext>
 
@@ -41,13 +41,13 @@ class Home extends React.Component {
         </WrapperAuth>
         <WrapperAuth isLogged={false}>
           <div class=" w-100  g-flex-centered  g-z-index-1 g-py-40 ">
-            <div class=" g-bg-white-opacity-0_9 g-flex-centered align-self-center g-mx-20">
+            <div class=" g-bg-white-opacity-0_8 g-flex-centered align-self-center g-mx-20">
               <div class=" align-self-center g-pa-10">
                 <Login borderClass="1"></Login>
 
               </div>
             </div>
-            <div class=" g-bg-white-opacity-0_9 g-flex-centered align-self-center  g-mx-20 g-width-560">
+            <div class=" g-bg-white-opacity-0_8 g-flex-centered align-self-center  g-mx-20 g-width-560">
               <div class=" align-self-center g-pa-10 w-100">
                 <Register borderClass="1"></Register>
 

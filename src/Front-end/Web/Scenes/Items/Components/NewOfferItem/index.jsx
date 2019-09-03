@@ -14,6 +14,8 @@ import BodyLoader from '../../../../Components/Loader/BodyLoader/index.jsx';
 import CategoryTreePreview from '../../../Categories/Scenes/CategoryTreePreview/index.jsx';
 import ItemDTO from './../../../../../../Shared/DTO/Item/ItemDTO.js';
 import CategoryOptionTempFormMapper from '../../../Categories/Components/CategoryOptionTempMapper/CategoryOptionTempFormMapper.jsx';
+import CommandList from '../../../../../../Shared/CommandList.js';
+import uuidv4 from "uuid/v4";
 
 
 
@@ -29,7 +31,7 @@ class NewOfferItem extends React.Component {
         this.state.validation = [];
         this.state.categoryId = 0;
         this.state.categoryIcon = '';
-        this.state.categoryOptionValues=[];
+        this.state.categoryOptionValues = [];
 
     }
     componentDidMount() {
@@ -50,12 +52,31 @@ class NewOfferItem extends React.Component {
         });
         this.refreshValidation();
     }
+    descriptionHandler(event) {
+        this.setState({
+            description: event.target.value
+
+        });
+        this.refreshValidation();
+    }
     openImage(event) {
 
         this.props.openLightbox(this.props.auth.user.blob_profile, this.props.userAccount.images)
         this.props.getFullsizeImage([{ uid: this.props.auth.user.blob_profile.blob_item.uid }])
     }
+    submitHandler(event) {
 
+        let item = {
+            id:uuidv4(),
+            name: this.state.name,
+            description: this.state.name,
+            catOptions: this.state.categoryOptionValues
+        }
+        console.log(item);
+        this.props.createNewItem(item).then(succ => {
+            console.log(succ);
+        })
+    }
     onClickTree(event) {
         console.log(event.currentTarget.getAttribute('data-name'))
         if (this.state.categoryId == 0) {
@@ -138,9 +159,11 @@ class NewOfferItem extends React.Component {
         let body =
             <Container className="g-pa-30 g-mb-30">
                 <Col className="text-center mx-auto g-max-width-600 g-mb-10">
+
                     <h5 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{this.tran.translate('NEW_ITEM_HEADER')}</h5>
                     {this.state.categoryId != 0 ? (<Label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20">{this.tran.translate('NEW_ITEM_SELL_CATEGORY_SET_HEADER', ...[this.state.categoryName])}</Label>) : <span></span>}
                 </Col>
+
                 <Row><Col xs="12">
                     {
                         this.props.offerItem.catOptions.filter(item => {
@@ -148,16 +171,16 @@ class NewOfferItem extends React.Component {
                         }).sort((a, b) => {
                             return Number(a.order) > Number(b.order) ? 1 : -1
                         }).map(item => {
-                            return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
-                            //    console.log(event.currentTarget.value);
-                              //  console.log(item.id);
-                              let res=values.map(el=>{
-                                  el.co_id=item.id
-                                  return el
-                              })
-                              this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id})
-                              this.state.categoryOptionValues.push(...res)
-                              console.log(this.state.categoryOptionValues)
+                            return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption, values) => {
+                                //    console.log(event.currentTarget.value);
+                                //  console.log(item.id);
+                                let res = values.map(el => {
+                                    el.co_id = item.id
+                                    return el
+                                })
+                                this.state.categoryOptionValues = this.state.categoryOptionValues.filter(el => { return el.co_id != item.id })
+                                this.state.categoryOptionValues.push(...res)
+                                console.log(this.state.categoryOptionValues)
                             }}></CategoryOptionTempFormMapper>
                         })
                     }
@@ -174,12 +197,12 @@ class NewOfferItem extends React.Component {
                                 }).sort((a, b) => {
                                     return Number(a.order) > Number(b.order) ? 1 : -1
                                 }).map(item => {
-                                    return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
-                                        let res=values.map(el=>{
-                                            el.co_id=item.id
+                                    return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption, values) => {
+                                        let res = values.map(el => {
+                                            el.co_id = item.id
                                             return el
                                         })
-                                        this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id })
+                                        this.state.categoryOptionValues = this.state.categoryOptionValues.filter(el => { return el.co_id != item.id })
                                         this.state.categoryOptionValues.push(...res)
                                         console.log(this.state.categoryOptionValues)
 
@@ -191,19 +214,19 @@ class NewOfferItem extends React.Component {
 
 
                         <TextBox placeholder={phTrans.translate('ITEM_NAME_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_NAME_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
-                        <TextArea placeholder={phTrans.translate('ITEM_DESCRIPTION_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_DESCRIPTION_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
+                        <TextArea placeholder={phTrans.translate('ITEM_DESCRIPTION_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_DESCRIPTION_LABEL')} value={this.state.description} onChange={this.descriptionHandler.bind(this)} field="name" validation={this.state.validation} />
                         {
                             this.props.offerItem.catOptions.filter(item => {
                                 return Number(item.order) >= 0
                             }).sort((a, b) => {
-                                return Number(a.category_link[0].order?a.category_link[0].order:a.order) > Number(b.category_link[0].order?b.category_link[0].order:b.order) ? 1 : -1
+                                return Number(a.category_link[0].order ? a.category_link[0].order : a.order) > Number(b.category_link[0].order ? b.category_link[0].order : b.order) ? 1 : -1
                             }).map(item => {
-                                return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption,values) => {
-                                    let res=values.map(el=>{
-                                        el.co_id=item.id
+                                return <CategoryOptionTempFormMapper catOption={item} categoryIcon={this.state.categoryIcon} onChange={(catOption, values) => {
+                                    let res = values.map(el => {
+                                        el.co_id = item.id
                                         return el
                                     })
-                                    this.state.categoryOptionValues=this.state.categoryOptionValues.filter(el=>{return el.co_id!=item.id})
+                                    this.state.categoryOptionValues = this.state.categoryOptionValues.filter(el => { return el.co_id != item.id })
                                     this.state.categoryOptionValues.push(...res)
                                     console.log(this.state.categoryOptionValues)
                                 }}></CategoryOptionTempFormMapper>
@@ -212,6 +235,9 @@ class NewOfferItem extends React.Component {
 
                     </Col>
                 </Row>
+                {this.state.categoryId != 0 ? (<center className="text-center">
+                    <button onClick={this.submitHandler.bind(this)} type="button" class="btn g-brd-none u-btn-primary rounded-0 g-letter-spacing-1 g-font-weight-700 g-font-size-12 text-uppercase btn btn-secondary btn-md">{this.tran.translate('SAVE_NEW_ITEM_LINK')} </button>
+                </center>) : <span></span>}
             </Container >
         return (
 
@@ -258,6 +284,10 @@ const mapDispatchToProps = (dispatch) => {
         },
         getCategoryOptions: (category_id) => {
             return dispatch(new BaseService().queryThunt(QueryList.CategoryOptions.GET_CATEGORY_OPTION, { id: category_id }));
+
+        },
+        createNewItem: (dto) => {
+            return dispatch(new BaseService().commandThunt(CommandList.Item.NEW_ITEM,  dto ));
 
         },
         getUserImages: (dto) => {
