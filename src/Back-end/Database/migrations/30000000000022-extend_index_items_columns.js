@@ -13,7 +13,7 @@ module.exports = {
   
             ALTER FULLTEXT INDEX ON [dbo].[Items] ADD ([clobSearch_no] LANGUAGE [Swedish])
   
-            ALTER FULLTEXT INDEX ON [dbo].[Items] ADD ([clobSearch_pl] LANGUAGE [Polish])
+           -- ALTER FULLTEXT INDEX ON [dbo].[Items] ADD ([clobSearch_pl] LANGUAGE [Polish])
   
             ALTER FULLTEXT INDEX ON [dbo].[Items] ADD ([clobSearch_ru] LANGUAGE [Russian])
   
@@ -30,7 +30,7 @@ module.exports = {
                   ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_es]) 
                   ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_fr]) 
                   ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_no]) 
-                  ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_pl]) 
+                --  ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_pl]) 
                   ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_ru]) 
                   ALTER FULLTEXT INDEX ON [dbo].[Items] DROP ([clobSearch_zh_cn]) 
             

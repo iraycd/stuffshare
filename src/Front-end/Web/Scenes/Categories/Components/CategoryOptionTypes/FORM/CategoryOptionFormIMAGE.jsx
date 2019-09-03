@@ -73,11 +73,11 @@ class CategoryOptionFormIMAGE extends React.Component {
                         images: this.state.images,
                         file: null
                     });
+                    let result = this.state.images.map(item => {
+                        return { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item, element: item.id, type: 'IMAGE' };
 
-                    this.props.onChange(this.props.catOption,this.state.images.map(item=>{
-                        return {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp[0].id,val: item.id,content:item,element:item.id,type:'IMAGE'};
-
-                    }))
+                    });
+                    this.props.onChange(this.props.catOption, result)
                 }
 
             } // reader.onload
@@ -86,21 +86,23 @@ class CategoryOptionFormIMAGE extends React.Component {
 
     }
     removeImage(event) {
-        this.state.images=this.state.images.filter(item => { return event.currentTarget.getAttribute('data-tag') != item.id })
+        this.state.images = this.state.images.filter(item => { return event.currentTarget.getAttribute('data-tag') != item.id })
         this.setState({
             images: this.state.images
         });
 
-        this.props.onChange(this.props.catOption,this.state.images.map(item=>{
-            return {id:this.props.catOption.cat_opt_temp[0].id,val: item.id,content:item};
+        this.props.onChange(this.props.catOption, this.state.images.map(item => {
+            return { id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item };
 
-        }))    }
+        }))
+    }
     setAsProfile(event) {
 
-        this.props.onChange(this.props.catOption,this.state.images.map(item=>{
-            return {id:this.props.catOption.cat_opt_temp[0].id,val: item.id,content:item};
+        this.props.onChange(this.props.catOption, this.state.images.map(item => {
+            return { id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item };
 
-        }))    }
+        }))
+    }
     uploadImage(event) {
 
         let dto = new BlobBase64();
@@ -158,7 +160,7 @@ class CategoryOptionFormIMAGE extends React.Component {
 
         })
 
-        if (imgList.length < (link.limit_of?link.limit_of:this.props.catOption.limit_of)) {
+        if (imgList.length < (link.limit_of ? link.limit_of : this.props.catOption.limit_of)) {
             imgList.push(<Col xs="2" className="g-pa-0 g-ma-0">
 
                 <div class={"g-brd-around g-brd-gray-light-v4 g-cursor-pointer  "}>
@@ -196,7 +198,7 @@ class CategoryOptionFormIMAGE extends React.Component {
         return (
             <Form className=" g-mb-5 text-center g-px-5 text-center">
                 <Col className="text-center mx-auto g-max-width-600 ">
-                    <Label className="g-line-height-1_8 g-letter-spacing-1  ">{this.props.catOption["name_" + this.props.lang].format(link.limit_of?link.limit_of:this.props.catOption.limit_of)} </Label>
+                    <Label className="g-line-height-1_8 g-letter-spacing-1  ">{this.props.catOption["name_" + this.props.lang].format(link.limit_of ? link.limit_of : this.props.catOption.limit_of)} </Label>
                 </Col>
                 <Col>
                     <Row className="g-brd-around g-brd-gray-light-v3 g-px-5 g-py-1" style={{ backgroundColor: "#eee" }}>
