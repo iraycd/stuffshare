@@ -101,8 +101,11 @@ export default class CategoryOptionsTemplate extends Model {
         },
         order: {
           type: DataTypes.INTEGER,
+        },
+        is_not_in_clob:{
+          type: DataTypes.BOOLEAN,
+          allowNull: true
         }
-        
    
         
       },

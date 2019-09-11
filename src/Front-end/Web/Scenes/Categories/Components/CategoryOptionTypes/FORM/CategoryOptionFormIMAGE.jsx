@@ -74,7 +74,7 @@ class CategoryOptionFormIMAGE extends React.Component {
                         file: null
                     });
                     let result = this.state.images.map(item => {
-                        return { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item, element: item.id, type: 'IMAGE' };
+                        return { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item, element: item.id, type: 'IMAGE',col_id:this.props.catOption.category_link[0].id };
 
                     });
                     this.props.onChange(this.props.catOption, result)
@@ -92,7 +92,7 @@ class CategoryOptionFormIMAGE extends React.Component {
         });
 
         this.props.onChange(this.props.catOption, this.state.images.map(item => {
-            return { id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item };
+            return { id: this.props.catOption.cat_opt_temp[0].id, val: item.id, content: item,col_id:this.props.catOption.category_link[0].id };
 
         }))
     }

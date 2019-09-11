@@ -31,6 +31,8 @@ export default class Blob extends Model {
         blob_id:DataTypes.UUID,
         item_id:DataTypes.UUID,
         blob_thumbmail_id:DataTypes.UUID,
+        blob_min_id:DataTypes.UUID,
+
         user_id: {
           type: DataTypes.UUID
         },
@@ -43,6 +45,8 @@ export default class Blob extends Model {
   static associate(models) {
     Blob.belongsTo(models.BlobMapper, { as: "blob_item", targetKey: 'id', foreignKey: "blob_id" });
     Blob.belongsTo(models.BlobMapper, { as: "blob_thumbmail", targetKey: 'id', foreignKey: "blob_thumbmail_id" });
+    Blob.belongsTo(models.BlobMapper, { as: "blob_min", targetKey: 'id', foreignKey: "blob_min_id" });
+
     //  Blob.belongsTo(models.User);
   }
 }

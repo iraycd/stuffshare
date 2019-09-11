@@ -47,7 +47,18 @@ export default class CategoryOptionsLink extends Model {
           type: DataTypes.INTEGER,
           allowNull: true
         },
-       
+        is_on_pin_map: {
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        },
+        is_on_map:{
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        },
+        is_form_hidden:{
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        }
   
       },
       { sequelize }
@@ -55,6 +66,8 @@ export default class CategoryOptionsLink extends Model {
   }
   static associate(models) {
     CategoryOptionsLink.belongsTo(models.Category, { as: "category", targetKey: 'id', foreignKey: "category_id" });
+    CategoryOptionsLink.belongsTo(models.CategoryOption, { as: "catOption", targetKey: 'id', foreignKey: "co_id" });
+
 
   }
 }

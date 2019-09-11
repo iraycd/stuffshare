@@ -32,7 +32,7 @@ export default class ItemRepository extends BaseRepository {
     console.log(this.context);
     let freetext = search.prepareSearch(search.freetext, 1)
     console.log(freetext);
-    let checkCategories = search.categoryList.length>0;
+    let checkCategories = search.categoryList.length > 0;
     let withQuery = [];
     if (checkCategories) {
       withQuery.push(`get_all_match AS (
@@ -72,18 +72,18 @@ export default class ItemRepository extends BaseRepository {
       withQuery.push(`get_results AS (
         SELECT
             Items.*, 
-            ${checkCategories?'match_count.Max_MAtch':'0'} AS max_match,
-            ${checkCategories?'match_count.filterCount':'0'} AS filter_count,
+            ${checkCategories ? 'match_count.Max_MAtch' : '0'} AS max_match,
+            ${checkCategories ? 'match_count.filterCount' : '0'} AS filter_count,
             COUNT(*) OVER(PARTITION BY 1) as counter,
             
-          ${freetext.length>0?'RANK':'1'} AS ft_rank
+          ${freetext.length > 0 ? 'RANK' : '1'} AS ft_rank
         FROM Items
-        ${checkCategories?'JOIN match_count ON item_id=Items.id':''}
-        ${freetext.length>0?'JOIN search_fts ON search_fts.[KEY] = Items.id':''}
+        ${checkCategories ? 'JOIN match_count ON item_id=Items.id' : ''}
+        ${freetext.length > 0 ? 'JOIN search_fts ON search_fts.[KEY] = Items.id' : ''}
          
       )`)
 
-    
+
     }
     return this.sequelizeDI.sequelize.query(
       `WITH 
@@ -129,7 +129,7 @@ export default class ItemRepository extends BaseRepository {
     console.log(this.context);
     let freetext = search.prepareSearch(search.freetext, 1)
     console.log(freetext);
-    let checkCategories = search.categoryList.length>0;
+    let checkCategories = search.categoryList.length > 0;
     let withQuery = [];
     if (checkCategories) {
       withQuery.push(`get_all_match AS (
@@ -169,18 +169,18 @@ export default class ItemRepository extends BaseRepository {
       withQuery.push(`get_results AS (
         SELECT
             Items.*, 
-            ${checkCategories?'match_count.Max_MAtch':'0'} AS max_match,
-            ${checkCategories?'match_count.filterCount':'0'} AS filter_count,
+            ${checkCategories ? 'match_count.Max_MAtch' : '0'} AS max_match,
+            ${checkCategories ? 'match_count.filterCount' : '0'} AS filter_count,
             COUNT(*) OVER(PARTITION BY 1) as counter,
             
-          ${freetext.length>0?'RANK':'1'} AS ft_rank
+          ${freetext.length > 0 ? 'RANK' : '1'} AS ft_rank
         FROM Items
-        ${checkCategories?'JOIN match_count ON item_id=Items.id':''}
-        ${freetext.length>0?'JOIN search_fts ON search_fts.[KEY] = Items.id':''}
+        ${checkCategories ? 'JOIN match_count ON item_id=Items.id' : ''}
+        ${freetext.length > 0 ? 'JOIN search_fts ON search_fts.[KEY] = Items.id' : ''}
          
       )`)
 
-    
+
     }
     return this.sequelizeDI.sequelize.query(
       `WITH 
@@ -205,7 +205,7 @@ export default class ItemRepository extends BaseRepository {
           , page_size: search.size
           , page_number: search.page
           , freetext: freetext
-          ,user_id: search.user_id
+          , user_id: search.user_id
         },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
@@ -220,14 +220,57 @@ export default class ItemRepository extends BaseRepository {
     let userId = this.userId;
     return this.entityDAO.findAll({
       where: {
-        uid: {
-          [SequelizeDB.Sequelize.Op.in]: uids
-        }
+         id: {
+            [SequelizeDB.Sequelize.Op.in]: uids
+          }
       },
       include: [
         {
           model: this.sequelizeDI.Category,
-          as: "categories"
+          required: true,
+          as: "category"
+        },
+        {
+          model: this.sequelizeDI.ItemCategoryOption,
+          required: true,
+          as: "itemCategoryOption",
+          include: [
+            {
+              model: this.sequelizeDI.CategoryOptionsLink, as: "category_link", required: true,
+              include: [
+                {
+                  model: this.sequelizeDI.CategoryOption, as: "catOption",
+                  required: true,
+                  include: [
+                    {
+                      model: this.sequelizeDI.CategoryOptionsType,
+                      as: "cat_opt",
+                      required: true,
+                      where: {
+                        status: 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              model: this.sequelizeDI.CategoryOptionsTemplate, as: "cat_opt_temp", required: true,
+              include: [{
+                model: this.sequelizeDI.CategoryOptionsTypeTemplate,
+                required: true,
+                as: "cat_opt_type_template"
+              }
+              ]
+            }
+          ]
+        },
+        {
+          model: this.sequelizeDI.V_User,
+          attributes: ['id', 'name'],
+          required: true,
+          as: "user"
+
         },
         {
           model: this.sequelizeDI.Blob,
@@ -238,7 +281,9 @@ export default class ItemRepository extends BaseRepository {
           },
           include: [
             { model: this.sequelizeDI.BlobMapper, as: "blob_thumbmail" },
-            { model: this.sequelizeDI.BlobMapper, as: "blob_item" }
+            { model: this.sequelizeDI.BlobMapper, as: "blob_item" },
+            { model: this.sequelizeDI.BlobMapper, as: "blob_min" }
+
           ]
         } //,
         // {
@@ -249,4 +294,6 @@ export default class ItemRepository extends BaseRepository {
       transaction: this.getTran({ transaction })
     });
   }
+
+
 }

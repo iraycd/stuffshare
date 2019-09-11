@@ -10,11 +10,12 @@ export default class SearchItemDTO extends BaseDTO {
     this.freetext = '';
     this.distance = 0;
     this.city = [];
-    this.district = [];
     this.country = 0;
     this.page = 0;
     this.size = 0;
     this.user_id=null;
+    this.lat=0;
+    this.lon=0;
   }
   validation(state) {
 

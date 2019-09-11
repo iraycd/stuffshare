@@ -3005,6 +3005,139 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "OPTION_IS_CLOB_LABEL": {
+            "id": "650308c8-1ba3-40ab-b149-b557a41e1c90",
+            "uid": "",
+            "code": "OPTION_IS_CLOB_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Nie indeksuj",
+                "us": "Do not index",
+                "de": "Nicht indexieren",
+                "ru": "Не индексировать",
+                "fr": "Ne pas indexer",
+                "es": "No indexar",
+                "no": "Ikke stikkordregister",
+                "zh_cn": "不要索引"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTION_IS_ON_MAP_TBL_HEADER": {
+            "id": "c57fd9f1-1ed0-46d9-b814-f232d24072a4",
+            "uid": "",
+            "code": "CATEGORY_OPTION_IS_ON_MAP_TBL_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Mapa",
+                "us": "Map",
+                "de": "Karte anzeigen",
+                "ru": "Карта",
+                "fr": "Carte",
+                "es": "Mapa",
+                "no": "Kart",
+                "zh_cn": "地图"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTION_IS_ON_TOOLTIP_TBL_HEADER": {
+            "id": "c57fd9f1-1ed0-46d9-b814-f232d24072a4",
+            "uid": "",
+            "code": "CATEGORY_OPTION_IS_ON_TOOLTIP_TBL_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Tootlip",
+                "us": "Tootlip",
+                "de": "Tootlip",
+                "ru": "Tootlip",
+                "fr": "Tootlip",
+                "es": "Tootlip",
+                "no": "Tootlip",
+                "zh_cn": "Tootlip"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_OPTION_FORM_HIDDEN_TBL_HEADER": {
+            "id": "c57fd9f1-1ed0-46d9-b814-f232d24072a4",
+            "uid": "",
+            "code": "CATEGORY_OPTION_FORM_HIDDEN_TBL_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ukryj",
+                "us": "Hide",
+                "de": "Ausblenden",
+                "ru": "Скрыть",
+                "fr": "Masquer",
+                "es": "Ocultar",
+                "no": "Skjul",
+                "zh_cn": "隐藏"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_IS_ON_MAP_RESULT_LABEL": {
+            "id": "a0e614e6-7a19-400d-a4c5-2f7a65535038",
+            "uid": "",
+            "code": "OPTION_IS_ON_MAP_RESULT_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Pokaż na mapie",
+                "us": "Show the map",
+                "de": "Karte anzeigen",
+                "ru": "Показать на карте",
+                "fr": "Afficher la carte",
+                "es": "Mostrar en el mapa",
+                "no": "Vis på kart",
+                "zh_cn": "显示的地图"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_IS_ON_MAP_TOOLTIP_LABEL": {
+            "id": "a0e614e6-7a19-400d-a4c5-2f7a65535038",
+            "uid": "",
+            "code": "OPTION_IS_ON_MAP_TOOLTIP_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Pokaż kolo pinezki",
+                "us": "To show the pins",
+                "de": "Zeigen Kreis, Stifte",
+                "ru": "Показать круг, булавки",
+                "fr": "Afficher un cercle, des épingles",
+                "es": "Visualiza el círculo, alfileres",
+                "no": "For å vise pins",
+                "zh_cn": "显示的脚"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "OPTION_HIDE_IN_FORM_LABEL": {
+            "id": "a0e614e6-7a19-400d-a4c5-2f7a65535038",
+            "uid": "",
+            "code": "OPTION_HIDE_IN_FORM_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Ukryj w formie",
+                "us": "Hide in the form",
+                "de": "Verstecken in Form",
+                "ru": "Скрыть в форме",
+                "fr": "Masquer le formulaire",
+                "es": "Ocultar en forma de",
+                "no": "Skjul i form",
+                "zh_cn": "隐藏的形式"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {

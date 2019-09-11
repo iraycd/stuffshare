@@ -13,6 +13,7 @@ import CountryRepository from "./Repository/countryRepository.js";
 import CityRepository from "./Repository/cityRepository.js";
 import UserAuthRepository from "./Repository/userAuthRepository.js";
 import CategoryOptionsRepository from "./Repository/categoryOptionsRepository.js";
+import ItemCategoryOptionRepository from "./Repository/itemCategoryOptionRepository.js";
 
 
 /**
@@ -25,11 +26,11 @@ export default class UnitOfWork extends BaseUnitOfWork {
 
     /**
      * Creates an instance of UnitOfWork.
-     * @param  { { categoryRepositoryDI:CategoryRepository,categoryOptionsRepositoryDI:CategoryOptionsRepository,userAuthRepositoryDI: UserAuthRepository,userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository}} 
+     * @param  { { categoryRepositoryDI:CategoryRepository,categoryOptionsRepositoryDI:CategoryOptionsRepository,userAuthRepositoryDI: UserAuthRepository,userRepositoryDI : UserRepository,categoryHierarchyRepositoryDI:CategoryHierarchyRepository,blobRepositoryDI:BlobRepository,blobMapperRepositoryDI:BlobMapperRepository,itemRepositoryDI:ItemRepository,itemCategoryRepositoryDI:ItemCategoryRepository, countryRepositoryDI:CountryRepository,cityRepositoryDI:CityRepository, itemCategoryOptionRepositoryDI:ItemCategoryOptionRepository}} 
      * @memberof UnitOfWork
      */
     // @ts-ignore
-    constructor({ categoryRepositoryDI, userRepositoryDI, categoryOptionsRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI, blobMapperRepositoryDI, itemCategoryRepositoryDI, itemRepositoryDI, textRepositoryDI, countryRepositoryDI, cityRepositoryDI, userAuthRepositoryDI }) {
+    constructor({ categoryRepositoryDI, userRepositoryDI, categoryOptionsRepositoryDI, categoryHierarchyRepositoryDI, blobRepositoryDI, blobMapperRepositoryDI, itemCategoryRepositoryDI, itemRepositoryDI, textRepositoryDI, countryRepositoryDI, cityRepositoryDI, userAuthRepositoryDI ,itemCategoryOptionRepositoryDI}) {
         super()
 
         this.transaction = null;
@@ -45,7 +46,8 @@ export default class UnitOfWork extends BaseUnitOfWork {
             countryRepositoryDI,
             cityRepositoryDI,
             userAuthRepositoryDI,
-            categoryOptionsRepositoryDI
+            categoryOptionsRepositoryDI,
+            itemCategoryOptionRepositoryDI
         }
     };
 
@@ -59,8 +61,16 @@ export default class UnitOfWork extends BaseUnitOfWork {
     get userRepository() {
         return this.repositories.userRepositoryDI;
     }
-
-
+    /**
+     * 
+     * @return {ItemCategoryOptionRepository}
+     * @readonly
+     * @memberof UnitOfWork
+     */
+    get itemCategoryOptionRepository() {
+        return this.repositories.itemCategoryOptionRepositoryDI;
+    }
+    
       /**
      * 
      * @return {CategoryOptionsRepository}

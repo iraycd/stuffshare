@@ -78,6 +78,8 @@ import GetCountriesByIdQuery from "./Query/Country/getCountriesByIdQuery.js";
 import GetAllCategoriesOptionQuery from "./Query/CategoryOptions/getAllCategoryOptionsQuery.js";
 import DeleteCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/deleteCategoryOptionsForCategoryCommand.js";
 import UpsertCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/upsertCategoryOptionsForCategoryCommand.js";
+import ItemCategoryOptionRepository from "./Repository/itemCategoryOptionRepository.js";
+import ElasticSearchService from "./Services/elasticSearchService.js";
 
 
 
@@ -109,8 +111,9 @@ let exporter = {
   cityServiceDI: asClass(CityService),
   categoryOptionsRepositoryDI: asClass(CategoryOptionsRepository),
   categoryOptionServiceDI: asClass(CategoryOptionService),
-
+  itemCategoryOptionRepositoryDI:asClass(ItemCategoryOptionRepository),
   userAuthRepositoryDI: asClass(UserAuthRepository),
+  elasticSearchServiceDI:asClass(ElasticSearchService),
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(

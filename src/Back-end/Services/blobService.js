@@ -71,8 +71,12 @@ export default class BlobService extends BaseService {
       await imgNormal
         .contain(300, 300) // resize
         .quality(60) // set JPEG quality
-        .writeAsync(`${upload_path}/${newBlob.id}-min.png`); // save
+        .writeAsync(`${upload_path}/${newBlob.id}-thumb.png`); // save
 
+        await imgNormal
+        .contain(100, 100) // resize
+        .quality(60) // set JPEG quality
+        .writeAsync(`${upload_path}/${newBlob.id}-min.png`); // save
       let blob_id = await this.insertFile({
         id: blob.id,
         path: newBlob.path,
@@ -84,10 +88,16 @@ export default class BlobService extends BaseService {
         path: `${upload_path}/${newBlob.id}-min.png`,
         fileName: `${newBlob.id}-min.png`
       });
-
+      let uid_thumb = uuidv4()
+      let blob_thumb_id = await this.insertFile({
+        id: uid_thumb,
+        path: `${upload_path}/${newBlob.id}-thumb.png`,
+        fileName: `${newBlob.id}-thumb.png`
+      });
       return {
         blob_id:  blob_id,
-        blob_min_id:  blob_min_id
+        blob_min_id:  blob_min_id,
+        blob_thumb_id:blob_thumb_id
       };
       ///write to db
     } catch (exception) {
@@ -96,6 +106,8 @@ export default class BlobService extends BaseService {
     } finally {
       await fs.unlink(`${newBlob.path}`);
       await fs.unlink(`${upload_path}/${newBlob.id}-min.png`);
+      await fs.unlink(`${upload_path}/${newBlob.id}-thumb.png`);
+
     }
   }
 
@@ -143,7 +155,8 @@ export default class BlobService extends BaseService {
     let newImages = await this.uploadImage({ blob });
     let result = {
       blob_id: newImages.blob_id,
-      blob_thumbmail_id: newImages.blob_min_id,
+      blob_thumbmail_id: newImages.blob_thumb_id,
+      blob_min_id: newImages.blob_min_id,
       user_id: this.userId,
       item_id: itemId == null ? undefined : itemId,
       order: getUsersBlob.length + 1,

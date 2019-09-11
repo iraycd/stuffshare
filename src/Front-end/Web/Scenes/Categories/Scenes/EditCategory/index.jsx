@@ -442,6 +442,9 @@ class CategoryEdit extends React.Component {
                                     <th c>{tran.translate('CATEGORY_OPTION_TYPE_TBL_HEADER')}</th>
                                     <th>{tran.translate('CATEGORY_OPTION_REQUIRE_TBL_HEADER')}</th>
                                     <th>{tran.translate('CATEGORY_OPTION_SEARCHABLE_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_IS_ON_MAP_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_IS_ON_TOOLTIP_TBL_HEADER')}</th>
+                                    <th>{tran.translate('CATEGORY_OPTION_FORM_HIDDEN_TBL_HEADER')}</th>
                                     <th>{tran.translate('CATEGORY_OPTION_LIMIT_TBL_HEADER')}</th>
                                     <th>{tran.translate('CATEGORY_OPTION_NAME_OPTION_HEADER')}</th>
                                 </tr>
@@ -464,6 +467,13 @@ class CategoryEdit extends React.Component {
                                             </td>
                                             <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_searchable} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_searchable = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
                                             </td>
+                                            <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_on_map} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_on_map = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
+                                            </td>
+                                            <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_on_pin_map} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_on_pin_map = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
+                                            </td>
+                                             <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={false} checked={this.state.rowEdit.is_form_hidden} id={this.state.guid} onChange={(event) => { let row = this.state.rowEdit; row.is_form_hidden = event.target.checked; this.setState({ rowEdit: row }) }} placeholder={this.props.placeholder} />
+                                            </td>
+                                           
                                             <td> <Input onChange={(event) => { let row = this.state.rowEdit; row.limit_of = event.target.value; this.setState({ rowEdit: row }) }} className=" form-control rounded-0" type={"number"} value={this.state.rowEdit.limit_of} /></td>
 
                                             <td>
@@ -483,6 +493,12 @@ class CategoryEdit extends React.Component {
                                         <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={true} checked={link.is_require!=undefined ? link.is_require : item.is_require} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
                                         </td>
                                         <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={true} checked={link.is_searchable!=undefined ? link.is_searchable : item.is_searchable} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                                        </td>
+                                        <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={true} checked={link.is_on_map!=undefined ? link.is_on_map : item.is_on_map} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                                        </td>
+                                        <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input" type={"checkbox"} disabled={true} checked={link.is_on_pin_map!=undefined ? link.is_on_pin_map : item.is_on_pin_map} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
+                                        </td>
+                                        <td className="g-my-10"><Input data-key={this.props["data-key"]} className="form-check-input " type={"checkbox"} disabled={true} checked={link.is_form_hidden!=undefined ? link.is_form_hidden : item.is_form_hidden} id={this.state.guid} onChange={this.props.onChange} placeholder={this.props.placeholder} />
                                         </td>
                                         <td>{link.limit_of ? link.limit_of : item.limit_of}</td>
 

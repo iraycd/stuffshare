@@ -14,6 +14,7 @@ import { BaseService } from '../../../../../../App/Architecture/baseServices.js'
 import ButtonLoader from '../../../../../Components/FormComponent/Components/ButtonLoader/index.jsx';
 import TextBox from '../../../../../Components/FormComponent/Components/TextBox/index.jsx';
 import { Translator } from './../../../../../../../Shared/index.js';
+import Checkbox from '../../../../../Components/FormComponent/Components/Checkbox/index.jsx';
 
 
 
@@ -144,6 +145,8 @@ class CategoryOptionSELECT_SINGLE extends React.Component {
 
                     <label className="g-line-height-1_8 g-letter-spacing-1  g-mb-20 form-control-label">{tran.translate('CATEGORY_OPTION_DETAILS_HEADER')}</label><br />
                 </Col>
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_CLOB_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_CLOB_LABEL')} value={this.state.catOption.is_not_in_clob} onChange={(event) => { this.state.catOption.is_not_in_clob = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_in_clob" validation={this.state.validation} />
+
                 <TextBox placeholder={phTrans.translate('OPTION_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_LABEL')} value={this.state.catOption.value} onChange={(event) => { this.state.catOption.value = event.target.value; this.refreshValidation.bind(this)(); this.setState({ catOption: this.state.catOption }) }} field="value" validation={this.state.validation} />
 
                 <Row>

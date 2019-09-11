@@ -23,6 +23,9 @@ import UserAccount from './User/Components/UserAccount/index.jsx';
 import AuthorizeUser from './User/Scenes/AuthorizeUser/index.jsx';
 import ForgotPasswordRedirect from './User/Scenes/ForgotPasswordRedirect/index.jsx';
 import CategoryOptions from './Categories/categoryOptions.jsx';
+import SearchMap from './Items/Scenes/SearchMap/index.jsx';
+
+
 
 
 class App extends React.Component {
@@ -64,6 +67,8 @@ class App extends React.Component {
           <RouterAuth exact={true} path={"/item/offer/new"} component={NewOfferItem} />
           <Route path={"/item/:id"} component={Item} />
           <RouterAuth path={"/categoryOptions/:id"} component={CategoryOptions} />
+          <Route path={"/search"} component={SearchMap} />
+
         </Switch>
         <Footer />
       </div>);

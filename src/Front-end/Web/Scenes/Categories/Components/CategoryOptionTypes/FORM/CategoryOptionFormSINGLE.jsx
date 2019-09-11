@@ -33,7 +33,15 @@ class CategoryOptionFormSINGLE extends React.Component {
             id: event.target.value
         });
         console.log(this.props.catOption)
-        this.props.onChange(this.props.catOption, [{id:uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: event.target.value, element: this.props.catOption.id, type: 'SINGLE' }])
+        this.props.onChange(this.props.catOption,
+            [{
+                id: uuidv4(),
+                cat_opt_id: this.props.catOption.cat_opt_temp[0].id,
+                val: event.target.value,
+                element: this.props.catOption.id,
+                type: 'SINGLE'
+                ,col_id:this.props.catOption.category_link[0].id
+            }])
 
 
     }
@@ -42,7 +50,7 @@ class CategoryOptionFormSINGLE extends React.Component {
             dataValue: event
         });
 
-        this.props.onChange(this.props.catOption, [{id:uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: event, element: this.props.catOption.id, type: 'SINGLE' }])
+        this.props.onChange(this.props.catOption, [{ id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp[0].id, val: event, element: this.props.catOption.id, type: 'SINGLE' }])
 
 
 

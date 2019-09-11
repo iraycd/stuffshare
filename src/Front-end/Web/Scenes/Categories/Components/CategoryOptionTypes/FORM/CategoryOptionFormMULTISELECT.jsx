@@ -43,8 +43,8 @@ class CategoryOptionFormMULTISELECT extends React.Component {
             select: this.props.catOption.cat_opt_temp.filter(item => {
                 return item.id == event.currentTarget.getAttribute('data-key')
             })[0],
-            type:'MULTISELECT'
-        })
+            type:'MULTISELECT',
+            col_id:this.props.catOption.category_link[0].id        })
         console.log(event.currentTarget.getAttribute('data-key'))
 
 

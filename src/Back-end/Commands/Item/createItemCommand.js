@@ -10,6 +10,7 @@ import CategoryService from "../../Services/categoryService.js";
 import BlobValidators from "../../Validators/blobValidators.js";
 import BlobBase64DTO from "../../../Shared/DTO/Blob/BlobBase64DTO.js";
 import Promise from "bluebird";
+import ElasticSearchService from "../../Services/elasticSearchService.js";
 ("use strict");
 
 export default class CreateItemCommand extends BaseCommand {
@@ -20,7 +21,8 @@ export default class CreateItemCommand extends BaseCommand {
    * dbTransactionInfrastuctureDI:DbTransactionInfrastucture,
    * itemServiceDI:ItemService,
    * blobServiceDI:BlobService,
-   * categoryServiceDI:CategoryService}}
+   * categoryServiceDI:CategoryService,
+   * elasticSearchServiceDI:ElasticSearchService}}
    * @memberof CreateItemCommand
    */
   constructor({
@@ -30,7 +32,8 @@ export default class CreateItemCommand extends BaseCommand {
     itemServiceDI,
     validationInfrastructureDI,
     categoryServiceDI,
-    blobServiceDI
+    blobServiceDI,
+    elasticSearchServiceDI
   }) {
     // @ts-ignore
     super({
@@ -38,10 +41,12 @@ export default class CreateItemCommand extends BaseCommand {
       authInfrastructureDI,
       dbTransactionInfrastuctureDI,
       validationInfrastructureDI
+      
     });
     this.itemServiceDI = itemServiceDI;
     this.blobServiceDI = blobServiceDI;
     this.categoryServiceDI = categoryServiceDI;
+    this.elasticSearchServiceDI=elasticSearchServiceDI;
   }
 
   get validation() {
@@ -110,12 +115,16 @@ export default class CreateItemCommand extends BaseCommand {
       clobs[item] += this.model.name + ";";
       clobs[item] += this.model.description + ";";;
       this.model.catOptions.filter(cat => {
-       // console.log(this.model.catOptions);
-       // console.log(cat);
+        // console.log(this.model.catOptions);
+        // console.log(cat);
         return ['SINGLE', 'SELECT', 'MULTISELECT', 'GEO'].includes(cat.type)
       }).forEach(cat => {
         //console.log(cat)
-        clobs[item] += (cat.select ? cat.select["value_" + item] : cat.val) + ";"
+        console.log(cat.catOption);
+        if ((cat.catOption ? cat.catOption.is_not_in_clob : false) != true) {
+          clobs[item] += (cat.select ? cat.select["value_" + item] : cat.val) + ";"
+
+        }
       })
     })
     Object.keys(clobs).forEach(item => {
@@ -125,7 +134,7 @@ export default class CreateItemCommand extends BaseCommand {
     this.model.user_id = this.context.user.id;
     //this.model.clobSearch_us = clob_us;
     //this.model.clobSearch_pl = clob_pl;
-
+    return clobs;
     //ADD CATEGORIES NAME TOO
     //ADD HASH TAGS
   }
@@ -144,12 +153,17 @@ export default class CreateItemCommand extends BaseCommand {
 
   }
   async action() {
-   // console.log(this.model);
-    this.createSearchClob.bind(this)();
+    // console.log(this.model);
+    let clobs = this.createSearchClob.bind(this)();
     this.getCategoriesValue.bind(this)();
 
     let item = await this.itemServiceDI.insert({ model: this.model });
+    let array = this.model.catOptions.map(item => {
+      return this.itemServiceDI.upsertCategoryOption({ model: item, item_id: this.model.id })
+    })
+    await Promise.all(array)
     await this.insertBlobs(item.id);
+    await this.elasticSearchServiceDI.upsertDoc({item_id:item.id,longitude:item.longitude,latitude:item.latitude,user_id:item.user_id,clobs:clobs});
     //await this.insertCategories(item.id);
 
     //  console.log(categories);

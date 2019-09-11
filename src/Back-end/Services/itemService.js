@@ -36,6 +36,18 @@ export default class ItemService extends BaseService {
     });
   }
 
+  async upsertCategoryOption({ model, item_id }) {
+    await this.unitOfWorkDI.itemCategoryOptionRepository.upsert({
+      model: {
+        id: model.id,
+        value: model.val,
+        co_id: model.element,
+        co_temp_id: model.cat_opt_id,
+        item_id: item_id,
+        col_id: model.col_id
+      }
+    });
+  }
   async deleteCategories({ itemId, categoryId }) {
     return await this.unitOfWorkDI.itemCategoryRepository.deleteCategories({
       item_id: itemId,
@@ -46,12 +58,7 @@ export default class ItemService extends BaseService {
     let result = await this.toJsonParse(this.unitOfWorkDI.itemRepository.getItem({ uids }));
     return result.map(item => {
       let element = Object.assign({}, item)
-      element.categories = {
-        old: item.categories
-      }
-      element.blobs = {
-        old: item.blobs
-      }
+    
       return element;
     })
   }
@@ -63,9 +70,9 @@ export default class ItemService extends BaseService {
    * @memberof ItemService
    */
   async searchItem({ search }) {
-  //  search.prepareSearch = await this.unitOfWorkDI.textRepository.prepareSearch({ text: search.freetext, wildecard: 1 })
-    let result = this.unitOfWorkDI.itemRepository.search({ search });
-    return result;
+    //  search.prepareSearch = await this.unitOfWorkDI.textRepository.prepareSearch({ text: search.freetext, wildecard: 1 })
+    //let result = this.unitOfWorkDI.itemRepository.search({ search });
+    return await this.unitOfWorkDI.itemRepository.getAll()
     //  return await this.toJsonParse(this.unitOfWorkDI.itemRepository.getItem({ uids: result, transaction }))
   }
 }

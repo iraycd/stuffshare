@@ -29,6 +29,7 @@ export default class CategoryOptionsTemplateDTO extends BaseDTO {
         this.value_zh_cn = '';
         this.status = '';
         this.order = '';
+        this.is_not_in_clob = false
     }
     validation(state) {
 

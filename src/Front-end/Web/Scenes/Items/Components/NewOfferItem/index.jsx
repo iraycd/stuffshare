@@ -69,7 +69,8 @@ class NewOfferItem extends React.Component {
         let item = {
             id:uuidv4(),
             name: this.state.name,
-            description: this.state.name,
+            description: this.state.description,
+            category_id:this.state.categoryId, 
             catOptions: this.state.categoryOptionValues
         }
         console.log(item);

@@ -13,6 +13,7 @@ import TextBox from '../../../../../Components/FormComponent/Components/TextBox/
 import { Translator } from './../../../../../../../Shared/index.js';
 import CATEGORY_EDIT_ACTIONS from './../../../Scenes/EditCategory/actions.js'
 import CategoryOptionSINGLE_SINGLE from './CategoryOptionSINGLE_SINGLE.jsx';
+import Checkbox from '../../../../../Components/FormComponent/Components/Checkbox/index.jsx';
 
 
 class CategoryOptionBETWEEN extends React.Component {
@@ -165,6 +166,8 @@ class CategoryOptionBETWEEN extends React.Component {
                     <h2 className="h6 text-uppercase g-letter-spacing-2 g-font-weight-600 text-uppercase text-center  g-color-gray-dark-v4 g-mb-5">{tran.translate('CATEGORY_OPTION_ADD_HEADER')}</h2>
 
                 </Col>
+                <Checkbox placeholder={phTrans.translate('OPTION_IS_CLOB_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_IS_CLOB_LABEL')} value={this.state.catOption.is_not_in_clob} onChange={(event) => { this.state.catOption.is_not_in_clob = event.target.checked; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="is_in_clob" validation={this.state.validation} />
+
                 <TextBox placeholder={phTrans.translate('OPTION_NAME_PLACEHOLDER')} isRequired={true} label={tran.translate('OPTION_NAME_LABEL')} value={this.state.catOption.name} onChange={(event) => { this.state.catOption.name = event.target.value; this.refreshValidation(); this.setState({ catOption: this.state.catOption }) }} field="name" validation={this.state.validation} />
 
                 <Row>

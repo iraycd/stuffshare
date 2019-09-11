@@ -54,22 +54,24 @@ class CategoryOptionFormGEO extends React.Component {
 
 
     onChange(state) {
+        console.log(this.props)
+        console.log(this.props.catOption.category_link[0].category_id);
         let id = this.props.catOption.id;
-            let result = [
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0].id,val: state.cityId,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0].id,val: state.countryId,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0].id,val: state.countryValue,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2})[0].id,val: state.latitude,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5})[0].id,val: state.cityValue,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7})[0].id,val: state.address,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7 })[0]},
-                {id:uuidv4(),cat_opt_id:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1})[0].id,val: state.longitude,element:id,type:'GEO',catOption:this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1 })[0]}
-            ]
+        let result = [
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0].id, val: state.cityId, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 6 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0].id, val: state.countryId, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 4 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0].id, val: state.countryValue, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 3 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2 })[0].id, val: state.latitude, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 2 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5 })[0].id, val: state.cityValue, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 5 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7 })[0].id, val: state.address, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 7 })[0] ,col_id:this.props.catOption.category_link[0].id},
+            { id: uuidv4(), cat_opt_id: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1 })[0].id, val: state.longitude, element: id, type: 'GEO', catOption: this.props.catOption.cat_opt_temp.filter(item => { return item.order == 1 })[0] ,col_id:this.props.catOption.category_link[0].id}
+        ]
 
 
         console.log(state)
         console.log(this.props.catOption.cat_opt_temp);
         //this.setState(state);
-        this.props.onChange(null,result)
+        this.props.onChange(null, result)
 
     }
     getDropDownValues() {

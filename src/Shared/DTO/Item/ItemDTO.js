@@ -20,6 +20,9 @@ export default class ItemDTO extends BaseDTO {
     this.clobSearch_zh_cn=''
     this.longitude=''
     this.latitude=''
+    this.blob_id=''
+    this.category_id=''
+    this.category_type=0
   }
   validation(state) {
   

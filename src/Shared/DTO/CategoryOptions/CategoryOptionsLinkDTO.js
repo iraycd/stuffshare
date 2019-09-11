@@ -12,6 +12,9 @@ export default class CategoryOptionsLinkDTO extends BaseDTO {
         this.is_searchable = ''
         this.is_require = ''
         this.limit_of = ''
+        this.is_on_pin_map = false
+        this.is_on_map = false
+        this.is_form_hidden=false;
     }
     validation(state) {
 

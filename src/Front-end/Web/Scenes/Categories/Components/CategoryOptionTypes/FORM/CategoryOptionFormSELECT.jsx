@@ -37,8 +37,13 @@ class CategoryOptionFormSELECT extends React.Component {
         })
         console.log(val);
         this.props.onChange(this.props.catOption, [{id:uuidv4(),
-            cat_opt_id: event.target.value, val: event.target.value, select: val[0], element: this.props.catOption.id, type: 'SELECT'
-        }])
+            cat_opt_id: event.target.value, 
+            val: event.target.value,
+             select: val[0],
+              element: this.props.catOption.id,
+               type: 'SELECT',
+               col_id:this.props.catOption.category_link[0].id
+                    }])
 
     }
     getDropDownValues() {

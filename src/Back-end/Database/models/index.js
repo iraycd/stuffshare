@@ -22,6 +22,7 @@ import CategoryOptionsTemplate from "./categoryOptionsTemplate.js";
 import CategoryOptionsTypeTemplate from "./categoryOptionsTypeTemplate.js";
 import CategoryOptionsType from "./categoryOptionsType.js";
 import CategoryOptionsLink from "./categoryOptionsLink.js";
+import ItemCategoryOption from "./itemCategoryOption.js";
 
 
 
@@ -71,7 +72,8 @@ let models = {
   CategoryOptionsTypeTemplate: CategoryOptionsTypeTemplate.init(sequelize, Sequelize),
   CategoryOptionsTemplate: CategoryOptionsTemplate.init(sequelize, Sequelize),
   CategoryOption: CategoryOption.init(sequelize, Sequelize),
-  CategoryOptionsLink:CategoryOptionsLink.init(sequelize,Sequelize)
+  CategoryOptionsLink:CategoryOptionsLink.init(sequelize,Sequelize),
+  ItemCategoryOption:ItemCategoryOption.init(sequelize,Sequelize)
 };
 
 Object.keys(models).forEach(modelName => {

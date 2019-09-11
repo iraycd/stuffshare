@@ -29,6 +29,16 @@ module.exports = {
 
               ALTER TABLE Items
               ADD [latitude] float NULL
+
+              ALTER TABLE Items
+              ADD category_id char(36) NULL
+
+              ALTER TABLE Items
+              ADD blob_id char(36) NULL
+
+              ALTER TABLE Items
+              ADD category_type int NULL
+      
         `
 
           )
@@ -61,7 +71,15 @@ module.exports = {
 
       ALTER TABLE Items
       DROP COLUMN  [latitude] 
+      
+      ALTER TABLE Items
+      DROP COLUMN  category_id 
 
+      ALTER TABLE Items
+      DROP COLUMN blob_id 
+
+      ALTER TABLE Items
+      DROP COLUMN category_type
     `)
   }
 };

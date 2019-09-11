@@ -81,9 +81,19 @@ export default class CategoryOption extends Model {
         },
         limit_of: {
           type: DataTypes.INTEGER,
+        },
+        is_on_pin_map: {
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        },
+        is_on_map:{
+          type: DataTypes.BOOLEAN,
+          allowNull: true
+        },
+        is_form_hidden:{
+          type: DataTypes.BOOLEAN,
+          allowNull: true
         }
-
-
       },
       { sequelize }
     );
