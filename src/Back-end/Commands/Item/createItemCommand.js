@@ -11,6 +11,10 @@ import BlobValidators from "../../Validators/blobValidators.js";
 import BlobBase64DTO from "../../../Shared/DTO/Blob/BlobBase64DTO.js";
 import Promise from "bluebird";
 import ElasticSearchService from "../../Services/elasticSearchService.js";
+import TagService from './../../Services/tagService.js'
+import uuidv4 from "uuid/v4";
+import ClosingInfrastructure from "../../Architecture/Infrastructure/closingInfrastructure.js";
+
 ("use strict");
 
 export default class CreateItemCommand extends BaseCommand {
@@ -22,7 +26,9 @@ export default class CreateItemCommand extends BaseCommand {
    * itemServiceDI:ItemService,
    * blobServiceDI:BlobService,
    * categoryServiceDI:CategoryService,
-   * elasticSearchServiceDI:ElasticSearchService}}
+   * elasticSearchServiceDI:ElasticSearchService,
+   * tagServiceDI:TagService,
+   * closingInfrastructureDI:ClosingInfrastructure}}
    * @memberof CreateItemCommand
    */
   constructor({
@@ -33,20 +39,25 @@ export default class CreateItemCommand extends BaseCommand {
     validationInfrastructureDI,
     categoryServiceDI,
     blobServiceDI,
-    elasticSearchServiceDI
+    elasticSearchServiceDI,
+    tagServiceDI,
+    closingInfrastructureDI
   }) {
     // @ts-ignore
     super({
       logFileInfrastructureDI,
       authInfrastructureDI,
       dbTransactionInfrastuctureDI,
-      validationInfrastructureDI
-      
+      validationInfrastructureDI,
+      closingInfrastructureDI
+
     });
     this.itemServiceDI = itemServiceDI;
     this.blobServiceDI = blobServiceDI;
     this.categoryServiceDI = categoryServiceDI;
-    this.elasticSearchServiceDI=elasticSearchServiceDI;
+    this.elasticSearchServiceDI = elasticSearchServiceDI;
+    this.tagServiceDI = tagServiceDI;
+    this.clobs = {}
   }
 
   get validation() {
@@ -64,6 +75,8 @@ export default class CreateItemCommand extends BaseCommand {
   }
   init(dto) {
     this.model = Object.assign(new ItemDTO(), dto);
+    this.model.is_elastic_sync = false;
+
   }
 
   async insertCategories(itemId) {
@@ -112,8 +125,8 @@ export default class CreateItemCommand extends BaseCommand {
       zh_cn: ""
     }
     Object.keys(clobs).forEach(item => {
-      clobs[item] += this.model.name + ";";
-      clobs[item] += this.model.description + ";";;
+      //clobs[item] += this.model.name + ";";
+      // clobs[item] += this.model.description + ";";;
       this.model.catOptions.filter(cat => {
         // console.log(this.model.catOptions);
         // console.log(cat);
@@ -122,11 +135,15 @@ export default class CreateItemCommand extends BaseCommand {
         //console.log(cat)
         console.log(cat.catOption);
         if ((cat.catOption ? cat.catOption.is_not_in_clob : false) != true) {
-          clobs[item] += (cat.select ? cat.select["value_" + item] : cat.val) + ";"
+          clobs[item] += (cat.select ? cat.select["value_" + item] : cat.val) + " ; "
 
         }
       })
+      this.model.tags.forEach(tag => {
+        clobs[item] += tag.label + ' ; ';
+      })
     })
+    console.log(clobs)
     Object.keys(clobs).forEach(item => {
       this.model["clobSearch_" + item] = clobs[item];
     })
@@ -138,6 +155,35 @@ export default class CreateItemCommand extends BaseCommand {
     //ADD CATEGORIES NAME TOO
     //ADD HASH TAGS
   }
+
+  async elasticClosingFunc() {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var expired = new Date(Date.now() + 12096e5);
+    var dateExpired = expired.getFullYear()+'-'+(expired.getMonth()+1)+'-'+expired.getDate();
+
+    return await this.elasticSearchServiceDI.upsertItemDoc({
+      item_id: this.model.id,
+      longitude: this.model.longitude,
+      latitude: this.model.latitude,
+      user_id: this.model.user_id,
+      clobs: this.clobs,
+      title: this.model.name,
+      description: this.model.description,
+      catOptions: this.model.catOptions,
+      status: this.model.status,
+      type: this.model.type,
+      category: this.model.category_id,
+      tags: this.model.tags,
+      categories:this.model.categories,
+      created_at:this.model.created_at?this.model.created_at:today.toISOString(),
+      expired_at:this.model.expired_at?this.model.expired_at:expired.toISOString()
+
+    });
+
+
+  }
+
   getCategoriesValue() {
     let catOptions = this.model.catOptions.filter(cat => {
       return cat.type == 'GEO';
@@ -152,18 +198,57 @@ export default class CreateItemCommand extends BaseCommand {
 
 
   }
+  async tagsInsert() {
+
+    let existTagsArray = this.model.tags.filter(item => {
+      return item.id != undefined
+    })
+    let newTags = this.model.tags.filter(item => {
+      return item.id == undefined
+    })
+    newTags = newTags.map(item => {
+      item.id = uuidv4()
+      return item
+    })
+    let idNewTagsArray = await this.tagServiceDI.insertUniq({ newTags: newTags });
+
+
+
+    let tagsId = [];
+    idNewTagsArray.forEach(item => {
+
+
+      tagsId.push(item);
+    })
+    existTagsArray.forEach(item => {
+
+      tagsId.push(item.id);
+    })
+
+    let tagsArray = await tagsId.map(tag => {
+      console.log(tag);
+      return this.itemServiceDI.insertTag({
+        item_id: this.model.id, tag_id: tag
+      })
+    })
+
+    await Promise.all(tagsArray);
+  }
   async action() {
     // console.log(this.model);
-    let clobs = this.createSearchClob.bind(this)();
+    this.clobs = this.createSearchClob.bind(this)();
     this.getCategoriesValue.bind(this)();
-
-    let item = await this.itemServiceDI.insert({ model: this.model });
+    let newItem = await this.itemServiceDI.upsert({ model: this.model });
     let array = this.model.catOptions.map(item => {
       return this.itemServiceDI.upsertCategoryOption({ model: item, item_id: this.model.id })
     })
+    this.model.categories = await this.categoryServiceDI.getCategoriesParents({ ids: this.model.category_id })
     await Promise.all(array)
-    await this.insertBlobs(item.id);
-    await this.elasticSearchServiceDI.upsertDoc({item_id:item.id,longitude:item.longitude,latitude:item.latitude,user_id:item.user_id,clobs:clobs});
+    await this.tagsInsert();
+    await this.insertBlobs(this.model.id);
+    this.closingInfrastructureDI.addClosingFunction(
+      this.elasticClosingFunc.bind(this)
+    )
     //await this.insertCategories(item.id);
 
     //  console.log(categories);

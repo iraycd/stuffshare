@@ -5,12 +5,13 @@ import ServerException from "./Exceptions/serverException.js";
 import DbTransactionInfrastucture from "./Infrastructure/dbTransactionInfrastucture.js";
 import ValidatonInfrastructure from "./Infrastructure/validatonInfrastructure.js";
 import PrivilegesInfrastructure from "./Infrastructure/privilegesInfrastructure.js";
+import ClosingInfrastructure from "./Infrastructure/closingInfrastructure.js";
 
 
 export default class BaseCommand extends BaseAction {
   /**
    * Creates an instance of BaseCommand.
-   * @param {{ logFileInfrastructureDI:LogFileInfrastructure, dbTransactionInfrastuctureDI : DbTransactionInfrastucture,validationInfrastructureDI:ValidatonInfrastructure,authInfrastructureDI:AuthInfrastucture, privilegesInfrastructureDI:PrivilegesInfrastructure}}
+   * @param {{ logFileInfrastructureDI:LogFileInfrastructure, dbTransactionInfrastuctureDI : DbTransactionInfrastucture,validationInfrastructureDI:ValidatonInfrastructure,authInfrastructureDI:AuthInfrastucture, privilegesInfrastructureDI:PrivilegesInfrastructure,closingInfrastructureDI:ClosingInfrastructure}}
    * @memberof BaseCommand
    */
   constructor({
@@ -19,10 +20,12 @@ export default class BaseCommand extends BaseAction {
     dbTransactionInfrastuctureDI,
     validationInfrastructureDI,
     privilegesInfrastructureDI,
-    dictionaryDI
+    dictionaryDI,
+    closingInfrastructureDI
   }) {
     super({ logFileInfrastructureDI, validationInfrastructureDI, authInfrastructureDI, privilegesInfrastructureDI,dictionaryDI});
     this.dbTransactionInfrastuctureDI = dbTransactionInfrastuctureDI;
+    this.closingInfrastructureDI=closingInfrastructureDI;
 
   }
   get validation() { }
@@ -33,6 +36,7 @@ export default class BaseCommand extends BaseAction {
       this.authInfrastructureDI,
       this.validationInfrastructureDI,
       this.privilegesInfrastructureDI,
+      this.closingInfrastructureDI,
       this.dbTransactionInfrastuctureDI
     ];
     return infrastructureArray.reduce((prv, curr, prevIndex) => {

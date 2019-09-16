@@ -5,20 +5,22 @@ import './../../../../Shared/BaseObjects/Helper/commonFunctions.js';
 
 export default class FormComponent extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+
+        this.state = {};
+        this.state.validation = []
+        let label = props.label;
+        if (this.props.isRequired == true) {
+            label += ' *';
+        }
+        this.state.field = props.field;
+        this.state.validation = props.validation ? props.validation : [];
+        this.state.guid = global.guid();
+        this.state.label = label;
     }
     init() {
-        let label = this.props.label;
-        if (this.props.isRequired == true) {
-            label +=' *';
-        }
-        this.state = {
-            field: this.props.field,
-            validation: this.props.validation,
-            guid: global.guid(),
-            label: label
-        };
+
     }
     FormValidation() {
         let FormValidation = [];

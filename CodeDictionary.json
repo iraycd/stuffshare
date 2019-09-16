@@ -3138,6 +3138,63 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "ITEM_TAGS_LABEL": {
+            "id": "e9dc3f53-dd95-41e0-aa69-1b9bfb942c16",
+            "uid": "",
+            "code": "ITEM_TAGS_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Tagi",
+                "us": "Tags",
+                "de": "Tags",
+                "ru": "Теги",
+                "fr": "Tags",
+                "es": "Etiquetas",
+                "no": "Koder",
+                "zh_cn": "标签"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "MAP_MORE_TAGS_LABEL": {
+            "id": "b818d226-7141-4976-9e09-4f060d84102d",
+            "uid": "",
+            "code": "MAP_MORE_TAGS_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "tagi",
+                "us": "tags",
+                "de": "Tags",
+                "ru": "теги",
+                "fr": "tags",
+                "es": "etiquetas",
+                "no": "koder",
+                "zh_cn": "标签"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "MAP_PIN_DESCRIPTION_LABEL": {
+            "id": "d99dc2d7-59f9-4cea-baef-436b9b513fa7",
+            "uid": "",
+            "code": "MAP_PIN_DESCRIPTION_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Opis",
+                "us": "Description",
+                "de": "Beschreibung",
+                "ru": "Описание",
+                "fr": "Description",
+                "es": "Descripción",
+                "no": "Beskrivelse",
+                "zh_cn": "描述"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
@@ -4090,5 +4147,6 @@
             "field": "",
             "toRefresh": true
         }
-    }
+    },
+    "INFO": {}
 }

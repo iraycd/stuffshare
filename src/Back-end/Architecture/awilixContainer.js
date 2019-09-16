@@ -11,6 +11,7 @@ import AuthInfrastucture from './Infrastructure/authInfrastucture.js';
 import MailSender from './mailSender.js';
 import PrivilegesInfrastructure from './Infrastructure/privilegesInfrastructure.js';
 import CodeDictionary from './Dictionary/codeDictionary.js';
+import ClosingInfrastructure from './Infrastructure/closingInfrastructure.js';
 
 
 const { createContainer, asValue, asClass } = awilix;
@@ -21,6 +22,7 @@ let containerDI = {
     validationInfrastructureDI: asClass(ValidatonInfrastructure),
     authInfrastructureDI : asClass(AuthInfrastucture),
     dbTransactionInfrastuctureDI:asClass(DbTransactionInfrastucture),
+    closingInfrastructureDI:asClass(ClosingInfrastructure),
     //ACTIONS list 
     baseAction: asClass(BaseAction),
     baseCommand: asClass(BaseCommand),

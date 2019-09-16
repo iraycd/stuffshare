@@ -5,15 +5,15 @@ import { Button, Form, FormGroup, Label, FormText, Col, Container, Row, FormFeed
 import FormComponent from './../../index.jsx';
 export default class TextArea extends FormComponent {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
     }
 
     render() {
 
         this.init();
-        let formValidation = this.FormValidation();
+        let formValidation = this.FormValidation.bind(this)();
 
 
         let result = (

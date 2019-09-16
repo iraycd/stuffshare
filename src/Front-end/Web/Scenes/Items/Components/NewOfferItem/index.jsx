@@ -16,7 +16,7 @@ import ItemDTO from './../../../../../../Shared/DTO/Item/ItemDTO.js';
 import CategoryOptionTempFormMapper from '../../../Categories/Components/CategoryOptionTempMapper/CategoryOptionTempFormMapper.jsx';
 import CommandList from '../../../../../../Shared/CommandList.js';
 import uuidv4 from "uuid/v4";
-
+import TagComponent from '../../../../Components/FormComponent/Components/TagComponent/index.jsx';
 
 
 
@@ -28,6 +28,11 @@ class NewOfferItem extends React.Component {
     constructor() {
         super();
         this.state = new ItemDTO();
+        this.state.tags = [
+
+        ]
+
+
         this.state.validation = [];
         this.state.categoryId = 0;
         this.state.categoryIcon = '';
@@ -43,7 +48,11 @@ class NewOfferItem extends React.Component {
 
 
     }
-
+    onTagChange(tags) {
+        this.setState({
+            tags: tags
+        })
+    }
 
     nameHandler(event) {
         this.setState({
@@ -67,11 +76,12 @@ class NewOfferItem extends React.Component {
     submitHandler(event) {
 
         let item = {
-            id:uuidv4(),
+            id: uuidv4(),
             name: this.state.name,
             description: this.state.description,
-            category_id:this.state.categoryId, 
-            catOptions: this.state.categoryOptionValues
+            category_id: this.state.categoryId,
+            catOptions: this.state.categoryOptionValues,
+            tags: this.state.tags
         }
         console.log(item);
         this.props.createNewItem(item).then(succ => {
@@ -142,9 +152,10 @@ class NewOfferItem extends React.Component {
         }
     }
 
-
     render() {
         this.init();
+        const { tags, suggestions } = this.state;
+
         const phTrans = Translator(this.props.codeDict.data.PLACEHOLDER, this.props.lang);
 
         if (this.props.loader.BODY_PROGRESS < 100) {
@@ -216,6 +227,7 @@ class NewOfferItem extends React.Component {
 
                         <TextBox placeholder={phTrans.translate('ITEM_NAME_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_NAME_LABEL')} value={this.state.name} onChange={this.nameHandler.bind(this)} field="name" validation={this.state.validation} />
                         <TextArea placeholder={phTrans.translate('ITEM_DESCRIPTION_PLACEHOLDER')} isRequired={true} label={this.tran.translate('ITEM_DESCRIPTION_LABEL')} value={this.state.description} onChange={this.descriptionHandler.bind(this)} field="name" validation={this.state.validation} />
+                        <TagComponent onChange={this.onTagChange.bind(this)} label={this.tran.translate('ITEM_TAGS_LABEL')} tags={this.state.tags} field="tag" validation={this.state.validation} />
                         {
                             this.props.offerItem.catOptions.filter(item => {
                                 return Number(item.order) >= 0
@@ -288,7 +300,7 @@ const mapDispatchToProps = (dispatch) => {
 
         },
         createNewItem: (dto) => {
-            return dispatch(new BaseService().commandThunt(CommandList.Item.NEW_ITEM,  dto ));
+            return dispatch(new BaseService().commandThunt(CommandList.Item.NEW_ITEM, dto));
 
         },
         getUserImages: (dto) => {

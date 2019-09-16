@@ -27,12 +27,13 @@ export default class ItemService extends BaseService {
    * @memberof CategoryService
    */
 
-  async insertCategories({ itemId, categoryId }) {
-    await this.unitOfWorkDI.itemCategoryRepository.insert({
-      model: {
-        item_id: itemId,
-        category_id: categoryId
-      }
+  async insertTag({ item_id, tag_id }) {
+    console.log(tag_id)
+    await this.unitOfWorkDI.itemRepository.insertTag({
+      
+        item_id: item_id,
+        tag_id: tag_id
+      
     });
   }
 
@@ -48,21 +49,24 @@ export default class ItemService extends BaseService {
       }
     });
   }
-  async deleteCategories({ itemId, categoryId }) {
-    return await this.unitOfWorkDI.itemCategoryRepository.deleteCategories({
+  async deleteTags({ itemId }) {
+    return await this.unitOfWorkDI.itemRepository.deleteTags({
       item_id: itemId,
-      category_id: categoryId
     });
   }
   async getItem({ uids }) {
     let result = await this.toJsonParse(this.unitOfWorkDI.itemRepository.getItem({ uids }));
     return result.map(item => {
       let element = Object.assign({}, item)
-    
+
       return element;
     })
   }
 
+  async setAsSyncElastic({id})
+  {
+    return await this.repository.setAsSyncElastic({id})
+  }
   /**
    *
    *

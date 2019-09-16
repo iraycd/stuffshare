@@ -10,7 +10,7 @@ let CONFIG = {
   UPLOAD_PATH:"C:/Programowanie/Private/stuffshare/upload",//"F:/Private/cqrs-node/upload",//
   LOCATION_IQ:"fcfb9eb913b786",
   ELASTIC_SEARCH:{
-    development:"https://paas:c6f0a439fb7c8eca2529c5f2b5fde358@oin-us-east-1.searchly.com/",
+    development:"https://25t337e5fo:xdrzi9s9z@oak-487876355.eu-west-1.bonsaisearch.net:443/",
     production:"https://5gn69lkoe1:e53lt3rgsr@alder-283162757.eu-west-1.bonsaisearch.net:443/"
   },
   DATABASE: {

@@ -41,6 +41,7 @@ class CategoryOptionFormSINGLE extends React.Component {
                 element: this.props.catOption.id,
                 type: 'SINGLE'
                 ,col_id:this.props.catOption.category_link[0].id
+                ,catOption: this.props.catOption.cat_opt_temp[0]
             }])
 
 

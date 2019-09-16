@@ -56,22 +56,23 @@ export default class Item extends Model {
         clobSearch_zh_cn: DataTypes.TEXT,
         longitude: DataTypes.FLOAT,
         latitude: DataTypes.FLOAT,
-        category_type:DataTypes.INTEGER
+        category_type: DataTypes.INTEGER,
+        is_elastic_sync:DataTypes.BOOLEAN
       },
       { sequelize }
     );
   }
   static associate(models) {
-  /*  Item.belongsToMany(models.Category, {
-      through: {
-        model: models.ItemCategory,
+    /*  Item.belongsToMany(models.Category, {
+        through: {
+          model: models.ItemCategory,
+          targetKey: "id",
+          foreignKey: "category_id"
+        },
+        as: "categories",
         targetKey: "id",
-        foreignKey: "category_id"
-      },
-      as: "categories",
-      targetKey: "id",
-      foreignKey: "item_id"
-    });*/
+        foreignKey: "item_id"
+      });*/
     Item.belongsTo(models.Category, {
       as: "category",
       targetKey: "id",
@@ -90,6 +91,12 @@ export default class Item extends Model {
     Item.hasMany(models.ItemCategoryOption, {
       as: "itemCategoryOption",
       targetKey: "id",
+      foreignKey: "item_id"
+    });
+    Item.belongsToMany(models.Tag, {
+      through: { model: models.ItemTag },
+      as: 'tags',
+      targetKey: 'id',
       foreignKey: "item_id"
     });
     //  Item.belongsTo(models.User);

@@ -80,6 +80,8 @@ import DeleteCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/
 import UpsertCategoryOptionsForCategoryCommand from "./Commands/CategoryOptions/upsertCategoryOptionsForCategoryCommand.js";
 import ItemCategoryOptionRepository from "./Repository/itemCategoryOptionRepository.js";
 import ElasticSearchService from "./Services/elasticSearchService.js";
+import TagRepository from "./Repository/tagRepository.js";
+import TagService from "./Services/tagService.js";
 
 
 
@@ -114,6 +116,8 @@ let exporter = {
   itemCategoryOptionRepositoryDI:asClass(ItemCategoryOptionRepository),
   userAuthRepositoryDI: asClass(UserAuthRepository),
   elasticSearchServiceDI:asClass(ElasticSearchService),
+  tagServiceDI:asClass(TagService),
+  tagRepositoryDI:asClass(TagRepository),
   sequelizeDI: asValue(SequelizeDB)
 };
 exporter[CommandList.Dictionary.ADD_DICTIONARY] = asClass(

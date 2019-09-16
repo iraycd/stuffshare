@@ -6,12 +6,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Translator } from './../../../../../../Shared/index.js';
-
+import { TextBox } from '../../../../Components/index.js';
+import { Input ,Button } from 'reactstrap'
 class SearchFreetext extends React.Component {
 
   constructor() {
     super();
-    this.state = { cat_id: "", cat: "" };
+    this.state = { category_id: "", query: "",tag:"" };
     this.state.validation = [];
   }
   refreshValidation() {
@@ -40,9 +41,10 @@ class SearchFreetext extends React.Component {
                 </p>
                 <form >
                   <div class=" g-pa-10 form-group g-ma-20 g-mb-20--md">
-                    <input class="form-control h-100 g-pa-15  form-control rounded-0 form-control" type="text" placeholder={phTrans.translate('SEARCH_HOMEPAGE_INPUT_PLACEHOLDER')} />
+                    <Input className="form-control h-100 g-pa-15  form-control rounded-0 form-control" type={"search"} value={this.props.value} onChange={(event) => { this.state.query = event.target.value; this.setState({ query: this.state.query }) }} placeholder={phTrans.translate('SEARCH_HOMEPAGE_INPUT_PLACEHOLDER')} />
+
                   </div>
-                  <Link to={`/search?catId=${this.state.cat_id}&q=${this.state.cat}`} class="g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15" >{tran.translate('SEARCH_BUTTON_LABEL')}</Link>
+                  <Link to={`/search?type=type&tag=${this.state.tag}&category_id=${this.state.category_id}&q=${encodeURI( this.state.query)}&rad=3km`} class="g-letter-spacing-1 btn btn-md  text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 g-brd-none rounded-0 g-py-12 g-px-15" >{tran.translate('SEARCH_BUTTON_LABEL')}</Link>
                 </form>
               </div>
             </div>

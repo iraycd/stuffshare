@@ -6,8 +6,8 @@ import { Button } from 'reactstrap';
 
 export default class ButtonLoader extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
     }
 

@@ -132,8 +132,21 @@ export default class CategoryRepository extends BaseRepository {
         UNION ALL
         SELECT :id
         )
-          SELECT  id,category,category_pl,category_us FROM union_recus JOIN Categories ON Id = category_id
-          GROUP BY id,category,category_pl,category_us
+          SELECT  id,category,
+          category_pl,
+          category_us   
+          ,[category_de]
+          ,[category_ru]
+          ,[category_fr]
+          ,[category_es]
+          ,[category_no]
+          ,[category_zh_cn] FROM union_recus JOIN Categories ON Id = category_id
+          GROUP BY id,category,category_pl,category_us,  [category_de]
+          ,[category_ru]
+          ,[category_fr]
+          ,[category_es]
+          ,[category_no]
+          ,[category_zh_cn]
         
     `,
       {

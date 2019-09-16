@@ -4,7 +4,7 @@ import ItemService from '../../Services/itemService.js';
 import SearchItemDTO from '../../../Shared/DTO/Item/SearchItemDTO';
 import ElasticSearchService from '../../Services/elasticSearchService.js';
 import BlobService from '../../Services/blobService.js';
-
+import BlobBase64DTO from '../../../Shared/DTO/Blob/BlobBase64DTO.js';
 
 
 
@@ -57,11 +57,12 @@ export default class SearchItemQuery extends BaseQuery {
 
     }
     async action() {
+        console.log(this.model)
         let result = await this.elasticSearchServiceDI.setContext(this.context).searchDoc({
             latitude: this.model.lat,
             longitude: this.model.lon,
             text: this.model.freetext,
-            distance: '1km',
+            distance: this.model.distance,
 
 
         })

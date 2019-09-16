@@ -1,6 +1,8 @@
 import BaseRepository from "../Architecture/baseRepository.js";
 import SequelizeDB from "../Database/models/index.js";
 import SearchItemDTO from './../../Shared/DTO/Item/SearchItemDTO.js';
+import uuidv4 from "uuid/v4";
+
 /**
  *
  * @export
@@ -213,22 +215,38 @@ export default class ItemRepository extends BaseRepository {
 
   }
 
-
+  setAsSyncElastic({id,transaction})
+  {
+    return this.entityDAO.update(
+      {
+        is_elastic_sync: true
+      },
+      {
+        where: { id: this.toStr(id) },
+        transaction: this.getTran({ transaction })
+      }
+    );
+  }
   getItem({ uids, transaction }) {
     console.log('this.userId')
     console.log(this.userId)
     let userId = this.userId;
     return this.entityDAO.findAll({
       where: {
-         id: {
-            [SequelizeDB.Sequelize.Op.in]: uids
-          }
+        id: {
+          [SequelizeDB.Sequelize.Op.in]: uids
+        }
       },
       include: [
         {
           model: this.sequelizeDI.Category,
           required: true,
           as: "category"
+        },
+        {
+          model: this.sequelizeDI.Tag,
+          required: false,
+          as: "tags"
         },
         {
           model: this.sequelizeDI.ItemCategoryOption,
@@ -295,5 +313,26 @@ export default class ItemRepository extends BaseRepository {
     });
   }
 
+  deleteTag({ item_id, transaction }) {
+    return this.sequelizeDI.ItemTag.destroy({
+      where: {
+        item_id: this.toStr(item_id)
+      },
+      transaction: this.getTran({ transaction })
+    });
+  }
+  insertTag({ tag_id, item_id, transaction }) {
+
+    console.log(tag_id)
+    return this.sequelizeDI.ItemTag.create(
+      {
+        id: uuidv4(),
+        item_id: item_id,
+        tag_id: tag_id
+      }, {
+        transaction: this.getTran({ transaction })
+      });
+
+  }
 
 }

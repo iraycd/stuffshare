@@ -10,8 +10,8 @@ import "./../../../../assets/css/react-datepicker-cssmodules.css"
 
 export default class DayPickerInputComponent extends FormComponent {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
     }
 
@@ -22,7 +22,7 @@ export default class DayPickerInputComponent extends FormComponent {
     render() {
 
         this.init();
-        let formValidation = this.FormValidation();
+        let formValidation = this.FormValidation.bind(this)();
 
 //"dd-MM-yyyy"
         let result = (

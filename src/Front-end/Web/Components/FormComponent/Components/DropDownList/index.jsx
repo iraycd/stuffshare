@@ -6,14 +6,14 @@ import FormComponent from './../../index.jsx';
 
 export default class DropDownList extends FormComponent {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
     }
 
     render() {
         this.init();
-        let formValidation = this.FormValidation();
+        let formValidation = this.FormValidation.bind(this)();
         let optionValue = [];
 
         let i = 0;
