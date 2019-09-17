@@ -18,7 +18,7 @@ export default class CategoryRepository extends BaseRepository {
     super(sequelizeDI.Category);
     this.sequelizeDI = sequelizeDI;
   }
-  getAllCategoriesFlat({model, transaction }) {
+  getAllCategoriesFlat({ model, transaction }) {
     return this.sequelizeDI.sequelize.query(
       `
       SELECT
@@ -30,7 +30,7 @@ export default class CategoryRepository extends BaseRepository {
        order by category  
       `,
       {
-        replacements: {status:model.status},
+        replacements: { status: model.status },
         transaction: this.getTran({ transaction }),
         type: this.sequelizeDI.sequelize.QueryTypes.SELECT
       }
@@ -42,9 +42,24 @@ export default class CategoryRepository extends BaseRepository {
    * @param {Array} {id}
    * @memberof CategoryRepository
    */
-  getCategoryTree({ ids, transaction }) {
+  getCategoryTree({ ids, parent, transaction }) {
+    let where = { id: ids };
+
+    if (ids[0] == '_ROOT') {
+      where = { category: "_ROOT" }
+    }
+    let parentWhere = undefined
+    if (parent != undefined) {
+      where = { status: 1 }
+      if (parent == '_ROOT') {
+        parentWhere = { category: '_ROOT' }
+      } else {
+        parentWhere = { id: parent }
+      }
+
+    }
     return this.entityDAO.findAll({
-      where: { id: ids },
+      where: where,
       include: [
         {
           model: this.sequelizeDI.Category,
@@ -57,7 +72,15 @@ export default class CategoryRepository extends BaseRepository {
         },
         {
           model: this.sequelizeDI.Category,
-          as: "category_parent"
+          as: "category_parent",
+          where: parentWhere,
+          include: [
+            {
+              model: this.sequelizeDI.Category,
+              as: "category_parent",
+              required: false
+            }
+          ]
           /* include: [{
              model: this.sequelizeDI.Category,
              as: "category_parent"

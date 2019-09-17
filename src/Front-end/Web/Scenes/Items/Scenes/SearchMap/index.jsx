@@ -28,6 +28,7 @@ import SearchItemDTO from './../../../../../../Shared/DTO/Item/SearchItemDTO.js'
 import { withRouter } from 'react-router-dom';
 import PreviewItemOptions from '../../Components/PreviewItemOptions/index.jsx';
 import { slide as Menu } from 'react-burger-menu'
+import FilterSearch from './../FilterSearch/index.jsx'
 
 const queryString = require('query-string');
 
@@ -313,10 +314,7 @@ class SearchMap extends React.Component {
                 }
 
             }} width={'20%'} customBurgerIcon={<span  ><i class="fa fa-filter" style={{ fontSize: '20px' }}></i><br /><span className="g-line-height-1_0">{0}</span></span>}>
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="about" className="menu-item" href="/about">About</a>
-                <a id="contact" className="menu-item" href="/contact">Contact</a>
-                <a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
+                <FilterSearch />
             </Menu >
                 <Menu id="fallDown" fallDown={true} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} styles={{
                     bmBurgerButton: {
@@ -356,7 +354,6 @@ class SearchMap extends React.Component {
                                             </Col>
                                         </Row>
                                         <div className="g-pb-10">
-                                            <div class="d-flex justify-content-center text-center g-mb-8 g-mt-8"><div class="d-inline-block align-self-center g-width-100 g-height-1  g-bg-gray-light-v3"></div><span class="align-self-center text-uppercase  g-color-gray-dark-v2  g-color-gray-dark-v4 g-letter-spacing-2  g-mx-5  g-font-weight-600 g-font-size-9">{tran.translate('MAP_PIN_DESCRIPTION_LABEL')}</span><div class="d-inline-block align-self-center g-width-100 g-height-1 g-bg-gray-light-v3"></div></div>
                                             <Row>
                                                 <PreviewItemOptions item={item} on_map={true} lang={this.props.lang} col_size="3" />
 
@@ -373,7 +370,7 @@ class SearchMap extends React.Component {
 
                                 </div>
                             )
-                        }) : <span></span>});
+                        }) : <span></span>}
                 </div>
                 </Menu >
                 <Menu width={'20%'} styles={{

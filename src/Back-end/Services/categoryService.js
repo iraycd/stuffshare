@@ -25,9 +25,9 @@ export default class CategoryService extends BaseService {
    * @returns
    * @memberof CategoryService
    */
-  async getCategoryTree({ id }) {
+  async getCategoryTree({ id ,parent}) {
     return await this.toJsonParse(
-      this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids: [id] })
+      this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids: [id],parent:parent })
     );
   }
 
@@ -61,7 +61,6 @@ export default class CategoryService extends BaseService {
       let ids = result.map(item => { return item.KEY });
       console.log(ids);
       return await this.unitOfWorkDI.categoryRepository.getCategoryTree({ ids: ids })
-
 
     } else {
       return []

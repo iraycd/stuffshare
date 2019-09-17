@@ -15,7 +15,7 @@ export default class GetCategoryTreeQuery extends BaseQuery {
         this.model = Object.assign(new CategoryDTO(), dto);
     }
     async action() {
-        return await this.categoryServiceDI.getCategoryTree({ id: this.model.id })
+        return await this.categoryServiceDI.getCategoryTree({ id: this.model.id,parent:this.model.parent })
 
     }
 };

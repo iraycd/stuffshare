@@ -3195,6 +3195,63 @@
             },
             "field": "",
             "toRefresh": true
+        },
+        "FILTER_ITEMS_HEADER": {
+            "id": "f2e20cff-e80a-4fd7-83ce-fbdb1bb39025",
+            "uid": "",
+            "code": "FILTER_ITEMS_HEADER",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Szukaj",
+                "us": "Search",
+                "de": "Suche",
+                "ru": "Поиск",
+                "fr": "Recherche",
+                "es": "La búsqueda de",
+                "no": "Søk",
+                "zh_cn": "搜索"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_FILTER_LABEL": {
+            "id": "ac345bde-e6ec-455e-868b-c9bb243caec1",
+            "uid": "",
+            "code": "CATEGORY_FILTER_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Kategorie",
+                "us": "Category",
+                "de": "Kategorie",
+                "ru": "Категории",
+                "fr": "Catégorie",
+                "es": "Categoría",
+                "no": "Kategori",
+                "zh_cn": "类别"
+            },
+            "field": "",
+            "toRefresh": true
+        },
+        "CATEGORY_CHOOSE_CATEGORY_LABEL": {
+            "id": "55d982ca-a3c7-4365-8536-d95de03d8c74",
+            "uid": "",
+            "code": "CATEGORY_CHOOSE_CATEGORY_LABEL",
+            "status": "200",
+            "type": "LABEL",
+            "message": {
+                "pl": "Wybierz kategorie",
+                "us": "Select categories",
+                "de": "Wählen Sie die Kategorien",
+                "ru": "Выберите категории",
+                "fr": "Sélectionnez la catégorie",
+                "es": "Seleccione la categoría de",
+                "no": "Velg kategorier",
+                "zh_cn": "选择类别"
+            },
+            "field": "",
+            "toRefresh": true
         }
     },
     "PLACEHOLDER": {
