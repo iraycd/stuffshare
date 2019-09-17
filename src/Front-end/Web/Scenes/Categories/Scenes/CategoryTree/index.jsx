@@ -104,6 +104,7 @@ class CategoryTree extends React.Component {
                     roots.push(node);
                 }
             } catch (exception) {
+                console.log(list[i])
                 console.log(exception)
             }
         }
