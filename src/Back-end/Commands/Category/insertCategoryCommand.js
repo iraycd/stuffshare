@@ -32,7 +32,8 @@ export default class InsertCategoryCommand extends BaseCommand {
         this.model = Object.assign(new CategoryDTO(), dto);
     }
     async action() {
-       await this.categoryServiceDI.setContext(this.context).newCategory({ model: this.model });
+        console.log(this.model);
+        await this.categoryServiceDI.setContext(this.context).newCategory({ model: this.model });
 
     }
 };

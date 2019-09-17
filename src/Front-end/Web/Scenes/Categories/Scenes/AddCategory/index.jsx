@@ -116,6 +116,7 @@ class AddCategory extends React.Component {
 
             })
         }
+        console.log(this.props.match.params.status)
         let cat = new CategoryDTO();
 
         cat.id = uuidv4();
@@ -161,6 +162,7 @@ class AddCategory extends React.Component {
 
 
         event.preventDefault();
+        console.log(this.state.category)
         //   if (this.validation().length == 0) {
         // this.props.code=this.state;
         this.state.category.id=this.state.category.id?this.state.category.id:uuidv4()

@@ -52,24 +52,81 @@ class MapForm extends React.Component {
         this.state.setLonLat = false;
         this.timeout = null;
 
-        this.myIcon = L.icon({
-            iconUrl: require(`./../../assets/markers/${props.icon}-black.svg`),
+        
+        var png = require(`./../../assets/markers/${props.icon}.png`)
+        let color='#ff7c7c'
+        this.myIcon = L.divIcon({
+            html: `
+            <svg viewBox="0 0 80 80" width="40" height="70" style="overflow: visible;">
+                <defs>
+                    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_5_blur">
+                        <feGaussianBlur stdDeviation="4.7" in="SourceGraphic"/>
+                    </filter>
+                    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_9_blur">
+                        <feGaussianBlur stdDeviation="3.9" in="SourceGraphic"/>
+                    </filter>
+                </defs>
+                <style>
+                    .small { font: italic 13px sans-serif; }
+                    .heavyText {font: 500 30px sans-serif; text-align:center }
+                
+                    /* Note that the color of the text is set with the    *
+                    * fill property, the color property is for HTML only */
+                    .Rrrrr { font: italic 40px serif; fill: red; }
+              </style>
+            
+                <g>
+                <ellipse filter="url(#svg_5_blur)" opacity="0.4" ry="11" rx="27.5" id="svg_5" cy="83" cx="35.5" stroke-width="1.5" stroke="#8e8e8e" fill="#a07d7d"/>
+                <ellipse filter="url(#svg_9_blur)" opacity="0.3" ry="8" rx="9" id="svg_9" cy="83" cx="35.5" stroke-width="1.5" stroke="#8e8e8e" fill="#665151"/>
+                <rect stroke="${color}" transform="rotate(45 34.75000000000003,52.249999999999986) " id="svg_7" height="38.606601" width="42" y="32.9467" x="13.75" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="${color}"/>
+                <ellipse stroke="${color}" ry="33" rx="34" id="svg_2" cy="34.9375" cx="35.5" stroke-width="1.5" fill="${color}"/>
+                <ellipse stroke="${color}" ry="25.235295" rx="26" id="svg_3" cy="35.702206" cx="35.5" fill-opacity="null" stroke-width="1.5" fill="#fff"/>
+                <image xlink:href="${png}" id="svg_4" height="32" width="32" y="18" x="20"/>
+               </g>
+            </object>`,
             iconSize: [30, 40],
             iconAnchor: [15, 35], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -35],
-            shadowUrl: null,
-            shadowSize: null,
-            shadowAnchor: null
+            className: 'marker-cluster-custom'
+
         });
-        this.myIconResults = L.icon({
-            iconUrl: require(`./../../assets/markers/${props.icon}-blue.svg`),
+        color='#4DB1CF'
+        this.myIconResults = L.divIcon({
+            html: `
+            <svg viewBox="0 0 80 80" width="40" height="70" style="overflow: visible;">
+                <defs>
+                    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_5_blur">
+                        <feGaussianBlur stdDeviation="4.7" in="SourceGraphic"/>
+                    </filter>
+                    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_9_blur">
+                        <feGaussianBlur stdDeviation="3.9" in="SourceGraphic"/>
+                    </filter>
+                </defs>
+                <style>
+                    .small { font: italic 13px sans-serif; }
+                    .heavyText {font: 500 30px sans-serif; text-align:center }
+                
+                    /* Note that the color of the text is set with the    *
+                    * fill property, the color property is for HTML only */
+                    .Rrrrr { font: italic 40px serif; fill: red; }
+              </style>
+            
+                <g>
+                <ellipse filter="url(#svg_5_blur)" opacity="0.4" ry="11" rx="27.5" id="svg_5" cy="83" cx="35.5" stroke-width="1.5" stroke="#8e8e8e" fill="#a07d7d"/>
+                <ellipse filter="url(#svg_9_blur)" opacity="0.3" ry="8" rx="9" id="svg_9" cy="83" cx="35.5" stroke-width="1.5" stroke="#8e8e8e" fill="#665151"/>
+                <rect stroke="${color}" transform="rotate(45 34.75000000000003,52.249999999999986) " id="svg_7" height="38.606601" width="42" y="32.9467" x="13.75" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="${color}"/>
+                <ellipse stroke="${color}" ry="33" rx="34" id="svg_2" cy="34.9375" cx="35.5" stroke-width="1.5" fill="${color}"/>
+                <ellipse stroke="${color}" ry="25.235295" rx="26" id="svg_3" cy="35.702206" cx="35.5" fill-opacity="null" stroke-width="1.5" fill="#fff"/>
+                <image xlink:href="${png}" id="svg_4" height="32" width="32" y="18" x="20"/>
+               </g>
+            </object>`,
             iconSize: [30, 40],
             iconAnchor: [15, 35], // point of the icon which will correspond to marker's location
             popupAnchor: [0, -35],
-            shadowUrl: null,
-            shadowSize: null,
-            shadowAnchor: null
+            className: 'marker-cluster-custom'
+
         });
+
     }
     refreshValidation() {
         if (this.state.toRefresh) {

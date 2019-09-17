@@ -31,24 +31,7 @@ class CategoryOptionFormGEO extends React.Component {
         this.state.latitude = this.state.geo[0];
         this.state.longitude = this.state.geo[1]
         this.state.markers = [];
-        this.myIcon = L.icon({
-            iconUrl: require(`./../../../../../assets/markers/${encodeURIComponent(this.props.categoryIcon)}-black.svg`),
-            iconSize: [30, 40],
-            iconAnchor: [15, 35], // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -35],
-            shadowUrl: null,
-            shadowSize: null,
-            shadowAnchor: null
-        });
-        this.myIconResults = L.icon({
-            iconUrl: require(`./../../../../../assets/markers/${encodeURIComponent(this.props.categoryIcon)}-blue.svg`),
-            iconSize: [30, 40],
-            iconAnchor: [15, 35], // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -35],
-            shadowUrl: null,
-            shadowSize: null,
-            shadowAnchor: null
-        });
+       
 
     }
 

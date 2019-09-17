@@ -78,6 +78,7 @@ export default class CategoryService extends BaseService {
    // if (!this.context.user.is_admin) {
    //   model.status = 0;
     //}
+    console.log(this.model);
     let result = await this.toJsonParse(
       this.unitOfWorkDI.categoryRepository.insert({ model })
     );

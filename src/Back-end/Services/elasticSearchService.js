@@ -261,12 +261,31 @@ export default class ElasticSearchService extends BaseService {
     let body = {
       "stored_fields": [
         "doc._id",
-        "doc._source"
+        "doc._source",
 
       ],
-      "_source": ["user_id"],
+      "_source": ["user_id,categories"],
 
-
+      "aggregations": {
+        "cat_Options": {
+           "terms": {
+              "field": "select.cat_opt_id.keyword"
+            
+           }
+        },
+        "categories": {
+           "terms": {
+              "field": "categories.id.keyword"
+            
+           }
+        },
+         "tags": {
+           "terms": {
+              "field": "tags.tag.keyword"
+            
+           }
+        }
+     },
       "query": {
         "bool": {
           "must": [
@@ -275,7 +294,7 @@ export default class ElasticSearchService extends BaseService {
             selectOptions,
             categoriesJson,
             userJson,
-            {
+        /*    {
               "script": {
                 "script": {
                   "source": "def value=Double.parseDouble(params.value);for (def item : doc['single.conc.keyword']){def val = item.indexOf(';');def id = item.substring(0,val) ;def values =item.replace(id+';','') ;def dblValue=Double.parseDouble(values);if(id==params.uid && ((params.operator =='gtl' && dblValue >= value) || (params.operator =='ltr'&& dblValue <= value))){return true}} return false;",
@@ -286,7 +305,7 @@ export default class ElasticSearchService extends BaseService {
                   }
                 }
               }
-            }
+            }*/
 
           ].filter(item => { return item != null }),
           "filter": [
