@@ -162,14 +162,15 @@ export default class ElasticSearchService extends BaseService {
     }
     let tagsTerms = null;
     if (tags != undefined) {
-      tagsTerms = tags.length > 0 ? (tags.map(item=>{
-        return   {
+      tagsTerms = tags.length > 0 ? (tags.map(item => {
+        return {
           "nested": {
-              "path": "tags", "query": {
-                "match": { "tags.tag": { "query": item, "fuzziness": 0,"operator": "and", } }
-              }}
-    
-};
+            "path": "tags", "query": {
+              "match": { "tags.tag": { "query": item, "fuzziness": 0, "operator": "and", } }
+            }
+          }
+
+        };
       })) : [null];
     }
 
@@ -223,14 +224,14 @@ export default class ElasticSearchService extends BaseService {
                   "nested": {
                     "path": "clob",
                     "query": {
-                      "match": { "clob.pl": { "query": String(text),"operator": "and", "fuzziness": 2, "boost": 20.0 } }
+                      "match": { "clob.pl": { "query": String(text), "operator": "and", "fuzziness": 2, "boost": 20.0 } }
                     }
                   }
                 },
                 {
                   "nested": {
                     "path": "tags", "query": {
-                      "match": { "tags.tag": { "query": String(text),"operator": "and", "fuzziness": 2, "boost": 40.0 } }
+                      "match": { "tags.tag": { "query": String(text), "operator": "and", "fuzziness": 2, "boost": 40.0 } }
                     }
                   }
                 },
@@ -268,44 +269,44 @@ export default class ElasticSearchService extends BaseService {
 
       "aggregations": {
         "cat_Options": {
-           "terms": {
-              "field": "select.cat_opt_id.keyword"
-            
-           }
+          "terms": {
+            "field": "select.cat_opt_id.keyword"
+
+          }
         },
         "categories": {
-           "terms": {
-              "field": "categories.id.keyword"
-            
-           }
+          "terms": {
+            "field": "categories.id.keyword"
+
+          }
         },
-         "tags": {
-           "terms": {
-              "field": "tags.tag.keyword"
-            
-           }
+        "tags": {
+          "terms": {
+            "field": "tags.tag.keyword"
+
+          }
         }
-     },
+      },
       "query": {
         "bool": {
           "must": [
             textArray,
-           // ...tagsTerms,
+            // ...tagsTerms,
             selectOptions,
             categoriesJson,
-            userJson,
-        /*    {
-              "script": {
-                "script": {
-                  "source": "def value=Double.parseDouble(params.value);for (def item : doc['single.conc.keyword']){def val = item.indexOf(';');def id = item.substring(0,val) ;def values =item.replace(id+';','') ;def dblValue=Double.parseDouble(values);if(id==params.uid && ((params.operator =='gtl' && dblValue >= value) || (params.operator =='ltr'&& dblValue <= value))){return true}} return false;",
-                  "params": {
-                    "uid": "1907c124-f3fa-4072-8da6-f0568e2c5071",
-                    "operator": "gtl",
-                    "value": "49.8"
+            userJson
+            /*    {
+                  "script": {
+                    "script": {
+                      "source": "def value=Double.parseDouble(params.value);for (def item : doc['single.conc.keyword']){def val = item.indexOf(';');def id = item.substring(0,val) ;def values =item.replace(id+';','') ;def dblValue=Double.parseDouble(values);if(id==params.uid && ((params.operator =='gtl' && dblValue >= value) || (params.operator =='ltr'&& dblValue <= value))){return true}} return false;",
+                      "params": {
+                        "uid": "1907c124-f3fa-4072-8da6-f0568e2c5071",
+                        "operator": "gtl",
+                        "value": "49.8"
+                      }
+                    }
                   }
-                }
-              }
-            }*/
+                }*/
 
           ].filter(item => { return item != null }),
           "filter": [
